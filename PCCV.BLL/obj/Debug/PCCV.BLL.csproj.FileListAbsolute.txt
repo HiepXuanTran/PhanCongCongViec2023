@@ -1,0 +1,9 @@
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.BLL.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.BLL.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.Data.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.Public.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.Data.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.Public.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PCCV.BLL\obj\Debug\PCCV.BLL.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PCCV.BLL\obj\Debug\PCCV.BLL.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PCCV.BLL\obj\Debug\PCCV.BLL.pdb
