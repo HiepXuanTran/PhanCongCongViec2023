@@ -5,6 +5,7 @@ using System.Text;
 using PhanCongCongViec.form.QuanLy;
 using PhanCongCongViec.form.Hệ_thống;
 using PhanCongCongViec.form.HeThong;
+using PhanCongCongViec.form.ThongTin;
 namespace PhanCongCongViec
 {
     class LoadMain
@@ -64,6 +65,59 @@ namespace PhanCongCongViec
             else
                 m_frmCV_HT_MucDoKho.Activate();
         }
+
+        static frmCV_TT_NhanSu m_frmCV_TT_NhanSu = null;
+        public static void HienThiCV_TT_NhanSu()
+        {
+            if (m_frmCV_TT_NhanSu == null || m_frmCV_TT_NhanSu.IsDisposed)
+            {
+                m_frmCV_TT_NhanSu = new frmCV_TT_NhanSu();
+                m_frmCV_TT_NhanSu.MdiParent = frmMain.ActiveForm;
+                m_frmCV_TT_NhanSu.Show();
+            }
+            else
+                m_frmCV_TT_NhanSu.Activate();
+        }
+
+        static frmCV_TT_ChiTietCongViec m_frmCV_TT_ChiTietCongViec = null;
+        public static void HienThiCV_TT_ChiTietCongViec()
+        {
+            if (m_frmCV_TT_ChiTietCongViec == null || m_frmCV_TT_ChiTietCongViec.IsDisposed)
+            {
+                m_frmCV_TT_ChiTietCongViec = new frmCV_TT_ChiTietCongViec();
+                m_frmCV_TT_ChiTietCongViec.MdiParent = frmMain.ActiveForm;
+                m_frmCV_TT_ChiTietCongViec.Show();
+            }
+            else
+                m_frmCV_TT_ChiTietCongViec.Activate();
+        }
+
+        static frmCV_HT_VaiTroCongViec m_frmCV_HT_VaiTroCongViec = null;
+        public static void HienThiCV_HT_VaiTroCongViec()
+        {
+            if (m_frmCV_HT_VaiTroCongViec == null || m_frmCV_HT_VaiTroCongViec.IsDisposed)
+            {
+                m_frmCV_HT_VaiTroCongViec = new frmCV_HT_VaiTroCongViec();
+                m_frmCV_HT_VaiTroCongViec.MdiParent = frmMain.ActiveForm;
+                m_frmCV_HT_VaiTroCongViec.Show();
+            }
+            else
+                m_frmCV_HT_VaiTroCongViec.Activate();
+        }
+
+        static frmCV_HT_UuTienCongViec m_frmCV_HT_UuTienCongViec = null;
+        public static void HienThiCV_HT_UuTienCongViec()
+        {
+            if (m_frmCV_HT_UuTienCongViec == null || m_frmCV_HT_UuTienCongViec.IsDisposed)
+            {
+                m_frmCV_HT_UuTienCongViec = new frmCV_HT_UuTienCongViec();
+                m_frmCV_HT_UuTienCongViec.MdiParent = frmMain.ActiveForm;
+                m_frmCV_HT_UuTienCongViec.Show();
+            }
+            else
+                m_frmCV_HT_UuTienCongViec.Activate();
+        }
+
     }
     public class BienToanCuc
     {

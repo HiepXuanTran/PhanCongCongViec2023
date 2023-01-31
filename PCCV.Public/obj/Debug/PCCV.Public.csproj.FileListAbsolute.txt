@@ -3,3 +3,8 @@ C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PCCV.Publi
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PCCV.Public\obj\Debug\PCCV.Public.dll
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PCCV.Public\obj\Debug\PCCV.Public.pdb
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PCCV.Public\obj\Debug\PCCV.Public.csprojResolveAssemblyReference.cache
+C:\Users\HP\Downloads\PhanCongCongViec\PCCV.Public\bin\Debug\PCCV.Public.dll
+C:\Users\HP\Downloads\PhanCongCongViec\PCCV.Public\bin\Debug\PCCV.Public.pdb
+C:\Users\HP\Downloads\PhanCongCongViec\PCCV.Public\obj\Debug\PCCV.Public.csprojResolveAssemblyReference.cache
+C:\Users\HP\Downloads\PhanCongCongViec\PCCV.Public\obj\Debug\PCCV.Public.dll
+C:\Users\HP\Downloads\PhanCongCongViec\PCCV.Public\obj\Debug\PCCV.Public.pdb

@@ -68,6 +68,18 @@
     <Compile Include="form\HeThong\frmCV_HT_MucDoKho.Designer.cs">
       <DependentUpon>frmCV_HT_MucDoKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\HeThong\frmCV_HT_UuTienCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\HeThong\frmCV_HT_UuTienCongViec.Designer.cs">
+      <DependentUpon>frmCV_HT_UuTienCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\HeThong\frmCV_HT_VaiTroCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\HeThong\frmCV_HT_VaiTroCongViec.Designer.cs">
+      <DependentUpon>frmCV_HT_VaiTroCongViec.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\QuanLy\frmCV_QL_CongViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +91,18 @@
     </Compile>
     <Compile Include="form\QuanLy\frmCV_QL_NhomCongViec.Designer.cs">
       <DependentUpon>frmCV_QL_NhomCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ThongTin\frmCV_TT_ChiTietCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ThongTin\frmCV_TT_ChiTietCongViec.Designer.cs">
+      <DependentUpon>frmCV_TT_ChiTietCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ThongTin\frmCV_TT_NhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ThongTin\frmCV_TT_NhanSu.Designer.cs">
+      <DependentUpon>frmCV_TT_NhanSu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -95,11 +119,23 @@
     <EmbeddedResource Include="form\HeThong\frmCV_HT_MucDoKho.resx">
       <DependentUpon>frmCV_HT_MucDoKho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form\HeThong\frmCV_HT_UuTienCongViec.resx">
+      <DependentUpon>frmCV_HT_UuTienCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\HeThong\frmCV_HT_VaiTroCongViec.resx">
+      <DependentUpon>frmCV_HT_VaiTroCongViec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\QuanLy\frmCV_QL_CongViec.resx">
       <DependentUpon>frmCV_QL_CongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\QuanLy\frmCV_QL_NhomCongViec.resx">
       <DependentUpon>frmCV_QL_NhomCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ThongTin\frmCV_TT_ChiTietCongViec.resx">
+      <DependentUpon>frmCV_TT_ChiTietCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ThongTin\frmCV_TT_NhanSu.resx">
+      <DependentUpon>frmCV_TT_NhanSu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -127,7 +163,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="form\TheoDoi\" />
-    <Folder Include="form\ThongTin\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PCCV.BLL\PCCV.BLL.csproj">

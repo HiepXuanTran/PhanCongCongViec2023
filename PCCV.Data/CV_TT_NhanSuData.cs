@@ -15,6 +15,7 @@ namespace PCCV.Data
         {
             return cls.LayDuLieu("CV_TT_NhanSu_Select");
         }
+
         public int CV_TT_NhanSu_Del(CV_TT_NhanSuPublic Public)
         {
             int thamso = 1;
@@ -26,7 +27,7 @@ namespace PCCV.Data
         }
         public int CV_TT_NhanSu_Add(CV_TT_NhanSuPublic Public)
         {
-            int thamso = 12;
+            int thamso = 10;
             string[] bien = new string[thamso];
             object[] giatri = new object[thamso];
             bien[0] = "@CV_TT_NhanSu_MaNhanSu";
@@ -37,10 +38,8 @@ namespace PCCV.Data
             bien[5] = "@CV_TT_NhanSu_KhaNangChuyenMon";
             bien[6] = "@HT_USER_Create";
             bien[7] = "@CV_TT_NhanSu_DateCreate";
-            bien[8] = "@HT_USER_Editor";
-            bien[9] = "@CV_TT_NhanSu_DateEditor";
-            bien[10] = "@CV_TT_NhanSu_HienThi";
-            bien[11] = "@CV_TT_NhanSu_SuDung";
+            bien[8] = "@CV_TT_NhanSu_HienThi";
+            bien[9] = "@CV_TT_NhanSu_SuDung";
 
             giatri[0] = Public.CV_TT_NhanSu_MaNhanSu;
             giatri[1] = Public.CV_TT_NhanSu_HoTen;
@@ -50,10 +49,8 @@ namespace PCCV.Data
             giatri[5] = Public.CV_TT_NhanSu_KhaNangChuyenMon;
             giatri[6] = Public.HT_USER_Create;
             giatri[7] = Public.CV_TT_NhanSu_DateCreate;
-            giatri[8] = Public.HT_USER_Editor;
-            giatri[9] = Public.CV_TT_NhanSu_DateEditor;
-            giatri[10] = Public.CV_TT_NhanSu_HienThi;
-            giatri[11] = Public.CV_TT_NhanSu_SuDung;
+            giatri[8] = Public.CV_TT_NhanSu_HienThi;
+            giatri[9] = Public.CV_TT_NhanSu_SuDung;
 
             return cls.Update("CV_TT_NhanSu_Insert", bien, giatri, thamso);
         }
@@ -62,6 +59,7 @@ namespace PCCV.Data
             int thamso = 13;
             string[] bien = new string[thamso];
             object[] giatri = new object[thamso];
+
             bien[0] = "@CV_TT_NhanSu_MaNhanSu";
             bien[1] = "@CV_TT_NhanSu_HoTen";
             bien[2] = "@CV_TT_NhanSu_DonVi";
@@ -88,7 +86,7 @@ namespace PCCV.Data
             giatri[9] = Public.CV_TT_NhanSu_DateEditor;
             giatri[10] = Public.CV_TT_NhanSu_HienThi;
             giatri[11] = Public.CV_TT_NhanSu_SuDung;
-            giatri[11] = Public.CV_TT_NhanSu_ID;
+            giatri[12] = Public.CV_TT_NhanSu_ID;
 
             return cls.Update("CV_TT_NhanSu_Edit", bien, giatri, thamso);
         }
