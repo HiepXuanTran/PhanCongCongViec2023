@@ -17,17 +17,23 @@ namespace PCCV.Data
         // hàm xoá hiển thị nhóm cv
         public int CV_QL_NhomCongViec_Del(CV_QL_NhomCongViecPublic Public)
         {
-            int thamso = 1;
+            int thamso = 4;
             string[] bien = new string[thamso];
             object[] giatri = new object[thamso];
             bien[0] = "@CV_QL_NhomCongViec_ID";
+            bien[1] = "@HT_USER_Editor";
+            bien[2] = "@CV_QL_NhomCongViec_DateEditor";
+            bien[3]  = "@CV_QL_NhomCongViec_SuDung";
             giatri[0] = Public.CV_QL_NhomCongViec_ID;
+            giatri[1] =Public.HT_USER_Editor;
+            giatri[2] = Public.CV_QL_NhomCongViec_DateEditor;
+            giatri[3] = Public.CV_QL_NhomCongViec_SuDung;
             return cls.Update("CV_QL_NhomCongViec_Del", bien, giatri, thamso);
         }
         // Thêm công việc 
         public int CV_QL_NhomCongViec_Add(CV_QL_NhomCongViecPublic Public)
         {
-            int thamso = 10;
+            int thamso = 8;
             string[] bien = new string[thamso];
             object[] giatri = new object[thamso];
             bien[0] = "@CV_QL_NhomCongViec_TenNhomCongViec1";
@@ -36,10 +42,8 @@ namespace PCCV.Data
             bien[3] = "@CV_QL_NhomCongViec_GhiChu";
             bien[4] = "@HT_USER_Create";
             bien[5] = "@CV_QL_NhomCongViec_DateCreate";
-            bien[6] = "@HT_USER_Editor";
-            bien[7] = "@CV_QL_NhomCongViec_DateEditor";
-            bien[8] = "@CV_QL_NhomCongViec_HienThi";
-            bien[9] = "@CV_QL_NhomCongViec_SuDung";
+            bien[6] = "@CV_QL_NhomCongViec_HienThi";
+            bien[7] = "@CV_QL_NhomCongViec_SuDung";
 
             giatri[0] = Public.CV_QL_NhomCongViec_TenNhomCongViec1;
             giatri[1] = Public.CV_QL_NhomCongViec_TenNhomCongViec2;
@@ -47,10 +51,8 @@ namespace PCCV.Data
             giatri[3] = Public.CV_QL_NhomCongViec_GhiChu;
             giatri[4] = Public.HT_USER_Create;
             giatri[5] = Public.CV_QL_NhomCongViec_DateCreate;
-            giatri[6] = Public.HT_USER_Editor;
-            giatri[7] = Public.CV_QL_NhomCongViec_DateEditor;
-            giatri[8] = Public.CV_QL_NhomCongViec_HienThi;
-            giatri[9] = Public.CV_QL_NhomCongViec_SuDung;
+            giatri[6] = Public.CV_QL_NhomCongViec_HienThi;
+            giatri[7] = Public.CV_QL_NhomCongViec_SuDung;
             return cls.Update("CV_QL_NhomCongViec_Insert", bien, giatri, thamso);
         }
         // Sửa công việc

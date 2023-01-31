@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PCCV.Public
 {
-    class CV_HT_LoaiCongViecPublic
+    public class CV_HT_LoaiCongViecPublic
     {
         int _CV_HT_LoaiCongViec_Id;
 

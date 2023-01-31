@@ -30,11 +30,17 @@ namespace PCCV.Data
         //}
         public int CV_QL_CongViec_Del(CV_QL_CongViecPublic Public)
         {
-            int thamso = 1;
+            int thamso = 4;
             string[] bien = new string[thamso];
             object[] giatri = new object[thamso];
             bien[0] = "@CV_QL_CongViec_ID";
+            bien[1]="@HT_USER_Editor";
+            bien[2]="@CV_QL_CongViec_DateEditor";
+            bien[3] = "@CV_QL_CongViec_SuDung";
             giatri[0] = Public.Id;
+            giatri[1] = Public.HT_USER_Editor;
+            giatri[2] = Public.CV_QL_CongViec_DateEditor;
+            giatri[3] = Public.CV_QL_CongViec_SuDung;
             return cls.Update("CV_QL_CongViec_Del", bien, giatri, thamso);
         }
         public int CV_QL_CongViec_Add(CV_QL_CongViecPublic Public)

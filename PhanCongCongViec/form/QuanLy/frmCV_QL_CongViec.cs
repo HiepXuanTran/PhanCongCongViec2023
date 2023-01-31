@@ -22,10 +22,85 @@ namespace PhanCongCongViec.form.QuanLy
         bool CV_QL_CongViecEdit = false;
         bool CV_QL_CongViecAdd = false;
         // lock 6 cột cuối
+        CV_HT_MucDoKhoBLL clsMucDoKho = new CV_HT_MucDoKhoBLL();
         CV_QL_NhomCongViecBLL clsNhomCongViec = new CV_QL_NhomCongViecBLL();
         CV_QL_CongViecBLL cls = new CV_QL_CongViecBLL();
         CV_HT_LoaiCongViecBLL clsLoaiCongViec = new CV_HT_LoaiCongViecBLL();
         // lock input 
+
+        /* 
+         
+         public void UnVisibleControls()
+        {
+            BarButtonItem[] items = new BarButtonItem[] { barButtonItem_Them, barButtonItem_Copy, barButtonItem_Sua, barButtonItem_Xoa, barButtonItem_Luu };
+
+            foreach (BarButtonItem item in items)
+            {
+                item.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            }
+        }
+
+        public void VisibleControls()
+        {
+            BarButtonItem[] items = new BarButtonItem[] { barButtonItem_Them, barButtonItem_Copy, barButtonItem_Sua, barButtonItem_Xoa, barButtonItem_Luu };
+            if (BienToanCuc.MaNguoiDung == "0")
+            {
+                //Quyền quản trị               
+                foreach (BarButtonItem item in items)
+                {
+                    item.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                }
+            }
+            else
+            {
+                Public_HT_PQ_USER.HT_USER_ID = int.Parse("0" + BienToanCuc.MaNguoiDung);
+                //Public.HT_ROOT_Form = this.Name.Replace("btn", "frm");
+                Public_HT_PQ_USER.HT_ROOT_Form = this.Name;
+                Public_HT_PQ_USER.HT_ROOT_Active = true;
+
+                SqlDataReader dr = cls_HT_PQ_USER.LoadHT_PQ_USER_R_MaND(Public_HT_PQ_USER);
+                dr.Read();
+
+                //Toàn quyền - Quyền xem                
+                foreach (BarButtonItem item in items)
+                {
+                    if (Convert.ToBoolean(dr[0]) == true)
+                    {
+                        item.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                    }
+                    if (Convert.ToBoolean(dr[1]) == true)
+                    {
+                        item.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+                    }
+                }
+
+                //Quyền thêm
+                if (Convert.ToBoolean(dr[2]) == true)
+                {
+                    barButtonItem_Them.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                    barButtonItem_Copy.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                    barButtonItem_Luu.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                }
+
+                //Quyền xóa
+                if (Convert.ToBoolean(dr[3]) == true)
+                {
+                    barButtonItem_Xoa.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                    barButtonItem_Luu.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                }
+
+                //Quyền sửa
+                if (Convert.ToBoolean(dr[4]) == true)
+                {
+                    barButtonItem_Sua.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                    barButtonItem_Luu.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                }
+                dr.Dispose();
+                dr.Close();
+            }
+        }
+         
+         */
         private void Lock_Unlock_Control_Input(bool Lock_Control) //Khóa và mở khóa điều khiển nhập dữ liệu
         {
             if (BienToanCuc.Lock_NhapDuLieu == true)
@@ -156,7 +231,16 @@ namespace PhanCongCongViec.form.QuanLy
 
         private void frmCV_QL_CongViec_Load(object sender, EventArgs e)
         {
-            
+            // lookup edit muc do kho
+            CV_QL_CongViec_LookupEdit_MucDoKho.DataSource = clsMucDoKho.LoadCV_HT_MucDoKho_LoadAll();
+            CV_QL_CongViec_LookupEdit_MucDoKho.DisplayMember = "CV_HT_MucDoKho_DoKhoCongViec";
+            CV_QL_CongViec_LookupEdit_MucDoKho.ValueMember = "CV_HT_MucDoKho_DoKhoCongViec";
+            CV_QL_CongViec_LookupEdit_MucDoKho.PopupWidth = 400;
+            CV_QL_CongViec_LookupEdit_MucDoKho.ShowFooter = false;
+            CV_QL_CongViec_LookupEdit_MucDoKho.Columns.Clear();
+            CV_QL_CongViec_LookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_MucDoKho_DoKhoCongViec", "Độ khó công việc", 50));
+            CV_QL_CongViec_LookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_MucDoKho_Mota", "Mô tả", 50));
+            CV_QL_CongViec_LookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_MucDoKho_GhiChu", "Ghi chú", 50));
             // lookup edit nhóm công việc
             CV_QL_CongViec_LookupEdit_NhomCongViec.DataSource = clsNhomCongViec.LoadCV_QL_NhomCongViec_LoadAll();
             CV_QL_CongViec_LookupEdit_NhomCongViec.DisplayMember = "CV_QL_NhomCongViec_TenNhomCongViec1";
@@ -255,6 +339,9 @@ namespace PhanCongCongViec.form.QuanLy
                             {
                                 CV_QL_CongViecPublic Public = new CV_QL_CongViecPublic();
                                 Public.Id = Convert.ToInt32(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_ID));
+                                Public.HT_USER_Editor = BienToanCuc.HT_USER_ID;
+                                Public.CV_QL_CongViec_DateEditor = DateTime.Now ;
+                                Public.CV_QL_CongViec_SuDung = BienToanCuc.HT_USER_Ten;
                                 kq = cls.CV_QL_CongViec_Del(Public);
                             }
                             else

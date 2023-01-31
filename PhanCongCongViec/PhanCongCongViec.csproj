@@ -56,7 +56,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="form\HeThong\frmCV_HT_LoaiCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\HeThong\frmCV_HT_LoaiCongViec.Designer.cs">
+      <DependentUpon>frmCV_HT_LoaiCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\HeThong\frmCV_HT_MucDoKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\HeThong\frmCV_HT_MucDoKho.Designer.cs">
+      <DependentUpon>frmCV_HT_MucDoKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\QuanLy\frmCV_QL_CongViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +89,12 @@
     <Compile Include="LoadMain.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="form\HeThong\frmCV_HT_LoaiCongViec.resx">
+      <DependentUpon>frmCV_HT_LoaiCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\HeThong\frmCV_HT_MucDoKho.resx">
+      <DependentUpon>frmCV_HT_MucDoKho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\QuanLy\frmCV_QL_CongViec.resx">
       <DependentUpon>frmCV_QL_CongViec.cs</DependentUpon>
     </EmbeddedResource>

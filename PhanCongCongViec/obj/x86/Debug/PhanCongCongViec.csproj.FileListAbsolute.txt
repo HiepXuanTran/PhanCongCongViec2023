@@ -16,3 +16,5 @@ C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PhanCongCo
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PhanCongCongViec\bin\Debug\PCCV.Data.pdb
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.frmMain.resources
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_NhomCongViec.resources
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.Hệ_thống.frmCV_HT_LoaiCongViec.resources
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.HeThong.frmCV_HT_MucDoKho.resources

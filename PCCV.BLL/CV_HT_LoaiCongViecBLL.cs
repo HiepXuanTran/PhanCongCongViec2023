@@ -15,5 +15,17 @@ namespace PCCV.BLL
         {
             return cls.LoadCV_HT_LoaiCongViec_LoadAll();
         }
+        public int CV_HT_LoaiCongViec_Add(CV_HT_LoaiCongViecPublic Public)
+        {
+            return cls.CV_HT_LoaiCongViec_Add(Public);
+        }
+        public int CV_HT_LoaiCongViec_Update(CV_HT_LoaiCongViecPublic Public)
+        {
+            return cls.CV_HT_LoaiCongViec_Update(Public);
+        }
+        public int CV_HT_LoaiCongViec_Del(CV_HT_LoaiCongViecPublic Public)
+        {
+            return cls.CV_HT_LoaiCongViec_Del(Public);
+        }
     }
 }

@@ -26,5 +26,20 @@ namespace PhanCongCongViec
         {
 
         }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadMain.HienThiCV_QL_NhomCongViec();
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadMain.HienThiCV_HT_LoaiCongViec();
+        }
+
+        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadMain.HienThiCV_HT_MucDoKho();
+        }
     }
 }

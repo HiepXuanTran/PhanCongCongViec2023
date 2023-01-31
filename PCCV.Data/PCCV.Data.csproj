@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="clsKetNoi.cs" />
     <Compile Include="CV_HT_LoaiCongViecData.cs" />
+    <Compile Include="CV_HT_MucDoKhoData.cs" />
     <Compile Include="CV_QL_CongViecData.cs" />
     <Compile Include="CV_QL_NhomCongViecData.cs" />
     <Compile Include="CV_TD_LichSuNhomCongViecData.cs" />
