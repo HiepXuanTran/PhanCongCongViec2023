@@ -16,3 +16,12 @@ C:\Users\HP\Downloads\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.Public.pdb
 C:\Users\HP\Downloads\PhanCongCongViec\PCCV.BLL\obj\Debug\PCCV.BLL.csprojResolveAssemblyReference.cache
 C:\Users\HP\Downloads\PhanCongCongViec\PCCV.BLL\obj\Debug\PCCV.BLL.dll
 C:\Users\HP\Downloads\PhanCongCongViec\PCCV.BLL\obj\Debug\PCCV.BLL.pdb
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.BLL.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.BLL.pdb
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.Data.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.Public.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.Data.pdb
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.Public.pdb
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\obj\Debug\PCCV.BLL.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\obj\Debug\PCCV.BLL.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\obj\Debug\PCCV.BLL.pdb

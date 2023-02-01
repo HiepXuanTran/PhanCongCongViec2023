@@ -46,6 +46,7 @@
     <Compile Include="CV_HT_VaiTroCongViecBLL.cs" />
     <Compile Include="CV_QL_CongViecBLL.cs" />
     <Compile Include="CV_QL_NhomCongViecBLL.cs" />
+    <Compile Include="CV_QL_PhanCongCongViecNhanSuBLL.cs" />
     <Compile Include="CV_TD_LichSuCongViecBLL.cs" />
     <Compile Include="CV_TT_ChiTietCongViecBLL.cs" />
     <Compile Include="CV_TT_NhanSuBLL.cs" />

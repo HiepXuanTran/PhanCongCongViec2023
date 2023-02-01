@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using PCCV.BLL;
 using PCCV.Public;
+using DevExpress.XtraGrid.Menu;
+using DevExpress.Utils.Menu;
 
 namespace PhanCongCongViec.form.ThongTin
 {
@@ -16,10 +18,54 @@ namespace PhanCongCongViec.form.ThongTin
         public frmCV_TT_NhanSu()
         {
             InitializeComponent();
+            new MultiSelectionEditingHelper(CV_TT_NhanSu_BandedGridview);
         }
         CV_TT_NhanSuBLL cls = new CV_TT_NhanSuBLL();
         bool CV_TT_NhanSuEdit = false;
         bool CV_TT_NhanSuAdd = false;
+
+        #region Cho phép thực hiện thao tác CLICK phải chuột
+
+        void Check_All_Click(object sender, EventArgs e)
+        {
+            CV_TT_NhanSu_BandedGridview.ClearSelection();
+            CV_TT_NhanSu_BandedGridview.FocusedColumn = CV_TT_NhanSu_BandedGridview.Columns["CV_TT_NhanSu_MaNhanSu"];
+
+            CV_TT_NhanSu_BandedGridview.MoveFirst();
+            for (int i = 0; i < CV_TT_NhanSu_BandedGridview.RowCount; i++)
+            {
+                CV_TT_NhanSu_BandedGridview.SetFocusedRowCellValue(CV_TT_NhanSuChon, true);
+                CV_TT_NhanSu_BandedGridview.MoveNext();
+            }
+            CV_TT_NhanSu_BandedGridview.MoveFirst();
+        }
+        void No_Check_All_Click(object sender, EventArgs e)
+        {
+            CV_TT_NhanSu_BandedGridview.ClearSelection();
+            CV_TT_NhanSu_BandedGridview.FocusedColumn = CV_TT_NhanSu_BandedGridview.Columns["CV_TT_NhanSu_HoTen"];
+
+            CV_TT_NhanSu_BandedGridview.MoveFirst();
+            for (int i = 0; i < CV_TT_NhanSu_BandedGridview.RowCount; i++)
+            {
+                CV_TT_NhanSu_BandedGridview.SetFocusedRowCellValue(CV_TT_NhanSuChon, false);
+                CV_TT_NhanSu_BandedGridview.MoveNext();
+            }
+            CV_TT_NhanSu_BandedGridview.MoveFirst();
+        }
+        //void Ghim_Trai_Click(object sender, EventArgs e)
+        //{
+        //    if (gridBand_Chung.Fixed == FixedStyle.Left)
+        //    {
+        //        gridBand_Chung.Fixed = FixedStyle.None;
+        //    }
+        //    else
+        //    {
+        //        gridBand_Chung.Fixed = FixedStyle.Left;
+        //    }
+        //}
+        #endregion
+
+
 
         private void Lock_Unlock_Control_Input(bool Lock_Control) //Khóa và mở khóa điều khiển nhập dữ liệu
         {
@@ -283,6 +329,40 @@ namespace PhanCongCongViec.form.ThongTin
             CV_TT_NhanSuEdit = false;
             Lock_Unlock_Control(true); // lock nut luu vs undo
             Lock_Unlock_Control_Input(false); //Khóa điều khiển nhập dữ liệu
+        }
+
+        private void CV_TT_NhanSu_barButtonItem_In_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadHamDungChung.PreviewPrintableComponent(CV_TT_NhanSu_GridControl, CV_TT_NhanSu_GridControl.LookAndFeel);
+        }
+
+        private void CV_TT_NhanSu_BandedGridview_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+
+            if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Row)
+            {
+                GridViewMenu menu = e.Menu as GridViewMenu;
+                menu.Items.Clear();
+
+                DXMenuItem Check_All = new DXMenuItem("Check All (Chọn)"); // caption menu
+                //itemReload.Image = ImgCollection.Images["refresh2_16x16.png"]; // icon cho menu
+                Check_All.Shortcut = Shortcut.Ctrl1; // phím tắt
+                Check_All.Click += new EventHandler(Check_All_Click);// thêm sự kiện click
+                menu.Items.Add(Check_All);
+
+                DXMenuItem No_Check_All = new DXMenuItem("UnCheck All (Chọn)");
+                //No_Check_All.BeginGroup = true;
+                //itemAdd.Image = ImgCollection.Images["new_16x16.png"];
+                No_Check_All.Shortcut = Shortcut.Ctrl2;
+                No_Check_All.Click += new EventHandler(No_Check_All_Click);
+                menu.Items.Add(No_Check_All);
+
+                //DXMenuItem Ghim_Trai = new DXMenuItem("Ghim/Nhả ghim nhóm cột bên trái");
+                //Ghim_Trai.Shortcut = Shortcut.Ctrl3;
+                //Ghim_Trai.Click += new EventHandler(Ghim_Trai_Click);
+                //menu.Items.Add(Ghim_Trai);
+
+            }
         }
 
     }

@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using PCCV.BLL;
 using PCCV.Public;
 using DevExpress.XtraBars;
+using DevExpress.XtraGrid.Menu;
+using DevExpress.Utils.Menu;
 namespace PhanCongCongViec.form.QuanLy
 {
     public partial class frmCV_QL_NhomCongViec : Form
@@ -16,7 +18,46 @@ namespace PhanCongCongViec.form.QuanLy
         public frmCV_QL_NhomCongViec()
         {
             InitializeComponent();
+            new MultiSelectionEditingHelper(CV_QL_NhomCongViec_bandedGridView);
         }
+
+        void Check_All_Click(object sender, EventArgs e)
+        {
+            CV_QL_NhomCongViec_bandedGridView.ClearSelection();
+            CV_QL_NhomCongViec_bandedGridView.FocusedColumn = CV_QL_NhomCongViec_bandedGridView.Columns["CV_QL_NhomCongViec_TenNhomCongViec1"];
+
+            CV_QL_NhomCongViec_bandedGridView.MoveFirst();
+            for (int i = 0; i < CV_QL_NhomCongViec_bandedGridView.RowCount; i++)
+            {
+                CV_QL_NhomCongViec_bandedGridView.SetFocusedRowCellValue(CV_QL_NhomCongViecChon, true);
+                CV_QL_NhomCongViec_bandedGridView.MoveNext();
+            }
+            CV_QL_NhomCongViec_bandedGridView.MoveFirst();
+        }
+        void No_Check_All_Click(object sender, EventArgs e)
+        {
+            CV_QL_NhomCongViec_bandedGridView.ClearSelection();
+            CV_QL_NhomCongViec_bandedGridView.FocusedColumn = CV_QL_NhomCongViec_bandedGridView.Columns["CV_QL_NhomCongViec_TenNhomCongViec1"];
+
+            CV_QL_NhomCongViec_bandedGridView.MoveFirst();
+            for (int i = 0; i < CV_QL_NhomCongViec_bandedGridView.RowCount; i++)
+            {
+                CV_QL_NhomCongViec_bandedGridView.SetFocusedRowCellValue(CV_QL_NhomCongViecChon, false);
+                CV_QL_NhomCongViec_bandedGridView.MoveNext();
+            }
+            CV_QL_NhomCongViec_bandedGridView.MoveFirst();
+        }
+        //void Ghim_Trai_Click(object sender, EventArgs e)
+        //{
+        //    if (gridBand_Chung.Fixed == FixedStyle.Left)
+        //    {
+        //        gridBand_Chung.Fixed = FixedStyle.None;
+        //    }
+        //    else
+        //    {
+        //        gridBand_Chung.Fixed = FixedStyle.Left;
+        //    }
+        //}
 
         bool CV_QL_NhomCongViecAdd = false;
         bool CV_QL_NhomCongViecEdit = false;
@@ -339,5 +380,38 @@ namespace PhanCongCongViec.form.QuanLy
             Lock_Unlock_Control_Input(false); //Khóa điều khiển nhập dữ liệu
         }
 
-    }
+        private void CV_QL_NhomCongViec_bandedGridView_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+            if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Row)
+            {
+                GridViewMenu menu = e.Menu as GridViewMenu;
+                menu.Items.Clear();
+
+                DXMenuItem Check_All = new DXMenuItem("Check All (Chọn)"); // caption menu
+                //itemReload.Image = ImgCollection.Images["refresh2_16x16.png"]; // icon cho menu
+                Check_All.Shortcut = Shortcut.Ctrl1; // phím tắt
+                Check_All.Click += new EventHandler(Check_All_Click);// thêm sự kiện click
+                menu.Items.Add(Check_All);
+
+                DXMenuItem No_Check_All = new DXMenuItem("UnCheck All (Chọn)");
+                //No_Check_All.BeginGroup = true;
+                //itemAdd.Image = ImgCollection.Images["new_16x16.png"];
+                No_Check_All.Shortcut = Shortcut.Ctrl2;
+                No_Check_All.Click += new EventHandler(No_Check_All_Click);
+                menu.Items.Add(No_Check_All);
+
+                //DXMenuItem Ghim_Trai = new DXMenuItem("Ghim/Nhả ghim nhóm cột bên trái");
+                //Ghim_Trai.Shortcut = Shortcut.Ctrl3;
+                //Ghim_Trai.Click += new EventHandler(Ghim_Trai_Click);
+                //menu.Items.Add(Ghim_Trai);
+                
+            }
+        }
+
+        private void CV_QL_NhomCongViec_barButtonItem_In_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadHamDungChung.PreviewPrintableComponent(CV_QL_NhomCongViec_GridControl, CV_QL_NhomCongViec_GridControl.LookAndFeel);
+        }
+        }
+
 }

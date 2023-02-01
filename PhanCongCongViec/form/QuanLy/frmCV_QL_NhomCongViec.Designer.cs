@@ -47,13 +47,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.CV_QL_NhomCongViec_GridControl = new DevExpress.XtraGrid.GridControl();
             this.CV_QL_NhomCongViec_bandedGridView = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.CV_QL_NhomCongViecChon = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_ID = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.CV_QL_NhomCongViec_TenNhomCongViec1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_TenNhomCongViec2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_MoTa = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_GhiChu = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_XemLichSu = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.HT_USER_Create = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_DateCreate = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.HT_USER_Editor = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -61,9 +64,6 @@
             this.CV_QL_NhomCongViec_HienThi = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_SuDung = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_NhomCongViec_GridControl)).BeginInit();
@@ -179,6 +179,7 @@
             this.CV_QL_NhomCongViec_barButtonItem_In.Id = 7;
             this.CV_QL_NhomCongViec_barButtonItem_In.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_NhomCongViec_barButtonItem_In.LargeGlyph")));
             this.CV_QL_NhomCongViec_barButtonItem_In.Name = "CV_QL_NhomCongViec_barButtonItem_In";
+            this.CV_QL_NhomCongViec_barButtonItem_In.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_NhomCongViec_barButtonItem_In_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -261,6 +262,17 @@
             this.CV_QL_NhomCongViec_bandedGridView.OptionsView.ShowGroupPanel = false;
             this.CV_QL_NhomCongViec_bandedGridView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_QL_NhomCongViec_TenNhomCongViec1, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.CV_QL_NhomCongViec_bandedGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_QL_NhomCongViec_bandedGridView_PopupMenuShowing);
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.gridBand1.AppearanceHeader.Options.UseFont = true;
+            this.gridBand1.Columns.Add(this.CV_QL_NhomCongViecChon);
+            this.gridBand1.Columns.Add(this.CV_QL_NhomCongViec_ID);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 50;
             // 
             // CV_QL_NhomCongViecChon
             // 
@@ -293,6 +305,29 @@
             this.CV_QL_NhomCongViec_ID.Caption = "ID";
             this.CV_QL_NhomCongViec_ID.FieldName = "CV_QL_NhomCongViec_ID";
             this.CV_QL_NhomCongViec_ID.Name = "CV_QL_NhomCongViec_ID";
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
+            this.gridBand3.AppearanceHeader.BackColor2 = System.Drawing.Color.Aqua;
+            this.gridBand3.AppearanceHeader.BorderColor = System.Drawing.Color.Aqua;
+            this.gridBand3.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
+            this.gridBand3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.gridBand3.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand3.AppearanceHeader.Options.UseBorderColor = true;
+            this.gridBand3.AppearanceHeader.Options.UseFont = true;
+            this.gridBand3.AppearanceHeader.Options.UseForeColor = true;
+            this.gridBand3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand3.Caption = "THÔNG TIN";
+            this.gridBand3.Columns.Add(this.CV_QL_NhomCongViec_TenNhomCongViec1);
+            this.gridBand3.Columns.Add(this.CV_QL_NhomCongViec_TenNhomCongViec2);
+            this.gridBand3.Columns.Add(this.CV_QL_NhomCongViec_MoTa);
+            this.gridBand3.Columns.Add(this.CV_QL_NhomCongViec_GhiChu);
+            this.gridBand3.Columns.Add(this.CV_QL_NhomCongViec_XemLichSu);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 1;
+            this.gridBand3.Width = 1012;
             // 
             // CV_QL_NhomCongViec_TenNhomCongViec1
             // 
@@ -369,6 +404,30 @@
             this.CV_QL_NhomCongViec_XemLichSu.Caption = "Xem lịch sử";
             this.CV_QL_NhomCongViec_XemLichSu.Name = "CV_QL_NhomCongViec_XemLichSu";
             this.CV_QL_NhomCongViec_XemLichSu.Width = 106;
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.AppearanceHeader.BackColor = System.Drawing.Color.Cyan;
+            this.gridBand2.AppearanceHeader.BackColor2 = System.Drawing.Color.Aquamarine;
+            this.gridBand2.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
+            this.gridBand2.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gridBand2.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.gridBand2.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand2.AppearanceHeader.Options.UseFont = true;
+            this.gridBand2.AppearanceHeader.Options.UseForeColor = true;
+            this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand2.Caption = "HỆ THỐNG";
+            this.gridBand2.Columns.Add(this.HT_USER_Create);
+            this.gridBand2.Columns.Add(this.CV_QL_NhomCongViec_DateCreate);
+            this.gridBand2.Columns.Add(this.HT_USER_Editor);
+            this.gridBand2.Columns.Add(this.CV_QL_NhomCongViec_DateEditor);
+            this.gridBand2.Columns.Add(this.CV_QL_NhomCongViec_HienThi);
+            this.gridBand2.Columns.Add(this.CV_QL_NhomCongViec_SuDung);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.Visible = false;
+            this.gridBand2.VisibleIndex = -1;
+            this.gridBand2.Width = 139;
             // 
             // HT_USER_Create
             // 
@@ -475,63 +534,6 @@
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "<div align = \"center\">QUẢN LÝ NHÓM CÔNG VIỆC</div>";
             // 
-            // gridBand1
-            // 
-            this.gridBand1.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.gridBand1.AppearanceHeader.Options.UseFont = true;
-            this.gridBand1.Columns.Add(this.CV_QL_NhomCongViecChon);
-            this.gridBand1.Columns.Add(this.CV_QL_NhomCongViec_ID);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 50;
-            // 
-            // gridBand3
-            // 
-            this.gridBand3.AppearanceHeader.BackColor = System.Drawing.Color.Aqua;
-            this.gridBand3.AppearanceHeader.BackColor2 = System.Drawing.Color.Aqua;
-            this.gridBand3.AppearanceHeader.BorderColor = System.Drawing.Color.Aqua;
-            this.gridBand3.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
-            this.gridBand3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.gridBand3.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand3.AppearanceHeader.Options.UseBorderColor = true;
-            this.gridBand3.AppearanceHeader.Options.UseFont = true;
-            this.gridBand3.AppearanceHeader.Options.UseForeColor = true;
-            this.gridBand3.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand3.Caption = "THÔNG TIN";
-            this.gridBand3.Columns.Add(this.CV_QL_NhomCongViec_TenNhomCongViec1);
-            this.gridBand3.Columns.Add(this.CV_QL_NhomCongViec_TenNhomCongViec2);
-            this.gridBand3.Columns.Add(this.CV_QL_NhomCongViec_MoTa);
-            this.gridBand3.Columns.Add(this.CV_QL_NhomCongViec_GhiChu);
-            this.gridBand3.Columns.Add(this.CV_QL_NhomCongViec_XemLichSu);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 1;
-            this.gridBand3.Width = 1012;
-            // 
-            // gridBand2
-            // 
-            this.gridBand2.AppearanceHeader.BackColor = System.Drawing.Color.Cyan;
-            this.gridBand2.AppearanceHeader.BackColor2 = System.Drawing.Color.Aquamarine;
-            this.gridBand2.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
-            this.gridBand2.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gridBand2.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.gridBand2.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand2.AppearanceHeader.Options.UseFont = true;
-            this.gridBand2.AppearanceHeader.Options.UseForeColor = true;
-            this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand2.Caption = "HỆ THỐNG";
-            this.gridBand2.Columns.Add(this.HT_USER_Create);
-            this.gridBand2.Columns.Add(this.CV_QL_NhomCongViec_DateCreate);
-            this.gridBand2.Columns.Add(this.HT_USER_Editor);
-            this.gridBand2.Columns.Add(this.CV_QL_NhomCongViec_DateEditor);
-            this.gridBand2.Columns.Add(this.CV_QL_NhomCongViec_HienThi);
-            this.gridBand2.Columns.Add(this.CV_QL_NhomCongViec_SuDung);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.Visible = false;
-            this.gridBand2.VisibleIndex = -1;
-            this.gridBand2.Width = 139;
-            // 
             // frmCV_QL_NhomCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -542,6 +544,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCV_QL_NhomCongViec";
             this.Text = "Quản lý nhóm công việc";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
