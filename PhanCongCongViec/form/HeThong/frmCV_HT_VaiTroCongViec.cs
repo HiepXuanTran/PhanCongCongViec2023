@@ -31,7 +31,7 @@ namespace PhanCongCongViec.form.HeThong
         void Check_All_Click(object sender, EventArgs e)
         {
             CV_HT_VaiTroCongViec_BandedGridview.ClearSelection();
-            CV_HT_VaiTroCongViec_BandedGridview.FocusedColumn = CV_HT_VaiTroCongViec_BandedGridview.Columns["CV_HT_VaiTroCongViec_GhiChu"];
+            CV_HT_VaiTroCongViec_BandedGridview.FocusedColumn = CV_HT_VaiTroCongViec_BandedGridview.Columns["CV_HT_VaiTroCongViecChon"];
 
             CV_HT_VaiTroCongViec_BandedGridview.MoveFirst();
             for (int i = 0; i < CV_HT_VaiTroCongViec_BandedGridview.RowCount; i++)
@@ -44,7 +44,7 @@ namespace PhanCongCongViec.form.HeThong
         void No_Check_All_Click(object sender, EventArgs e)
         {
             CV_HT_VaiTroCongViec_BandedGridview.ClearSelection();
-            CV_HT_VaiTroCongViec_BandedGridview.FocusedColumn = CV_HT_VaiTroCongViec_BandedGridview.Columns["CV_HT_VaiTroCongViec_MoTa"];
+            CV_HT_VaiTroCongViec_BandedGridview.FocusedColumn = CV_HT_VaiTroCongViec_BandedGridview.Columns["CV_HT_VaiTroCongViecChon"];
 
             CV_HT_VaiTroCongViec_BandedGridview.MoveFirst();
             for (int i = 0; i < CV_HT_VaiTroCongViec_BandedGridview.RowCount; i++)

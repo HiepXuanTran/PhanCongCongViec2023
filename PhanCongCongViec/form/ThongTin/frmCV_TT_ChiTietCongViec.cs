@@ -33,7 +33,7 @@ namespace PhanCongCongViec.form.ThongTin
         void Check_All_Click(object sender, EventArgs e)
         {
             CV_TT_ChiTietCongViec_BandedGridview.ClearSelection();
-            CV_TT_ChiTietCongViec_BandedGridview.FocusedColumn = CV_TT_ChiTietCongViec_BandedGridview.Columns["CV_TT_ChiTietCongViec_TenCongViec"];
+            CV_TT_ChiTietCongViec_BandedGridview.FocusedColumn = CV_TT_ChiTietCongViec_BandedGridview.Columns["CV_TT_ChiTietCongViecChon"];
 
             CV_TT_ChiTietCongViec_BandedGridview.MoveFirst();
             for (int i = 0; i < CV_TT_ChiTietCongViec_BandedGridview.RowCount; i++)
@@ -46,7 +46,7 @@ namespace PhanCongCongViec.form.ThongTin
         void No_Check_All_Click(object sender, EventArgs e)
         {
             CV_TT_ChiTietCongViec_BandedGridview.ClearSelection();
-            CV_TT_ChiTietCongViec_BandedGridview.FocusedColumn = CV_TT_ChiTietCongViec_BandedGridview.Columns["CV_TT_ChiTietCongViec_CacBuocCongViec"];
+            CV_TT_ChiTietCongViec_BandedGridview.FocusedColumn = CV_TT_ChiTietCongViec_BandedGridview.Columns["CV_TT_ChiTietCongViecChon"];
 
             CV_TT_ChiTietCongViec_BandedGridview.MoveFirst();
             for (int i = 0; i < CV_TT_ChiTietCongViec_BandedGridview.RowCount; i++)

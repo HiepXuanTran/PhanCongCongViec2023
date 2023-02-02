@@ -29,7 +29,7 @@ namespace PhanCongCongViec.form.ThongTin
         void Check_All_Click(object sender, EventArgs e)
         {
             CV_TT_NhanSu_BandedGridview.ClearSelection();
-            CV_TT_NhanSu_BandedGridview.FocusedColumn = CV_TT_NhanSu_BandedGridview.Columns["CV_TT_NhanSu_MaNhanSu"];
+            CV_TT_NhanSu_BandedGridview.FocusedColumn = CV_TT_NhanSu_BandedGridview.Columns["CV_TT_NhanSuChon"];
 
             CV_TT_NhanSu_BandedGridview.MoveFirst();
             for (int i = 0; i < CV_TT_NhanSu_BandedGridview.RowCount; i++)
@@ -42,7 +42,7 @@ namespace PhanCongCongViec.form.ThongTin
         void No_Check_All_Click(object sender, EventArgs e)
         {
             CV_TT_NhanSu_BandedGridview.ClearSelection();
-            CV_TT_NhanSu_BandedGridview.FocusedColumn = CV_TT_NhanSu_BandedGridview.Columns["CV_TT_NhanSu_HoTen"];
+            CV_TT_NhanSu_BandedGridview.FocusedColumn = CV_TT_NhanSu_BandedGridview.Columns["CV_TT_NhanSuChon"];
 
             CV_TT_NhanSu_BandedGridview.MoveFirst();
             for (int i = 0; i < CV_TT_NhanSu_BandedGridview.RowCount; i++)
@@ -267,7 +267,7 @@ namespace PhanCongCongViec.form.ThongTin
                             CV_TT_NhanSuPublic Public = new CV_TT_NhanSuPublic();
                             Public.CV_TT_NhanSu_HienThi = true;
                             Public.CV_TT_NhanSu_SuDung = BienToanCuc.HT_USER_Ten;
-                            Public.CV_TT_NhanSu_MaNhanSu = CV_TT_NhanSu_BandedGridview.GetFocusedRowCellDisplayText(CV_TT_NhanSu_MaNhanSu);
+                            Public.CV_TT_NhanSu_MaNhanSu = CV_TT_NhanSu_BandedGridview.GetFocusedRowCellValue(CV_TT_NhanSu_MaNhanSu).ToString();
                             Public.CV_TT_NhanSu_HoTen = CV_TT_NhanSu_BandedGridview.GetFocusedRowCellDisplayText(CV_TT_NhanSu_HoTen);
                             Public.CV_TT_NhanSu_DonVi = CV_TT_NhanSu_BandedGridview.GetFocusedRowCellDisplayText(CV_TT_NhanSu_DonVi);
 

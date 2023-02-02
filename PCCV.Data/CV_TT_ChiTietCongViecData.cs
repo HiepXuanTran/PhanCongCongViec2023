@@ -120,8 +120,6 @@ namespace PCCV.Data
             giatri[13] = Public.CV_TT_ChiTietCongViec_DateEditor;
             giatri[14] = Public.CV_TT_ChiTietCongViec_HienThi;
             giatri[15] = Public.CV_TT_ChiTietCongViec_SuDung;
-            
-            
             return cls.Update("CV_TT_ChiTietCongViec_Update", bien, giatri, thamso);
         }
     }

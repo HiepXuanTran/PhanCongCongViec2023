@@ -30,7 +30,7 @@ namespace PhanCongCongViec.form.HeThong
         void Check_All_Click(object sender, EventArgs e)
         {
             CV_HT_UuTienCongViec_BandedGridview.ClearSelection();
-            CV_HT_UuTienCongViec_BandedGridview.FocusedColumn = CV_HT_UuTienCongViec_BandedGridview.Columns["CV_HT_UuTienCongViec_GhiChu"];
+            CV_HT_UuTienCongViec_BandedGridview.FocusedColumn = CV_HT_UuTienCongViec_BandedGridview.Columns["CV_HT_UuTienCongViecChon"];
 
             CV_HT_UuTienCongViec_BandedGridview.MoveFirst();
             for (int i = 0; i < CV_HT_UuTienCongViec_BandedGridview.RowCount; i++)
@@ -43,7 +43,7 @@ namespace PhanCongCongViec.form.HeThong
         void No_Check_All_Click(object sender, EventArgs e)
         {
             CV_HT_UuTienCongViec_BandedGridview.ClearSelection();
-            CV_HT_UuTienCongViec_BandedGridview.FocusedColumn = CV_HT_UuTienCongViec_BandedGridview.Columns["CV_HT_UuTienCongViec_MoTa"];
+            CV_HT_UuTienCongViec_BandedGridview.FocusedColumn = CV_HT_UuTienCongViec_BandedGridview.Columns["CV_HT_UuTienCongViecChon"];
 
             CV_HT_UuTienCongViec_BandedGridview.MoveFirst();
             for (int i = 0; i < CV_HT_UuTienCongViec_BandedGridview.RowCount; i++)

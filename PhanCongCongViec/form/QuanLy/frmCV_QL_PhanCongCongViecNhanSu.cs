@@ -33,7 +33,7 @@ namespace PhanCongCongViec.form.QuanLy
         void Check_All_Click(object sender, EventArgs e)
         {
             CV_QL_PhanCongCongViecNhanSu_bandedGridView.ClearSelection();
-            CV_QL_PhanCongCongViecNhanSu_bandedGridView.FocusedColumn = CV_QL_PhanCongCongViecNhanSu_bandedGridView.Columns["CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec"];
+            CV_QL_PhanCongCongViecNhanSu_bandedGridView.FocusedColumn = CV_QL_PhanCongCongViecNhanSu_bandedGridView.Columns["CV_QL_PhanCongCongViecNhanSuChon"];
 
             CV_QL_PhanCongCongViecNhanSu_bandedGridView.MoveFirst();
             for (int i = 0; i < CV_QL_PhanCongCongViecNhanSu_bandedGridView.RowCount; i++)
@@ -46,7 +46,7 @@ namespace PhanCongCongViec.form.QuanLy
         void No_Check_All_Click(object sender, EventArgs e)
         {
             CV_QL_PhanCongCongViecNhanSu_bandedGridView.ClearSelection();
-            CV_QL_PhanCongCongViecNhanSu_bandedGridView.FocusedColumn = CV_QL_PhanCongCongViecNhanSu_bandedGridView.Columns["CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec"];
+            CV_QL_PhanCongCongViecNhanSu_bandedGridView.FocusedColumn = CV_QL_PhanCongCongViecNhanSu_bandedGridView.Columns["CV_QL_PhanCongCongViecNhanSuChon"];
 
             CV_QL_PhanCongCongViecNhanSu_bandedGridView.MoveFirst();
             for (int i = 0; i < CV_QL_PhanCongCongViecNhanSu_bandedGridView.RowCount; i++)
