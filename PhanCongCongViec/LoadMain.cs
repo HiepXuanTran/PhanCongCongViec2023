@@ -3,8 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using PhanCongCongViec.form.QuanLy;
-using PhanCongCongViec.form.Hệ_thống;
 using PhanCongCongViec.form.HeThong;
+using PhanCongCongViec.form.ThongTin;
+using System.Windows.Forms;
+using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.Utils;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using DevExpress.LookAndFeel;
+using DevExpress.XtraPrinting;
+using System.Data;
+using System.Net.NetworkInformation;
 namespace PhanCongCongViec
 {
     class LoadMain
@@ -64,6 +75,73 @@ namespace PhanCongCongViec
             else
                 m_frmCV_HT_MucDoKho.Activate();
         }
+
+        static frmCV_TT_NhanSu m_frmCV_TT_NhanSu = null;
+        public static void HienThiCV_TT_NhanSu()
+        {
+            if (m_frmCV_TT_NhanSu == null || m_frmCV_TT_NhanSu.IsDisposed)
+            {
+                m_frmCV_TT_NhanSu = new frmCV_TT_NhanSu();
+                m_frmCV_TT_NhanSu.MdiParent = frmMain.ActiveForm;
+                m_frmCV_TT_NhanSu.Show();
+            }
+            else
+                m_frmCV_TT_NhanSu.Activate();
+        }
+
+        static frmCV_TT_ChiTietCongViec m_frmCV_TT_ChiTietCongViec = null;
+        public static void HienThiCV_TT_ChiTietCongViec()
+        {
+            if (m_frmCV_TT_ChiTietCongViec == null || m_frmCV_TT_ChiTietCongViec.IsDisposed)
+            {
+                m_frmCV_TT_ChiTietCongViec = new frmCV_TT_ChiTietCongViec();
+                m_frmCV_TT_ChiTietCongViec.MdiParent = frmMain.ActiveForm;
+                m_frmCV_TT_ChiTietCongViec.Show();
+            }
+            else
+                m_frmCV_TT_ChiTietCongViec.Activate();
+        }
+
+        static frmCV_HT_VaiTroCongViec m_frmCV_HT_VaiTroCongViec = null;
+        public static void HienThiCV_HT_VaiTroCongViec()
+        {
+            if (m_frmCV_HT_VaiTroCongViec == null || m_frmCV_HT_VaiTroCongViec.IsDisposed)
+            {
+                m_frmCV_HT_VaiTroCongViec = new frmCV_HT_VaiTroCongViec();
+                m_frmCV_HT_VaiTroCongViec.MdiParent = frmMain.ActiveForm;
+                m_frmCV_HT_VaiTroCongViec.Show();
+            }
+            else
+                m_frmCV_HT_VaiTroCongViec.Activate();
+        }
+
+        static frmCV_HT_UuTienCongViec m_frmCV_HT_UuTienCongViec = null;
+        public static void HienThiCV_HT_UuTienCongViec()
+        {
+            if (m_frmCV_HT_UuTienCongViec == null || m_frmCV_HT_UuTienCongViec.IsDisposed)
+            {
+                m_frmCV_HT_UuTienCongViec = new frmCV_HT_UuTienCongViec();
+                m_frmCV_HT_UuTienCongViec.MdiParent = frmMain.ActiveForm;
+                m_frmCV_HT_UuTienCongViec.Show();
+            }
+            else
+                m_frmCV_HT_UuTienCongViec.Activate();
+        }
+
+
+        static frmCV_QL_PhanCongCongViecNhanSu m_frmCV_QL_PhanCongCongViecNhanSu = null;
+        public static void HienThiCV_QL_PhanCongCongViecNhanSu()
+        {
+            if (m_frmCV_QL_PhanCongCongViecNhanSu == null || m_frmCV_QL_PhanCongCongViecNhanSu.IsDisposed)
+            {
+                m_frmCV_QL_PhanCongCongViecNhanSu = new frmCV_QL_PhanCongCongViecNhanSu();
+                m_frmCV_QL_PhanCongCongViecNhanSu.MdiParent = frmMain.ActiveForm;
+                m_frmCV_QL_PhanCongCongViecNhanSu.Show();
+            }
+            else
+                m_frmCV_QL_PhanCongCongViecNhanSu.Activate();
+        }
+
     }
     public class BienToanCuc
     {
@@ -76,4 +154,130 @@ namespace PhanCongCongViec
         public static bool Lock_NhapDuLieu = true;
         public static int idCongViec = -1;
     }
+
+    public static class LoadHamDungChung
+    {
+        #region In dữ liệu trên lưới
+        public static void PreviewPrintableComponent(IPrintable component, UserLookAndFeel lookAndFeel)
+        {
+            // Create a link that will print a control.            
+            PrintableComponentLink link = new PrintableComponentLink()
+            {
+                PrintingSystemBase = new PrintingSystemBase(),
+                Component = component,
+                Landscape = true
+                //Margins = new Mar
+                //PaperKind = PaperKind.A5,
+                //Margins = new Margins(20, 20, 20, 20)
+            };
+
+            // Show the report. 
+            link.Margins.Bottom = 20;
+            link.Margins.Top = 20;
+            link.Margins.Left = 20;
+            link.Margins.Right = 20;
+            link.Landscape = true;
+            link.PaperKind = System.Drawing.Printing.PaperKind.A4;
+
+            link.ShowPreview(lookAndFeel);
+            //link.ShowRibbonPreview(lookAndFeel);
+        }
+        #endregion
+
+        #region kiểm tra sự tồn tại của địa chỉ
+        //Kiểm tra sự tồn tại của HOST gửi email
+        public static bool isAddressAvailable_LoadDungChung(string address)
+        {
+            Ping ping = new Ping();
+            try
+            {
+                //return ping.Send(address, 100).Status == IPStatus.Success;
+                return ping.Send(address, 10000).Status == IPStatus.Success;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        #endregion
+    }
+    #region Load lớp cho phép chỉnh sửa nhiều dòng, ô trên lưới
+    public class MultiSelectionEditingHelper
+    {
+        private GridView _View;
+        public MultiSelectionEditingHelper(GridView view)
+        {
+            _View = view;
+            _View.OptionsBehavior.EditorShowMode = EditorShowMode.MouseDownFocused;
+            _View.MouseUp += _View_MouseUp;
+            _View.CellValueChanged += new CellValueChangedEventHandler(_View_CellValueChanged);
+            _View.MouseDown += new MouseEventHandler(_View_MouseDown);
+        }
+
+        void _View_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (GetInSelectedCell(e))
+            {
+                GridHitInfo hi = _View.CalcHitInfo(e.Location);
+                if (_View.FocusedRowHandle == hi.RowHandle)
+                {
+                    _View.FocusedColumn = hi.Column;
+                    DXMouseEventArgs.GetMouseArgs(e).Handled = true;
+                }
+            }
+        }
+
+        void _View_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            OnCellValueChanged(e);
+        }
+
+        bool lockEvents;
+        private void OnCellValueChanged(CellValueChangedEventArgs e)
+        {
+            if (lockEvents)
+                return;
+            lockEvents = true;
+            SetSelectedCellsValues(e.Value);
+            lockEvents = false;
+        }
+
+        private void SetSelectedCellsValues(object value)
+        {
+            try
+            {
+                _View.BeginUpdate();
+                GridCell[] cells = _View.GetSelectedCells();
+                foreach (GridCell cell in cells)
+                {
+                    _View.SetRowCellValue(cell.RowHandle, cell.Column, value);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                _View.EndUpdate();
+            }
+
+        }
+        private bool GetInSelectedCell(MouseEventArgs e)
+        {
+            GridHitInfo hi = _View.CalcHitInfo(e.Location);
+            return hi.InRowCell && hi.InRowCell && _View.IsCellSelected(hi.RowHandle, hi.Column);
+        }
+
+        void _View_MouseUp(object sender, MouseEventArgs e)
+        {
+            bool inSelectedCell = GetInSelectedCell(e);
+            if (inSelectedCell)
+            {
+                DXMouseEventArgs.GetMouseArgs(e).Handled = true;
+                _View.ShowEditorByMouse();
+            }
+        }
+    }
+    #endregion
 }

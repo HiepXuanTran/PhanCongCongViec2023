@@ -47,13 +47,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.CV_QL_NhomCongViec_GridControl = new DevExpress.XtraGrid.GridControl();
             this.CV_QL_NhomCongViec_bandedGridView = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.CV_QL_NhomCongViecChon = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_ID = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.CV_QL_NhomCongViec_TenNhomCongViec1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_TenNhomCongViec2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_MoTa = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_GhiChu = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_XemLichSu = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.HT_USER_Create = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_DateCreate = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.HT_USER_Editor = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -61,9 +64,6 @@
             this.CV_QL_NhomCongViec_HienThi = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_SuDung = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_NhomCongViec_GridControl)).BeginInit();
@@ -179,6 +179,7 @@
             this.CV_QL_NhomCongViec_barButtonItem_In.Id = 7;
             this.CV_QL_NhomCongViec_barButtonItem_In.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_NhomCongViec_barButtonItem_In.LargeGlyph")));
             this.CV_QL_NhomCongViec_barButtonItem_In.Name = "CV_QL_NhomCongViec_barButtonItem_In";
+            this.CV_QL_NhomCongViec_barButtonItem_In.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_NhomCongViec_barButtonItem_In_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -261,6 +262,17 @@
             this.CV_QL_NhomCongViec_bandedGridView.OptionsView.ShowGroupPanel = false;
             this.CV_QL_NhomCongViec_bandedGridView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_QL_NhomCongViec_TenNhomCongViec1, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.CV_QL_NhomCongViec_bandedGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_QL_NhomCongViec_bandedGridView_PopupMenuShowing);
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.gridBand1.AppearanceHeader.Options.UseFont = true;
+            this.gridBand1.Columns.Add(this.CV_QL_NhomCongViecChon);
+            this.gridBand1.Columns.Add(this.CV_QL_NhomCongViec_ID);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 50;
             // 
             // CV_QL_NhomCongViecChon
             // 
@@ -272,6 +284,8 @@
             this.CV_QL_NhomCongViecChon.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.CV_QL_NhomCongViecChon.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_NhomCongViecChon.AppearanceHeader.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViecChon.AppearanceHeader.Options.UseTextOptions = true;
+            this.CV_QL_NhomCongViecChon.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhomCongViecChon.Caption = "Chọn";
             this.CV_QL_NhomCongViecChon.FieldName = "CV_QL_NhomCongViecChon";
             this.CV_QL_NhomCongViecChon.Name = "CV_QL_NhomCongViecChon";
@@ -290,200 +304,11 @@
             this.CV_QL_NhomCongViec_ID.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.CV_QL_NhomCongViec_ID.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_NhomCongViec_ID.AppearanceHeader.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_ID.AppearanceHeader.Options.UseTextOptions = true;
+            this.CV_QL_NhomCongViec_ID.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhomCongViec_ID.Caption = "ID";
             this.CV_QL_NhomCongViec_ID.FieldName = "CV_QL_NhomCongViec_ID";
             this.CV_QL_NhomCongViec_ID.Name = "CV_QL_NhomCongViec_ID";
-            // 
-            // CV_QL_NhomCongViec_TenNhomCongViec1
-            // 
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceCell.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceCell.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceHeader.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceHeader.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.Caption = "Tên nhóm công việc cha *";
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.FieldName = "CV_QL_NhomCongViec_TenNhomCongViec1";
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.Name = "CV_QL_NhomCongViec_TenNhomCongViec1";
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.Visible = true;
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.Width = 300;
-            // 
-            // CV_QL_NhomCongViec_TenNhomCongViec2
-            // 
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceCell.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceCell.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceHeader.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceHeader.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.Caption = "Tên nhóm công việc con *";
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.FieldName = "CV_QL_NhomCongViec_TenNhomCongViec2";
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.Name = "CV_QL_NhomCongViec_TenNhomCongViec2";
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.Visible = true;
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.Width = 232;
-            // 
-            // CV_QL_NhomCongViec_MoTa
-            // 
-            this.CV_QL_NhomCongViec_MoTa.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.CV_QL_NhomCongViec_MoTa.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
-            this.CV_QL_NhomCongViec_MoTa.AppearanceCell.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_MoTa.AppearanceCell.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_MoTa.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CV_QL_NhomCongViec_MoTa.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.CV_QL_NhomCongViec_MoTa.AppearanceHeader.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_MoTa.AppearanceHeader.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_MoTa.Caption = "Mô tả";
-            this.CV_QL_NhomCongViec_MoTa.FieldName = "CV_QL_NhomCongViec_MoTa";
-            this.CV_QL_NhomCongViec_MoTa.Name = "CV_QL_NhomCongViec_MoTa";
-            this.CV_QL_NhomCongViec_MoTa.Visible = true;
-            this.CV_QL_NhomCongViec_MoTa.Width = 232;
-            // 
-            // CV_QL_NhomCongViec_GhiChu
-            // 
-            this.CV_QL_NhomCongViec_GhiChu.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.CV_QL_NhomCongViec_GhiChu.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
-            this.CV_QL_NhomCongViec_GhiChu.AppearanceCell.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_GhiChu.AppearanceCell.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_GhiChu.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CV_QL_NhomCongViec_GhiChu.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.CV_QL_NhomCongViec_GhiChu.AppearanceHeader.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_GhiChu.AppearanceHeader.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_GhiChu.Caption = "Ghi chú";
-            this.CV_QL_NhomCongViec_GhiChu.FieldName = "CV_QL_NhomCongViec_GhiChu";
-            this.CV_QL_NhomCongViec_GhiChu.Name = "CV_QL_NhomCongViec_GhiChu";
-            this.CV_QL_NhomCongViec_GhiChu.Visible = true;
-            this.CV_QL_NhomCongViec_GhiChu.Width = 248;
-            // 
-            // CV_QL_NhomCongViec_XemLichSu
-            // 
-            this.CV_QL_NhomCongViec_XemLichSu.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
-            this.CV_QL_NhomCongViec_XemLichSu.AppearanceCell.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_XemLichSu.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CV_QL_NhomCongViec_XemLichSu.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.CV_QL_NhomCongViec_XemLichSu.AppearanceHeader.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_XemLichSu.AppearanceHeader.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_XemLichSu.Caption = "Xem lịch sử";
-            this.CV_QL_NhomCongViec_XemLichSu.Name = "CV_QL_NhomCongViec_XemLichSu";
-            this.CV_QL_NhomCongViec_XemLichSu.Width = 106;
-            // 
-            // HT_USER_Create
-            // 
-            this.HT_USER_Create.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.HT_USER_Create.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
-            this.HT_USER_Create.AppearanceCell.Options.UseFont = true;
-            this.HT_USER_Create.AppearanceCell.Options.UseForeColor = true;
-            this.HT_USER_Create.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HT_USER_Create.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.HT_USER_Create.AppearanceHeader.Options.UseFont = true;
-            this.HT_USER_Create.AppearanceHeader.Options.UseForeColor = true;
-            this.HT_USER_Create.Caption = "ID Người tạo";
-            this.HT_USER_Create.FieldName = "HT_USER_Create";
-            this.HT_USER_Create.Name = "HT_USER_Create";
-            this.HT_USER_Create.Width = 114;
-            // 
-            // CV_QL_NhomCongViec_DateCreate
-            // 
-            this.CV_QL_NhomCongViec_DateCreate.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.CV_QL_NhomCongViec_DateCreate.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
-            this.CV_QL_NhomCongViec_DateCreate.AppearanceCell.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_DateCreate.AppearanceCell.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_DateCreate.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CV_QL_NhomCongViec_DateCreate.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.CV_QL_NhomCongViec_DateCreate.AppearanceHeader.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_DateCreate.AppearanceHeader.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_DateCreate.Caption = "Ngày tạo";
-            this.CV_QL_NhomCongViec_DateCreate.FieldName = "CV_QL_NhomCongViec_DateCreate";
-            this.CV_QL_NhomCongViec_DateCreate.Name = "CV_QL_NhomCongViec_DateCreate";
-            this.CV_QL_NhomCongViec_DateCreate.Width = 114;
-            // 
-            // HT_USER_Editor
-            // 
-            this.HT_USER_Editor.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.HT_USER_Editor.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
-            this.HT_USER_Editor.AppearanceCell.Options.UseFont = true;
-            this.HT_USER_Editor.AppearanceCell.Options.UseForeColor = true;
-            this.HT_USER_Editor.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HT_USER_Editor.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.HT_USER_Editor.AppearanceHeader.Options.UseFont = true;
-            this.HT_USER_Editor.AppearanceHeader.Options.UseForeColor = true;
-            this.HT_USER_Editor.Caption = "ID Người sửa";
-            this.HT_USER_Editor.FieldName = "HT_USER_Editor";
-            this.HT_USER_Editor.Name = "HT_USER_Editor";
-            this.HT_USER_Editor.Width = 114;
-            // 
-            // CV_QL_NhomCongViec_DateEditor
-            // 
-            this.CV_QL_NhomCongViec_DateEditor.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.CV_QL_NhomCongViec_DateEditor.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
-            this.CV_QL_NhomCongViec_DateEditor.AppearanceCell.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_DateEditor.AppearanceCell.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_DateEditor.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CV_QL_NhomCongViec_DateEditor.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.CV_QL_NhomCongViec_DateEditor.AppearanceHeader.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_DateEditor.AppearanceHeader.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_DateEditor.Caption = "Ngày sửa";
-            this.CV_QL_NhomCongViec_DateEditor.FieldName = "CV_QL_NhomCongViec_DateEditor";
-            this.CV_QL_NhomCongViec_DateEditor.Name = "CV_QL_NhomCongViec_DateEditor";
-            this.CV_QL_NhomCongViec_DateEditor.Width = 114;
-            // 
-            // CV_QL_NhomCongViec_HienThi
-            // 
-            this.CV_QL_NhomCongViec_HienThi.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.CV_QL_NhomCongViec_HienThi.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
-            this.CV_QL_NhomCongViec_HienThi.AppearanceCell.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_HienThi.AppearanceCell.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_HienThi.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CV_QL_NhomCongViec_HienThi.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.CV_QL_NhomCongViec_HienThi.AppearanceHeader.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_HienThi.AppearanceHeader.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_HienThi.Caption = "Hiển Thị";
-            this.CV_QL_NhomCongViec_HienThi.FieldName = "CV_QL_NhomCongViec_HienThi";
-            this.CV_QL_NhomCongViec_HienThi.Name = "CV_QL_NhomCongViec_HienThi";
-            this.CV_QL_NhomCongViec_HienThi.Width = 114;
-            // 
-            // CV_QL_NhomCongViec_SuDung
-            // 
-            this.CV_QL_NhomCongViec_SuDung.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.CV_QL_NhomCongViec_SuDung.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
-            this.CV_QL_NhomCongViec_SuDung.AppearanceCell.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_SuDung.AppearanceCell.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_SuDung.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CV_QL_NhomCongViec_SuDung.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.CV_QL_NhomCongViec_SuDung.AppearanceHeader.Options.UseFont = true;
-            this.CV_QL_NhomCongViec_SuDung.AppearanceHeader.Options.UseForeColor = true;
-            this.CV_QL_NhomCongViec_SuDung.Caption = "Người tương tác";
-            this.CV_QL_NhomCongViec_SuDung.FieldName = "CV_QL_NhomCongViec_SuDung";
-            this.CV_QL_NhomCongViec_SuDung.Name = "CV_QL_NhomCongViec_SuDung";
-            this.CV_QL_NhomCongViec_SuDung.Width = 139;
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.Class = "";
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelX1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.labelX1.Location = new System.Drawing.Point(0, 0);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(1188, 49);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "<div align = \"center\">QUẢN LÝ NHÓM CÔNG VIỆC</div>";
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.gridBand1.AppearanceHeader.Options.UseFont = true;
-            this.gridBand1.Columns.Add(this.CV_QL_NhomCongViecChon);
-            this.gridBand1.Columns.Add(this.CV_QL_NhomCongViec_ID);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 50;
             // 
             // gridBand3
             // 
@@ -507,6 +332,92 @@
             this.gridBand3.Name = "gridBand3";
             this.gridBand3.VisibleIndex = 1;
             this.gridBand3.Width = 1012;
+            // 
+            // CV_QL_NhomCongViec_TenNhomCongViec1
+            // 
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceCell.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceHeader.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceHeader.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceHeader.Options.UseTextOptions = true;
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.Caption = "Tên nhóm công việc cha *";
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.FieldName = "CV_QL_NhomCongViec_TenNhomCongViec1";
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.Name = "CV_QL_NhomCongViec_TenNhomCongViec1";
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.Visible = true;
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.Width = 300;
+            // 
+            // CV_QL_NhomCongViec_TenNhomCongViec2
+            // 
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceCell.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceHeader.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceHeader.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceHeader.Options.UseTextOptions = true;
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.Caption = "Tên nhóm công việc con *";
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.FieldName = "CV_QL_NhomCongViec_TenNhomCongViec2";
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.Name = "CV_QL_NhomCongViec_TenNhomCongViec2";
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.Visible = true;
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.Width = 232;
+            // 
+            // CV_QL_NhomCongViec_MoTa
+            // 
+            this.CV_QL_NhomCongViec_MoTa.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.CV_QL_NhomCongViec_MoTa.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhomCongViec_MoTa.AppearanceCell.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_MoTa.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_MoTa.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_NhomCongViec_MoTa.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhomCongViec_MoTa.AppearanceHeader.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_MoTa.AppearanceHeader.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_MoTa.AppearanceHeader.Options.UseTextOptions = true;
+            this.CV_QL_NhomCongViec_MoTa.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_QL_NhomCongViec_MoTa.Caption = "Mô tả";
+            this.CV_QL_NhomCongViec_MoTa.FieldName = "CV_QL_NhomCongViec_MoTa";
+            this.CV_QL_NhomCongViec_MoTa.Name = "CV_QL_NhomCongViec_MoTa";
+            this.CV_QL_NhomCongViec_MoTa.Visible = true;
+            this.CV_QL_NhomCongViec_MoTa.Width = 232;
+            // 
+            // CV_QL_NhomCongViec_GhiChu
+            // 
+            this.CV_QL_NhomCongViec_GhiChu.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.CV_QL_NhomCongViec_GhiChu.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhomCongViec_GhiChu.AppearanceCell.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_GhiChu.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_GhiChu.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_NhomCongViec_GhiChu.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhomCongViec_GhiChu.AppearanceHeader.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_GhiChu.AppearanceHeader.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_GhiChu.AppearanceHeader.Options.UseTextOptions = true;
+            this.CV_QL_NhomCongViec_GhiChu.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_QL_NhomCongViec_GhiChu.Caption = "Ghi chú";
+            this.CV_QL_NhomCongViec_GhiChu.FieldName = "CV_QL_NhomCongViec_GhiChu";
+            this.CV_QL_NhomCongViec_GhiChu.Name = "CV_QL_NhomCongViec_GhiChu";
+            this.CV_QL_NhomCongViec_GhiChu.Visible = true;
+            this.CV_QL_NhomCongViec_GhiChu.Width = 248;
+            // 
+            // CV_QL_NhomCongViec_XemLichSu
+            // 
+            this.CV_QL_NhomCongViec_XemLichSu.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhomCongViec_XemLichSu.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_XemLichSu.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_NhomCongViec_XemLichSu.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhomCongViec_XemLichSu.AppearanceHeader.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_XemLichSu.AppearanceHeader.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_XemLichSu.AppearanceHeader.Options.UseTextOptions = true;
+            this.CV_QL_NhomCongViec_XemLichSu.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_QL_NhomCongViec_XemLichSu.Caption = "Xem lịch sử";
+            this.CV_QL_NhomCongViec_XemLichSu.Name = "CV_QL_NhomCongViec_XemLichSu";
+            this.CV_QL_NhomCongViec_XemLichSu.Width = 106;
             // 
             // gridBand2
             // 
@@ -532,6 +443,123 @@
             this.gridBand2.VisibleIndex = -1;
             this.gridBand2.Width = 139;
             // 
+            // HT_USER_Create
+            // 
+            this.HT_USER_Create.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.HT_USER_Create.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.HT_USER_Create.AppearanceCell.Options.UseFont = true;
+            this.HT_USER_Create.AppearanceCell.Options.UseForeColor = true;
+            this.HT_USER_Create.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HT_USER_Create.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.HT_USER_Create.AppearanceHeader.Options.UseFont = true;
+            this.HT_USER_Create.AppearanceHeader.Options.UseForeColor = true;
+            this.HT_USER_Create.AppearanceHeader.Options.UseTextOptions = true;
+            this.HT_USER_Create.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.HT_USER_Create.Caption = "ID Người tạo";
+            this.HT_USER_Create.FieldName = "HT_USER_Create";
+            this.HT_USER_Create.Name = "HT_USER_Create";
+            this.HT_USER_Create.Width = 114;
+            // 
+            // CV_QL_NhomCongViec_DateCreate
+            // 
+            this.CV_QL_NhomCongViec_DateCreate.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.CV_QL_NhomCongViec_DateCreate.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhomCongViec_DateCreate.AppearanceCell.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_DateCreate.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_DateCreate.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_NhomCongViec_DateCreate.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhomCongViec_DateCreate.AppearanceHeader.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_DateCreate.AppearanceHeader.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_DateCreate.AppearanceHeader.Options.UseTextOptions = true;
+            this.CV_QL_NhomCongViec_DateCreate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_QL_NhomCongViec_DateCreate.Caption = "Ngày tạo";
+            this.CV_QL_NhomCongViec_DateCreate.FieldName = "CV_QL_NhomCongViec_DateCreate";
+            this.CV_QL_NhomCongViec_DateCreate.Name = "CV_QL_NhomCongViec_DateCreate";
+            this.CV_QL_NhomCongViec_DateCreate.Width = 114;
+            // 
+            // HT_USER_Editor
+            // 
+            this.HT_USER_Editor.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.HT_USER_Editor.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.HT_USER_Editor.AppearanceCell.Options.UseFont = true;
+            this.HT_USER_Editor.AppearanceCell.Options.UseForeColor = true;
+            this.HT_USER_Editor.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HT_USER_Editor.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.HT_USER_Editor.AppearanceHeader.Options.UseFont = true;
+            this.HT_USER_Editor.AppearanceHeader.Options.UseForeColor = true;
+            this.HT_USER_Editor.AppearanceHeader.Options.UseTextOptions = true;
+            this.HT_USER_Editor.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.HT_USER_Editor.Caption = "ID Người sửa";
+            this.HT_USER_Editor.FieldName = "HT_USER_Editor";
+            this.HT_USER_Editor.Name = "HT_USER_Editor";
+            this.HT_USER_Editor.Width = 114;
+            // 
+            // CV_QL_NhomCongViec_DateEditor
+            // 
+            this.CV_QL_NhomCongViec_DateEditor.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.CV_QL_NhomCongViec_DateEditor.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhomCongViec_DateEditor.AppearanceCell.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_DateEditor.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_DateEditor.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_NhomCongViec_DateEditor.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhomCongViec_DateEditor.AppearanceHeader.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_DateEditor.AppearanceHeader.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_DateEditor.AppearanceHeader.Options.UseTextOptions = true;
+            this.CV_QL_NhomCongViec_DateEditor.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_QL_NhomCongViec_DateEditor.Caption = "Ngày sửa";
+            this.CV_QL_NhomCongViec_DateEditor.FieldName = "CV_QL_NhomCongViec_DateEditor";
+            this.CV_QL_NhomCongViec_DateEditor.Name = "CV_QL_NhomCongViec_DateEditor";
+            this.CV_QL_NhomCongViec_DateEditor.Width = 114;
+            // 
+            // CV_QL_NhomCongViec_HienThi
+            // 
+            this.CV_QL_NhomCongViec_HienThi.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.CV_QL_NhomCongViec_HienThi.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhomCongViec_HienThi.AppearanceCell.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_HienThi.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_HienThi.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_NhomCongViec_HienThi.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhomCongViec_HienThi.AppearanceHeader.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_HienThi.AppearanceHeader.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_HienThi.AppearanceHeader.Options.UseTextOptions = true;
+            this.CV_QL_NhomCongViec_HienThi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_QL_NhomCongViec_HienThi.Caption = "Hiển Thị";
+            this.CV_QL_NhomCongViec_HienThi.FieldName = "CV_QL_NhomCongViec_HienThi";
+            this.CV_QL_NhomCongViec_HienThi.Name = "CV_QL_NhomCongViec_HienThi";
+            this.CV_QL_NhomCongViec_HienThi.Width = 114;
+            // 
+            // CV_QL_NhomCongViec_SuDung
+            // 
+            this.CV_QL_NhomCongViec_SuDung.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.CV_QL_NhomCongViec_SuDung.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhomCongViec_SuDung.AppearanceCell.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_SuDung.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_SuDung.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_NhomCongViec_SuDung.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhomCongViec_SuDung.AppearanceHeader.Options.UseFont = true;
+            this.CV_QL_NhomCongViec_SuDung.AppearanceHeader.Options.UseForeColor = true;
+            this.CV_QL_NhomCongViec_SuDung.AppearanceHeader.Options.UseTextOptions = true;
+            this.CV_QL_NhomCongViec_SuDung.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_QL_NhomCongViec_SuDung.Caption = "Người tương tác";
+            this.CV_QL_NhomCongViec_SuDung.FieldName = "CV_QL_NhomCongViec_SuDung";
+            this.CV_QL_NhomCongViec_SuDung.Name = "CV_QL_NhomCongViec_SuDung";
+            this.CV_QL_NhomCongViec_SuDung.Width = 139;
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.Class = "";
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelX1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelX1.Location = new System.Drawing.Point(0, 0);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(1188, 49);
+            this.labelX1.TabIndex = 0;
+            this.labelX1.Text = "<div align = \"center\">QUẢN LÝ NHÓM CÔNG VIỆC</div>";
+            // 
             // frmCV_QL_NhomCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -542,6 +570,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCV_QL_NhomCongViec";
             this.Text = "Quản lý nhóm công việc";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

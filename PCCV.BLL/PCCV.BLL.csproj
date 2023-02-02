@@ -42,9 +42,13 @@
   <ItemGroup>
     <Compile Include="CV_HT_LoaiCongViecBLL.cs" />
     <Compile Include="CV_HT_MucDoKhoBLL.cs" />
+    <Compile Include="CV_HT_UuTienCongViecBLL.cs" />
+    <Compile Include="CV_HT_VaiTroCongViecBLL.cs" />
     <Compile Include="CV_QL_CongViecBLL.cs" />
     <Compile Include="CV_QL_NhomCongViecBLL.cs" />
+    <Compile Include="CV_QL_PhanCongCongViecNhanSuBLL.cs" />
     <Compile Include="CV_TD_LichSuCongViecBLL.cs" />
+    <Compile Include="CV_TT_ChiTietCongViecBLL.cs" />
     <Compile Include="CV_TT_NhanSuBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

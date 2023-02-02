@@ -1,4 +1,4 @@
-﻿namespace PhanCongCongViec.form.Hệ_thống
+﻿namespace PhanCongCongViec.form.HeThong
 {
     partial class frmCV_HT_LoaiCongViec
     {
@@ -113,6 +113,7 @@
             this.CV_HT_LoaiCongViec_BandedGridView.OptionsView.ShowGroupPanel = false;
             this.CV_HT_LoaiCongViec_BandedGridView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_HT_LoaiCongViec_TenLoaiCongViec, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.CV_HT_LoaiCongViec_BandedGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_HT_LoaiCongViec_BandedGridView_PopupMenuShowing);
             // 
             // gridBand1
             // 
@@ -421,6 +422,7 @@
             this.CV_HT_LoaiCongViec_barButtonItem_In.Id = 6;
             this.CV_HT_LoaiCongViec_barButtonItem_In.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_HT_LoaiCongViec_barButtonItem_In.LargeGlyph")));
             this.CV_HT_LoaiCongViec_barButtonItem_In.Name = "CV_HT_LoaiCongViec_barButtonItem_In";
+            this.CV_HT_LoaiCongViec_barButtonItem_In.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_HT_LoaiCongViec_barButtonItem_In_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -460,6 +462,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCV_HT_LoaiCongViec";
             this.Text = "Quản lý loại công việc";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

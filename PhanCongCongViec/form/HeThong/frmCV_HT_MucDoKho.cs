@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using System.IO;
 using PCCV.Public;
 using PCCV.BLL;
+using DevExpress.XtraGrid.Menu;
+using DevExpress.Utils.Menu;
 
 namespace PhanCongCongViec.form.HeThong
 {
@@ -17,10 +19,52 @@ namespace PhanCongCongViec.form.HeThong
         public frmCV_HT_MucDoKho()
         {
             InitializeComponent();
+            new MultiSelectionEditingHelper(CV_HT_MucDoKho_BandedGridView);
         }
         bool CV_HT_MucDoKhoAdd = false;
         bool CV_HT_MucDoKhoEdit = false;
         CV_HT_MucDoKhoBLL clsMucDoKho = new CV_HT_MucDoKhoBLL();
+
+        #region Cho phép thực hiện thao tác CLICK phải chuột
+
+        void Check_All_Click(object sender, EventArgs e)
+        {
+            CV_HT_MucDoKho_BandedGridView.ClearSelection();
+            CV_HT_MucDoKho_BandedGridView.FocusedColumn = CV_HT_MucDoKho_BandedGridView.Columns["CV_HT_MucDoKho_DoKhoCongViec"];
+
+            CV_HT_MucDoKho_BandedGridView.MoveFirst();
+            for (int i = 0; i < CV_HT_MucDoKho_BandedGridView.RowCount; i++)
+            {
+                CV_HT_MucDoKho_BandedGridView.SetFocusedRowCellValue(CV_HT_MucDoKhoChon, true);
+                CV_HT_MucDoKho_BandedGridView.MoveNext();
+            }
+            CV_HT_MucDoKho_BandedGridView.MoveFirst();
+        }
+        void No_Check_All_Click(object sender, EventArgs e)
+        {
+            CV_HT_MucDoKho_BandedGridView.ClearSelection();
+            CV_HT_MucDoKho_BandedGridView.FocusedColumn = CV_HT_MucDoKho_BandedGridView.Columns["CV_HT_MucDoKho_DoKhoCongViec"];
+
+            CV_HT_MucDoKho_BandedGridView.MoveFirst();
+            for (int i = 0; i < CV_HT_MucDoKho_BandedGridView.RowCount; i++)
+            {
+                CV_HT_MucDoKho_BandedGridView.SetFocusedRowCellValue(CV_HT_MucDoKhoChon, false);
+                CV_HT_MucDoKho_BandedGridView.MoveNext();
+            }
+            CV_HT_MucDoKho_BandedGridView.MoveFirst();
+        }
+        //void Ghim_Trai_Click(object sender, EventArgs e)
+        //{
+        //    if (gridBand_Chung.Fixed == FixedStyle.Left)
+        //    {
+        //        gridBand_Chung.Fixed = FixedStyle.None;
+        //    }
+        //    else
+        //    {
+        //        gridBand_Chung.Fixed = FixedStyle.Left;
+        //    }
+        //}
+        #endregion
         /* 
          
          public void UnVisibleControls()
@@ -388,6 +432,39 @@ namespace PhanCongCongViec.form.HeThong
             CV_HT_MucDoKhoEdit = false;
             Lock_Unlock_Control(true); // lock nut luu vs undo
             Lock_Unlock_Control_Input(false); //Khóa điều khiển nhập dữ liệu
+        }
+
+        private void CV_HT_MucDoKho_barButtonItem_In_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadHamDungChung.PreviewPrintableComponent(CV_HT_MucDoKho_GridControl, CV_HT_MucDoKho_GridControl.LookAndFeel);
+        }
+
+        private void CV_HT_MucDoKho_BandedGridView_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+            if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Row)
+            {
+                GridViewMenu menu = e.Menu as GridViewMenu;
+                menu.Items.Clear();
+
+                DXMenuItem Check_All = new DXMenuItem("Check All (Chọn)"); // caption menu
+                //itemReload.Image = ImgCollection.Images["refresh2_16x16.png"]; // icon cho menu
+                Check_All.Shortcut = Shortcut.Ctrl1; // phím tắt
+                Check_All.Click += new EventHandler(Check_All_Click);// thêm sự kiện click
+                menu.Items.Add(Check_All);
+
+                DXMenuItem No_Check_All = new DXMenuItem("UnCheck All (Chọn)");
+                //No_Check_All.BeginGroup = true;
+                //itemAdd.Image = ImgCollection.Images["new_16x16.png"];
+                No_Check_All.Shortcut = Shortcut.Ctrl2;
+                No_Check_All.Click += new EventHandler(No_Check_All_Click);
+                menu.Items.Add(No_Check_All);
+
+                //DXMenuItem Ghim_Trai = new DXMenuItem("Ghim/Nhả ghim nhóm cột bên trái");
+                //Ghim_Trai.Shortcut = Shortcut.Ctrl3;
+                //Ghim_Trai.Click += new EventHandler(Ghim_Trai_Click);
+                //menu.Items.Add(Ghim_Trai);
+
+            }
         }
 
 

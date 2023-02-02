@@ -35,9 +35,9 @@ namespace PCCV.Public
             get { return _CV_TT_NhanSu_DonVi; }
             set { _CV_TT_NhanSu_DonVi = value; }
         }
-        private string _CV_TT_NhanSu_NhomThucHien;
+        private int? _CV_TT_NhanSu_NhomThucHien;
 
-        public string CV_TT_NhanSu_NhomThucHien
+        public int? CV_TT_NhanSu_NhomThucHien
         {
             get { return _CV_TT_NhanSu_NhomThucHien; }
             set { _CV_TT_NhanSu_NhomThucHien = value; }
