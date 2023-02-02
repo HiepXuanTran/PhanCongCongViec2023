@@ -122,6 +122,8 @@
             this.CV_TT_NhanSu_BandedGridview.GridControl = this.CV_TT_NhanSu_GridControl;
             this.CV_TT_NhanSu_BandedGridview.Name = "CV_TT_NhanSu_BandedGridview";
             this.CV_TT_NhanSu_BandedGridview.OptionsBehavior.AutoExpandAllGroups = true;
+            this.CV_TT_NhanSu_BandedGridview.OptionsSelection.MultiSelect = true;
+            this.CV_TT_NhanSu_BandedGridview.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
             this.CV_TT_NhanSu_BandedGridview.OptionsView.ShowFooter = true;
             this.CV_TT_NhanSu_BandedGridview.OptionsView.ShowGroupPanel = false;
             this.CV_TT_NhanSu_BandedGridview.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_TT_NhanSu_BandedGridview_PopupMenuShowing);

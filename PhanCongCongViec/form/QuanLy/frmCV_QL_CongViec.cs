@@ -111,12 +111,51 @@ namespace PhanCongCongViec.form.QuanLy
             CV_QL_CongViec_BandedGridview.ClearSelection();
             CV_QL_CongViec_BandedGridview.FocusedColumn = CV_QL_CongViec_BandedGridview.Columns[tencot];
         }
-        #region Cho phép thực hiện thao tác CLICK phải chuột
+        //#region Cho phép thực hiện thao tác CLICK phải chuột
+
+        //void Check_All_Click(object sender, EventArgs e)
+        //{
+        //    CV_QL_CongViec_BandedGridview.ClearSelection();
+        //    CV_QL_CongViec_BandedGridview.FocusedColumn = CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_TenLoaiCongViec"];
+
+        //    CV_QL_CongViec_BandedGridview.MoveFirst();
+        //    for (int i = 0; i < CV_QL_CongViec_BandedGridview.RowCount; i++)
+        //    {
+        //        CV_QL_CongViec_BandedGridview.SetFocusedRowCellValue(CV_QL_CongViecChon, true);
+        //        CV_QL_CongViec_BandedGridview.MoveNext();
+        //    }
+        //    CV_QL_CongViec_BandedGridview.MoveFirst();
+        //}
+        //void No_Check_All_Click(object sender, EventArgs e)
+        //{
+        //    CV_QL_CongViec_BandedGridview.ClearSelection();
+        //    CV_QL_CongViec_BandedGridview.FocusedColumn = CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_TenLoaiCongViec"];
+
+        //    CV_QL_CongViec_BandedGridview.MoveFirst();
+        //    for (int i = 0; i < CV_QL_CongViec_BandedGridview.RowCount; i++)
+        //    {
+        //        CV_QL_CongViec_BandedGridview.SetFocusedRowCellValue(CV_QL_CongViecChon, false);
+        //        CV_QL_CongViec_BandedGridview.MoveNext();
+        //    }
+        //    CV_QL_CongViec_BandedGridview.MoveFirst();
+        //}
+        //void Ghim_Trai_Click(object sender, EventArgs e)
+        //{
+        //    if (gridBandChung.Fixed == FixedStyle.Left)
+        //    {
+        //        gridBandChung.Fixed = FixedStyle.None;
+        //    }
+        //    else
+        //    {
+        //        gridBandChung.Fixed = FixedStyle.Left;
+        //    }
+        //}
+        //#endregion#region Cho phép thực hiện thao tác CLICK phải chuột
 
         void Check_All_Click(object sender, EventArgs e)
         {
             CV_QL_CongViec_BandedGridview.ClearSelection();
-            CV_QL_CongViec_BandedGridview.FocusedColumn = CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_TenLoaiCongViec"];
+            CV_QL_CongViec_BandedGridview.FocusedColumn = CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViecChon"];
 
             CV_QL_CongViec_BandedGridview.MoveFirst();
             for (int i = 0; i < CV_QL_CongViec_BandedGridview.RowCount; i++)
@@ -129,7 +168,7 @@ namespace PhanCongCongViec.form.QuanLy
         void No_Check_All_Click(object sender, EventArgs e)
         {
             CV_QL_CongViec_BandedGridview.ClearSelection();
-            CV_QL_CongViec_BandedGridview.FocusedColumn = CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_TenLoaiCongViec"];
+            CV_QL_CongViec_BandedGridview.FocusedColumn = CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViecChon"];
 
             CV_QL_CongViec_BandedGridview.MoveFirst();
             for (int i = 0; i < CV_QL_CongViec_BandedGridview.RowCount; i++)
@@ -150,7 +189,6 @@ namespace PhanCongCongViec.form.QuanLy
                 gridBandChung.Fixed = FixedStyle.Left;
             }
         }
-        #endregion
 
         private void Lock_Unlock_Control_Input(bool Lock_Control) //Khóa và mở khóa điều khiển nhập dữ liệu
         {
@@ -160,7 +198,6 @@ namespace PhanCongCongViec.form.QuanLy
                 this.CV_QL_CongViec_TenNhomCongViec1.OptionsColumn.ReadOnly = !Lock_Control;
                 this.CV_QL_CongViec_TenNhomCongViec2.OptionsColumn.ReadOnly = !Lock_Control;
                 this.CV_QL_CongViec_TenCongViec.OptionsColumn.ReadOnly = !Lock_Control;
-                this.CV_QL_CongViec_ChiTietCongViec.OptionsColumn.ReadOnly = Lock_Control;
                 this.CV_QL_CongViec_MoTaCongViec.OptionsColumn.ReadOnly = !Lock_Control;
                 this.CV_QL_CongViec_NhomThucHien.OptionsColumn.ReadOnly = !Lock_Control;
                 this.CV_QL_CongViec_KhaNangChuyenMon.OptionsColumn.ReadOnly = !Lock_Control;
@@ -342,6 +379,7 @@ namespace PhanCongCongViec.form.QuanLy
 
             // load form nhan su
             CV_QL_CongViec_GridControl.DataSource = cls.LoadCV_QL_CongViec();
+            this.CV_QL_CongViec_ChiTietCongViec.OptionsColumn.ReadOnly = true;
             CV_QL_CongViec_barButtonItem_Luu.Enabled = false;
             CV_QL_CongViec_barButtonItem_Undo.Enabled = false;
             Lock_Unlock_Control_Input(false); // lock input

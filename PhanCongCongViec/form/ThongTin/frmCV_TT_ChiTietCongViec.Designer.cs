@@ -36,6 +36,7 @@
             this.CV_TT_ChiTietCongViecChon = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.CV_TT_ChiTietCongViec_TenCongViec = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.CV_TT_ChiTietCongViec_CacBuocCongViec = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_TT_ChiTietCongViec_MoTaBuocCongViec = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_TT_ChiTietCongViec_ID = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -78,6 +79,7 @@
             this.CV_TT_ChiTietCongViec_SaveFileDinhKem = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_GridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_BandedGridview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_btnEdit_TenFile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_ComboboxEdit_MucDoKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -103,7 +105,8 @@
             this.CV_QL_CongViec_LookupEdit_NhomCongViec,
             this.CV_QL_CongViec_LookupEdit_NhomCongViec2,
             this.CV_QL_CongViec_ComboboxEdit_MucDoKho,
-            this.CV_TT_ChiTietCongViec_btnEdit_TenFile});
+            this.CV_TT_ChiTietCongViec_btnEdit_TenFile,
+            this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec});
             this.CV_TT_ChiTietCongViec_GridControl.Size = new System.Drawing.Size(1653, 529);
             this.CV_TT_ChiTietCongViec_GridControl.TabIndex = 1;
             this.CV_TT_ChiTietCongViec_GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -137,6 +140,8 @@
             this.CV_TT_ChiTietCongViec_BandedGridview.GridControl = this.CV_TT_ChiTietCongViec_GridControl;
             this.CV_TT_ChiTietCongViec_BandedGridview.Name = "CV_TT_ChiTietCongViec_BandedGridview";
             this.CV_TT_ChiTietCongViec_BandedGridview.OptionsBehavior.AutoExpandAllGroups = true;
+            this.CV_TT_ChiTietCongViec_BandedGridview.OptionsSelection.MultiSelect = true;
+            this.CV_TT_ChiTietCongViec_BandedGridview.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
             this.CV_TT_ChiTietCongViec_BandedGridview.OptionsView.ShowFooter = true;
             this.CV_TT_ChiTietCongViec_BandedGridview.OptionsView.ShowGroupPanel = false;
             this.CV_TT_ChiTietCongViec_BandedGridview.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_TT_ChiTietCongViec_BandedGridview_PopupMenuShowing);
@@ -194,10 +199,18 @@
             this.CV_TT_ChiTietCongViec_TenCongViec.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_TT_ChiTietCongViec_TenCongViec.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_TT_ChiTietCongViec_TenCongViec.Caption = "Tên Công Việc *";
+            this.CV_TT_ChiTietCongViec_TenCongViec.ColumnEdit = this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec;
             this.CV_TT_ChiTietCongViec_TenCongViec.FieldName = "CV_TT_ChiTietCongViec_TenCongViec";
             this.CV_TT_ChiTietCongViec_TenCongViec.Name = "CV_TT_ChiTietCongViec_TenCongViec";
             this.CV_TT_ChiTietCongViec_TenCongViec.Visible = true;
             this.CV_TT_ChiTietCongViec_TenCongViec.Width = 81;
+            // 
+            // CV_TT_ChiTietCongViec_lookupEdit_TenCongViec
+            // 
+            this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.AutoHeight = false;
+            this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.Name = "CV_TT_ChiTietCongViec_lookupEdit_TenCongViec";
             // 
             // CV_TT_ChiTietCongViec_CacBuocCongViec
             // 
@@ -258,7 +271,7 @@
             this.gridBand3.Columns.Add(this.CV_TT_ChiTietCongViec_FileDinhKem);
             this.gridBand3.Name = "gridBand3";
             this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 156;
+            this.gridBand3.Width = 75;
             // 
             // CV_TT_ChiTietCongViec_TenFile
             // 
@@ -297,7 +310,6 @@
             this.CV_TT_ChiTietCongViec_FileDinhKem.Caption = "File đính kèm";
             this.CV_TT_ChiTietCongViec_FileDinhKem.FieldName = "CV_TT_ChiTietCongViec_FileDinhKem";
             this.CV_TT_ChiTietCongViec_FileDinhKem.Name = "CV_TT_ChiTietCongViec_FileDinhKem";
-            this.CV_TT_ChiTietCongViec_FileDinhKem.Visible = true;
             this.CV_TT_ChiTietCongViec_FileDinhKem.Width = 81;
             // 
             // gridBand5
@@ -558,6 +570,7 @@
             this.CV_TT_ChiTietCongViec_barButtonItem_DownloadDinhKem.Id = 6;
             this.CV_TT_ChiTietCongViec_barButtonItem_DownloadDinhKem.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_TT_ChiTietCongViec_barButtonItem_DownloadDinhKem.LargeGlyph")));
             this.CV_TT_ChiTietCongViec_barButtonItem_DownloadDinhKem.Name = "CV_TT_ChiTietCongViec_barButtonItem_DownloadDinhKem";
+            this.CV_TT_ChiTietCongViec_barButtonItem_DownloadDinhKem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_TT_ChiTietCongViec_barButtonItem_DownloadDinhKem_ItemClick);
             // 
             // CV_TT_ChiTietCongViec_barButtonItem_In
             // 
@@ -674,6 +687,7 @@
             this.Load += new System.EventHandler(this.frmCV_TT_ChiTietCongViec_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_GridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_BandedGridview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_btnEdit_TenFile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_ComboboxEdit_MucDoKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -730,10 +744,11 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private System.Windows.Forms.SaveFileDialog CV_TT_ChiTietCongViec_SaveFileDinhKem;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_TT_ChiTietCongViec_CacBuocCongViec;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit CV_TT_ChiTietCongViec_btnEdit_TenFile;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_TT_ChiTietCongViec_lookupEdit_TenCongViec;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit CV_TT_ChiTietCongViec_btnEdit_TenFile;
     }
 }

@@ -17,11 +17,17 @@ namespace PCCV.Data
 
         public int CV_HT_UuTienCongViec_Del(CV_HT_UuTienCongViecPublic Public)
         {
-            int thamso = 1;
+            int thamso = 4;
             string[] bien = new string[thamso];
             object[] giatri = new object[thamso];
             bien[0] = "@CV_HT_UuTienCongViec_ID";
+            bien[1] = "@CV_HT_UuTienCongViec_DateEditor";
+            bien[2] = "@HT_USER_Editor";
+            bien[3] = "@CV_HT_UuTienCongViec_SuDung";
             giatri[0] = Public.CV_HT_UuTienCongViec_ID;
+            giatri[1] = Public.CV_HT_UuTienCongViec_DateEditor;
+            giatri[2] = Public.HT_USER_Editor;
+            giatri[3] = Public.CV_HT_UuTienCongViec_SuDung;
             return cls.Update("CV_HT_UuTienCongViec_Del", bien, giatri, thamso);
         }
         public int CV_HT_UuTienCongViec_Add(CV_HT_UuTienCongViecPublic Public)

@@ -110,7 +110,6 @@
     <Compile Include="form\ThongTin\frmCV_TT_NhanSu.Designer.cs">
       <DependentUpon>frmCV_TT_NhanSu.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\ThongTin\menu.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -18,12 +18,29 @@ namespace PCCV.Data
        
         public int CV_TT_ChiTietCongViec_Del(CV_TT_ChiTietCongViecPublic Public)
         {
-            int thamso = 1;
+            int thamso = 5;
             string[] bien = new string[thamso];
             object[] giatri = new object[thamso];
             bien[0] = "@CV_TT_ChiTietCongViec_ID";
+            bien[1] = "@CV_TT_ChiTietCongViec_DateEditor";
+            bien[2] = "@HT_USER_Editor";
+            bien[3] = "@CV_TT_ChiTietCongViec_SuDung";
+            bien[4] = "@CV_QL_CongViec_TenCongViec1";
             giatri[0] = Public.Id;
+            giatri[1] = Public.CV_TT_ChiTietCongViec_DateEditor;
+            giatri[2] = Public.HT_USER_Editor;
+            giatri[3] = Public.CV_TT_ChiTietCongViec_SuDung;
+            giatri[4] = Public.TenCongViec;
             return cls.Update("CV_TT_ChiTietCongViec_Del", bien, giatri, thamso);
+        }
+        public SqlDataReader LoadCV_TT_ChiTietCongViec_Load_R_Para_File(CV_TT_ChiTietCongViecPublic Public)
+        {
+            int thamso = 1;
+            string[] bien = new string[thamso];
+            object[] giatri = new object[thamso];
+            bien[0] = "@CV_TT_ChiTietCongViec_Id";
+            giatri[0] = Public.Id;
+            return cls.LayDuLieu_R("CV_TT_ChiTietCongViec_Load_R_Para_File", bien, giatri, thamso);
         }
         public int CV_TT_ChiTietCongViec_Add(CV_TT_ChiTietCongViecPublic Public)
         {

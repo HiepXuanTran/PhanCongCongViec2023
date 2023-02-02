@@ -18,11 +18,17 @@ namespace PCCV.Data
 
         public int CV_TT_NhanSu_Del(CV_TT_NhanSuPublic Public)
         {
-            int thamso = 1;
+            int thamso = 4;
             string[] bien = new string[thamso];
             object[] giatri = new object[thamso];
             bien[0] = "@CV_TT_NhanSu_ID";
+            bien[1] = "@CV_TT_NhanSu_DateEditor";
+            bien[2] = "@HT_USER_Editor";
+            bien[3] = "@CV_TT_NhanSu_SuDung";
             giatri[0] = Public.CV_TT_NhanSu_ID;
+            giatri[1] = Public.CV_TT_NhanSu_DateEditor;
+            giatri[2] = Public.HT_USER_Editor;
+            giatri[3] = Public.CV_TT_NhanSu_SuDung;
             return cls.Update("CV_TT_NhanSu_Del", bien, giatri, thamso);
         }
         public int CV_TT_NhanSu_Add(CV_TT_NhanSuPublic Public)

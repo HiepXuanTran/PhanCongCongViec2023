@@ -23,7 +23,7 @@ namespace PhanCongCongViec.form.ThongTin
             new MultiSelectionEditingHelper(CV_TT_ChiTietCongViec_BandedGridview);
         }
 
-
+        CV_QL_CongViecBLL clsCongViec = new CV_QL_CongViecBLL();
         bool CV_TT_ChiTietCongViecEdit = false;
         bool CV_TT_ChiTietCongViecAdd = false;
         CV_TT_ChiTietCongViecBLL cls = new CV_TT_ChiTietCongViecBLL();
@@ -189,6 +189,20 @@ namespace PhanCongCongViec.form.ThongTin
 
         private void frmCV_TT_ChiTietCongViec_Load(object sender, EventArgs e)
         {
+            // load form ten cong viec
+            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.DataSource = clsCongViec.LoadCV_QL_CongViec();
+            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.DisplayMember = "CV_QL_CongViec_TenCongViec";
+            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.ValueMember = "CV_QL_CongViec_TenCongViec";
+            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.PopupWidth = 400;
+            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.ShowFooter = false;
+            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Clear();
+            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenLoaiCongViec", "Tên loại công việc", 200));
+            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 150));
+            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 150));
+            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenCongViec", "Tên công việc", 150));
+            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MucDoKho", "Độ khó công việc", 150));
+            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MoTaCongViec", "Mô tả công việc", 150));
+
             CV_TT_ChiTietCongViec_GridControl.DataSource = cls.LoadCV_TT_ChiTietCongViec();
             CV_TT_ChiTietCongViec_barButtonItem_Luu.Enabled = false;
             CV_TT_ChiTietCongViec_barButtonItem_Undo.Enabled = false;
@@ -252,6 +266,10 @@ namespace PhanCongCongViec.form.ThongTin
                             {
                                 CV_TT_ChiTietCongViecPublic Public = new CV_TT_ChiTietCongViecPublic();
                                 Public.Id = Convert.ToInt32(CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_TT_ChiTietCongViec_ID));
+                                Public.HT_USER_Editor = BienToanCuc.HT_USER_ID;
+                                Public.CV_TT_ChiTietCongViec_DateEditor = DateTime.Now;
+                                Public.CV_TT_ChiTietCongViec_SuDung = BienToanCuc.HT_USER_Ten;
+                                Public.TenCongViec = CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_TT_ChiTietCongViec_TenCongViec).ToString();
                                 kq = cls.CV_TT_ChiTietCongViec_Del(Public);
                             }
                             else
@@ -443,6 +461,54 @@ namespace PhanCongCongViec.form.ThongTin
                 //menu.Items.Add(Ghim_Trai);
 
             }
+        }
+
+        private void CV_TT_ChiTietCongViec_barButtonItem_DownloadDinhKem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //CV_QL_CongViecPublic Public = new CV_QL_CongViecPublic();
+            //try
+            //{
+            //    //Start - Download
+            //    Public.Id = int.Parse("0" + CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellDisplayText(CV_TT_ChiTietCongViec_ID));
+
+            //    //SqlDataReader dr = cls.LoadCV_QL_CongViec_Load_R_Para_File(Public);
+            //    //dr.Read();
+
+            //    string TenFile = "";
+            //    //CV_QL_CongViec_SaveFileDinhKem.FileName = Convert.ToString(dr["CV_QL_CongViec_TenFile"].ToString());
+
+            //    DialogResult DR = CV_QL_CongViec_SaveFileDinhKem.ShowDialog();
+            //    if (DR == DialogResult.OK)
+            //    {
+            //        TenFile = CV_QL_CongViec_SaveFileDinhKem.FileName;
+            //        //Get File data from dataset row.
+            //        byte[] FileDinhKem = (byte[])dr["CV_QL_CongViec_FileDinhKem"];
+
+            //        using (FileStream fs = new FileStream(TenFile, FileMode.Create))
+            //        {
+            //            fs.Write(FileDinhKem, 0, FileDinhKem.Length);
+            //            fs.Close();
+            //        }
+            //    }
+            //    else
+            //    {
+            //        dr.Dispose();
+            //        dr.Close();
+            //        return;
+            //    }
+
+            //    dr.Dispose();
+            //    dr.Close();
+
+            //    MessageBox.Show("Tải file thành công!", "Thành công!", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+            //    //End - Download mẫu lấy thông tin
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("Không tồn tại file NỘI DUNG ĐÍNH KÈM! (ID file: " + Public.Id + ")", "Thông báo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}  
         }
     }
 }

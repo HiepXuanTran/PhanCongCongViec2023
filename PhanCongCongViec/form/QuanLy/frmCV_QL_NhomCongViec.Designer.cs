@@ -38,7 +38,6 @@
             this.CV_QL_NhomCongViec_barButtonItem_Xoa = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_NhomCongViec_barButtonItem_Luu = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_NhomCongViec_barButtonItem_Undo = new DevExpress.XtraBars.BarButtonItem();
-            this.CV_QL_NhomCongViec_barButtonItem_DownloadFile = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_NhomCongViec_barButtonItem_In = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -86,7 +85,6 @@
             this.CV_QL_NhomCongViec_barButtonItem_Xoa,
             this.CV_QL_NhomCongViec_barButtonItem_Luu,
             this.CV_QL_NhomCongViec_barButtonItem_Undo,
-            this.CV_QL_NhomCongViec_barButtonItem_DownloadFile,
             this.CV_QL_NhomCongViec_barButtonItem_In});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 8;
@@ -104,7 +102,6 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Xoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Luu, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Undo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_DownloadFile, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_In, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
@@ -163,14 +160,6 @@
             this.CV_QL_NhomCongViec_barButtonItem_Undo.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_NhomCongViec_barButtonItem_Undo.LargeGlyph")));
             this.CV_QL_NhomCongViec_barButtonItem_Undo.Name = "CV_QL_NhomCongViec_barButtonItem_Undo";
             this.CV_QL_NhomCongViec_barButtonItem_Undo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_NhomCongViec_barButtonItem_Undo_ItemClick);
-            // 
-            // CV_QL_NhomCongViec_barButtonItem_DownloadFile
-            // 
-            this.CV_QL_NhomCongViec_barButtonItem_DownloadFile.Caption = "Download";
-            this.CV_QL_NhomCongViec_barButtonItem_DownloadFile.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_NhomCongViec_barButtonItem_DownloadFile.Glyph")));
-            this.CV_QL_NhomCongViec_barButtonItem_DownloadFile.Id = 6;
-            this.CV_QL_NhomCongViec_barButtonItem_DownloadFile.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_NhomCongViec_barButtonItem_DownloadFile.LargeGlyph")));
-            this.CV_QL_NhomCongViec_barButtonItem_DownloadFile.Name = "CV_QL_NhomCongViec_barButtonItem_DownloadFile";
             // 
             // CV_QL_NhomCongViec_barButtonItem_In
             // 
@@ -257,6 +246,8 @@
             this.CV_QL_NhomCongViec_bandedGridView.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
             this.CV_QL_NhomCongViec_bandedGridView.OptionsBehavior.AutoExpandAllGroups = true;
             this.CV_QL_NhomCongViec_bandedGridView.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.False;
+            this.CV_QL_NhomCongViec_bandedGridView.OptionsSelection.MultiSelect = true;
+            this.CV_QL_NhomCongViec_bandedGridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
             this.CV_QL_NhomCongViec_bandedGridView.OptionsView.ShowAutoFilterRow = true;
             this.CV_QL_NhomCongViec_bandedGridView.OptionsView.ShowFooter = true;
             this.CV_QL_NhomCongViec_bandedGridView.OptionsView.ShowGroupPanel = false;
@@ -598,7 +589,6 @@
         private DevExpress.XtraBars.BarButtonItem CV_QL_NhomCongViec_barButtonItem_Xoa;
         private DevExpress.XtraBars.BarButtonItem CV_QL_NhomCongViec_barButtonItem_Luu;
         private DevExpress.XtraBars.BarButtonItem CV_QL_NhomCongViec_barButtonItem_Undo;
-        private DevExpress.XtraBars.BarButtonItem CV_QL_NhomCongViec_barButtonItem_DownloadFile;
         private DevExpress.XtraBars.BarButtonItem CV_QL_NhomCongViec_barButtonItem_In;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraGrid.GridControl CV_QL_NhomCongViec_GridControl;

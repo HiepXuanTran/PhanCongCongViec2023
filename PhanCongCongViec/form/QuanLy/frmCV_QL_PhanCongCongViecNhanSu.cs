@@ -573,7 +573,7 @@ namespace PhanCongCongViec.form.QuanLy
             LoadHamDungChung.PreviewPrintableComponent(CV_QL_PhanCongCongViecNhanSu_gridControl, CV_QL_PhanCongCongViecNhanSu_gridControl.LookAndFeel);
         }
 
-        private void CV_QL_PhanCongCongViecNhanSu_bandedGridView_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        private void CV_QL_PhanCongCongViecNhanSu_bandedGridView_PopupMenuShowing_1(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
             if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Row)
             {
@@ -597,7 +597,6 @@ namespace PhanCongCongViec.form.QuanLy
                 Ghim_Trai.Shortcut = Shortcut.Ctrl3;
                 Ghim_Trai.Click += new EventHandler(Ghim_Trai_Click);
                 menu.Items.Add(Ghim_Trai);
-
             }
         }
     }

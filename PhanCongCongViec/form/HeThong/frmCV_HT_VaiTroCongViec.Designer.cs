@@ -125,6 +125,8 @@
             this.CV_HT_VaiTroCongViec_BandedGridview.GridControl = this.CV_HT_VaiTroCongViec_GridControl;
             this.CV_HT_VaiTroCongViec_BandedGridview.Name = "CV_HT_VaiTroCongViec_BandedGridview";
             this.CV_HT_VaiTroCongViec_BandedGridview.OptionsBehavior.AutoExpandAllGroups = true;
+            this.CV_HT_VaiTroCongViec_BandedGridview.OptionsSelection.MultiSelect = true;
+            this.CV_HT_VaiTroCongViec_BandedGridview.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
             this.CV_HT_VaiTroCongViec_BandedGridview.OptionsView.ShowFooter = true;
             this.CV_HT_VaiTroCongViec_BandedGridview.OptionsView.ShowGroupPanel = false;
             this.CV_HT_VaiTroCongViec_BandedGridview.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_HT_VaiTroCongViec_BandedGridview_PopupMenuShowing);

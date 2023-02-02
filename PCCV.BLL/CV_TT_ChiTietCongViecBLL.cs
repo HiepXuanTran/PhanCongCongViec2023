@@ -28,5 +28,9 @@ namespace PCCV.BLL
         {
             return cls.CV_TT_ChiTietCongViec_Edit(Public);
         }
+        public SqlDataReader LoadCV_TT_ChiTietCongViec_Load_R_Para_File(CV_TT_ChiTietCongViecPublic Public)
+        {
+            return cls.LoadCV_TT_ChiTietCongViec_Load_R_Para_File(Public);
+        }
     }
 }
