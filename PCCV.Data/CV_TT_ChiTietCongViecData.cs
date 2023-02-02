@@ -25,12 +25,12 @@ namespace PCCV.Data
             bien[1] = "@CV_TT_ChiTietCongViec_DateEditor";
             bien[2] = "@HT_USER_Editor";
             bien[3] = "@CV_TT_ChiTietCongViec_SuDung";
-            bien[4] = "@CV_QL_CongViec_TenCongViec1";
+            bien[4] = "@CV_TT_ChiTietCongViec_IDCongViec";
             giatri[0] = Public.Id;
             giatri[1] = Public.CV_TT_ChiTietCongViec_DateEditor;
             giatri[2] = Public.HT_USER_Editor;
             giatri[3] = Public.CV_TT_ChiTietCongViec_SuDung;
-            giatri[4] = Public.TenCongViec;
+            giatri[4] = Public.CV_TT_ChiTietCongViec_IDCongViec;
             return cls.Update("CV_TT_ChiTietCongViec_Del", bien, giatri, thamso);
         }
         public SqlDataReader LoadCV_TT_ChiTietCongViec_Load_R_Para_File(CV_TT_ChiTietCongViecPublic Public)
@@ -47,7 +47,7 @@ namespace PCCV.Data
             int thamso = 13;
             string[] bien = new string[thamso];
             object[] giatri = new object[thamso];
-            bien[0] = "@CV_TT_ChiTietCongViec_TenCongViec";
+            bien[0] = "CV_TT_ChiTietCongViec_IDCongViec";
             bien[1] = "@CV_TT_ChiTietCongViec_CacBuocCongViec";
             bien[2] = "@CV_TT_ChiTietCongViec_MoTaBuocCongViec";
             bien[3] = "@CV_TT_ChiTietCongViec_MucDoKho";
@@ -63,7 +63,7 @@ namespace PCCV.Data
 
 
 
-            giatri[0] = Public.TenCongViec;
+            giatri[0] = Public.CV_TT_ChiTietCongViec_IDCongViec;
             giatri[1] = Public.CacBuocCongViec;
             giatri[2] = Public.MoTaBuocCongViec;
             giatri[3] = Public.MucDoKho;
@@ -86,7 +86,7 @@ namespace PCCV.Data
             object[] giatri = new object[thamso];
 
             bien[0] = "@CV_TT_ChiTietCongViec_ID";
-            bien[1] = "@CV_TT_ChiTietCongViec_TenCongViec";
+            bien[1] = "@CV_TT_ChiTietCongViec_IDCongViec";
             bien[2] = "@CV_TT_ChiTietCongViec_CacBuocCongViec";
             bien[3] = "@CV_TT_ChiTietCongViec_MoTaBuocCongViec";
             bien[4] = "@CV_TT_ChiTietCongViec_MucDoKho";
@@ -105,7 +105,7 @@ namespace PCCV.Data
             
 
             giatri[0] = Public.Id;
-            giatri[1] = Public.TenCongViec;
+            giatri[1] = Public.CV_TT_ChiTietCongViec_IDCongViec;
             giatri[2] = Public.CacBuocCongViec;
             giatri[3] = Public.MoTaBuocCongViec;
             giatri[4] = Public.MucDoKho;

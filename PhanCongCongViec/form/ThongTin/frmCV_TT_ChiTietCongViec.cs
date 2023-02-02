@@ -189,10 +189,24 @@ namespace PhanCongCongViec.form.ThongTin
 
         private void frmCV_TT_ChiTietCongViec_Load(object sender, EventArgs e)
         {
+            // lookup muc do kho
+            CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.DataSource = clsCongViec.LoadCV_QL_CongViec();
+            CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.DisplayMember = "CV_QL_CongViec_MucDoKho";
+            CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.ValueMember = "CV_QL_CongViec_ID";
+            CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.PopupWidth = 400;
+            CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.ShowFooter = false;
+            CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Clear();
+            CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenLoaiCongViec", "Tên loại công việc", 200));
+            CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 150));
+            CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 150));
+            CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenCongViec", "Tên công việc", 150));
+            CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MucDoKho", "Độ khó công việc", 150));
+            CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MoTaCongViec", "Mô tả công việc", 150));
+
             // load form ten cong viec
             CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.DataSource = clsCongViec.LoadCV_QL_CongViec();
             CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.DisplayMember = "CV_QL_CongViec_TenCongViec";
-            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.ValueMember = "CV_QL_CongViec_TenCongViec";
+            CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.ValueMember = "CV_QL_CongViec_ID";
             CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.PopupWidth = 400;
             CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.ShowFooter = false;
             CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Clear();
@@ -269,7 +283,7 @@ namespace PhanCongCongViec.form.ThongTin
                                 Public.HT_USER_Editor = BienToanCuc.HT_USER_ID;
                                 Public.CV_TT_ChiTietCongViec_DateEditor = DateTime.Now;
                                 Public.CV_TT_ChiTietCongViec_SuDung = BienToanCuc.HT_USER_Ten;
-                                Public.TenCongViec = CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_TT_ChiTietCongViec_TenCongViec).ToString();
+                                Public.CV_TT_ChiTietCongViec_IDCongViec = Convert.ToInt32(CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_TT_ChiTietCongViec_TenCongViec));
                                 kq = cls.CV_TT_ChiTietCongViec_Del(Public);
                             }
                             else
@@ -322,8 +336,8 @@ namespace PhanCongCongViec.form.ThongTin
                             // gán vào đối tượng puhlic
                             CV_TT_ChiTietCongViecPublic Public = new CV_TT_ChiTietCongViecPublic();
                             Public.CV_TT_ChiTietCongViec_HienThi = true;
-                            Public.CV_TT_ChiTietCongViec_SuDung = BienToanCuc.HT_USER_Ten;                            
-                            Public.TenCongViec = CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellDisplayText(CV_TT_ChiTietCongViec_TenCongViec);
+                            Public.CV_TT_ChiTietCongViec_SuDung = BienToanCuc.HT_USER_Ten;
+                            Public.CV_TT_ChiTietCongViec_IDCongViec = Convert.ToInt32(CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_TT_ChiTietCongViec_TenCongViec));
                             Public.CacBuocCongViec = CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellDisplayText(CV_TT_ChiTietCongViec_CacBuocCongViec);
                             if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_TT_ChiTietCongViec_MoTaBuocCongViec))))
                             {
@@ -340,7 +354,8 @@ namespace PhanCongCongViec.form.ThongTin
                             }
                             if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_TT_ChiTietCongViec_FileDinhKem))))
                             {
-                                Public.FileDinhKem = (byte[])CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_TT_ChiTietCongViec_FileDinhKem);
+                                //Public.FileDinhKem = (byte[])CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_TT_ChiTietCongViec_FileDinhKem);
+                                Public.FileDinhKem = ReadFile(CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_TT_ChiTietCongViec_FileDinhKem).ToString());
                             }
                             if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_TT_ChiTietCongViec_TenFile))))
                             {
@@ -414,18 +429,28 @@ namespace PhanCongCongViec.form.ThongTin
 
         private void CV_TT_ChiTietCongViec_btnEdit_TenFile_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            if (KiemTra() == false)
-            {
-                MessageBox.Show("Bạn phải chọn dữ liệu", "Thông báo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        //    if (KiemTra() == false)
+        //    {
+        //        MessageBox.Show("Bạn phải chọn dữ liệu", "Thông báo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return;
+        //    }
+        //    OpenFileDialog dlg = new OpenFileDialog();
+        //    DialogResult dlgRes = dlg.ShowDialog();
+        //    if (dlgRes != DialogResult.Cancel)
+        //    {
+        //        FileInfo Ten_File = new FileInfo(dlg.FileName);
+        //        CV_TT_ChiTietCongViec_BandedGridview.SetFocusedRowCellValue(CV_TT_ChiTietCongViec_TenFile, Ten_File.Name);
+        //        CV_TT_ChiTietCongViec_BandedGridview.SetFocusedRowCellValue(CV_TT_ChiTietCongViec_FileDinhKem, ReadFile(dlg.FileName));
+        //    }
             OpenFileDialog dlg = new OpenFileDialog();
             DialogResult dlgRes = dlg.ShowDialog();
             if (dlgRes != DialogResult.Cancel)
             {
+                //FocusRowCell("CV_QL_CongViec_FileDinhKem");
+                CV_TT_ChiTietCongViec_BandedGridview.SetFocusedRowCellValue(CV_TT_ChiTietCongViec_FileDinhKem, dlg.FileName);
                 FileInfo Ten_File = new FileInfo(dlg.FileName);
+                //FocusRowCell("CV_QL_CongViec_TenFile");
                 CV_TT_ChiTietCongViec_BandedGridview.SetFocusedRowCellValue(CV_TT_ChiTietCongViec_TenFile, Ten_File.Name);
-                CV_TT_ChiTietCongViec_BandedGridview.SetFocusedRowCellValue(CV_TT_ChiTietCongViec_FileDinhKem, ReadFile(dlg.FileName));
             }
         }
 
@@ -465,50 +490,50 @@ namespace PhanCongCongViec.form.ThongTin
 
         private void CV_TT_ChiTietCongViec_barButtonItem_DownloadDinhKem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //CV_QL_CongViecPublic Public = new CV_QL_CongViecPublic();
-            //try
-            //{
-            //    //Start - Download
-            //    Public.Id = int.Parse("0" + CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellDisplayText(CV_TT_ChiTietCongViec_ID));
+            CV_TT_ChiTietCongViecPublic Public = new CV_TT_ChiTietCongViecPublic();
+            try
+            {
+                //Start - Download
+                Public.Id = int.Parse("0" + CV_TT_ChiTietCongViec_BandedGridview.GetFocusedRowCellDisplayText(CV_TT_ChiTietCongViec_ID));
 
-            //    //SqlDataReader dr = cls.LoadCV_QL_CongViec_Load_R_Para_File(Public);
-            //    //dr.Read();
+                SqlDataReader dr = cls.LoadCV_TT_ChiTietCongViec_Load_R_Para_File(Public);
+                dr.Read();
 
-            //    string TenFile = "";
-            //    //CV_QL_CongViec_SaveFileDinhKem.FileName = Convert.ToString(dr["CV_QL_CongViec_TenFile"].ToString());
+                string TenFile = "";
+                CV_TT_ChiTietCongViec_SaveFileDinhKem.FileName = Convert.ToString(dr["CV_TT_ChiTietCongViec_TenFile"].ToString());
 
-            //    DialogResult DR = CV_QL_CongViec_SaveFileDinhKem.ShowDialog();
-            //    if (DR == DialogResult.OK)
-            //    {
-            //        TenFile = CV_QL_CongViec_SaveFileDinhKem.FileName;
-            //        //Get File data from dataset row.
-            //        byte[] FileDinhKem = (byte[])dr["CV_QL_CongViec_FileDinhKem"];
+                DialogResult DR = CV_TT_ChiTietCongViec_SaveFileDinhKem.ShowDialog();
+                if (DR == DialogResult.OK)
+                {
+                    TenFile = CV_TT_ChiTietCongViec_SaveFileDinhKem.FileName;
+                    //Get File data from dataset row.
+                    byte[] FileDinhKem = (byte[])dr["CV_TT_ChiTietCongViec_FileDinhKem"];
 
-            //        using (FileStream fs = new FileStream(TenFile, FileMode.Create))
-            //        {
-            //            fs.Write(FileDinhKem, 0, FileDinhKem.Length);
-            //            fs.Close();
-            //        }
-            //    }
-            //    else
-            //    {
-            //        dr.Dispose();
-            //        dr.Close();
-            //        return;
-            //    }
+                    using (FileStream fs = new FileStream(TenFile, FileMode.Create))
+                    {
+                        fs.Write(FileDinhKem, 0, FileDinhKem.Length);
+                        fs.Close();
+                    }
+                }
+                else
+                {
+                    dr.Dispose();
+                    dr.Close();
+                    return;
+                }
 
-            //    dr.Dispose();
-            //    dr.Close();
+                dr.Dispose();
+                dr.Close();
 
-            //    MessageBox.Show("Tải file thành công!", "Thành công!", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show("Tải file thành công!", "Thành công!", MessageBoxButtons.OK, MessageBoxIcon.None);
 
-            //    //End - Download mẫu lấy thông tin
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("Không tồn tại file NỘI DUNG ĐÍNH KÈM! (ID file: " + Public.Id + ")", "Thông báo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}  
+                //End - Download mẫu lấy thông tin
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Không tồn tại file NỘI DUNG ĐÍNH KÈM! (ID file: " + Public.Id + ")", "Thông báo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }  
         }
     }
 }

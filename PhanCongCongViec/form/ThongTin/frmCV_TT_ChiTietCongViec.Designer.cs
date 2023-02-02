@@ -46,7 +46,7 @@
             this.CV_TT_ChiTietCongViec_FileDinhKem = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.CV_TT_ChiTietCongViec_MucDoKho = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.CV_QL_CongViec_ComboboxEdit_MucDoKho = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.CV_TT_ChiTietCongViec_lookupEdit_MucDoKho = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.CV_TT_ChiTietCongViec_TongSoNgayThucHien = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_TT_ChiTietCongViec_TongSoGioThucHien = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_TT_ChiTietCongViec_TongSoPhutThucHien = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -74,6 +74,7 @@
             this.CV_QL_CongViec_btnEdit_TenFile = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.CV_QL_CongViec_LookupEdit_NhomCongViec = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.CV_QL_CongViec_LookupEdit_NhomCongViec2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.CV_QL_CongViec_ComboboxEdit_MucDoKho = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CV_TT_ChiTietCongViec_SaveFileDinhKem = new System.Windows.Forms.SaveFileDialog();
@@ -81,12 +82,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_BandedGridview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_btnEdit_TenFile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_ComboboxEdit_MucDoKho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_lookupEdit_MucDoKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_LoaiCongViec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_btnEdit_TenFile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_NhomCongViec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_NhomCongViec2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_ComboboxEdit_MucDoKho)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,7 +108,8 @@
             this.CV_QL_CongViec_LookupEdit_NhomCongViec2,
             this.CV_QL_CongViec_ComboboxEdit_MucDoKho,
             this.CV_TT_ChiTietCongViec_btnEdit_TenFile,
-            this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec});
+            this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec,
+            this.CV_TT_ChiTietCongViec_lookupEdit_MucDoKho});
             this.CV_TT_ChiTietCongViec_GridControl.Size = new System.Drawing.Size(1653, 529);
             this.CV_TT_ChiTietCongViec_GridControl.TabIndex = 1;
             this.CV_TT_ChiTietCongViec_GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -142,6 +145,7 @@
             this.CV_TT_ChiTietCongViec_BandedGridview.OptionsBehavior.AutoExpandAllGroups = true;
             this.CV_TT_ChiTietCongViec_BandedGridview.OptionsSelection.MultiSelect = true;
             this.CV_TT_ChiTietCongViec_BandedGridview.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
+            this.CV_TT_ChiTietCongViec_BandedGridview.OptionsView.ShowAutoFilterRow = true;
             this.CV_TT_ChiTietCongViec_BandedGridview.OptionsView.ShowFooter = true;
             this.CV_TT_ChiTietCongViec_BandedGridview.OptionsView.ShowGroupPanel = false;
             this.CV_TT_ChiTietCongViec_BandedGridview.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_TT_ChiTietCongViec_BandedGridview_PopupMenuShowing);
@@ -200,7 +204,7 @@
             this.CV_TT_ChiTietCongViec_TenCongViec.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_TT_ChiTietCongViec_TenCongViec.Caption = "Tên Công Việc *";
             this.CV_TT_ChiTietCongViec_TenCongViec.ColumnEdit = this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec;
-            this.CV_TT_ChiTietCongViec_TenCongViec.FieldName = "CV_TT_ChiTietCongViec_TenCongViec";
+            this.CV_TT_ChiTietCongViec_TenCongViec.FieldName = "CV_TT_ChiTietCongViec_IDCongViec";
             this.CV_TT_ChiTietCongViec_TenCongViec.Name = "CV_TT_ChiTietCongViec_TenCongViec";
             this.CV_TT_ChiTietCongViec_TenCongViec.Visible = true;
             this.CV_TT_ChiTietCongViec_TenCongViec.Width = 81;
@@ -211,6 +215,7 @@
             this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.Name = "CV_TT_ChiTietCongViec_lookupEdit_TenCongViec";
+            this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec.NullText = "";
             // 
             // CV_TT_ChiTietCongViec_CacBuocCongViec
             // 
@@ -342,24 +347,19 @@
             this.CV_TT_ChiTietCongViec_MucDoKho.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_TT_ChiTietCongViec_MucDoKho.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_TT_ChiTietCongViec_MucDoKho.Caption = "Mức độ khó *";
-            this.CV_TT_ChiTietCongViec_MucDoKho.ColumnEdit = this.CV_QL_CongViec_ComboboxEdit_MucDoKho;
+            this.CV_TT_ChiTietCongViec_MucDoKho.ColumnEdit = this.CV_TT_ChiTietCongViec_lookupEdit_MucDoKho;
             this.CV_TT_ChiTietCongViec_MucDoKho.FieldName = "CV_TT_ChiTietCongViec_MucDoKho";
             this.CV_TT_ChiTietCongViec_MucDoKho.Name = "CV_TT_ChiTietCongViec_MucDoKho";
             this.CV_TT_ChiTietCongViec_MucDoKho.Visible = true;
             this.CV_TT_ChiTietCongViec_MucDoKho.Width = 82;
             // 
-            // CV_QL_CongViec_ComboboxEdit_MucDoKho
+            // CV_TT_ChiTietCongViec_lookupEdit_MucDoKho
             // 
-            this.CV_QL_CongViec_ComboboxEdit_MucDoKho.AutoHeight = false;
-            this.CV_QL_CongViec_ComboboxEdit_MucDoKho.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.AutoHeight = false;
+            this.CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CV_QL_CongViec_ComboboxEdit_MucDoKho.Items.AddRange(new object[] {
-            "Dễ",
-            "Trung Bình",
-            "Khó ",
-            "Cực Khó",
-            "Siêu khủng khiếp"});
-            this.CV_QL_CongViec_ComboboxEdit_MucDoKho.Name = "CV_QL_CongViec_ComboboxEdit_MucDoKho";
+            this.CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.Name = "CV_TT_ChiTietCongViec_lookupEdit_MucDoKho";
+            this.CV_TT_ChiTietCongViec_lookupEdit_MucDoKho.NullText = "";
             // 
             // CV_TT_ChiTietCongViec_TongSoNgayThucHien
             // 
@@ -641,6 +641,19 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CV_QL_CongViec_LookupEdit_NhomCongViec2.Name = "CV_QL_CongViec_LookupEdit_NhomCongViec2";
             // 
+            // CV_QL_CongViec_ComboboxEdit_MucDoKho
+            // 
+            this.CV_QL_CongViec_ComboboxEdit_MucDoKho.AutoHeight = false;
+            this.CV_QL_CongViec_ComboboxEdit_MucDoKho.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CV_QL_CongViec_ComboboxEdit_MucDoKho.Items.AddRange(new object[] {
+            "Dễ",
+            "Trung Bình",
+            "Khó ",
+            "Cực Khó",
+            "Siêu khủng khiếp"});
+            this.CV_QL_CongViec_ComboboxEdit_MucDoKho.Name = "CV_QL_CongViec_ComboboxEdit_MucDoKho";
+            // 
             // labelX1
             // 
             // 
@@ -689,12 +702,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_BandedGridview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_lookupEdit_TenCongViec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_btnEdit_TenFile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_ComboboxEdit_MucDoKho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_TT_ChiTietCongViec_lookupEdit_MucDoKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_LoaiCongViec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_btnEdit_TenFile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_NhomCongViec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_NhomCongViec2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_ComboboxEdit_MucDoKho)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -750,5 +764,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_TT_ChiTietCongViec_lookupEdit_MucDoKho;
     }
 }

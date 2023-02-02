@@ -527,7 +527,7 @@ namespace PhanCongCongViec.form.QuanLy
                             if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_FileDinhKem))))
                             {
                                 //Public.FileDinhKem = (byte[])CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_FileDinhKem);
-                                Public.FileDinhKem = ReadFile(CV_QL_CongViec_BandedGridview.GetFocusedRowCellDisplayText(CV_QL_CongViec_FileDinhKem));
+                                Public.FileDinhKem = ReadFile(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_FileDinhKem).ToString());
                             }
                             if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_TenFile))))
                             {

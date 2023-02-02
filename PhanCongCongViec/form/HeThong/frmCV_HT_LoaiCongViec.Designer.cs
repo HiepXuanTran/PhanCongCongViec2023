@@ -111,6 +111,7 @@
             this.CV_HT_LoaiCongViec_BandedGridView.OptionsSelection.MultiSelect = true;
             this.CV_HT_LoaiCongViec_BandedGridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
             this.CV_HT_LoaiCongViec_BandedGridView.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+            this.CV_HT_LoaiCongViec_BandedGridView.OptionsView.ShowAutoFilterRow = true;
             this.CV_HT_LoaiCongViec_BandedGridView.OptionsView.ShowFooter = true;
             this.CV_HT_LoaiCongViec_BandedGridView.OptionsView.ShowGroupPanel = false;
             this.CV_HT_LoaiCongViec_BandedGridView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {

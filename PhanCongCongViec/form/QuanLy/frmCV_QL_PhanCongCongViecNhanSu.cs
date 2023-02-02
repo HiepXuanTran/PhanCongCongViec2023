@@ -262,6 +262,8 @@ namespace PhanCongCongViec.form.QuanLy
             CV_QL_PhanCongCongViecNhanSu_bandedGridView.MoveFirst();
             for (int i = 0; i < CV_QL_PhanCongCongViecNhanSu_bandedGridView.RowCount; i++)
             {
+                string s2 = i.ToString();
+                string strinng = CV_QL_PhanCongCongViecNhanSu_bandedGridView.GetFocusedRowCellValue(CV_QL_PhanCongCongViecNhanSuChon).ToString();
                 if (Convert.ToBoolean(CV_QL_PhanCongCongViecNhanSu_bandedGridView.GetFocusedRowCellValue(CV_QL_PhanCongCongViecNhanSuChon))) // == true
                 {
                     return true;

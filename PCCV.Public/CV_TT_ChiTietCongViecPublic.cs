@@ -14,14 +14,15 @@ namespace PCCV.Public
             get { return _Id; }
             set { _Id = value; }
         }
-        
-        string _TenCongViec;
 
-        public string TenCongViec
+        int _CV_TT_ChiTietCongViec_IDCongViec;
+
+        public int CV_TT_ChiTietCongViec_IDCongViec
         {
-            get { return _TenCongViec; }
-            set { _TenCongViec = value; }
+            get { return _CV_TT_ChiTietCongViec_IDCongViec; }
+            set { _CV_TT_ChiTietCongViec_IDCongViec = value; }
         }
+
         string _CacBuocCongViec;
 
         public string CacBuocCongViec
