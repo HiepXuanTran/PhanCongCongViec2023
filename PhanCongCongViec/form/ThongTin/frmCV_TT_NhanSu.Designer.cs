@@ -134,7 +134,7 @@
             this.gridBand2.Columns.Add(this.CV_TT_NhanSu_ID);
             this.gridBand2.Name = "gridBand2";
             this.gridBand2.VisibleIndex = 0;
-            this.gridBand2.Width = 37;
+            this.gridBand2.Width = 47;
             // 
             // CV_TT_NhanSuChon
             // 
@@ -152,7 +152,7 @@
             this.CV_TT_NhanSuChon.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "CV_TT_NhanSuChon", "{0}")});
             this.CV_TT_NhanSuChon.Visible = true;
-            this.CV_TT_NhanSuChon.Width = 37;
+            this.CV_TT_NhanSuChon.Width = 47;
             // 
             // CV_TT_NhanSu_ID
             // 
@@ -185,7 +185,7 @@
             this.gridBand1.Columns.Add(this.CV_TT_NhanSu_KhaNangChuyenMon);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 1;
-            this.gridBand1.Width = 1026;
+            this.gridBand1.Width = 1374;
             // 
             // CV_TT_NhanSu_MaNhanSu
             // 
@@ -201,7 +201,7 @@
             this.CV_TT_NhanSu_MaNhanSu.FieldName = "CV_TT_NhanSu_MaNhanSu";
             this.CV_TT_NhanSu_MaNhanSu.Name = "CV_TT_NhanSu_MaNhanSu";
             this.CV_TT_NhanSu_MaNhanSu.Visible = true;
-            this.CV_TT_NhanSu_MaNhanSu.Width = 50;
+            this.CV_TT_NhanSu_MaNhanSu.Width = 100;
             // 
             // CV_TT_NhanSu_HoTen
             // 
@@ -217,7 +217,7 @@
             this.CV_TT_NhanSu_HoTen.FieldName = "CV_TT_NhanSu_HoTen";
             this.CV_TT_NhanSu_HoTen.Name = "CV_TT_NhanSu_HoTen";
             this.CV_TT_NhanSu_HoTen.Visible = true;
-            this.CV_TT_NhanSu_HoTen.Width = 250;
+            this.CV_TT_NhanSu_HoTen.Width = 325;
             // 
             // CV_TT_NhanSu_DonVi
             // 
@@ -233,7 +233,7 @@
             this.CV_TT_NhanSu_DonVi.FieldName = "CV_TT_NhanSu_DonVi";
             this.CV_TT_NhanSu_DonVi.Name = "CV_TT_NhanSu_DonVi";
             this.CV_TT_NhanSu_DonVi.Visible = true;
-            this.CV_TT_NhanSu_DonVi.Width = 200;
+            this.CV_TT_NhanSu_DonVi.Width = 260;
             // 
             // CV_TT_NhanSu_NhomThucHien
             // 
@@ -251,7 +251,7 @@
             this.CV_TT_NhanSu_NhomThucHien.FieldName = "CV_TT_NhanSu_NhomThucHien";
             this.CV_TT_NhanSu_NhomThucHien.Name = "CV_TT_NhanSu_NhomThucHien";
             this.CV_TT_NhanSu_NhomThucHien.Visible = true;
-            this.CV_TT_NhanSu_NhomThucHien.Width = 150;
+            this.CV_TT_NhanSu_NhomThucHien.Width = 195;
             // 
             // CV_TT_NhanSu_TrinhDo
             // 
@@ -265,7 +265,7 @@
             this.CV_TT_NhanSu_TrinhDo.FieldName = "CV_TT_NhanSu_TrinhDo";
             this.CV_TT_NhanSu_TrinhDo.Name = "CV_TT_NhanSu_TrinhDo";
             this.CV_TT_NhanSu_TrinhDo.Visible = true;
-            this.CV_TT_NhanSu_TrinhDo.Width = 133;
+            this.CV_TT_NhanSu_TrinhDo.Width = 172;
             // 
             // CV_TT_NhanSu_KhaNangChuyenMon
             // 
@@ -281,7 +281,7 @@
             this.CV_TT_NhanSu_KhaNangChuyenMon.FieldName = "CV_TT_NhanSu_KhaNangChuyenMon";
             this.CV_TT_NhanSu_KhaNangChuyenMon.Name = "CV_TT_NhanSu_KhaNangChuyenMon";
             this.CV_TT_NhanSu_KhaNangChuyenMon.Visible = true;
-            this.CV_TT_NhanSu_KhaNangChuyenMon.Width = 243;
+            this.CV_TT_NhanSu_KhaNangChuyenMon.Width = 322;
             // 
             // HT_USER_Create
             // 

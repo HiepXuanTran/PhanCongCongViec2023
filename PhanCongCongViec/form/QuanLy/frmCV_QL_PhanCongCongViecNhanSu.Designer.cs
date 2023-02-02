@@ -292,6 +292,7 @@
             this.CV_QL_PhanCongCongViecNhanSu_bandedGridView.OptionsView.ShowAutoFilterRow = true;
             this.CV_QL_PhanCongCongViecNhanSu_bandedGridView.OptionsView.ShowFooter = true;
             this.CV_QL_PhanCongCongViecNhanSu_bandedGridView.OptionsView.ShowGroupPanel = false;
+            this.CV_QL_PhanCongCongViecNhanSu_bandedGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_QL_PhanCongCongViecNhanSu_bandedGridView_PopupMenuShowing);
             // 
             // gridBand_Chung
             // 
@@ -330,17 +331,17 @@
             // 
             // CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec
             // 
-            this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.AppearanceCell.Options.UseForeColor = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.Caption = "Tên loại công việc *";
             this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.ColumnEdit = this.CV_QL_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec;
-            this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.FieldName = "CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec";
+            this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.FieldName = "CV_QL_PhanCongCongViecNhanSu_IDCongViec";
             this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.Name = "CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec";
             this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.Visible = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenLoaiCongViec.Width = 139;
@@ -355,17 +356,17 @@
             // 
             // CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1
             // 
-            this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.AppearanceCell.Options.UseForeColor = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.Caption = "Tên nhóm công việc 1 *";
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.ColumnEdit = this.CV_QL_PhanCongCongViecNhanSu_LookupEdit_TenNhomCongViec1;
-            this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.FieldName = "CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1";
+            this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.FieldName = "CV_QL_PhanCongCongViecNhanSu_IDCongViec";
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.Name = "CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1";
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.Visible = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec1.Width = 171;
@@ -380,17 +381,17 @@
             // 
             // CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2
             // 
-            this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.AppearanceCell.Options.UseForeColor = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.Caption = "Tên nhóm công việc 2 *";
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.ColumnEdit = this.CV_QL_PhanCongCongViecNhanSu_LookupEdit_TenNhomCongViec2;
-            this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.FieldName = "CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2";
+            this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.FieldName = "CV_QL_PhanCongCongViecNhanSu_IDCongViec";
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.Name = "CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2";
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.Visible = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenNhomCongViec2.Width = 171;
@@ -405,17 +406,17 @@
             // 
             // CV_QL_PhanCongCongViecNhanSu_TenCongViec
             // 
-            this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.AppearanceCell.ForeColor = System.Drawing.Color.Red;
             this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.AppearanceCell.Options.UseForeColor = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.Caption = "Tên công việc  *";
             this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.ColumnEdit = this.CV_QL_PhanCongCongViecNhanSu_LookupEdit_TenCongViec;
-            this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.FieldName = "CV_QL_PhanCongCongViecNhanSu_TenCongViec";
+            this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.FieldName = "CV_QL_PhanCongCongViecNhanSu_IDCongViec";
             this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.Name = "CV_QL_PhanCongCongViecNhanSu_TenCongViec";
             this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.Visible = true;
             this.CV_QL_PhanCongCongViecNhanSu_TenCongViec.Width = 116;
@@ -430,17 +431,17 @@
             // 
             // CV_QL_PhanCongCongViecNhanSu_MucDoKho
             // 
-            this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.AppearanceCell.Options.UseForeColor = true;
             this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.Caption = "Mức độ khó *";
             this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.ColumnEdit = this.CV_QL_PhanCongCongViecNhanSu_LookupEdit_MucDoKho;
-            this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.FieldName = "CV_QL_PhanCongCongViecNhanSu_MucDoKho";
+            this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.FieldName = "CV_QL_PhanCongCongViecNhanSu_IDCongViec";
             this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.Name = "CV_QL_PhanCongCongViecNhanSu_MucDoKho";
             this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.Visible = true;
             this.CV_QL_PhanCongCongViecNhanSu_MucDoKho.Width = 142;
@@ -480,7 +481,7 @@
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhuTrach.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhuTrach.Caption = "Nhân sự phụ trách *";
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhuTrach.ColumnEdit = this.CV_QL_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach;
-            this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhuTrach.FieldName = "CV_QL_PhanCongCongViecNhanSu_NhanSuPhuTrach";
+            this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhuTrach.FieldName = "CV_QL_PhanCongCongViecNhanSu_IDNhanSuPhuTrach";
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhuTrach.Name = "CV_QL_PhanCongCongViecNhanSu_NhanSuPhuTrach";
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhuTrach.Visible = true;
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhuTrach.Width = 183;
@@ -505,7 +506,7 @@
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuThucHien.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuThucHien.Caption = "Nhân sự thực hiện *";
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuThucHien.ColumnEdit = this.CV_QL_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach;
-            this.CV_QL_PhanCongCongViecNhanSu_NhanSuThucHien.FieldName = "CV_QL_PhanCongCongViecNhanSu_NhanSuThucHien";
+            this.CV_QL_PhanCongCongViecNhanSu_NhanSuThucHien.FieldName = "CV_QL_PhanCongCongViecNhanSu_IDNhanSuThucHien";
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuThucHien.Name = "CV_QL_PhanCongCongViecNhanSu_NhanSuThucHien";
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuThucHien.Visible = true;
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuThucHien.Width = 183;
@@ -522,7 +523,7 @@
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhoiHop.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhoiHop.Caption = "Nhân sự phối hợp";
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhoiHop.ColumnEdit = this.CV_QL_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach;
-            this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhoiHop.FieldName = "CV_QL_PhanCongCongViecNhanSu_NhanSuPhoiHop";
+            this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhoiHop.FieldName = "CV_QL_PhanCongCongViecNhanSu_IDNhanSuPhoiHop";
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhoiHop.Name = "CV_QL_PhanCongCongViecNhanSu_NhanSuPhoiHop";
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhoiHop.Visible = true;
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuPhoiHop.Width = 176;
@@ -539,7 +540,7 @@
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuKiemTra.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuKiemTra.Caption = "Nhân sự kiểm tra";
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuKiemTra.ColumnEdit = this.CV_QL_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach;
-            this.CV_QL_PhanCongCongViecNhanSu_NhanSuKiemTra.FieldName = "CV_QL_PhanCongCongViecNhanSu_NhanSuKiemTra";
+            this.CV_QL_PhanCongCongViecNhanSu_NhanSuKiemTra.FieldName = "CV_QL_PhanCongCongViecNhanSu_IDNhanSuKiemTra";
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuKiemTra.MinWidth = 150;
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuKiemTra.Name = "CV_QL_PhanCongCongViecNhanSu_NhanSuKiemTra";
             this.CV_QL_PhanCongCongViecNhanSu_NhanSuKiemTra.Visible = true;
