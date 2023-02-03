@@ -207,6 +207,9 @@ namespace PhanCongCongViec.form.HeThong
                             {
                                 CV_HT_VaiTroCongViecPublic Public = new CV_HT_VaiTroCongViecPublic();
                                 Public.CV_HT_VaiTroCongViec_ID = Convert.ToInt32(CV_HT_VaiTroCongViec_BandedGridview.GetFocusedRowCellValue(CV_HT_VaiTroCongViec_ID));
+                                Public.CV_HT_VaiTroCongViec_DateEditor = DateTime.Now;
+                                Public.HT_USER_Editor = BienToanCuc.HT_USER_ID;
+                                Public.CV_HT_VaiTroCongViec_SuDung = BienToanCuc.HT_USER_Ten;
                                 kq = cls.CV_HT_VaiTroCongViec_Del(Public);
                             }
                             else

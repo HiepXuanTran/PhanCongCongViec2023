@@ -178,6 +178,9 @@ namespace PhanCongCongViec.form.ThongTin
                             {
                                 CV_TT_NhanSuPublic Public = new CV_TT_NhanSuPublic();
                                 Public.CV_TT_NhanSu_ID = Convert.ToInt32(CV_TT_NhanSu_BandedGridview.GetFocusedRowCellValue(CV_TT_NhanSu_ID));
+                                Public.CV_TT_NhanSu_DateEditor = DateTime.Now;
+                                Public.HT_USER_Editor = BienToanCuc.HT_USER_ID;
+                                Public.CV_TT_NhanSu_SuDung = BienToanCuc.HT_USER_Ten;
                                 kq = cls.CV_TT_NhanSu_Del(Public);
                             }
                             else

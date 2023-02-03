@@ -230,7 +230,7 @@
             this.CV_TT_NhanSu_DonVi.AppearanceHeader.Options.UseForeColor = true;
             this.CV_TT_NhanSu_DonVi.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_TT_NhanSu_DonVi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CV_TT_NhanSu_DonVi.Caption = "Đơn Vị ";
+            this.CV_TT_NhanSu_DonVi.Caption = "Đơn Vị *";
             this.CV_TT_NhanSu_DonVi.FieldName = "CV_TT_NhanSu_DonVi";
             this.CV_TT_NhanSu_DonVi.Name = "CV_TT_NhanSu_DonVi";
             this.CV_TT_NhanSu_DonVi.Visible = true;
@@ -248,7 +248,7 @@
             this.CV_TT_NhanSu_NhomThucHien.AppearanceHeader.Options.UseForeColor = true;
             this.CV_TT_NhanSu_NhomThucHien.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_TT_NhanSu_NhomThucHien.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CV_TT_NhanSu_NhomThucHien.Caption = "Nhóm thực hiện ";
+            this.CV_TT_NhanSu_NhomThucHien.Caption = "Nhóm thực hiện *";
             this.CV_TT_NhanSu_NhomThucHien.FieldName = "CV_TT_NhanSu_NhomThucHien";
             this.CV_TT_NhanSu_NhomThucHien.Name = "CV_TT_NhanSu_NhomThucHien";
             this.CV_TT_NhanSu_NhomThucHien.Visible = true;
@@ -262,7 +262,7 @@
             this.CV_TT_NhanSu_TrinhDo.AppearanceHeader.Options.UseForeColor = true;
             this.CV_TT_NhanSu_TrinhDo.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_TT_NhanSu_TrinhDo.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CV_TT_NhanSu_TrinhDo.Caption = "Trình Độ";
+            this.CV_TT_NhanSu_TrinhDo.Caption = "Trình Độ *";
             this.CV_TT_NhanSu_TrinhDo.FieldName = "CV_TT_NhanSu_TrinhDo";
             this.CV_TT_NhanSu_TrinhDo.Name = "CV_TT_NhanSu_TrinhDo";
             this.CV_TT_NhanSu_TrinhDo.Visible = true;
