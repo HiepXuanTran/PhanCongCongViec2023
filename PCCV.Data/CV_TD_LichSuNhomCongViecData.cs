@@ -12,7 +12,7 @@ namespace PCCV.Data
         clsKetNoi cls = new clsKetNoi();
         public DataTable LoadLichSuCongViec_LoadAll()
         {
-            return cls.LayDuLieu("CV_TD_LichSuNhomCongViec_Select");
+            return cls.LayDuLieu("SP_CV_TD_LichSuNhomCongViec_Select");
         }
         public DataTable LoadLichSuCongViec_Load1(CV_QL_NhomCongViecPublic Public)
         {
@@ -21,7 +21,7 @@ namespace PCCV.Data
             object[] giatri = new object[thamso];
             bien[0] = "@CV_TD_LichSuCongViecID";
             giatri[0] = Public.CV_QL_NhomCongViec_ID;
-            return cls.LayDuLieu("CV_TD_LichSuNhomCongViec_Select1", bien, giatri, thamso);
+            return cls.LayDuLieu("SP_CV_TD_LichSuNhomCongViec_Select1", bien, giatri, thamso);
         }
     }
 }

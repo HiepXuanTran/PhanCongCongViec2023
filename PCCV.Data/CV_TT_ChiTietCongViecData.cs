@@ -13,7 +13,7 @@ namespace PCCV.Data
         clsKetNoi cls = new clsKetNoi();
         public DataTable LoadCV_TT_ChiTietCongViec()
         {
-            return cls.LayDuLieu("CV_TT_ChiTietCongViec_Select");
+            return cls.LayDuLieu("SP_CV_TT_ChiTietCongViec_Select");
         }
        
         public int CV_TT_ChiTietCongViec_Del(CV_TT_ChiTietCongViecPublic Public)
@@ -31,7 +31,7 @@ namespace PCCV.Data
             giatri[2] = Public.HT_USER_Editor;
             giatri[3] = Public.CV_TT_ChiTietCongViec_SuDung;
             giatri[4] = Public.CV_TT_ChiTietCongViec_IDCongViec;
-            return cls.Update("CV_TT_ChiTietCongViec_Del", bien, giatri, thamso);
+            return cls.Update("SP_CV_TT_ChiTietCongViec_Del", bien, giatri, thamso);
         }
         public SqlDataReader LoadCV_TT_ChiTietCongViec_Load_R_Para_File(CV_TT_ChiTietCongViecPublic Public)
         {
@@ -40,7 +40,7 @@ namespace PCCV.Data
             object[] giatri = new object[thamso];
             bien[0] = "@CV_TT_ChiTietCongViec_Id";
             giatri[0] = Public.Id;
-            return cls.LayDuLieu_R("CV_TT_ChiTietCongViec_Load_R_Para_File", bien, giatri, thamso);
+            return cls.LayDuLieu_R("SP_CV_TT_ChiTietCongViec_Load_R_Para_File", bien, giatri, thamso);
         }
         public int CV_TT_ChiTietCongViec_Add(CV_TT_ChiTietCongViecPublic Public)
         {
@@ -77,7 +77,7 @@ namespace PCCV.Data
             giatri[11] = Public.CV_TT_ChiTietCongViec_HienThi;
             giatri[12] = Public.CV_TT_ChiTietCongViec_SuDung;
 
-            return cls.Update("CV_TT_ChiTietCongViec_Insert", bien, giatri, thamso);
+            return cls.Update("SP_CV_TT_ChiTietCongViec_Insert", bien, giatri, thamso);
         }
         public int CV_TT_ChiTietCongViec_Edit(CV_TT_ChiTietCongViecPublic Public)
         {
@@ -120,7 +120,7 @@ namespace PCCV.Data
             giatri[13] = Public.CV_TT_ChiTietCongViec_DateEditor;
             giatri[14] = Public.CV_TT_ChiTietCongViec_HienThi;
             giatri[15] = Public.CV_TT_ChiTietCongViec_SuDung;
-            return cls.Update("CV_TT_ChiTietCongViec_Update", bien, giatri, thamso);
+            return cls.Update("SP_CV_TT_ChiTietCongViec_Update", bien, giatri, thamso);
         }
     }
 }

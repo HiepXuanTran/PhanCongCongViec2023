@@ -13,7 +13,7 @@ namespace PCCV.Data
         clsKetNoi cls = new clsKetNoi();
         public DataTable LoadCV_QL_CongViec()
         {
-            return cls.LayDuLieu("CV_QL_CongViec_Select");
+            return cls.LayDuLieu("SP_CV_QL_CongViec_Select");
         }
         public SqlDataReader LoadCV_QL_CongViec_Load_R_Para_File(CV_QL_CongViecPublic Public)
         {
@@ -22,7 +22,7 @@ namespace PCCV.Data
             object[] giatri = new object[thamso];
             bien[0] = "@CV_QL_CongViec_Id";
             giatri[0] = Public.Id;
-            return cls.LayDuLieu_R("CV_QL_CongViec_Load_R_Para_File", bien, giatri, thamso);
+            return cls.LayDuLieu_R("SP_CV_QL_CongViec_Load_R_Para_File", bien, giatri, thamso);
         }
         //public DataTable LoadNhanSu()
         //{
@@ -41,7 +41,7 @@ namespace PCCV.Data
             giatri[1] = Public.HT_USER_Editor;
             giatri[2] = Public.CV_QL_CongViec_DateEditor;
             giatri[3] = Public.CV_QL_CongViec_SuDung;
-            return cls.Update("CV_QL_CongViec_Del", bien, giatri, thamso);
+            return cls.Update("SP_CV_QL_CongViec_Del", bien, giatri, thamso);
         }
         public int CV_QL_CongViec_Add(CV_QL_CongViecPublic Public)
         {
@@ -86,7 +86,7 @@ namespace PCCV.Data
             giatri[15] = Public.CV_QL_CongViec_HienThi;
             giatri[16] = Public.CV_QL_CongViec_SuDung;
             giatri[17] = Public.TenFile;
-            return cls.Update("CV_QL_CongViec_Insert", bien, giatri, thamso);
+            return cls.Update("SP_CV_QL_CongViec_Insert", bien, giatri, thamso);
         }
         public int CV_QL_CongViec_Edit(CV_QL_CongViecPublic Public)
         {
@@ -135,7 +135,7 @@ namespace PCCV.Data
             giatri[18] = Public.CV_QL_CongViec_SuDung;
             giatri[19] = Public.Id;
             giatri[20] = Public.TenFile;
-            return cls.Update("CV_QL_CongViec_Update", bien, giatri, thamso);
+            return cls.Update("SP_CV_QL_CongViec_Update", bien, giatri, thamso);
         }
     }
 }

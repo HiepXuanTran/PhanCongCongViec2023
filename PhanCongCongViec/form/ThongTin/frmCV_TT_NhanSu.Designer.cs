@@ -256,6 +256,8 @@
             // 
             // CV_TT_NhanSu_TrinhDo
             // 
+            this.CV_TT_NhanSu_TrinhDo.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_TT_NhanSu_TrinhDo.AppearanceCell.Options.UseForeColor = true;
             this.CV_TT_NhanSu_TrinhDo.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CV_TT_NhanSu_TrinhDo.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.CV_TT_NhanSu_TrinhDo.AppearanceHeader.Options.UseFont = true;

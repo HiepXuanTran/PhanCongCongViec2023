@@ -12,7 +12,7 @@ namespace PCCV.Data
         clsKetNoi cls = new clsKetNoi();
         public DataTable LoadCV_QL_PhanCongCongViecNhanSu()
         {
-            return cls.LayDuLieu("CV_QL_PhanCongCongViecNhanSu_Select");
+            return cls.LayDuLieu("SP_CV_QL_PhanCongCongViecNhanSu_Select");
         }
         public int CV_QL_PhanCongCongViecNhanSu_Del(CV_QL_PhanCongCongViecNhanSuPublic Public)
         {
@@ -27,7 +27,7 @@ namespace PCCV.Data
             giatri[1] = Public.CV_QL_PhanCongCongViecNhanSu_DateEditor;
             giatri[2] = Public.HT_USER_Editor;
             giatri[3] = Public.CV_QL_PhanCongCongViecNhanSu_SuDung;
-            return cls.Update("CV_QL_PhanCongCongViecNhanSu_Del", bien, giatri, thamso);
+            return cls.Update("SP_CV_QL_PhanCongCongViecNhanSu_Del", bien, giatri, thamso);
         }
         public int CV_QL_PhanCongCongViecNhanSu_Insert(CV_QL_PhanCongCongViecNhanSuPublic Public)
         {
@@ -63,7 +63,7 @@ namespace PCCV.Data
             giatri[11] = Public.CV_QL_PhanCongCongViecNhanSu_IDNhanSuThucHien;
             giatri[12] = Public.CV_QL_PhanCongCongViecNhanSu_IDNhanSuPhoiHop;
             giatri[13] = Public.CV_QL_PhanCongCongViecNhanSu_IDNhanSuKiemTra;
-            return cls.Update("CV_QL_PhanCongCongViecNhanSu_Insert", bien, giatri, thamso);
+            return cls.Update("SP_CV_QL_PhanCongCongViecNhanSu_Insert", bien, giatri, thamso);
         }
         public int CV_QL_PhanCongCongViecNhanSu_Update(CV_QL_PhanCongCongViecNhanSuPublic Public)
         {
@@ -104,7 +104,7 @@ namespace PCCV.Data
             giatri[14] = Public.CV_QL_PhanCongCongViecNhanSu_IDNhanSuThucHien;
             giatri[15] = Public.CV_QL_PhanCongCongViecNhanSu_IDNhanSuPhoiHop;
             giatri[16] = Public.CV_QL_PhanCongCongViecNhanSu_IDNhanSuKiemTra;
-            return cls.Update("CV_QL_PhanCongCongViecNhanSu_Update", bien, giatri, thamso);
+            return cls.Update("SP_CV_QL_PhanCongCongViecNhanSu_Update", bien, giatri, thamso);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace PCCV.Data
         clsKetNoi cls = new clsKetNoi();
         public DataTable LoadCV_HT_LoaiCongViec_LoadAll()
         {
-            return cls.LayDuLieu("CV_HT_LoaiCongViec_Select");
+            return cls.LayDuLieu("SP_CV_HT_LoaiCongViec_Select");
         }
         public int CV_HT_LoaiCongViec_Del(CV_HT_LoaiCongViecPublic Public)
         {
@@ -27,7 +27,7 @@ namespace PCCV.Data
             giatri[1] = Public.CV_HT_LoaiCongViec_DateEdit;
             giatri[2] = Public.HT_USER_Edit;
             giatri[3] = Public.CV_HT_LoaiCongViec_SuDung;
-            return cls.Update("CV_HT_LoaiCongViec_Del", bien, giatri, thamso);
+            return cls.Update("SP_CV_HT_LoaiCongViec_Del", bien, giatri, thamso);
         }
 
         public int CV_HT_LoaiCongViec_Add(CV_HT_LoaiCongViecPublic Public)
@@ -49,7 +49,7 @@ namespace PCCV.Data
             giatri[4] = Public.CV_HT_LoaiCongViec_DateCreate;
             giatri[5] = Public.CV_HT_LoaiCongViec_HienThi;
             giatri[6] = Public.CV_HT_LoaiCongViec_SuDung;
-            return cls.Update("CV_HT_LoaiCongViec_Insert", bien, giatri, thamso);
+            return cls.Update("SP_CV_HT_LoaiCongViec_Insert", bien, giatri, thamso);
         }
         public int CV_HT_LoaiCongViec_Update(CV_HT_LoaiCongViecPublic Public)
         {
@@ -76,7 +76,7 @@ namespace PCCV.Data
             giatri[7] = Public.CV_HT_LoaiCongViec_DateEdit;
             giatri[8] = Public.HT_USER_Edit;
             giatri[9] = Public.CV_HT_LoaiCongViec_Id;
-            return cls.Update("CV_HT_LoaiCongViec_Update", bien, giatri, thamso);
+            return cls.Update("SP_CV_HT_LoaiCongViec_Update", bien, giatri, thamso);
         }
 
     }

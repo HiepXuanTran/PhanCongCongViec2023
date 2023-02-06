@@ -10,10 +10,16 @@ namespace PCCV.Data
 {
     public class CV_TT_NhanSuData
     {
+
         clsKetNoi cls = new clsKetNoi();
         public DataTable LoadCV_TT_NhanSu_LoadAll()
         {
-            return cls.LayDuLieu("CV_TT_NhanSu_Select");
+            return cls.LayDuLieu("SP_CV_TT_NhanSu_Select");
+        }
+
+        public DataTable LoadCV_TT_NhanSu_LoadSTT()
+        {
+            return cls.LayDuLieu("SP_CV_TT_NhanSu_Select_TheoNhomThucHien");
         }
 
         public int CV_TT_NhanSu_Del(CV_TT_NhanSuPublic Public)
@@ -29,7 +35,7 @@ namespace PCCV.Data
             giatri[1] = Public.CV_TT_NhanSu_DateEditor;
             giatri[2] = Public.HT_USER_Editor;
             giatri[3] = Public.CV_TT_NhanSu_SuDung;
-            return cls.Update("CV_TT_NhanSu_Del", bien, giatri, thamso);
+            return cls.Update("SP_CV_TT_NhanSu_Del", bien, giatri, thamso);
         }
         public int CV_TT_NhanSu_Add(CV_TT_NhanSuPublic Public)
         {
@@ -58,7 +64,7 @@ namespace PCCV.Data
             giatri[8] = Public.CV_TT_NhanSu_HienThi;
             giatri[9] = Public.CV_TT_NhanSu_SuDung;
 
-            return cls.Update("CV_TT_NhanSu_Insert", bien, giatri, thamso);
+            return cls.Update("SP_CV_TT_NhanSu_Insert", bien, giatri, thamso);
         }
         public int CV_TT_NhanSu_Edit(CV_TT_NhanSuPublic Public)
         {
@@ -94,7 +100,7 @@ namespace PCCV.Data
             giatri[11] = Public.CV_TT_NhanSu_SuDung;
             giatri[12] = Public.CV_TT_NhanSu_ID;
 
-            return cls.Update("CV_TT_NhanSu_Edit", bien, giatri, thamso);
+            return cls.Update("SP_CV_TT_NhanSu_Edit", bien, giatri, thamso);
         }
     }
 }

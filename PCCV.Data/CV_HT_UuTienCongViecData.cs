@@ -12,7 +12,7 @@ namespace PCCV.Data
         clsKetNoi cls = new clsKetNoi();
         public DataTable LoadCV_HT_UuTienCongViec_LoadAll()
         {
-            return cls.LayDuLieu("CV_HT_UuTienCongViec_Select");
+            return cls.LayDuLieu("SP_CV_HT_UuTienCongViec_Select");
         }
 
         public int CV_HT_UuTienCongViec_Del(CV_HT_UuTienCongViecPublic Public)
@@ -28,7 +28,7 @@ namespace PCCV.Data
             giatri[1] = Public.CV_HT_UuTienCongViec_DateEditor;
             giatri[2] = Public.HT_USER_Editor;
             giatri[3] = Public.CV_HT_UuTienCongViec_SuDung;
-            return cls.Update("CV_HT_UuTienCongViec_Del", bien, giatri, thamso);
+            return cls.Update("SP_CV_HT_UuTienCongViec_Del", bien, giatri, thamso);
         }
         public int CV_HT_UuTienCongViec_Add(CV_HT_UuTienCongViecPublic Public)
         {
@@ -51,7 +51,7 @@ namespace PCCV.Data
             giatri[5] = Public.CV_HT_UuTienCongViec_HienThi;
             giatri[6] = Public.CV_HT_UuTienCongViec_SuDung;
 
-            return cls.Update("CV_HT_UuTienCongViec_Insert", bien, giatri, thamso);
+            return cls.Update("SP_CV_HT_UuTienCongViec_Insert", bien, giatri, thamso);
         }
         public int CV_HT_UuTienCongViec_Edit(CV_HT_UuTienCongViecPublic Public)
         {
@@ -81,7 +81,7 @@ namespace PCCV.Data
             giatri[8] = Public.CV_HT_UuTienCongViec_SuDung;
             giatri[9] = Public.CV_HT_UuTienCongViec_ID;
 
-            return cls.Update("CV_HT_UuTienCongViec_Edit", bien, giatri, thamso);
+            return cls.Update("SP_CV_HT_UuTienCongViec_Edit", bien, giatri, thamso);
         }
     }
 }

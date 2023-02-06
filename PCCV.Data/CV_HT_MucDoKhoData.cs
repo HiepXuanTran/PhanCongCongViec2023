@@ -12,7 +12,7 @@ namespace PCCV.Data
         clsKetNoi cls = new clsKetNoi();
         public DataTable LoadCV_HT_MucDoKho_LoadAll()
         {
-            return cls.LayDuLieu("CV_HT_MucDoKho_Select");
+            return cls.LayDuLieu("SP_CV_HT_MucDoKho_Select");
         }
         public int CV_HT_MucDoKho_Del(CV_HT_MucDoKhoPublic Public)
         {
@@ -27,7 +27,7 @@ namespace PCCV.Data
             giatri[1] = Public.CV_HT_MucDoKho_DateEdit;
             giatri[2] = Public.HT_USER_Edit;
             giatri[3] = Public.CV_HT_MucDoKho_Sudung;
-            return cls.Update("CV_HT_MucDoKho_Del", bien, giatri, thamso);
+            return cls.Update("SP_CV_HT_MucDoKho_Del", bien, giatri, thamso);
         }
         public int CV_HT_MucDoKho_Add(CV_HT_MucDoKhoPublic Public)
         {
@@ -48,7 +48,7 @@ namespace PCCV.Data
             giatri[4] = Public.CV_HT_MucDoKho_DateCreate;
             giatri[5] = Public.CV_HT_MucDoKho_Sudung;
             giatri[6] = Public.CV_HT_MucDoKho_HienThi;
-            return cls.Update("CV_HT_MucDoKho_Insert", bien, giatri, thamso);
+            return cls.Update("SP_CV_HT_MucDoKho_Insert", bien, giatri, thamso);
         }
 
         public int CV_HT_MucDoKho_Update(CV_HT_MucDoKhoPublic Public)
@@ -76,7 +76,7 @@ namespace PCCV.Data
             giatri[7] = Public.CV_HT_MucDoKho_Sudung;
             giatri[8] = Public.CV_HT_MucDoKho_HienThi;
             giatri[9] = Public.CV_HT_MucDoKho_Id;
-            return cls.Update("CV_HT_MucDoKho_Update", bien, giatri, thamso);
+            return cls.Update("SP_CV_HT_MucDoKho_Update", bien, giatri, thamso);
         }
     }
 }

@@ -321,7 +321,7 @@ namespace PhanCongCongViec.form.QuanLy
         {
 
             //lookup edit nhom thuc hien 
-            CV_QL_CongViec_LookupEdit_NhomThucHien.DataSource = clsNhanSu.LoadCV_TT_NhanSu_LoadAll();
+            CV_QL_CongViec_LookupEdit_NhomThucHien.DataSource = clsNhanSu.LoadCV_TT_NhanSu_LoadSTT();
             CV_QL_CongViec_LookupEdit_NhomThucHien.DisplayMember = "CV_TT_NhanSu_NhomThucHien";
             CV_QL_CongViec_LookupEdit_NhomThucHien.ValueMember = "CV_TT_NhanSu_ID";
             CV_QL_CongViec_LookupEdit_NhomThucHien.PopupWidth = 400;

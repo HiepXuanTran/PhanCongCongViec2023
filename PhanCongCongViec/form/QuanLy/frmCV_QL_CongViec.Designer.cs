@@ -505,6 +505,8 @@
             this.CV_QL_CongViec_TongSoNgayThucHien.Caption = "Số ngày thực hiện";
             this.CV_QL_CongViec_TongSoNgayThucHien.FieldName = "CV_QL_CongViec_TongSoNgayThucHien";
             this.CV_QL_CongViec_TongSoNgayThucHien.Name = "CV_QL_CongViec_TongSoNgayThucHien";
+            this.CV_QL_CongViec_TongSoNgayThucHien.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CV_QL_CongViec_TongSoNgayThucHien", "SUM={0:0.##}")});
             this.CV_QL_CongViec_TongSoNgayThucHien.Visible = true;
             this.CV_QL_CongViec_TongSoNgayThucHien.Width = 150;
             // 
@@ -523,6 +525,8 @@
             this.CV_QL_CongViec_TongSoGioThucHien.Caption = "Số giờ thực hiện";
             this.CV_QL_CongViec_TongSoGioThucHien.FieldName = "CV_QL_CongViec_TongSoGioThucHien";
             this.CV_QL_CongViec_TongSoGioThucHien.Name = "CV_QL_CongViec_TongSoGioThucHien";
+            this.CV_QL_CongViec_TongSoGioThucHien.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CV_QL_CongViec_TongSoGioThucHien", "SUM={0:0.##}")});
             this.CV_QL_CongViec_TongSoGioThucHien.Visible = true;
             this.CV_QL_CongViec_TongSoGioThucHien.Width = 150;
             // 
@@ -541,6 +545,8 @@
             this.CV_QL_CongViec_TongSoPhutThucHien.Caption = "Số phút thực hiện";
             this.CV_QL_CongViec_TongSoPhutThucHien.FieldName = "CV_QL_CongViec_TongSoPhutThucHien";
             this.CV_QL_CongViec_TongSoPhutThucHien.Name = "CV_QL_CongViec_TongSoPhutThucHien";
+            this.CV_QL_CongViec_TongSoPhutThucHien.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CV_QL_CongViec_TongSoPhutThucHien", "SUM={0:0.##}")});
             this.CV_QL_CongViec_TongSoPhutThucHien.Visible = true;
             this.CV_QL_CongViec_TongSoPhutThucHien.Width = 150;
             // 

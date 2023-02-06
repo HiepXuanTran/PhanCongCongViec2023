@@ -376,6 +376,8 @@
             this.CV_TT_ChiTietCongViec_TongSoNgayThucHien.Caption = "Số ngày thực hiện";
             this.CV_TT_ChiTietCongViec_TongSoNgayThucHien.FieldName = "CV_TT_ChiTietCongViec_TongSoNgayThucHien";
             this.CV_TT_ChiTietCongViec_TongSoNgayThucHien.Name = "CV_TT_ChiTietCongViec_TongSoNgayThucHien";
+            this.CV_TT_ChiTietCongViec_TongSoNgayThucHien.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CV_TT_ChiTietCongViec_TongSoNgayThucHien", "SUM={0:0.##}")});
             this.CV_TT_ChiTietCongViec_TongSoNgayThucHien.Visible = true;
             this.CV_TT_ChiTietCongViec_TongSoNgayThucHien.Width = 93;
             // 
@@ -394,6 +396,8 @@
             this.CV_TT_ChiTietCongViec_TongSoGioThucHien.Caption = "Số giờ thực hiện";
             this.CV_TT_ChiTietCongViec_TongSoGioThucHien.FieldName = "CV_TT_ChiTietCongViec_TongSoGioThucHien";
             this.CV_TT_ChiTietCongViec_TongSoGioThucHien.Name = "CV_TT_ChiTietCongViec_TongSoGioThucHien";
+            this.CV_TT_ChiTietCongViec_TongSoGioThucHien.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CV_TT_ChiTietCongViec_TongSoGioThucHien", "SUM={0:0.##}")});
             this.CV_TT_ChiTietCongViec_TongSoGioThucHien.Visible = true;
             this.CV_TT_ChiTietCongViec_TongSoGioThucHien.Width = 85;
             // 
@@ -412,6 +416,8 @@
             this.CV_TT_ChiTietCongViec_TongSoPhutThucHien.Caption = "Số phút thực hiện";
             this.CV_TT_ChiTietCongViec_TongSoPhutThucHien.FieldName = "CV_TT_ChiTietCongViec_TongSoPhutThucHien";
             this.CV_TT_ChiTietCongViec_TongSoPhutThucHien.Name = "CV_TT_ChiTietCongViec_TongSoPhutThucHien";
+            this.CV_TT_ChiTietCongViec_TongSoPhutThucHien.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CV_TT_ChiTietCongViec_TongSoPhutThucHien", "SUM={0:0.##}")});
             this.CV_TT_ChiTietCongViec_TongSoPhutThucHien.Visible = true;
             this.CV_TT_ChiTietCongViec_TongSoPhutThucHien.Width = 87;
             // 

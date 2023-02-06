@@ -28,5 +28,9 @@ namespace PCCV.BLL
         {
             return cls.CV_TT_NhanSu_Edit(Public);
         }
+        public DataTable LoadCV_TT_NhanSu_LoadSTT()
+        {
+            return cls.LoadCV_TT_NhanSu_LoadSTT();
+        }
     }
 }
