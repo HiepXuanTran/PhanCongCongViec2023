@@ -800,11 +800,17 @@ namespace PhanCongCongViec.form.QuanLy
             CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_NhomThucHien"], CongViecPublic.NhomThucHien);
             CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_KhaNangChuyenMon"], CongViecPublic.KhaNangChuyenMon);
             CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_FileDinhKem"], CongViecPublic.FileDinhKem);
+            CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_TenFile"], CongViecPublic.TenFile);
             CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_MucDoKho"], CongViecPublic.MucDoKho);
             CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_TongSoPhutThucHien"], CongViecPublic.SoPhutThucHien);
             CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_TongSoGioThucHien"], CongViecPublic.SoGioThucHien);
             CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_TongSoNgayThucHien"], CongViecPublic.SoNgayThucHien);
             CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViecChon"], false);
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadMain.HienThiCV_TT_CongViecImport();
         }
     }
 }

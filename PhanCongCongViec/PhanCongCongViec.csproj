@@ -86,6 +86,12 @@
     <Compile Include="form\QuanLy\frmCV_QL_CongViec.Designer.cs">
       <DependentUpon>frmCV_QL_CongViec.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\QuanLy\frmCV_QL_CongViec_ImportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\QuanLy\frmCV_QL_CongViec_ImportExcel.Designer.cs">
+      <DependentUpon>frmCV_QL_CongViec_ImportExcel.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\QuanLy\frmCV_QL_NhomCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,12 +103,6 @@
     </Compile>
     <Compile Include="form\QuanLy\frmCV_QL_PhanCongCongViecNhanSu.Designer.cs">
       <DependentUpon>frmCV_QL_PhanCongCongViecNhanSu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form\QuanLy\frm_Import_CV_QL_CongViec.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form\QuanLy\frm_Import_CV_QL_CongViec.Designer.cs">
-      <DependentUpon>frm_Import_CV_QL_CongViec.cs</DependentUpon>
     </Compile>
     <Compile Include="form\ThongTin\frmCV_TT_ChiTietCongViec.cs">
       <SubType>Form</SubType>
@@ -140,14 +140,14 @@
     <EmbeddedResource Include="form\QuanLy\frmCV_QL_CongViec.resx">
       <DependentUpon>frmCV_QL_CongViec.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form\QuanLy\frmCV_QL_CongViec_ImportExcel.resx">
+      <DependentUpon>frmCV_QL_CongViec_ImportExcel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\QuanLy\frmCV_QL_NhomCongViec.resx">
       <DependentUpon>frmCV_QL_NhomCongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\QuanLy\frmCV_QL_PhanCongCongViecNhanSu.resx">
       <DependentUpon>frmCV_QL_PhanCongCongViecNhanSu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form\QuanLy\frm_Import_CV_QL_CongViec.resx">
-      <DependentUpon>frm_Import_CV_QL_CongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\ThongTin\frmCV_TT_ChiTietCongViec.resx">
       <DependentUpon>frmCV_TT_ChiTietCongViec.cs</DependentUpon>

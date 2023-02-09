@@ -101,6 +101,18 @@ namespace PhanCongCongViec
             else
                 m_frmCV_TT_ChiTietCongViec.Activate();
         }
+        static frmCV_QL_CongViec_ImportExcel m_frmCV_QL_CongViec_ImportExcel = null;
+        public static void HienThiCV_TT_CongViecImport()
+        {
+            if (m_frmCV_QL_CongViec_ImportExcel == null || m_frmCV_QL_CongViec_ImportExcel.IsDisposed)
+            {
+                m_frmCV_QL_CongViec_ImportExcel = new frmCV_QL_CongViec_ImportExcel();
+                m_frmCV_QL_CongViec_ImportExcel.MdiParent = frmMain.ActiveForm;
+                m_frmCV_QL_CongViec_ImportExcel.Show();
+            }
+            else
+                m_frmCV_QL_CongViec_ImportExcel.Activate();
+        }
 
         static frmCV_HT_VaiTroCongViec m_frmCV_HT_VaiTroCongViec = null;
         public static void HienThiCV_HT_VaiTroCongViec()

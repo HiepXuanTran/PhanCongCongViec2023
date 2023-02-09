@@ -67,4 +67,4 @@ C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.exe.licenses
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_PhanCongCongViecNhanSu.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.HeThong.frmCV_HT_LoaiCongViec.resources
-C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frm_Import_CV_QL_CongViec.resources
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_CongViec_ImportExcel.resources
