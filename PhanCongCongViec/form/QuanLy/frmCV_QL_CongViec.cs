@@ -27,6 +27,7 @@ namespace PhanCongCongViec.form.QuanLy
         CV_TT_NhanSuBLL clsNhanSu = new CV_TT_NhanSuBLL();
         bool CV_QL_CongViecEdit = false;
         bool CV_QL_CongViecAdd = false;
+        bool CV_QL_CongViecCoppy = false;
         // lock 6 cột cuối
         CV_HT_MucDoKhoBLL clsMucDoKho = new CV_HT_MucDoKhoBLL();
         CV_QL_NhomCongViecBLL clsNhomCongViec = new CV_QL_NhomCongViecBLL();
@@ -735,6 +736,7 @@ namespace PhanCongCongViec.form.QuanLy
             {
                 if (Convert.ToBoolean(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViecChon))) // == true
                 {
+                    CV_QL_CongViec_BandedGridview.SetFocusedRowCellValue(CV_QL_CongViecChon,false);
                     CongViecPublic.TenLoaiCongViec = CV_QL_CongViec_BandedGridview.GetFocusedRowCellDisplayText(CV_QL_CongViec_TenLoaiCongViec);
                     CongViecPublic.TenNhomCongViec1 = CV_QL_CongViec_BandedGridview.GetFocusedRowCellDisplayText(CV_QL_CongViec_TenNhomCongViec1);
                     CongViecPublic.TenNhomCongViec2 = CV_QL_CongViec_BandedGridview.GetFocusedRowCellDisplayText(CV_QL_CongViec_TenNhomCongViec2);
@@ -762,7 +764,7 @@ namespace PhanCongCongViec.form.QuanLy
                     }
                     if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_FileDinhKem))))
                     {
-                        //Public.FileDinhKem = (byte[])CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_FileDinhKem);
+                        CongViecPublic.FileDinhKem = (byte[])CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_FileDinhKem);
                         CongViecPublic.FileDinhKem = ReadFile(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_FileDinhKem).ToString());
                     }
                     if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_TenFile))))
@@ -786,7 +788,13 @@ namespace PhanCongCongViec.form.QuanLy
                     TraVe_DongDangTuongTac(i);
                 }
                 CV_QL_CongViec_BandedGridview.MoveNext();
-            }
+            } 
+            Lock_Unlock_Control_Input(true);
+            Lock_Unlock_Control(false);
+            CV_QL_CongViecAdd = false;
+            CV_QL_CongViecEdit = false;
+            CV_QL_CongViecCoppy = true;
+
         }
 
         private void CV_QL_CongViec_BandedGridview_InitNewRow(object sender, DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs e)

@@ -268,6 +268,7 @@
             this.CV_QL_CongViec_BandedGridview.OptionsView.ShowGroupPanel = false;
             this.CV_QL_CongViec_BandedGridview.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_QL_CongViec_TenLoaiCongViec, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.CV_QL_CongViec_BandedGridview.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_QL_CongViec_BandedGridview_PopupMenuShowing);
             // 
             // gridBandChung
             // 
