@@ -295,6 +295,18 @@ namespace PhanCongCongViec.form.QuanLy
                 CV_QL_CongViec_BandedGridview.MoveNext();
             }
         }
+        private void TraVe_DongDangTuongTac(int DongDangTuongTac)
+        {
+            CV_QL_CongViec_BandedGridview.MoveFirst();
+            for (int i = 0; i < CV_QL_CongViec_BandedGridview.RowCount; i++)
+            {
+                if (i == DongDangTuongTac)
+                {
+                    break;
+                }
+                CV_QL_CongViec_BandedGridview.MoveNext();
+            }
+        }
         // hàm kiểm tra check ô để sửa
         private bool KiemTra()
         {
@@ -380,6 +392,7 @@ namespace PhanCongCongViec.form.QuanLy
 
             // load form nhan su
             CV_QL_CongViec_GridControl.DataSource = cls.LoadCV_QL_CongViec();
+            string s = CV_QL_CongViec_BandedGridview.RowCount.ToString();
             this.CV_QL_CongViec_ChiTietCongViec.OptionsColumn.ReadOnly = true;
             CV_QL_CongViec_barButtonItem_Luu.Enabled = false;
             CV_QL_CongViec_barButtonItem_Undo.Enabled = false;
@@ -770,6 +783,7 @@ namespace PhanCongCongViec.form.QuanLy
                         CongViecPublic.SoNgayThucHien = Convert.ToDouble(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_TongSoNgayThucHien));
                     }
                     CV_QL_CongViec_BandedGridview.AddNewRow();
+                    TraVe_DongDangTuongTac(i);
                 }
                 CV_QL_CongViec_BandedGridview.MoveNext();
             }

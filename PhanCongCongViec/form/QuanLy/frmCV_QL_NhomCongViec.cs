@@ -58,7 +58,7 @@ namespace PhanCongCongViec.form.QuanLy
         //        gridBand_Chung.Fixed = FixedStyle.Left;
         //    }
         //}
-
+        CV_QL_NhomCongViecPublic NhomCongViecPublic = new CV_QL_NhomCongViecPublic();
         bool CV_QL_NhomCongViecAdd = false;
         bool CV_QL_NhomCongViecEdit = false;
         CV_QL_NhomCongViecBLL cls = new CV_QL_NhomCongViecBLL();
@@ -112,6 +112,19 @@ namespace PhanCongCongViec.form.QuanLy
                 if (Convert.ToBoolean(CV_QL_NhomCongViec_bandedGridView.GetFocusedRowCellValue(CV_QL_NhomCongViecChon)))
                 {
                     //Trả con trỏ về vị trí được chọn
+                    break;
+                }
+                CV_QL_NhomCongViec_bandedGridView.MoveNext();
+            }
+        }
+
+        private void TraVe_DongDangTuongTac(int DongDangTuongTac)
+        {
+            CV_QL_NhomCongViec_bandedGridView.MoveFirst();
+            for (int i = 0; i < CV_QL_NhomCongViec_bandedGridView.RowCount; i++)
+            {
+                if (i == DongDangTuongTac)
+                {
                     break;
                 }
                 CV_QL_NhomCongViec_bandedGridView.MoveNext();
@@ -412,6 +425,45 @@ namespace PhanCongCongViec.form.QuanLy
         {
             LoadHamDungChung.PreviewPrintableComponent(CV_QL_NhomCongViec_GridControl, CV_QL_NhomCongViec_GridControl.LookAndFeel);
         }
+
+        private void CV_QL_NhomCongViec_barButtonItem_Coppy_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (KiemTra() == false)
+            {
+                MessageBox.Show("Bạn phải chọn dữ liệu", "Thông báo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            CV_QL_NhomCongViec_bandedGridView.MoveFirst();
+            for (int i = 0; i < CV_QL_NhomCongViec_bandedGridView.RowCount; i++)
+            {
+                if (Convert.ToBoolean(CV_QL_NhomCongViec_bandedGridView.GetFocusedRowCellValue(CV_QL_NhomCongViecChon))) // == true
+                {
+                    NhomCongViecPublic.CV_QL_NhomCongViec_TenNhomCongViec1 = CV_QL_NhomCongViec_bandedGridView.GetFocusedRowCellDisplayText(CV_QL_NhomCongViec_TenNhomCongViec1);
+                    NhomCongViecPublic.CV_QL_NhomCongViec_TenNhomCongViec2 = CV_QL_NhomCongViec_bandedGridView.GetFocusedRowCellDisplayText(CV_QL_NhomCongViec_TenNhomCongViec2);
+                    if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_NhomCongViec_bandedGridView.GetFocusedRowCellDisplayText(CV_QL_NhomCongViec_MoTa))))
+                    {
+                        NhomCongViecPublic.CV_QL_NhomCongViec_MoTa = CV_QL_NhomCongViec_bandedGridView.GetFocusedRowCellDisplayText(CV_QL_NhomCongViec_MoTa);
+                    }
+                    if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_NhomCongViec_bandedGridView.GetFocusedRowCellDisplayText(CV_QL_NhomCongViec_GhiChu))))
+                    {
+                        NhomCongViecPublic.CV_QL_NhomCongViec_GhiChu = CV_QL_NhomCongViec_bandedGridView.GetFocusedRowCellDisplayText(CV_QL_NhomCongViec_GhiChu);
+                    }
+                    CV_QL_NhomCongViec_bandedGridView.AddNewRow();
+                    TraVe_DongDangTuongTac(i);
+                }
+                CV_QL_NhomCongViec_bandedGridView.MoveNext();
+            }
+        }
+
+        private void CV_QL_NhomCongViec_bandedGridView_InitNewRow(object sender, DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs e)
+        {
+            CV_QL_NhomCongViec_bandedGridView.SetRowCellValue(e.RowHandle, CV_QL_NhomCongViec_bandedGridView.Columns["CV_QL_NhomCongViec_TenNhomCongViec1"], NhomCongViecPublic.CV_QL_NhomCongViec_TenNhomCongViec1);
+            CV_QL_NhomCongViec_bandedGridView.SetRowCellValue(e.RowHandle, CV_QL_NhomCongViec_bandedGridView.Columns["CV_QL_NhomCongViec_TenNhomCongViec2"], NhomCongViecPublic.CV_QL_NhomCongViec_TenNhomCongViec2);
+            CV_QL_NhomCongViec_bandedGridView.SetRowCellValue(e.RowHandle, CV_QL_NhomCongViec_bandedGridView.Columns["CV_QL_NhomCongViec_MoTa"], NhomCongViecPublic.CV_QL_NhomCongViec_MoTa);
+            CV_QL_NhomCongViec_bandedGridView.SetRowCellValue(e.RowHandle, CV_QL_NhomCongViec_bandedGridView.Columns["CV_QL_NhomCongViec_GhiChu"], NhomCongViecPublic.CV_QL_NhomCongViec_GhiChu);
+            CV_QL_NhomCongViec_bandedGridView.SetRowCellValue(e.RowHandle, CV_QL_NhomCongViec_bandedGridView.Columns["CV_QL_NhomCongViecChon"], false);
+        }
+
         }
 
 }

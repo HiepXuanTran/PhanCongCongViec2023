@@ -68,6 +68,9 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.CV_QL_CongViec_barButtonItem_Refresh = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.CV_QL_CongViec_barButtonItem_Add = new DevExpress.XtraBars.BarButtonItem();
+            this.CV_QL_CongViec_barButtonItem_Coppy = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_CongViec_barButtonItem_Sua = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_CongViec_barButtonItem_Xoa = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_CongViec_barButtonItem_Luu = new DevExpress.XtraBars.BarButtonItem();
@@ -77,9 +80,6 @@
             this.CV_QL_CongViec_barButtonItem_DownloadDinhKem = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
-            this.CV_QL_CongViec_barButtonItem_Add = new DevExpress.XtraBars.BarButtonItem();
-            this.CV_QL_CongViec_barButtonItem_Coppy = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -680,6 +680,35 @@
             this.CV_QL_CongViec_barButtonItem_Refresh.Name = "CV_QL_CongViec_barButtonItem_Refresh";
             this.CV_QL_CongViec_barButtonItem_Refresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_CongViec_barButtonItem_Refresh_ItemClick);
             // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Caption = "Thêm mới";
+            this.barSubItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem2.Glyph")));
+            this.barSubItem2.Id = 12;
+            this.barSubItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem2.LargeGlyph")));
+            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_Add, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_Coppy, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.barSubItem2.Name = "barSubItem2";
+            // 
+            // CV_QL_CongViec_barButtonItem_Add
+            // 
+            this.CV_QL_CongViec_barButtonItem_Add.Caption = "Thêm dòng mới";
+            this.CV_QL_CongViec_barButtonItem_Add.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Add.Glyph")));
+            this.CV_QL_CongViec_barButtonItem_Add.Id = 1;
+            this.CV_QL_CongViec_barButtonItem_Add.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Add.LargeGlyph")));
+            this.CV_QL_CongViec_barButtonItem_Add.Name = "CV_QL_CongViec_barButtonItem_Add";
+            this.CV_QL_CongViec_barButtonItem_Add.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_CongViec_barButtonItem_Them_ItemClick);
+            // 
+            // CV_QL_CongViec_barButtonItem_Coppy
+            // 
+            this.CV_QL_CongViec_barButtonItem_Coppy.Caption = "Coppy";
+            this.CV_QL_CongViec_barButtonItem_Coppy.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Coppy.Glyph")));
+            this.CV_QL_CongViec_barButtonItem_Coppy.Id = 11;
+            this.CV_QL_CongViec_barButtonItem_Coppy.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Coppy.LargeGlyph")));
+            this.CV_QL_CongViec_barButtonItem_Coppy.Name = "CV_QL_CongViec_barButtonItem_Coppy";
+            this.CV_QL_CongViec_barButtonItem_Coppy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
             // CV_QL_CongViec_barButtonItem_Sua
             // 
             this.CV_QL_CongViec_barButtonItem_Sua.Caption = "Sửa";
@@ -760,35 +789,6 @@
             this.barButtonItem2.Id = 10;
             this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
             this.barButtonItem2.Name = "barButtonItem2";
-            // 
-            // barSubItem2
-            // 
-            this.barSubItem2.Caption = "Thêm mới";
-            this.barSubItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem2.Glyph")));
-            this.barSubItem2.Id = 12;
-            this.barSubItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem2.LargeGlyph")));
-            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_Add, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_Coppy, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.barSubItem2.Name = "barSubItem2";
-            // 
-            // CV_QL_CongViec_barButtonItem_Add
-            // 
-            this.CV_QL_CongViec_barButtonItem_Add.Caption = "Thêm dòng mới";
-            this.CV_QL_CongViec_barButtonItem_Add.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Add.Glyph")));
-            this.CV_QL_CongViec_barButtonItem_Add.Id = 1;
-            this.CV_QL_CongViec_barButtonItem_Add.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Add.LargeGlyph")));
-            this.CV_QL_CongViec_barButtonItem_Add.Name = "CV_QL_CongViec_barButtonItem_Add";
-            this.CV_QL_CongViec_barButtonItem_Add.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_CongViec_barButtonItem_Them_ItemClick);
-            // 
-            // CV_QL_CongViec_barButtonItem_Coppy
-            // 
-            this.CV_QL_CongViec_barButtonItem_Coppy.Caption = "Coppy";
-            this.CV_QL_CongViec_barButtonItem_Coppy.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Coppy.Glyph")));
-            this.CV_QL_CongViec_barButtonItem_Coppy.Id = 11;
-            this.CV_QL_CongViec_barButtonItem_Coppy.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Coppy.LargeGlyph")));
-            this.CV_QL_CongViec_barButtonItem_Coppy.Name = "CV_QL_CongViec_barButtonItem_Coppy";
-            this.CV_QL_CongViec_barButtonItem_Coppy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barDockControlTop
             // 

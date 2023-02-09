@@ -33,7 +33,9 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.CV_QL_NhomCongViec_barButtonItem_Refresh = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.CV_QL_NhomCongViec_barButtonItem_Them = new DevExpress.XtraBars.BarButtonItem();
+            this.CV_QL_NhomCongViec_barButtonItem_Coppy = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_NhomCongViec_barButtonItem_Sua = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_NhomCongViec_barButtonItem_Xoa = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_NhomCongViec_barButtonItem_Luu = new DevExpress.XtraBars.BarButtonItem();
@@ -85,9 +87,11 @@
             this.CV_QL_NhomCongViec_barButtonItem_Xoa,
             this.CV_QL_NhomCongViec_barButtonItem_Luu,
             this.CV_QL_NhomCongViec_barButtonItem_Undo,
-            this.CV_QL_NhomCongViec_barButtonItem_In});
+            this.CV_QL_NhomCongViec_barButtonItem_In,
+            this.barSubItem1,
+            this.CV_QL_NhomCongViec_barButtonItem_Coppy});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 8;
+            this.barManager1.MaxItemId = 10;
             // 
             // bar2
             // 
@@ -97,7 +101,7 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Refresh, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Them, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Sua, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Xoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Luu, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
@@ -116,14 +120,34 @@
             this.CV_QL_NhomCongViec_barButtonItem_Refresh.Name = "CV_QL_NhomCongViec_barButtonItem_Refresh";
             this.CV_QL_NhomCongViec_barButtonItem_Refresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_NhomCongViec_barButtonItem_Refresh_ItemClick);
             // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "Thêm";
+            this.barSubItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.Glyph")));
+            this.barSubItem1.Id = 8;
+            this.barSubItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.LargeGlyph")));
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Them, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Coppy, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.barSubItem1.Name = "barSubItem1";
+            // 
             // CV_QL_NhomCongViec_barButtonItem_Them
             // 
-            this.CV_QL_NhomCongViec_barButtonItem_Them.Caption = "Thêm";
+            this.CV_QL_NhomCongViec_barButtonItem_Them.Caption = "Thêm dòng mới";
             this.CV_QL_NhomCongViec_barButtonItem_Them.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_NhomCongViec_barButtonItem_Them.Glyph")));
             this.CV_QL_NhomCongViec_barButtonItem_Them.Id = 1;
             this.CV_QL_NhomCongViec_barButtonItem_Them.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_NhomCongViec_barButtonItem_Them.LargeGlyph")));
             this.CV_QL_NhomCongViec_barButtonItem_Them.Name = "CV_QL_NhomCongViec_barButtonItem_Them";
             this.CV_QL_NhomCongViec_barButtonItem_Them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_NhomCongViec_barButtonItem_Them_ItemClick);
+            // 
+            // CV_QL_NhomCongViec_barButtonItem_Coppy
+            // 
+            this.CV_QL_NhomCongViec_barButtonItem_Coppy.Caption = "Coppy";
+            this.CV_QL_NhomCongViec_barButtonItem_Coppy.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_NhomCongViec_barButtonItem_Coppy.Glyph")));
+            this.CV_QL_NhomCongViec_barButtonItem_Coppy.Id = 9;
+            this.CV_QL_NhomCongViec_barButtonItem_Coppy.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_NhomCongViec_barButtonItem_Coppy.LargeGlyph")));
+            this.CV_QL_NhomCongViec_barButtonItem_Coppy.Name = "CV_QL_NhomCongViec_barButtonItem_Coppy";
+            this.CV_QL_NhomCongViec_barButtonItem_Coppy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_NhomCongViec_barButtonItem_Coppy_ItemClick);
             // 
             // CV_QL_NhomCongViec_barButtonItem_Sua
             // 
@@ -254,6 +278,7 @@
             this.CV_QL_NhomCongViec_bandedGridView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_QL_NhomCongViec_TenNhomCongViec1, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.CV_QL_NhomCongViec_bandedGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_QL_NhomCongViec_bandedGridView_PopupMenuShowing);
+            this.CV_QL_NhomCongViec_bandedGridView.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.CV_QL_NhomCongViec_bandedGridView_InitNewRow);
             // 
             // gridBand1
             // 
@@ -610,5 +635,7 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarButtonItem CV_QL_NhomCongViec_barButtonItem_Coppy;
     }
 }
