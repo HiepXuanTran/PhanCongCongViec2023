@@ -68,13 +68,18 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.CV_QL_CongViec_barButtonItem_Refresh = new DevExpress.XtraBars.BarButtonItem();
-            this.CV_QL_CongViec_barButtonItem_Add = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_CongViec_barButtonItem_Sua = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_CongViec_barButtonItem_Xoa = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_CongViec_barButtonItem_Luu = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_CongViec_barButtonItem_Undo = new DevExpress.XtraBars.BarButtonItem();
-            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_CongViec_barButtonItem_In = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.CV_QL_CongViec_barButtonItem_Add = new DevExpress.XtraBars.BarButtonItem();
+            this.CV_QL_CongViec_barButtonItem_Coppy = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -172,6 +177,7 @@
             this.CV_QL_CongViec_BandedGridview.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_QL_CongViec_TenLoaiCongViec, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.CV_QL_CongViec_BandedGridview.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_QL_CongViec_BandedGridview_PopupMenuShowing);
+            this.CV_QL_CongViec_BandedGridview.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.CV_QL_CongViec_BandedGridview_InitNewRow);
             // 
             // gridBandChung
             // 
@@ -636,9 +642,14 @@
             this.CV_QL_CongViec_barButtonItem_Luu,
             this.CV_QL_CongViec_barButtonItem_Undo,
             this.CV_QL_CongViec_barButtonItem_DownloadDinhKem,
-            this.CV_QL_CongViec_barButtonItem_In});
+            this.CV_QL_CongViec_barButtonItem_In,
+            this.barSubItem1,
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.CV_QL_CongViec_barButtonItem_Coppy,
+            this.barSubItem2});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 8;
+            this.barManager1.MaxItemId = 13;
             // 
             // bar2
             // 
@@ -648,13 +659,14 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_Refresh, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_Add, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem2, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_Sua, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_Xoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_Luu, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_Undo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_DownloadDinhKem, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_In, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_In, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem2, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -667,15 +679,6 @@
             this.CV_QL_CongViec_barButtonItem_Refresh.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Refresh.LargeGlyph")));
             this.CV_QL_CongViec_barButtonItem_Refresh.Name = "CV_QL_CongViec_barButtonItem_Refresh";
             this.CV_QL_CongViec_barButtonItem_Refresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_CongViec_barButtonItem_Refresh_ItemClick);
-            // 
-            // CV_QL_CongViec_barButtonItem_Add
-            // 
-            this.CV_QL_CongViec_barButtonItem_Add.Caption = "Thêm";
-            this.CV_QL_CongViec_barButtonItem_Add.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Add.Glyph")));
-            this.CV_QL_CongViec_barButtonItem_Add.Id = 1;
-            this.CV_QL_CongViec_barButtonItem_Add.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Add.LargeGlyph")));
-            this.CV_QL_CongViec_barButtonItem_Add.Name = "CV_QL_CongViec_barButtonItem_Add";
-            this.CV_QL_CongViec_barButtonItem_Add.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_CongViec_barButtonItem_Them_ItemClick);
             // 
             // CV_QL_CongViec_barButtonItem_Sua
             // 
@@ -713,15 +716,6 @@
             this.CV_QL_CongViec_barButtonItem_Undo.Name = "CV_QL_CongViec_barButtonItem_Undo";
             this.CV_QL_CongViec_barButtonItem_Undo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_CongViec_barButtonItem_Undo_ItemClick);
             // 
-            // CV_QL_CongViec_barButtonItem_DownloadDinhKem
-            // 
-            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem.Caption = "Download";
-            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_DownloadDinhKem.Glyph")));
-            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem.Id = 6;
-            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_DownloadDinhKem.LargeGlyph")));
-            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem.Name = "CV_QL_CongViec_barButtonItem_DownloadDinhKem";
-            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_CongViec_barButtonItem_DownloadDinhKem_ItemClick);
-            // 
             // CV_QL_CongViec_barButtonItem_In
             // 
             this.CV_QL_CongViec_barButtonItem_In.Caption = "In";
@@ -730,6 +724,71 @@
             this.CV_QL_CongViec_barButtonItem_In.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_In.LargeGlyph")));
             this.CV_QL_CongViec_barButtonItem_In.Name = "CV_QL_CongViec_barButtonItem_In";
             this.CV_QL_CongViec_barButtonItem_In.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_CongViec_barButtonItem_In_ItemClick);
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "Download";
+            this.barSubItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.Glyph")));
+            this.barSubItem1.Id = 8;
+            this.barSubItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.LargeGlyph")));
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_DownloadDinhKem, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // CV_QL_CongViec_barButtonItem_DownloadDinhKem
+            // 
+            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem.Caption = "Download File đính kèm";
+            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_DownloadDinhKem.Glyph")));
+            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem.Id = 6;
+            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_DownloadDinhKem.LargeGlyph")));
+            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem.Name = "CV_QL_CongViec_barButtonItem_DownloadDinhKem";
+            this.CV_QL_CongViec_barButtonItem_DownloadDinhKem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_CongViec_barButtonItem_DownloadDinhKem_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Download File Excel Import";
+            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
+            this.barButtonItem1.Id = 9;
+            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Import";
+            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
+            this.barButtonItem2.Id = 10;
+            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Caption = "Thêm mới";
+            this.barSubItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem2.Glyph")));
+            this.barSubItem2.Id = 12;
+            this.barSubItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem2.LargeGlyph")));
+            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_Add, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_CongViec_barButtonItem_Coppy, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.barSubItem2.Name = "barSubItem2";
+            // 
+            // CV_QL_CongViec_barButtonItem_Add
+            // 
+            this.CV_QL_CongViec_barButtonItem_Add.Caption = "Thêm dòng mới";
+            this.CV_QL_CongViec_barButtonItem_Add.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Add.Glyph")));
+            this.CV_QL_CongViec_barButtonItem_Add.Id = 1;
+            this.CV_QL_CongViec_barButtonItem_Add.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Add.LargeGlyph")));
+            this.CV_QL_CongViec_barButtonItem_Add.Name = "CV_QL_CongViec_barButtonItem_Add";
+            this.CV_QL_CongViec_barButtonItem_Add.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_CongViec_barButtonItem_Them_ItemClick);
+            // 
+            // CV_QL_CongViec_barButtonItem_Coppy
+            // 
+            this.CV_QL_CongViec_barButtonItem_Coppy.Caption = "Coppy";
+            this.CV_QL_CongViec_barButtonItem_Coppy.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Coppy.Glyph")));
+            this.CV_QL_CongViec_barButtonItem_Coppy.Id = 11;
+            this.CV_QL_CongViec_barButtonItem_Coppy.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_CongViec_barButtonItem_Coppy.LargeGlyph")));
+            this.CV_QL_CongViec_barButtonItem_Coppy.Name = "CV_QL_CongViec_barButtonItem_Coppy";
+            this.CV_QL_CongViec_barButtonItem_Coppy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -873,5 +932,10 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem CV_QL_CongViec_barButtonItem_Coppy;
+        private DevExpress.XtraBars.BarSubItem barSubItem2;
     }
 }
