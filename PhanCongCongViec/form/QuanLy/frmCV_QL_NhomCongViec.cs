@@ -464,6 +464,11 @@ namespace PhanCongCongViec.form.QuanLy
             CV_QL_NhomCongViec_bandedGridView.SetRowCellValue(e.RowHandle, CV_QL_NhomCongViec_bandedGridView.Columns["CV_QL_NhomCongViecChon"], false);
         }
 
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadMain.HienThiCV_TT_NhomCongViecImport();
+        }
+
         }
 
 }
