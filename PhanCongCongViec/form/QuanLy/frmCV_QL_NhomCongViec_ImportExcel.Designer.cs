@@ -144,6 +144,7 @@
             this.CV_QL_NhomCongViec_bandedGridView.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
             this.CV_QL_NhomCongViecChon,
             this.CV_QL_NhomCongViec_ID,
+            this.CV_QL_NhomCongViec_TenNhomCongViec1,
             this.CV_QL_NhomCongViec_TenNhomCongViec2,
             this.CV_QL_NhomCongViec_MoTa,
             this.CV_QL_NhomCongViec_GhiChu,
@@ -153,7 +154,6 @@
             this.CV_QL_NhomCongViec_DateEditor,
             this.CV_QL_NhomCongViec_HienThi,
             this.CV_QL_NhomCongViec_SuDung,
-            this.CV_QL_NhomCongViec_TenNhomCongViec1,
             this.CV_QL_NhomCongViec_XemLichSu});
             this.CV_QL_NhomCongViec_bandedGridView.GridControl = this.CV_QL_NhomCongViec_GridControl;
             this.CV_QL_NhomCongViec_bandedGridView.GroupCount = 1;
@@ -252,7 +252,7 @@
             this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_NhomCongViec_TenNhomCongViec1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhomCongViec_TenNhomCongViec1.Caption = "Tên nhóm công việc cha *";
-            this.CV_QL_NhomCongViec_TenNhomCongViec1.FieldName = "CV_QL_NhomCongViec_TenNhomCongViec1";
+            this.CV_QL_NhomCongViec_TenNhomCongViec1.FieldName = "Nhóm Công Việc Cha";
             this.CV_QL_NhomCongViec_TenNhomCongViec1.Name = "CV_QL_NhomCongViec_TenNhomCongViec1";
             this.CV_QL_NhomCongViec_TenNhomCongViec1.Visible = true;
             this.CV_QL_NhomCongViec_TenNhomCongViec1.Width = 300;
@@ -270,7 +270,7 @@
             this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_NhomCongViec_TenNhomCongViec2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhomCongViec_TenNhomCongViec2.Caption = "Tên nhóm công việc con *";
-            this.CV_QL_NhomCongViec_TenNhomCongViec2.FieldName = "CV_QL_NhomCongViec_TenNhomCongViec2";
+            this.CV_QL_NhomCongViec_TenNhomCongViec2.FieldName = "Nhóm Công Việc Con";
             this.CV_QL_NhomCongViec_TenNhomCongViec2.Name = "CV_QL_NhomCongViec_TenNhomCongViec2";
             this.CV_QL_NhomCongViec_TenNhomCongViec2.Visible = true;
             this.CV_QL_NhomCongViec_TenNhomCongViec2.Width = 232;
@@ -288,7 +288,7 @@
             this.CV_QL_NhomCongViec_MoTa.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_NhomCongViec_MoTa.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhomCongViec_MoTa.Caption = "Mô tả";
-            this.CV_QL_NhomCongViec_MoTa.FieldName = "CV_QL_NhomCongViec_MoTa";
+            this.CV_QL_NhomCongViec_MoTa.FieldName = "Mô Tả";
             this.CV_QL_NhomCongViec_MoTa.Name = "CV_QL_NhomCongViec_MoTa";
             this.CV_QL_NhomCongViec_MoTa.Visible = true;
             this.CV_QL_NhomCongViec_MoTa.Width = 232;
@@ -306,7 +306,7 @@
             this.CV_QL_NhomCongViec_GhiChu.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_NhomCongViec_GhiChu.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhomCongViec_GhiChu.Caption = "Ghi chú";
-            this.CV_QL_NhomCongViec_GhiChu.FieldName = "CV_QL_NhomCongViec_GhiChu";
+            this.CV_QL_NhomCongViec_GhiChu.FieldName = "Ghi Chú";
             this.CV_QL_NhomCongViec_GhiChu.Name = "CV_QL_NhomCongViec_GhiChu";
             this.CV_QL_NhomCongViec_GhiChu.Visible = true;
             this.CV_QL_NhomCongViec_GhiChu.Width = 248;
@@ -549,7 +549,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmCV_QL_NhomCongViec_ImportExcel";
-            this.Text = "frmCV_QL_NhomCongViec_ImportExcel";
+            this.Text = "Import file Excel Nhóm Công Việc";
             this.Load += new System.EventHandler(this.frmCV_QL_NhomCongViec_ImportExcel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
