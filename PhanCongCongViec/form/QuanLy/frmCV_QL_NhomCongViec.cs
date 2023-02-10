@@ -61,6 +61,7 @@ namespace PhanCongCongViec.form.QuanLy
         CV_QL_NhomCongViecPublic NhomCongViecPublic = new CV_QL_NhomCongViecPublic();
         bool CV_QL_NhomCongViecAdd = false;
         bool CV_QL_NhomCongViecEdit = false;
+        bool CV_QL_NhomCongViecCopy = false;
         CV_QL_NhomCongViecBLL cls = new CV_QL_NhomCongViecBLL();
 
         private void Lock_Unlock_Control_Input(bool Lock_Control) //Khóa và mở khóa điều khiển nhập dữ liệu
@@ -78,7 +79,7 @@ namespace PhanCongCongViec.form.QuanLy
         private void Lock_Unlock_Control(Boolean Lock_Control) //Khóa và mở khóa điều khiển chức năng
         {
             CV_QL_NhomCongViec_barButtonItem_Refresh.Enabled = Lock_Control;
-            CV_QL_NhomCongViec_barButtonItem_Them.Enabled = Lock_Control;
+            CV_QL_NhomCongViec_barSubItem_Them.Enabled = Lock_Control;
             CV_QL_NhomCongViec_barButtonItem_Sua.Enabled = Lock_Control;
             CV_QL_NhomCongViec_barButtonItem_Xoa.Enabled = Lock_Control;
             CV_QL_NhomCongViec_barButtonItem_Luu.Enabled = !Lock_Control;
@@ -303,7 +304,7 @@ namespace PhanCongCongViec.form.QuanLy
             int kq = -1;
             try
             {
-                if (CV_QL_NhomCongViecAdd == true || CV_QL_NhomCongViecEdit == true)
+                if (CV_QL_NhomCongViecAdd == true || CV_QL_NhomCongViecEdit == true || CV_QL_NhomCongViecCopy ==true)
                 {
                     bool s = KiemTra();
                     if (KiemTra() == false || KiemTra_NhapDuLieu() == false)
@@ -342,6 +343,12 @@ namespace PhanCongCongViec.form.QuanLy
                                 Public.CV_QL_NhomCongViec_GhiChu = CV_QL_NhomCongViec_bandedGridView.GetFocusedRowCellDisplayText(CV_QL_NhomCongViec_GhiChu);
                             }
                             if (CV_QL_NhomCongViecAdd == true)
+                            {
+                                Public.CV_QL_NhomCongViec_DateCreate = DateTime.Now;
+                                Public.HT_USER_Create = BienToanCuc.HT_USER_ID;
+                                kq = cls.CV_QL_NhomCongViec_Add(Public);
+                            }
+                            if (CV_QL_NhomCongViecCopy == true)
                             {
                                 Public.CV_QL_NhomCongViec_DateCreate = DateTime.Now;
                                 Public.HT_USER_Create = BienToanCuc.HT_USER_ID;
@@ -433,6 +440,14 @@ namespace PhanCongCongViec.form.QuanLy
                 MessageBox.Show("Bạn phải chọn dữ liệu", "Thông báo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            CV_QL_NhomCongViecAdd = false;
+            CV_QL_NhomCongViecEdit = false;
+            CV_QL_NhomCongViecCopy = true;
+
+            Lock_Unlock_Control_Input(true);
+            Lock_Unlock_Control(false);
+
             CV_QL_NhomCongViec_bandedGridView.MoveFirst();
             for (int i = 0; i < CV_QL_NhomCongViec_bandedGridView.RowCount; i++)
             {

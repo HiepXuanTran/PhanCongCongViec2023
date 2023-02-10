@@ -33,7 +33,7 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.CV_QL_NhomCongViec_barButtonItem_Refresh = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.CV_QL_NhomCongViec_barSubItem_Them = new DevExpress.XtraBars.BarSubItem();
             this.CV_QL_NhomCongViec_barButtonItem_Them = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_NhomCongViec_barButtonItem_Coppy = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_NhomCongViec_barButtonItem_Sua = new DevExpress.XtraBars.BarButtonItem();
@@ -41,6 +41,7 @@
             this.CV_QL_NhomCongViec_barButtonItem_Luu = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_NhomCongViec_barButtonItem_Undo = new DevExpress.XtraBars.BarButtonItem();
             this.CV_QL_NhomCongViec_barButtonItem_In = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -65,7 +66,6 @@
             this.CV_QL_NhomCongViec_HienThi = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_NhomCongViec_SuDung = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_NhomCongViec_GridControl)).BeginInit();
@@ -89,7 +89,7 @@
             this.CV_QL_NhomCongViec_barButtonItem_Luu,
             this.CV_QL_NhomCongViec_barButtonItem_Undo,
             this.CV_QL_NhomCongViec_barButtonItem_In,
-            this.barSubItem1,
+            this.CV_QL_NhomCongViec_barSubItem_Them,
             this.CV_QL_NhomCongViec_barButtonItem_Coppy,
             this.barButtonItem1});
             this.barManager1.MainMenu = this.bar2;
@@ -103,7 +103,7 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Refresh, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barSubItem_Them, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Sua, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Xoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Luu, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
@@ -123,16 +123,16 @@
             this.CV_QL_NhomCongViec_barButtonItem_Refresh.Name = "CV_QL_NhomCongViec_barButtonItem_Refresh";
             this.CV_QL_NhomCongViec_barButtonItem_Refresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_NhomCongViec_barButtonItem_Refresh_ItemClick);
             // 
-            // barSubItem1
+            // CV_QL_NhomCongViec_barSubItem_Them
             // 
-            this.barSubItem1.Caption = "Thêm";
-            this.barSubItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.Glyph")));
-            this.barSubItem1.Id = 8;
-            this.barSubItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.LargeGlyph")));
-            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            this.CV_QL_NhomCongViec_barSubItem_Them.Caption = "Thêm";
+            this.CV_QL_NhomCongViec_barSubItem_Them.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_NhomCongViec_barSubItem_Them.Glyph")));
+            this.CV_QL_NhomCongViec_barSubItem_Them.Id = 8;
+            this.CV_QL_NhomCongViec_barSubItem_Them.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_QL_NhomCongViec_barSubItem_Them.LargeGlyph")));
+            this.CV_QL_NhomCongViec_barSubItem_Them.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Them, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_QL_NhomCongViec_barButtonItem_Coppy, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.barSubItem1.Name = "barSubItem1";
+            this.CV_QL_NhomCongViec_barSubItem_Them.Name = "CV_QL_NhomCongViec_barSubItem_Them";
             // 
             // CV_QL_NhomCongViec_barButtonItem_Them
             // 
@@ -197,12 +197,22 @@
             this.CV_QL_NhomCongViec_barButtonItem_In.Name = "CV_QL_NhomCongViec_barButtonItem_In";
             this.CV_QL_NhomCongViec_barButtonItem_In.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_QL_NhomCongViec_barButtonItem_In_ItemClick);
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Import";
+            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
+            this.barButtonItem1.Id = 10;
+            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2);
             this.barDockControlTop.Size = new System.Drawing.Size(891, 24);
             // 
             // barDockControlBottom
@@ -210,7 +220,7 @@
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 352);
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2);
             this.barDockControlBottom.Size = new System.Drawing.Size(891, 0);
             // 
             // barDockControlLeft
@@ -218,7 +228,7 @@
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2);
             this.barDockControlLeft.Size = new System.Drawing.Size(0, 328);
             // 
             // barDockControlRight
@@ -226,7 +236,7 @@
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(891, 24);
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 328);
             // 
             // panel1
@@ -235,7 +245,7 @@
             this.panel1.Controls.Add(this.labelX1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(891, 328);
             this.panel1.TabIndex = 4;
@@ -243,10 +253,10 @@
             // CV_QL_NhomCongViec_GridControl
             // 
             this.CV_QL_NhomCongViec_GridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CV_QL_NhomCongViec_GridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CV_QL_NhomCongViec_GridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.CV_QL_NhomCongViec_GridControl.Location = new System.Drawing.Point(0, 40);
             this.CV_QL_NhomCongViec_GridControl.MainView = this.CV_QL_NhomCongViec_bandedGridView;
-            this.CV_QL_NhomCongViec_GridControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CV_QL_NhomCongViec_GridControl.Margin = new System.Windows.Forms.Padding(2);
             this.CV_QL_NhomCongViec_GridControl.MenuManager = this.barManager1;
             this.CV_QL_NhomCongViec_GridControl.Name = "CV_QL_NhomCongViec_GridControl";
             this.CV_QL_NhomCongViec_GridControl.Size = new System.Drawing.Size(891, 288);
@@ -581,21 +591,11 @@
             this.labelX1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelX1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.labelX1.Location = new System.Drawing.Point(0, 0);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(2);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(891, 40);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "<div align = \"center\">QUẢN LÝ NHÓM CÔNG VIỆC</div>";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "Import";
-            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
-            this.barButtonItem1.Id = 10;
-            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // frmCV_QL_NhomCongViec
             // 
@@ -608,7 +608,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCV_QL_NhomCongViec";
             this.Text = "Quản lý nhóm công việc";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -657,7 +657,7 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
-        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarSubItem CV_QL_NhomCongViec_barSubItem_Them;
         private DevExpress.XtraBars.BarButtonItem CV_QL_NhomCongViec_barButtonItem_Coppy;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }

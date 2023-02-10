@@ -577,6 +577,14 @@ namespace PhanCongCongViec.form.QuanLy
                                 Public.Id = Convert.ToInt32(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_ID));
                                 kq = cls.CV_QL_CongViec_Edit(Public);
                             }
+                            if (CV_QL_CongViecCoppy == true)
+                            {
+                                Public.HT_USER_Create = BienToanCuc.HT_USER_ID;
+                                Public.CV_QL_CongViec_DateCreate = DateTime.Now;
+                                Public.HT_USER_Create = BienToanCuc.HT_USER_ID;
+                                kq = cls.CV_QL_CongViec_Add(Public);
+ 
+                            }
                         }
                         CV_QL_CongViec_BandedGridview.MoveNext();
                     }
