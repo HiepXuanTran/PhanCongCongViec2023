@@ -60,8 +60,8 @@ namespace PhanCongCongViec.form.QuanLy
         //}
         CV_QL_NhomCongViecPublic NhomCongViecPublic = new CV_QL_NhomCongViecPublic();
         bool CV_QL_NhomCongViecAdd = false;
-        bool CV_QL_NhomCongViecEdit = false;
         bool CV_QL_NhomCongViecCopy = false;
+        bool CV_QL_NhomCongViecEdit = false;
         CV_QL_NhomCongViecBLL cls = new CV_QL_NhomCongViecBLL();
 
         private void Lock_Unlock_Control_Input(bool Lock_Control) //Khóa và mở khóa điều khiển nhập dữ liệu
@@ -79,7 +79,7 @@ namespace PhanCongCongViec.form.QuanLy
         private void Lock_Unlock_Control(Boolean Lock_Control) //Khóa và mở khóa điều khiển chức năng
         {
             CV_QL_NhomCongViec_barButtonItem_Refresh.Enabled = Lock_Control;
-            CV_QL_NhomCongViec_barSubItem_Them.Enabled = Lock_Control;
+            CV_QL_NhomCongViec_barButtonItem_Them.Enabled = Lock_Control;
             CV_QL_NhomCongViec_barButtonItem_Sua.Enabled = Lock_Control;
             CV_QL_NhomCongViec_barButtonItem_Xoa.Enabled = Lock_Control;
             CV_QL_NhomCongViec_barButtonItem_Luu.Enabled = !Lock_Control;
@@ -232,6 +232,7 @@ namespace PhanCongCongViec.form.QuanLy
         private void CV_QL_NhomCongViec_barButtonItem_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CV_QL_NhomCongViecAdd = true;
+            CV_QL_NhomCongViecCopy = false;
             CV_QL_NhomCongViecEdit = false;
             CV_QL_NhomCongViec_bandedGridView.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
             Lock_Unlock_Control_Input(true);
@@ -255,6 +256,7 @@ namespace PhanCongCongViec.form.QuanLy
             else
             {
                 CV_QL_NhomCongViecAdd = false;
+                CV_QL_NhomCongViecCopy = false;
                 CV_QL_NhomCongViecEdit = true;
                 Lock_Unlock_Control_Input(true);
                 Lock_Unlock_Control(false);
@@ -304,7 +306,7 @@ namespace PhanCongCongViec.form.QuanLy
             int kq = -1;
             try
             {
-                if (CV_QL_NhomCongViecAdd == true || CV_QL_NhomCongViecEdit == true || CV_QL_NhomCongViecCopy ==true)
+                if (CV_QL_NhomCongViecAdd == true || CV_QL_NhomCongViecEdit == true||CV_QL_NhomCongViecCopy == true)
                 {
                     bool s = KiemTra();
                     if (KiemTra() == false || KiemTra_NhapDuLieu() == false)
@@ -354,7 +356,6 @@ namespace PhanCongCongViec.form.QuanLy
                                 Public.HT_USER_Create = BienToanCuc.HT_USER_ID;
                                 kq = cls.CV_QL_NhomCongViec_Add(Public);
                             }
-
                             if (CV_QL_NhomCongViecEdit == true)
                             {
                                 Public.HT_USER_Editor = BienToanCuc.HT_USER_ID;
@@ -374,6 +375,10 @@ namespace PhanCongCongViec.form.QuanLy
                     {
                         MessageBox.Show("Thêm Thành Công!");
                     }
+                    if (CV_QL_NhomCongViecCopy== true)
+                    {
+                        MessageBox.Show("Thêm Thành Công!");
+                    }
                     else if (CV_QL_NhomCongViecEdit == true)
                     {
                         MessageBox.Show("Sửa Thành Công!");
@@ -384,6 +389,7 @@ namespace PhanCongCongViec.form.QuanLy
                 Lock_Unlock_Control(true); //Mở khóa toàn bộ
                 CV_QL_NhomCongViecAdd = false;
                 CV_QL_NhomCongViecEdit = false;
+                CV_QL_NhomCongViecCopy = false;
             }
 
             catch (Exception ex)
@@ -395,6 +401,7 @@ namespace PhanCongCongViec.form.QuanLy
         private void CV_QL_NhomCongViec_barButtonItem_Undo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CV_QL_NhomCongViecAdd = false;
+            CV_QL_NhomCongViecCopy = false;
             CV_QL_NhomCongViecEdit = false;
             Lock_Unlock_Control(true);
             Lock_Unlock_Control_Input(false); //Khóa điều khiển nhập dữ liệu
@@ -440,19 +447,13 @@ namespace PhanCongCongViec.form.QuanLy
                 MessageBox.Show("Bạn phải chọn dữ liệu", "Thông báo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            CV_QL_NhomCongViecAdd = false;
-            CV_QL_NhomCongViecEdit = false;
-            CV_QL_NhomCongViecCopy = true;
-
-            Lock_Unlock_Control_Input(true);
-            Lock_Unlock_Control(false);
-
             CV_QL_NhomCongViec_bandedGridView.MoveFirst();
-            for (int i = 0; i < CV_QL_NhomCongViec_bandedGridView.RowCount; i++)
+            int count = CV_QL_NhomCongViec_bandedGridView.RowCount;
+            for (int i = 0; i < count ; i++)
             {
                 if (Convert.ToBoolean(CV_QL_NhomCongViec_bandedGridView.GetFocusedRowCellValue(CV_QL_NhomCongViecChon))) // == true
                 {
+                    CV_QL_NhomCongViec_bandedGridView.SetFocusedRowCellValue(CV_QL_NhomCongViecChon, false);
                     NhomCongViecPublic.CV_QL_NhomCongViec_TenNhomCongViec1 = CV_QL_NhomCongViec_bandedGridView.GetFocusedRowCellDisplayText(CV_QL_NhomCongViec_TenNhomCongViec1);
                     NhomCongViecPublic.CV_QL_NhomCongViec_TenNhomCongViec2 = CV_QL_NhomCongViec_bandedGridView.GetFocusedRowCellDisplayText(CV_QL_NhomCongViec_TenNhomCongViec2);
                     if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_NhomCongViec_bandedGridView.GetFocusedRowCellDisplayText(CV_QL_NhomCongViec_MoTa))))
@@ -468,6 +469,14 @@ namespace PhanCongCongViec.form.QuanLy
                 }
                 CV_QL_NhomCongViec_bandedGridView.MoveNext();
             }
+
+
+            CV_QL_NhomCongViecAdd = false;
+            CV_QL_NhomCongViecEdit = false;
+            CV_QL_NhomCongViecCopy = true;
+
+            Lock_Unlock_Control_Input(true);
+            Lock_Unlock_Control(false);
         }
 
         private void CV_QL_NhomCongViec_bandedGridView_InitNewRow(object sender, DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs e)
@@ -476,11 +485,12 @@ namespace PhanCongCongViec.form.QuanLy
             CV_QL_NhomCongViec_bandedGridView.SetRowCellValue(e.RowHandle, CV_QL_NhomCongViec_bandedGridView.Columns["CV_QL_NhomCongViec_TenNhomCongViec2"], NhomCongViecPublic.CV_QL_NhomCongViec_TenNhomCongViec2);
             CV_QL_NhomCongViec_bandedGridView.SetRowCellValue(e.RowHandle, CV_QL_NhomCongViec_bandedGridView.Columns["CV_QL_NhomCongViec_MoTa"], NhomCongViecPublic.CV_QL_NhomCongViec_MoTa);
             CV_QL_NhomCongViec_bandedGridView.SetRowCellValue(e.RowHandle, CV_QL_NhomCongViec_bandedGridView.Columns["CV_QL_NhomCongViec_GhiChu"], NhomCongViecPublic.CV_QL_NhomCongViec_GhiChu);
-            CV_QL_NhomCongViec_bandedGridView.SetRowCellValue(e.RowHandle, CV_QL_NhomCongViec_bandedGridView.Columns["CV_QL_NhomCongViecChon"], false);
+            CV_QL_NhomCongViec_bandedGridView.SetRowCellValue(e.RowHandle, CV_QL_NhomCongViec_bandedGridView.Columns["CV_QL_NhomCongViecChon"], true);
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
+
             LoadMain.HienThiCV_TT_NhomCongViecImport();
         }
 

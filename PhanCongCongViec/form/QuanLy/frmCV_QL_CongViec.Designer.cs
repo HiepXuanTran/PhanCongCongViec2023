@@ -162,7 +162,6 @@
             this.CV_QL_CongViec_SuDung,
             this.CV_QL_CongViec_TenFile});
             this.CV_QL_CongViec_BandedGridview.GridControl = this.CV_QL_CongViec_GridControl;
-            this.CV_QL_CongViec_BandedGridview.GroupCount = 1;
             this.CV_QL_CongViec_BandedGridview.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.CV_QL_CongViec_BandedGridview.Name = "CV_QL_CongViec_BandedGridview";
             this.CV_QL_CongViec_BandedGridview.OptionsBehavior.AllowFixedGroups = DevExpress.Utils.DefaultBoolean.True;
@@ -175,7 +174,9 @@
             this.CV_QL_CongViec_BandedGridview.OptionsView.ShowFooter = true;
             this.CV_QL_CongViec_BandedGridview.OptionsView.ShowGroupPanel = false;
             this.CV_QL_CongViec_BandedGridview.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_QL_CongViec_TenLoaiCongViec, DevExpress.Data.ColumnSortOrder.Ascending)});
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_QL_CongViec_TenLoaiCongViec, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_QL_CongViec_TenNhomCongViec1, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_QL_CongViec_ID, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.CV_QL_CongViec_BandedGridview.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_QL_CongViec_BandedGridview_PopupMenuShowing);
             this.CV_QL_CongViec_BandedGridview.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.CV_QL_CongViec_BandedGridview_InitNewRow);
             // 

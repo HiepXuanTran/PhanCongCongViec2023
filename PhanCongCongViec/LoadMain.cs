@@ -114,20 +114,6 @@ namespace PhanCongCongViec
                 m_frmCV_QL_CongViec_ImportExcel.Activate();
         }
 
-
-        static frmCV_QL_NhomCongViec_ImportExcel m_frmCV_QL_NhomCongViec_ImportExcel = null;
-        public static void HienThiCV_TT_NhomCongViecImport()
-        {
-            if (m_frmCV_QL_NhomCongViec_ImportExcel == null || m_frmCV_QL_NhomCongViec_ImportExcel.IsDisposed)
-            {
-                m_frmCV_QL_NhomCongViec_ImportExcel = new frmCV_QL_NhomCongViec_ImportExcel();
-                m_frmCV_QL_NhomCongViec_ImportExcel.MdiParent = frmMain.ActiveForm;
-                m_frmCV_QL_NhomCongViec_ImportExcel.Show();
-            }
-            else
-                m_frmCV_QL_NhomCongViec_ImportExcel.Activate();
-        }
-
         static frmCV_HT_VaiTroCongViec m_frmCV_HT_VaiTroCongViec = null;
         public static void HienThiCV_HT_VaiTroCongViec()
         {
@@ -168,6 +154,18 @@ namespace PhanCongCongViec
                 m_frmCV_QL_PhanCongCongViecNhanSu.Activate();
         }
 
+        static frmCV_QL_NhomCongViec_ImportExcel m_frmCV_QL_NhomCongViec_ImportExcel = null;
+        public static void HienThiCV_TT_NhomCongViecImport()
+        {
+            if (m_frmCV_QL_NhomCongViec_ImportExcel == null || m_frmCV_QL_NhomCongViec_ImportExcel.IsDisposed)
+            {
+                m_frmCV_QL_NhomCongViec_ImportExcel = new frmCV_QL_NhomCongViec_ImportExcel();
+                m_frmCV_QL_NhomCongViec_ImportExcel.MdiParent = frmMain.ActiveForm;
+                m_frmCV_QL_NhomCongViec_ImportExcel.Show();
+            }
+            else
+                m_frmCV_QL_NhomCongViec_ImportExcel.Activate();
+        }
     }
     public class BienToanCuc
     {

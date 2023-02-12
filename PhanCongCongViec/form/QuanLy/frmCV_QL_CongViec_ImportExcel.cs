@@ -104,17 +104,17 @@ namespace PhanCongCongViec.form.QuanLy
         {
 
             //lookup edit nhom thuc hien 
-            CV_QL_CongViec_LookupEdit_NhomThucHien.DataSource = clsNhanSu.LoadCV_TT_NhanSu_LoadSTT();
-            CV_QL_CongViec_LookupEdit_NhomThucHien.DisplayMember = "CV_TT_NhanSu_NhomThucHien";
-            CV_QL_CongViec_LookupEdit_NhomThucHien.ValueMember = "CV_TT_NhanSu_ID";
-            CV_QL_CongViec_LookupEdit_NhomThucHien.PopupWidth = 400;
-            CV_QL_CongViec_LookupEdit_NhomThucHien.ShowFooter = false;
-            CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Clear();
-            CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_HoTen", "Họ tên", 200));
-            CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_DonVi", "Đơn vị", 150));
-            CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_NhomThucHien", "Nhóm thực hiện", 250));
-            CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_TrinhDo", "Trình độ", 150));
-            CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_KhaNangChuyenMon", "Khả năng chuyên môn", 300));
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.DataSource = clsNhanSu.LoadCV_TT_NhanSu_LoadSTT();
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.DisplayMember = "CV_TT_NhanSu_NhomThucHien";
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.ValueMember = "CV_TT_NhanSu_ID";
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.PopupWidth = 400;
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.ShowFooter = false;
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Clear();
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_HoTen", "Họ tên", 200));
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_DonVi", "Đơn vị", 150));
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_NhomThucHien", "Nhóm thực hiện", 250));
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_TrinhDo", "Trình độ", 150));
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_KhaNangChuyenMon", "Khả năng chuyên môn", 300));
 
 
             // lookup edit muc do kho

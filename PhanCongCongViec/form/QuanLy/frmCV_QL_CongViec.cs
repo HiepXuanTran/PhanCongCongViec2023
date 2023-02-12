@@ -325,7 +325,8 @@ namespace PhanCongCongViec.form.QuanLy
         private void CV_QL_CongViec_barButtonItem_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CV_QL_CongViecAdd = true;
-            CV_QL_CongViecEdit = false;
+            CV_QL_CongViecEdit = false; 
+            CV_QL_CongViecCoppy = false;
             CV_QL_CongViec_BandedGridview.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
             Lock_Unlock_Control_Input(true);
             Lock_Unlock_Control(false);
@@ -335,7 +336,7 @@ namespace PhanCongCongViec.form.QuanLy
         {
 
             //lookup edit nhom thuc hien 
-            CV_QL_CongViec_LookupEdit_NhomThucHien.DataSource = clsNhanSu.LoadCV_TT_NhanSu_LoadSTT();
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.DataSource = clsNhanSu.LoadCV_TT_NhanSu_LoadSTT();
             CV_QL_CongViec_LookupEdit_NhomThucHien.DisplayMember = "CV_TT_NhanSu_NhomThucHien";
             CV_QL_CongViec_LookupEdit_NhomThucHien.ValueMember = "CV_TT_NhanSu_ID";
             CV_QL_CongViec_LookupEdit_NhomThucHien.PopupWidth = 400;
@@ -391,7 +392,6 @@ namespace PhanCongCongViec.form.QuanLy
             CV_QL_CongViec_LookupEdit_LoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_LoaiCongViec_Mota", "Mô tả", 50));
             CV_QL_CongViec_LookupEdit_LoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_LoaiCongViec_GhiChu", "Ghi chú", 50));
 
-            // load form nhan su
             CV_QL_CongViec_GridControl.DataSource = cls.LoadCV_QL_CongViec();
             string s = CV_QL_CongViec_BandedGridview.RowCount.ToString();
             this.CV_QL_CongViec_ChiTietCongViec.OptionsColumn.ReadOnly = true;
@@ -427,6 +427,7 @@ namespace PhanCongCongViec.form.QuanLy
             else
             {
                 CV_QL_CongViecAdd = false;
+                CV_QL_CongViecCoppy = false;
                 CV_QL_CongViecEdit = true;
                 Lock_Unlock_Control_Input(true); //lock input
                 Lock_Unlock_Control(false); // lock nut nhap hien thi nut luu
@@ -489,7 +490,7 @@ namespace PhanCongCongViec.form.QuanLy
             int kq = -1;
             try
             {
-                if (CV_QL_CongViecAdd == true || CV_QL_CongViecEdit == true)
+                if (CV_QL_CongViecAdd == true || CV_QL_CongViecEdit == true || CV_QL_CongViecCoppy == true)
                 {
                     if (KiemTra() == false || KiemTra_NhapDuLieu() == false)
                     {
@@ -568,6 +569,16 @@ namespace PhanCongCongViec.form.QuanLy
                                 Public.HT_USER_Create = BienToanCuc.HT_USER_ID;
                                 kq = cls.CV_QL_CongViec_Add(Public);
                             }
+
+
+                            if (CV_QL_CongViecCoppy == true)
+                            {
+                                Public.HT_USER_Create = BienToanCuc.HT_USER_ID;
+                                Public.CV_QL_CongViec_DateCreate = DateTime.Now;
+                                Public.HT_USER_Create = BienToanCuc.HT_USER_ID;
+                                kq = cls.CV_QL_CongViec_Add(Public);
+                            }
+
                             if (CV_QL_CongViecEdit == true)
                             {
                                 Public.HT_USER_Create = Convert.ToInt32(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(HT_USER_Create));
@@ -576,14 +587,6 @@ namespace PhanCongCongViec.form.QuanLy
                                 Public.CV_QL_CongViec_DateEditor = DateTime.Now;
                                 Public.Id = Convert.ToInt32(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_ID));
                                 kq = cls.CV_QL_CongViec_Edit(Public);
-                            }
-                            if (CV_QL_CongViecCoppy == true)
-                            {
-                                Public.HT_USER_Create = BienToanCuc.HT_USER_ID;
-                                Public.CV_QL_CongViec_DateCreate = DateTime.Now;
-                                Public.HT_USER_Create = BienToanCuc.HT_USER_ID;
-                                kq = cls.CV_QL_CongViec_Add(Public);
- 
                             }
                         }
                         CV_QL_CongViec_BandedGridview.MoveNext();
@@ -600,12 +603,17 @@ namespace PhanCongCongViec.form.QuanLy
                     {
                         MessageBox.Show("Sửa Thành Công!");
                     }
+                    else if (CV_QL_CongViecCoppy == true)
+                    {
+                        MessageBox.Show("Thêm Thành Công!");
+                    }
                 }
                 frmCV_QL_CongViec_Load(sender, e);
                 Lock_Unlock_Control_Input(false); //Khóa điều khiển nhập dữ liệu
                 Lock_Unlock_Control(true); //Mở khóa toàn bộ
                 CV_QL_CongViecAdd = false;
                 CV_QL_CongViecEdit = false;
+                CV_QL_CongViecCoppy = false;
             }
 
             catch (Exception ex)
@@ -617,7 +625,8 @@ namespace PhanCongCongViec.form.QuanLy
         private void CV_QL_CongViec_barButtonItem_Undo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CV_QL_CongViecAdd = false;
-            CV_QL_CongViecEdit = false;
+            CV_QL_CongViecEdit = false; 
+            CV_QL_CongViecCoppy = false;
             Lock_Unlock_Control(true); // lock nut luu vs undo
             Lock_Unlock_Control_Input(false); //Khóa điều khiển nhập dữ liệu
         }
@@ -731,7 +740,7 @@ namespace PhanCongCongViec.form.QuanLy
                 
             }
         }
-
+        // nut coppy
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (KiemTra() == false)
@@ -740,7 +749,8 @@ namespace PhanCongCongViec.form.QuanLy
                 return;
             }
             CV_QL_CongViec_BandedGridview.MoveFirst();
-            for (int i = 0; i < CV_QL_CongViec_BandedGridview.RowCount; i++)
+            int count = CV_QL_CongViec_BandedGridview.RowCount;
+            for (int i = 0; i < count; i++)
             {
                 if (Convert.ToBoolean(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViecChon))) // == true
                 {
@@ -821,7 +831,7 @@ namespace PhanCongCongViec.form.QuanLy
             CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_TongSoPhutThucHien"], CongViecPublic.SoPhutThucHien);
             CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_TongSoGioThucHien"], CongViecPublic.SoGioThucHien);
             CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViec_TongSoNgayThucHien"], CongViecPublic.SoNgayThucHien);
-            CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViecChon"], false);
+            CV_QL_CongViec_BandedGridview.SetRowCellValue(e.RowHandle, CV_QL_CongViec_BandedGridview.Columns["CV_QL_CongViecChon"], true);
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
