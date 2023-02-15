@@ -19,3 +19,10 @@ C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.Data\bin\Deb
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.Data\obj\Debug\PCCV.Data.csprojResolveAssemblyReference.cache
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.Data\obj\Debug\PCCV.Data.dll
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.Data\obj\Debug\PCCV.Data.pdb
+C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PCCV.Data\bin\Debug\PCCV.Data.dll
+C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PCCV.Data\bin\Debug\PCCV.Data.pdb
+C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PCCV.Data\bin\Debug\PCCV.Public.dll
+C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PCCV.Data\bin\Debug\PCCV.Public.pdb
+C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.dll
+C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.pdb

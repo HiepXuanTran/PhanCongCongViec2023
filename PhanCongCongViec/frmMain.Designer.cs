@@ -69,11 +69,12 @@
             this.barButtonItem11,
             this.barButtonItem12});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
+            this.ribbon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbon.MaxItemId = 16;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(1300, 179);
+            this.ribbon.Size = new System.Drawing.Size(1114, 143);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barButtonItem1
@@ -215,10 +216,11 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 480);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 391);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1300, 40);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1114, 31);
             // 
             // tabStrip1
             // 
@@ -229,13 +231,14 @@
             this.tabStrip1.CloseButtonVisible = true;
             this.tabStrip1.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabStrip1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabStrip1.Location = new System.Drawing.Point(0, 179);
+            this.tabStrip1.Location = new System.Drawing.Point(0, 143);
+            this.tabStrip1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabStrip1.MdiForm = this;
             this.tabStrip1.MdiTabbedDocuments = true;
             this.tabStrip1.Name = "tabStrip1";
             this.tabStrip1.SelectedTab = null;
             this.tabStrip1.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.tabStrip1.Size = new System.Drawing.Size(1300, 23);
+            this.tabStrip1.Size = new System.Drawing.Size(1114, 19);
             this.tabStrip1.Style = DevComponents.DotNetBar.eTabStripStyle.Office2007Document;
             this.tabStrip1.TabIndex = 2;
             this.tabStrip1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
@@ -243,14 +246,15 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 520);
+            this.ClientSize = new System.Drawing.Size(1114, 422);
             this.Controls.Add(this.tabStrip1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMain";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;

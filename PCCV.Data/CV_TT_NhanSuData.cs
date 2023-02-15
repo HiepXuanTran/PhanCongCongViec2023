@@ -17,6 +17,12 @@ namespace PCCV.Data
             return cls.LayDuLieu("SP_CV_TT_NhanSu_Select");
         }
 
+        public DataTable LoadCV_TT_NhanSu_LoadUser()
+        {
+            return cls.LayDuLieu("CV_TT_NhanSu_Select");
+        }
+
+
         public DataTable LoadCV_TT_NhanSu_LoadSTT()
         {
             return cls.LayDuLieu("SP_CV_TT_NhanSu_Select_TheoNhomThucHien");

@@ -16,6 +16,12 @@ namespace PCCV.BLL
         {
             return cls.LoadCV_TT_NhanSu_LoadAll();
         }
+
+        public DataTable LoadCV_TT_NhanSu_LoadUser()
+        {
+            return cls.LoadCV_TT_NhanSu_LoadUser();
+        }
+
         public int CV_TT_NhanSu_Del(CV_TT_NhanSuPublic Public)
         {
             return cls.CV_TT_NhanSu_Del(Public);

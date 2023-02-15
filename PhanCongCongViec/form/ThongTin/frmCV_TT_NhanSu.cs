@@ -146,7 +146,7 @@ namespace PhanCongCongViec.form.ThongTin
 
         private void frmCV_TT_NhanSu_Load(object sender, EventArgs e)
         {
-            CV_TT_NhanSu_GridControl.DataSource = cls.LoadCV_TT_NhanSu_LoadAll();
+            CV_TT_NhanSu_GridControl.DataSource = cls.LoadCV_TT_NhanSu_LoadUser();
             CV_TT_NhanSu_barButtonItem_Luu.Enabled = false;
             CV_TT_NhanSu_barButtonItem_Undo.Enabled = false;
             Lock_Unlock_Control_Input(false); // lock input
