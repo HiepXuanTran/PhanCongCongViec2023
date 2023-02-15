@@ -46,9 +46,9 @@
     <Compile Include="CV_HT_VaiTroCongViecPublic.cs" />
     <Compile Include="CV_QL_CongViecPublic.cs" />
     <Compile Include="CV_QL_NhomCongViecPublic.cs" />
-    <Compile Include="CV_QL_PhanCongCongViecNhanSuPublic.cs" />
-    <Compile Include="CV_TT_ChiTietCongViecPublic.cs" />
-    <Compile Include="CV_TT_NhanSuPublic.cs" />
+    <Compile Include="CV_PC_PhanCongCongViecNhanSuPublic.cs" />
+    <Compile Include="CV_QL_ChiTietCongViecPublic.cs" />
+    <Compile Include="CV_QL_NhanSuPublic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

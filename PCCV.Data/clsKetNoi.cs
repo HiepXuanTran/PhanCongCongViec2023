@@ -11,7 +11,7 @@ namespace PCCV.Data
     class clsKetNoi
     {
         SqlConnection con = new SqlConnection();
-        string ketnoi = ConfigurationManager.ConnectionStrings["project"].ConnectionString;
+        string ketnoi = ConfigurationManager.ConnectionStrings["ChuoiKetNoi"].ConnectionString;
         public bool ClsKetNoi_CSDL_KiemTra()
         {
             con.ConnectionString = ketnoi; //ketnoi;

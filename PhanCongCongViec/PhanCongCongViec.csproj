@@ -110,23 +110,23 @@
     <Compile Include="form\QuanLy\frmCV_QL_NhomCongViec_ImportExcel.Designer.cs">
       <DependentUpon>frmCV_QL_NhomCongViec_ImportExcel.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\QuanLy\frmCV_QL_PhanCongCongViecNhanSu.cs">
+    <Compile Include="form\PhanCong\frmCV_PC_PhanCongCongViecNhanSu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\QuanLy\frmCV_QL_PhanCongCongViecNhanSu.Designer.cs">
-      <DependentUpon>frmCV_QL_PhanCongCongViecNhanSu.cs</DependentUpon>
+    <Compile Include="form\PhanCong\frmCV_PC_PhanCongCongViecNhanSu.Designer.cs">
+      <DependentUpon>frmCV_PC_PhanCongCongViecNhanSu.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\ThongTin\frmCV_TT_ChiTietCongViec.cs">
+    <Compile Include="form\QuanLy\frmCV_QL_ChiTietCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\ThongTin\frmCV_TT_ChiTietCongViec.Designer.cs">
-      <DependentUpon>frmCV_TT_ChiTietCongViec.cs</DependentUpon>
+    <Compile Include="form\QuanLy\frmCV_QL_ChiTietCongViec.Designer.cs">
+      <DependentUpon>frmCV_QL_ChiTietCongViec.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\ThongTin\frmCV_TT_NhanSu.cs">
+    <Compile Include="form\QuanLy\frmCV_QL_NhanSu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\ThongTin\frmCV_TT_NhanSu.Designer.cs">
-      <DependentUpon>frmCV_TT_NhanSu.cs</DependentUpon>
+    <Compile Include="form\QuanLy\frmCV_QL_NhanSu.Designer.cs">
+      <DependentUpon>frmCV_QL_NhanSu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -164,14 +164,14 @@
     <EmbeddedResource Include="form\QuanLy\frmCV_QL_NhomCongViec_ImportExcel.resx">
       <DependentUpon>frmCV_QL_NhomCongViec_ImportExcel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\QuanLy\frmCV_QL_PhanCongCongViecNhanSu.resx">
-      <DependentUpon>frmCV_QL_PhanCongCongViecNhanSu.cs</DependentUpon>
+    <EmbeddedResource Include="form\PhanCong\frmCV_PC_PhanCongCongViecNhanSu.resx">
+      <DependentUpon>frmCV_PC_PhanCongCongViecNhanSu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\ThongTin\frmCV_TT_ChiTietCongViec.resx">
-      <DependentUpon>frmCV_TT_ChiTietCongViec.cs</DependentUpon>
+    <EmbeddedResource Include="form\QuanLy\frmCV_QL_ChiTietCongViec.resx">
+      <DependentUpon>frmCV_QL_ChiTietCongViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\ThongTin\frmCV_TT_NhanSu.resx">
-      <DependentUpon>frmCV_TT_NhanSu.cs</DependentUpon>
+    <EmbeddedResource Include="form\QuanLy\frmCV_QL_NhanSu.resx">
+      <DependentUpon>frmCV_QL_NhanSu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

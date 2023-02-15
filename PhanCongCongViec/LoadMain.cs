@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using PhanCongCongViec.form.QuanLy;
 using PhanCongCongViec.form.HeThong;
-using PhanCongCongViec.form.ThongTin;
+using PhanCongCongViec.form.PhanCong;
 using System.Windows.Forms;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors.Repository;
@@ -76,30 +76,30 @@ namespace PhanCongCongViec
                 m_frmCV_HT_MucDoKho.Activate();
         }
 
-        static frmCV_TT_NhanSu m_frmCV_TT_NhanSu = null;
-        public static void HienThiCV_TT_NhanSu()
+        static frmCV_QL_NhanSu m_frmCV_QL_NhanSu = null;
+        public static void HienThiCV_QL_NhanSu()
         {
-            if (m_frmCV_TT_NhanSu == null || m_frmCV_TT_NhanSu.IsDisposed)
+            if (m_frmCV_QL_NhanSu == null || m_frmCV_QL_NhanSu.IsDisposed)
             {
-                m_frmCV_TT_NhanSu = new frmCV_TT_NhanSu();
-                m_frmCV_TT_NhanSu.MdiParent = frmMain.ActiveForm;
-                m_frmCV_TT_NhanSu.Show();
+                m_frmCV_QL_NhanSu = new frmCV_QL_NhanSu();
+                m_frmCV_QL_NhanSu.MdiParent = frmMain.ActiveForm;
+                m_frmCV_QL_NhanSu.Show();
             }
             else
-                m_frmCV_TT_NhanSu.Activate();
+                m_frmCV_QL_NhanSu.Activate();
         }
 
-        static frmCV_TT_ChiTietCongViec m_frmCV_TT_ChiTietCongViec = null;
-        public static void HienThiCV_TT_ChiTietCongViec()
+        static frmCV_QL_ChiTietCongViec m_frmCV_QL_ChiTietCongViec = null;
+        public static void HienThiCV_QL_ChiTietCongViec()
         {
-            if (m_frmCV_TT_ChiTietCongViec == null || m_frmCV_TT_ChiTietCongViec.IsDisposed)
+            if (m_frmCV_QL_ChiTietCongViec == null || m_frmCV_QL_ChiTietCongViec.IsDisposed)
             {
-                m_frmCV_TT_ChiTietCongViec = new frmCV_TT_ChiTietCongViec();
-                m_frmCV_TT_ChiTietCongViec.MdiParent = frmMain.ActiveForm;
-                m_frmCV_TT_ChiTietCongViec.Show();
+                m_frmCV_QL_ChiTietCongViec = new frmCV_QL_ChiTietCongViec();
+                m_frmCV_QL_ChiTietCongViec.MdiParent = frmMain.ActiveForm;
+                m_frmCV_QL_ChiTietCongViec.Show();
             }
             else
-                m_frmCV_TT_ChiTietCongViec.Activate();
+                m_frmCV_QL_ChiTietCongViec.Activate();
         }
         static frmCV_QL_CongViec_ImportExcel m_frmCV_QL_CongViec_ImportExcel = null;
         public static void HienThiCV_TT_CongViecImport()
@@ -141,17 +141,17 @@ namespace PhanCongCongViec
         }
 
 
-        static frmCV_QL_PhanCongCongViecNhanSu m_frmCV_QL_PhanCongCongViecNhanSu = null;
-        public static void HienThiCV_QL_PhanCongCongViecNhanSu()
+        static frmCV_PC_PhanCongCongViecNhanSu m_frmCV_PC_PhanCongCongViecNhanSu = null;
+        public static void HienThiCV_PC_PhanCongCongViecNhanSu()
         {
-            if (m_frmCV_QL_PhanCongCongViecNhanSu == null || m_frmCV_QL_PhanCongCongViecNhanSu.IsDisposed)
+            if (m_frmCV_PC_PhanCongCongViecNhanSu == null || m_frmCV_PC_PhanCongCongViecNhanSu.IsDisposed)
             {
-                m_frmCV_QL_PhanCongCongViecNhanSu = new frmCV_QL_PhanCongCongViecNhanSu();
-                m_frmCV_QL_PhanCongCongViecNhanSu.MdiParent = frmMain.ActiveForm;
-                m_frmCV_QL_PhanCongCongViecNhanSu.Show();
+                m_frmCV_PC_PhanCongCongViecNhanSu = new frmCV_PC_PhanCongCongViecNhanSu();
+                m_frmCV_PC_PhanCongCongViecNhanSu.MdiParent = frmMain.ActiveForm;
+                m_frmCV_PC_PhanCongCongViecNhanSu.Show();
             }
             else
-                m_frmCV_QL_PhanCongCongViecNhanSu.Activate();
+                m_frmCV_PC_PhanCongCongViecNhanSu.Activate();
         }
 
         static frmCV_QL_NhomCongViec_ImportExcel m_frmCV_QL_NhomCongViec_ImportExcel = null;

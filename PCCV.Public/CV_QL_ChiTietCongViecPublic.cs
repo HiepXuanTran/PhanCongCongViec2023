@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PCCV.Public
 {
-    public class CV_TT_ChiTietCongViecPublic
+    public class CV_QL_ChiTietCongViecPublic
     {
         int _Id;
 
@@ -15,12 +15,12 @@ namespace PCCV.Public
             set { _Id = value; }
         }
 
-        int _CV_TT_ChiTietCongViec_IDCongViec;
+        int _CV_QL_ChiTietCongViec_IDCongViec;
 
-        public int CV_TT_ChiTietCongViec_IDCongViec
+        public int CV_QL_ChiTietCongViec_IDCongViec
         {
-            get { return _CV_TT_ChiTietCongViec_IDCongViec; }
-            set { _CV_TT_ChiTietCongViec_IDCongViec = value; }
+            get { return _CV_QL_ChiTietCongViec_IDCongViec; }
+            set { _CV_QL_ChiTietCongViec_IDCongViec = value; }
         }
 
         string _CacBuocCongViec;
@@ -87,12 +87,12 @@ namespace PCCV.Public
             get { return _HT_USER_Create; }
             set { _HT_USER_Create = value; }
         }
-        DateTime _CV_TT_ChiTietCongViec_DateCreate;
+        DateTime _CV_QL_ChiTietCongViec_DateCreate;
 
-        public DateTime CV_TT_ChiTietCongViec_DateCreate
+        public DateTime CV_QL_ChiTietCongViec_DateCreate
         {
-            get { return _CV_TT_ChiTietCongViec_DateCreate; }
-            set { _CV_TT_ChiTietCongViec_DateCreate = value; }
+            get { return _CV_QL_ChiTietCongViec_DateCreate; }
+            set { _CV_QL_ChiTietCongViec_DateCreate = value; }
         }
         int _HT_USER_Editor;
 
@@ -101,26 +101,26 @@ namespace PCCV.Public
             get { return _HT_USER_Editor; }
             set { _HT_USER_Editor = value; }
         }
-        DateTime _CV_TT_ChiTietCongViec_DateEditor;
+        DateTime _CV_QL_ChiTietCongViec_DateEditor;
 
-        public DateTime CV_TT_ChiTietCongViec_DateEditor
+        public DateTime CV_QL_ChiTietCongViec_DateEditor
         {
-            get { return _CV_TT_ChiTietCongViec_DateEditor; }
-            set { _CV_TT_ChiTietCongViec_DateEditor = value; }
+            get { return _CV_QL_ChiTietCongViec_DateEditor; }
+            set { _CV_QL_ChiTietCongViec_DateEditor = value; }
         }
-        string _CV_TT_ChiTietCongViec_SuDung;
+        string _CV_QL_ChiTietCongViec_SuDung;
 
-        public string CV_TT_ChiTietCongViec_SuDung
+        public string CV_QL_ChiTietCongViec_SuDung
         {
-            get { return _CV_TT_ChiTietCongViec_SuDung; }
-            set { _CV_TT_ChiTietCongViec_SuDung = value; }
+            get { return _CV_QL_ChiTietCongViec_SuDung; }
+            set { _CV_QL_ChiTietCongViec_SuDung = value; }
         }
-        bool _CV_TT_ChiTietCongViec_HienThi;
+        bool _CV_QL_ChiTietCongViec_HienThi;
 
-        public bool CV_TT_ChiTietCongViec_HienThi
+        public bool CV_QL_ChiTietCongViec_HienThi
         {
-            get { return _CV_TT_ChiTietCongViec_HienThi; }
-            set { _CV_TT_ChiTietCongViec_HienThi = value; }
+            get { return _CV_QL_ChiTietCongViec_HienThi; }
+            set { _CV_QL_ChiTietCongViec_HienThi = value; }
         }
     }
 }

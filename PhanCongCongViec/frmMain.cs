@@ -44,12 +44,12 @@ namespace PhanCongCongViec
 
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadMain.HienThiCV_TT_NhanSu();
+            LoadMain.HienThiCV_QL_NhanSu();
         }
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadMain.HienThiCV_TT_ChiTietCongViec();
+            LoadMain.HienThiCV_QL_ChiTietCongViec();
         }
 
         private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
@@ -64,7 +64,7 @@ namespace PhanCongCongViec
 
         private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadMain.HienThiCV_QL_PhanCongCongViecNhanSu();
+            LoadMain.HienThiCV_PC_PhanCongCongViecNhanSu();
         }
     }
 }

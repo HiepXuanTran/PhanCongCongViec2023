@@ -25,7 +25,7 @@ namespace PhanCongCongViec.form.QuanLy
 
         string FileName_Import = "";
         CV_QL_CongViecBLL cls = new CV_QL_CongViecBLL();
-        CV_TT_NhanSuBLL clsNhanSu = new CV_TT_NhanSuBLL();
+        CV_QL_NhanSuBLL clsNhanSu = new CV_QL_NhanSuBLL();
         CV_HT_MucDoKhoBLL clsMucDoKho = new CV_HT_MucDoKhoBLL();
         CV_QL_NhomCongViecBLL clsNhomCongViec = new CV_QL_NhomCongViecBLL();
         CV_HT_LoaiCongViecBLL clsLoaiCongViec = new CV_HT_LoaiCongViecBLL();

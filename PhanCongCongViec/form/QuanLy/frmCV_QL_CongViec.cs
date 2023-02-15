@@ -24,7 +24,7 @@ namespace PhanCongCongViec.form.QuanLy
         }
         CV_QL_CongViecPublic CongViecPublic = new CV_QL_CongViecPublic();
         //flag edit and flag add
-        CV_TT_NhanSuBLL clsNhanSu = new CV_TT_NhanSuBLL();
+        CV_QL_NhanSuBLL clsNhanSu = new CV_QL_NhanSuBLL();
         bool CV_QL_CongViecEdit = false;
         bool CV_QL_CongViecAdd = false;
         bool CV_QL_CongViecCoppy = false;
@@ -336,7 +336,7 @@ namespace PhanCongCongViec.form.QuanLy
         {
 
             //lookup edit nhom thuc hien 
-            CV_QL_CongViec_LookupEdit_NhomThucHien.DataSource = clsNhanSu.LoadCV_TT_NhanSu_LoadSTT();
+            CV_QL_CongViec_LookupEdit_NhomThucHien.DataSource = clsNhanSu.LoadCV_QL_NhanSu_LoadSTT();
             CV_QL_CongViec_LookupEdit_NhomThucHien.DisplayMember = "CV_TT_NhanSu_NhomThucHien";
             CV_QL_CongViec_LookupEdit_NhomThucHien.ValueMember = "CV_TT_NhanSu_ID";
             CV_QL_CongViec_LookupEdit_NhomThucHien.PopupWidth = 400;
