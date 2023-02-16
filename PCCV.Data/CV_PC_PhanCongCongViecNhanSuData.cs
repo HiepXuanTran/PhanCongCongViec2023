@@ -31,11 +31,11 @@ namespace PCCV.Data
         }
         public int CV_PC_PhanCongCongViecNhanSu_Insert(CV_PC_PhanCongCongViecNhanSuPublic Public)
         {
-            int thamso = 14;
+            int thamso = 12;
             string[] bien = new string[thamso];
             object[] giatri = new object[thamso];
             bien[0] = "@CV_PC_PhanCongCongViecNhanSu_IDCongViec";
-            bien[1] = "@CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhuTrach";
+            bien[1] = "@CV_PC_PhanCongCongViecNhanSu_IDVaiTro";
             bien[2] = "@CV_PC_PhanCongCongViecNhanSu_NgayBatDau";
             bien[3] = "@CV_PC_PhanCongCongViecNhanSu_NgayKetThuc";
             bien[4] = "@CV_PC_PhanCongCongViecNhanSu_DanhGia";
@@ -45,12 +45,10 @@ namespace PCCV.Data
             bien[8] = "@CV_PC_PhanCongCongViecNhanSu_HienThi";
             bien[9] = "@CV_PC_PhanCongCongViecNhanSu_SuDung";
             bien[10] = "@CV_PC_PhanCongCongViecNhanSu_DiaDiemThucHien";
-            bien[11] = "@CV_PC_PhanCongCongViecNhanSu_IDNhanSuThucHien";
-            bien[12] = "@CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhoiHop";
-            bien[13] = "@CV_PC_PhanCongCongViecNhanSu_IDNhanSuKiemTra";
+            bien[11] = "@CV_PC_PhanCongCongViecNhanSu_IDUser";
 
             giatri[0] = Public.CV_PC_PhanCongCongViecNhanSu_IDCongViec;
-            giatri[1] = Public.CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhuTrach;
+            giatri[1] = Public.CV_PC_PhanCongCongViecNhanSu_IDVaiTro;
             giatri[2] = Public.CV_PC_PhanCongCongViecNhanSu_NgayBatDau;
             giatri[3] = Public.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc;
             giatri[4] = Public.CV_PC_PhanCongCongViecNhanSu_DanhGia;
@@ -60,18 +58,16 @@ namespace PCCV.Data
             giatri[8] = Public.CV_PC_PhanCongCongViecNhanSu_HienThi;
             giatri[9] = Public.CV_PC_PhanCongCongViecNhanSu_SuDung;
             giatri[10] = Public.CV_PC_PhanCongCongViecNhanSu_DiaDiemThucHien;
-            giatri[11] = Public.CV_PC_PhanCongCongViecNhanSu_IDNhanSuThucHien;
-            giatri[12] = Public.CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhoiHop;
-            giatri[13] = Public.CV_PC_PhanCongCongViecNhanSu_IDNhanSuKiemTra;
+            giatri[11] = Public.CV_PC_PhanCongCongViecNhanSu_IDUser;
             return cls.Update("SP_CV_PC_PhanCongCongViecNhanSu_Insert", bien, giatri, thamso);
         }
         public int CV_PC_PhanCongCongViecNhanSu_Update(CV_PC_PhanCongCongViecNhanSuPublic Public)
         {
-            int thamso = 17;
+            int thamso = 15;
             string[] bien = new string[thamso];
             object[] giatri = new object[thamso];
             bien[0] = "@CV_PC_PhanCongCongViecNhanSu_IDCongViec";
-            bien[1] = "@CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhuTrach";
+            bien[1] = "@CV_PC_PhanCongCongViecNhanSu_IDVaiTro";
             bien[2] = "@CV_PC_PhanCongCongViecNhanSu_NgayBatDau";
             bien[3] = "@CV_PC_PhanCongCongViecNhanSu_NgayKetThuc";
             bien[4] = "@CV_PC_PhanCongCongViecNhanSu_DanhGia";
@@ -84,11 +80,9 @@ namespace PCCV.Data
             bien[11] = "@HT_USER_Editor";
             bien[12] = "@CV_PC_PhanCongCongViecNhanSu_DateEditor";
             bien[13] = "@CV_PC_PhanCongCongViecNhanSu_DiaDiemThucHien";
-            bien[14] = "@CV_PC_PhanCongCongViecNhanSu_IDNhanSuThucHien";
-            bien[15] = "@CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhoiHop";
-            bien[16] = "@CV_PC_PhanCongCongViecNhanSu_IDNhanSuKiemTra";
+            bien[14] = "@CV_PC_PhanCongCongViecNhanSu_IDUser";
             giatri[0] = Public.CV_PC_PhanCongCongViecNhanSu_IDCongViec;
-            giatri[1] = Public.CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhuTrach;
+            giatri[1] = Public.CV_PC_PhanCongCongViecNhanSu_IDVaiTro;
             giatri[2] = Public.CV_PC_PhanCongCongViecNhanSu_NgayBatDau;
             giatri[3] = Public.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc;
             giatri[4] = Public.CV_PC_PhanCongCongViecNhanSu_DanhGia;
@@ -101,9 +95,7 @@ namespace PCCV.Data
             giatri[11] = Public.HT_USER_Editor;
             giatri[12] = Public.CV_PC_PhanCongCongViecNhanSu_DateEditor;
             giatri[13] = Public.CV_PC_PhanCongCongViecNhanSu_DiaDiemThucHien;
-            giatri[14] = Public.CV_PC_PhanCongCongViecNhanSu_IDNhanSuThucHien;
-            giatri[15] = Public.CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhoiHop;
-            giatri[16] = Public.CV_PC_PhanCongCongViecNhanSu_IDNhanSuKiemTra;
+            giatri[14] = Public.CV_PC_PhanCongCongViecNhanSu_IDUser;
             return cls.Update("SP_CV_PC_PhanCongCongViecNhanSu_Update", bien, giatri, thamso);
         }
     }

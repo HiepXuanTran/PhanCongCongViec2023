@@ -12,10 +12,6 @@ namespace PCCV.BLL
     public class CV_QL_NhanSuBLL
     {
         CV_QL_NhanSuData cls = new CV_QL_NhanSuData();
-        public DataTable LoadCV_QL_NhanSu_LoadAll()
-        {
-            return cls.LoadCV_QL_NhanSu_LoadAll();
-        }
 
         public DataTable LoadCV_QL_NhanSu_LoadUser()
         {

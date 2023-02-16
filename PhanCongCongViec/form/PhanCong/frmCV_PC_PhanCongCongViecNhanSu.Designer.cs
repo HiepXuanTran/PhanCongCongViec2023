@@ -33,16 +33,21 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Refresh = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add = new DevExpress.XtraBars.BarButtonItem();
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate = new DevExpress.XtraBars.BarButtonItem();
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy = new DevExpress.XtraBars.BarButtonItem();
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Sua = new DevExpress.XtraBars.BarButtonItem();
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Xoa = new DevExpress.XtraBars.BarButtonItem();
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Luu = new DevExpress.XtraBars.BarButtonItem();
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Undo = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print = new DevExpress.XtraBars.BarButtonItem();
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CV_PC_PhanCongCongViecNhanSu_gridControl = new DevExpress.XtraGrid.GridControl();
             this.CV_PC_PhanCongCongViecNhanSu_bandedGridView = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
@@ -59,11 +64,10 @@
             this.CV_PC_PhanCongCongViecNhanSu_MucDoKho = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_MucDoKho = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.CV_PC_PhanCongCongViecNhanSu_NgayBatDau = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -80,6 +84,7 @@
             this.CV_PC_PhanCongCongViecNhanSu_DateEditor = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_PC_PhanCongCongViecNhanSu_HienThi = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_PC_PhanCongCongViecNhanSu_SuDung = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -90,6 +95,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenNhomCongViec2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_MucDoKho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,9 +116,14 @@
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Refresh,
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Luu,
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Undo,
-            this.barButtonItem7});
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print,
+            this.barSubItem1,
+            this.barButtonItem1,
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate,
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy,
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 7;
+            this.barManager1.MaxItemId = 12;
             // 
             // bar2
             // 
@@ -121,12 +133,13 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Refresh, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Sua, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Xoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Luu, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Undo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem7, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -140,14 +153,44 @@
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Refresh.Name = "CV_PC_PhanCongCongViecNhanSu_barButtonItem_Refresh";
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Refresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Refresh_ItemClick);
             // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "Thêm";
+            this.barSubItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.Glyph")));
+            this.barSubItem1.Id = 7;
+            this.barSubItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.LargeGlyph")));
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.barSubItem1.Name = "barSubItem1";
+            // 
             // CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add
             // 
-            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add.Caption = "Thêm";
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add.Caption = "Thêm dòng mới";
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add.Glyph")));
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add.Id = 0;
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add.LargeGlyph")));
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add.Name = "CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add";
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Add_ItemClick);
+            // 
+            // CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate
+            // 
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate.Caption = "Sinh tự động";
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate.Glyph")));
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate.Id = 9;
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate.LargeGlyph")));
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate.Name = "CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate";
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate_ItemClick);
+            // 
+            // CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy
+            // 
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy.Caption = "Coppy";
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy.Glyph")));
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy.Id = 10;
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy.LargeGlyph")));
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy.Name = "CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy";
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // CV_PC_PhanCongCongViecNhanSu_barButtonItem_Sua
             // 
@@ -185,65 +228,80 @@
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Undo.Name = "CV_PC_PhanCongCongViecNhanSu_barButtonItem_Undo";
             this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Undo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Undo_ItemClick);
             // 
-            // barButtonItem7
+            // CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print
             // 
-            this.barButtonItem7.Caption = "In";
-            this.barButtonItem7.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.Glyph")));
-            this.barButtonItem7.Id = 6;
-            this.barButtonItem7.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.LargeGlyph")));
-            this.barButtonItem7.Name = "barButtonItem7";
-            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print.Caption = "In";
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print.Glyph")));
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print.Id = 6;
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print.LargeGlyph")));
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print.Name = "CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print";
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
+            // 
+            // CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import
+            // 
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import.Caption = "Import";
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import.Glyph = ((System.Drawing.Image)(resources.GetObject("CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import.Glyph")));
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import.Id = 11;
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import.LargeGlyph")));
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import.Name = "CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import";
+            this.CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlTop.Size = new System.Drawing.Size(1443, 24);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(1924, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 390);
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1443, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 480);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1924, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 366);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 450);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1443, 24);
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 366);
+            this.barDockControlRight.Location = new System.Drawing.Point(1924, 30);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 450);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Sinh tự động";
+            this.barButtonItem1.Id = 8;
+            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.CV_PC_PhanCongCongViecNhanSu_gridControl);
             this.panel1.Controls.Add(this.labelX1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1443, 366);
+            this.panel1.Size = new System.Drawing.Size(1924, 450);
             this.panel1.TabIndex = 4;
             // 
             // CV_PC_PhanCongCongViecNhanSu_gridControl
             // 
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CV_PC_PhanCongCongViecNhanSu_gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Location = new System.Drawing.Point(0, 42);
+            this.CV_PC_PhanCongCongViecNhanSu_gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Location = new System.Drawing.Point(0, 52);
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.MainView = this.CV_PC_PhanCongCongViecNhanSu_bandedGridView;
-            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Margin = new System.Windows.Forms.Padding(2);
+            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.MenuManager = this.barManager1;
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.Name = "CV_PC_PhanCongCongViecNhanSu_gridControl";
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -252,8 +310,10 @@
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenNhomCongViec2,
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec,
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_MucDoKho,
-            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach});
-            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Size = new System.Drawing.Size(1443, 324);
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach,
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro,
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu});
+            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Size = new System.Drawing.Size(1924, 398);
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.TabIndex = 1;
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CV_PC_PhanCongCongViecNhanSu_bandedGridView});
@@ -272,10 +332,8 @@
             this.CV_PC_PhanCongCongViecNhanSu_TenNhomCongViec2,
             this.CV_PC_PhanCongCongViecNhanSu_TenCongViec,
             this.CV_PC_PhanCongCongViecNhanSu_MucDoKho,
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach,
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien,
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop,
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra,
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser,
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro,
             this.CV_PC_PhanCongCongViecNhanSu_NgayBatDau,
             this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc,
             this.CV_PC_PhanCongCongViecNhanSu_DanhGia,
@@ -298,6 +356,7 @@
             this.CV_PC_PhanCongCongViecNhanSu_bandedGridView.OptionsView.ShowAutoFilterRow = true;
             this.CV_PC_PhanCongCongViecNhanSu_bandedGridView.OptionsView.ShowFooter = true;
             this.CV_PC_PhanCongCongViecNhanSu_bandedGridView.OptionsView.ShowGroupPanel = false;
+            this.CV_PC_PhanCongCongViecNhanSu_bandedGridView.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.CV_PC_PhanCongCongViecNhanSu_bandedGridView_InitNewRow);
             // 
             // gridBand_Chung
             // 
@@ -466,90 +525,61 @@
             this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridBand2.Caption = "NHÂN SỰ";
-            this.gridBand2.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach);
-            this.gridBand2.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien);
-            this.gridBand2.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop);
-            this.gridBand2.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra);
+            this.gridBand2.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_IDUser);
+            this.gridBand2.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro);
             this.gridBand2.Name = "gridBand2";
             this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 692;
+            this.gridBand2.Width = 366;
             // 
-            // CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach
+            // CV_PC_PhanCongCongViecNhanSu_IDUser
             // 
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.AppearanceCell.ForeColor = System.Drawing.Color.Red;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.AppearanceCell.Options.UseForeColor = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.AppearanceHeader.Options.UseFont = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.AppearanceHeader.Options.UseForeColor = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.AppearanceHeader.Options.UseTextOptions = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.Caption = "Nhân sự phụ trách *";
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.ColumnEdit = this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.FieldName = "CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhuTrach";
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.Name = "CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach";
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.Visible = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach.Width = 183;
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.AppearanceCell.ForeColor = System.Drawing.Color.Red;
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.AppearanceCell.Options.UseForeColor = true;
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.AppearanceHeader.Options.UseFont = true;
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.AppearanceHeader.Options.UseForeColor = true;
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.AppearanceHeader.Options.UseTextOptions = true;
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.Caption = "Nhân sự *";
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.ColumnEdit = this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu;
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.FieldName = "CV_PC_PhanCongCongViecNhanSu_IDUser";
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.Name = "CV_PC_PhanCongCongViecNhanSu_IDUser";
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.Visible = true;
+            this.CV_PC_PhanCongCongViecNhanSu_IDUser.Width = 183;
             // 
-            // CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach
+            // CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu
             // 
-            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach.AutoHeight = false;
-            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.AutoHeight = false;
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach.Name = "CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach";
-            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach.NullText = "";
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.Name = "CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu";
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.NullText = "";
             // 
-            // CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien
+            // CV_PC_PhanCongCongViecNhanSu_IdVaiTro
             // 
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.AppearanceCell.ForeColor = System.Drawing.Color.Red;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.AppearanceCell.Options.UseForeColor = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.AppearanceHeader.Options.UseFont = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.AppearanceHeader.Options.UseForeColor = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.AppearanceHeader.Options.UseTextOptions = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.Caption = "Nhân sự thực hiện *";
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.ColumnEdit = this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.FieldName = "CV_PC_PhanCongCongViecNhanSu_IDNhanSuThucHien";
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.Name = "CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien";
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.Visible = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien.Width = 183;
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceCell.ForeColor = System.Drawing.Color.Red;
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceCell.Options.UseForeColor = true;
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceHeader.Options.UseFont = true;
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceHeader.Options.UseForeColor = true;
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceHeader.Options.UseTextOptions = true;
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.Caption = "Vai trò *";
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.ColumnEdit = this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro;
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.FieldName = "CV_PC_PhanCongCongViecNhanSu_IDVaiTro";
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.Name = "CV_PC_PhanCongCongViecNhanSu_IdVaiTro";
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.Visible = true;
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.Width = 183;
             // 
-            // CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop
+            // CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro
             // 
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.AppearanceCell.Options.UseForeColor = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.AppearanceHeader.Options.UseFont = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.AppearanceHeader.Options.UseForeColor = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.AppearanceHeader.Options.UseTextOptions = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.Caption = "Nhân sự phối hợp";
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.ColumnEdit = this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.FieldName = "CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhoiHop";
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.Name = "CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop";
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.Visible = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop.Width = 176;
-            // 
-            // CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra
-            // 
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.AppearanceCell.ForeColor = System.Drawing.Color.Red;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.AppearanceCell.Options.UseForeColor = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.AppearanceHeader.Options.UseFont = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.AppearanceHeader.Options.UseForeColor = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.AppearanceHeader.Options.UseTextOptions = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.Caption = "Nhân sự kiểm tra";
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.ColumnEdit = this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.FieldName = "CV_PC_PhanCongCongViecNhanSu_IDNhanSuKiemTra";
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.MinWidth = 150;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.Name = "CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra";
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.Visible = true;
-            this.CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra.Width = 150;
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.AutoHeight = false;
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.Name = "CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro";
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.NullText = "";
             // 
             // gridBand3
             // 
@@ -751,6 +781,14 @@
             this.CV_PC_PhanCongCongViecNhanSu_SuDung.Name = "CV_PC_PhanCongCongViecNhanSu_SuDung";
             this.CV_PC_PhanCongCongViecNhanSu_SuDung.Visible = true;
             // 
+            // CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach
+            // 
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach.AutoHeight = false;
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach.Name = "CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach";
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach.NullText = "";
+            // 
             // labelX1
             // 
             // 
@@ -761,24 +799,24 @@
             this.labelX1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelX1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.labelX1.Location = new System.Drawing.Point(0, 0);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(2);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(1443, 42);
+            this.labelX1.Size = new System.Drawing.Size(1924, 52);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "<div align = \"center\">PHÂN CÔNG CÔNG VIỆC - NHÂN SỰ</div>";
             // 
             // frmCV_PC_PhanCongCongViecNhanSu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 390);
+            this.ClientSize = new System.Drawing.Size(1924, 480);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmCV_PC_PhanCongCongViecNhanSu";
             this.Text = "Phân công công việc - Nhân sự";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -792,6 +830,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenNhomCongViec2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_MucDoKho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -815,7 +855,7 @@
         private DevExpress.XtraBars.BarButtonItem CV_PC_PhanCongCongViecNhanSu_barButtonItem_Xoa;
         private DevExpress.XtraBars.BarButtonItem CV_PC_PhanCongCongViecNhanSu_barButtonItem_Luu;
         private DevExpress.XtraBars.BarButtonItem CV_PC_PhanCongCongViecNhanSu_barButtonItem_Undo;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem CV_PC_PhanCongCongViecNhanSu_barButtonItem_Print;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenNhomCongViec1;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenNhomCongViec2;
@@ -829,10 +869,8 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_TenNhomCongViec2;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_TenCongViec;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_MucDoKho;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_NhanSuPhuTrach;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_NhanSuThucHien;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_NhanSuPhoiHop;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_NhanSuKiemTra;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_IDUser;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_IdVaiTro;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_NgayBatDau;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_NgayKetThuc;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_DanhGia;
@@ -845,8 +883,15 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_DateEditor;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_HienThi;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_PC_PhanCongCongViecNhanSu_SuDung;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem CV_PC_PhanCongCongViecNhanSu_barButtonItem_AutoGenerate;
+        private DevExpress.XtraBars.BarButtonItem CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy;
+        private DevExpress.XtraBars.BarButtonItem CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand_Chung;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;

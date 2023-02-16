@@ -173,10 +173,6 @@
             this.CV_QL_CongViec_BandedGridview.OptionsView.ShowAutoFilterRow = true;
             this.CV_QL_CongViec_BandedGridview.OptionsView.ShowFooter = true;
             this.CV_QL_CongViec_BandedGridview.OptionsView.ShowGroupPanel = false;
-            this.CV_QL_CongViec_BandedGridview.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_QL_CongViec_TenLoaiCongViec, DevExpress.Data.ColumnSortOrder.Ascending),
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_QL_CongViec_TenNhomCongViec1, DevExpress.Data.ColumnSortOrder.Ascending),
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_QL_CongViec_ID, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.CV_QL_CongViec_BandedGridview.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_QL_CongViec_BandedGridview_PopupMenuShowing);
             this.CV_QL_CongViec_BandedGridview.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.CV_QL_CongViec_BandedGridview_InitNewRow);
             // 

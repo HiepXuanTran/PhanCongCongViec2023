@@ -21,35 +21,20 @@ namespace PCCV.Public
             get { return _CV_PC_PhanCongCongViecNhanSu_IDCongViec; }
             set { _CV_PC_PhanCongCongViecNhanSu_IDCongViec = value; }
         }
-        int _CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhuTrach;
+        int _CV_PC_PhanCongCongViecNhanSu_IDVaiTro;
 
-        public int CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhuTrach
+        public int CV_PC_PhanCongCongViecNhanSu_IDVaiTro
         {
-            get { return _CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhuTrach; }
-            set { _CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhuTrach = value; }
+            get { return _CV_PC_PhanCongCongViecNhanSu_IDVaiTro; }
+            set { _CV_PC_PhanCongCongViecNhanSu_IDVaiTro = value; }
         }
-        int _CV_PC_PhanCongCongViecNhanSu_IDNhanSuThucHien;
+        int _CV_PC_PhanCongCongViecNhanSu_IDUser;
 
-        public int CV_PC_PhanCongCongViecNhanSu_IDNhanSuThucHien
+        public int CV_PC_PhanCongCongViecNhanSu_IDUser
         {
-            get { return _CV_PC_PhanCongCongViecNhanSu_IDNhanSuThucHien; }
-            set { _CV_PC_PhanCongCongViecNhanSu_IDNhanSuThucHien = value; }
+            get { return _CV_PC_PhanCongCongViecNhanSu_IDUser; }
+            set { _CV_PC_PhanCongCongViecNhanSu_IDUser = value; }
         }
-        int _CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhoiHop;
-
-        public int CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhoiHop
-        {
-            get { return _CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhoiHop; }
-            set { _CV_PC_PhanCongCongViecNhanSu_IDNhanSuPhoiHop = value; }
-        }
-        int _CV_PC_PhanCongCongViecNhanSu_IDNhanSuKiemTra;
-
-        public int CV_PC_PhanCongCongViecNhanSu_IDNhanSuKiemTra
-        {
-            get { return _CV_PC_PhanCongCongViecNhanSu_IDNhanSuKiemTra; }
-            set { _CV_PC_PhanCongCongViecNhanSu_IDNhanSuKiemTra = value; }
-        }
-
 
         DateTime _CV_PC_PhanCongCongViecNhanSu_NgayBatDau;
 

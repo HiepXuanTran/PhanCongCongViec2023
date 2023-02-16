@@ -59,13 +59,10 @@ C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.HeThong.frmCV_HT_VaiTroCongViec.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_CongViec.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_NhomCongViec.resources
-C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.ThongTin.frmCV_TT_ChiTietCongViec.resources
-C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.ThongTin.frmCV_TT_NhanSu.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.frmMain.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.Properties.Resources.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.csproj.GenerateResource.Cache
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.exe.licenses
-C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_PhanCongCongViecNhanSu.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.HeThong.frmCV_HT_LoaiCongViec.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_CongViec_ImportExcel.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_NhomCongViec_ImportExcel.resources
@@ -125,3 +122,7 @@ C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PhanCongCo
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PhanCongCongViec\bin\Debug\PCCV.BLL.pdb
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PhanCongCongViec\bin\Debug\PCCV.Public.pdb
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PhanCongCongViec\bin\Debug\PCCV.Data.pdb
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.resources
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.PhanCong.frmCV_PC_PhanCongCongViecNhanSu.resources
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_ChiTietCongViec.resources
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_NhanSu.resources

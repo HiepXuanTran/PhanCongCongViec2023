@@ -12,14 +12,10 @@ namespace PCCV.Data
     {
 
         clsKetNoi cls = new clsKetNoi();
-        public DataTable LoadCV_QL_NhanSu_LoadAll()
-        {
-            return cls.LayDuLieu("SP_CV_QL_NhanSu_Select");
-        }
-
+        
         public DataTable LoadCV_QL_NhanSu_LoadUser()
         {
-            return cls.LayDuLieu("CV_QL_NhanSu_Select");
+            return cls.LayDuLieu("SP_CV_QL_NhanSu_Select");
         }
 
 

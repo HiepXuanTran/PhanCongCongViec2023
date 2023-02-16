@@ -95,8 +95,7 @@ namespace PhanCongCongViec.form.HeThong
             {
                 if (Convert.ToBoolean(CV_HT_VaiTroCongViec_BandedGridview.GetFocusedRowCellValue(CV_HT_VaiTroCongViecChon)) &&
                         (
-                            string.IsNullOrWhiteSpace(Convert.ToString(CV_HT_VaiTroCongViec_BandedGridview.GetFocusedRowCellValue(CV_HT_VaiTroCongViec_VaiTroTrongCongViec))) ||
-                            string.IsNullOrWhiteSpace(Convert.ToString(CV_HT_VaiTroCongViec_BandedGridview.GetFocusedRowCellValue(CV_HT_VaiTroCongViec_MoTa)))
+                            string.IsNullOrWhiteSpace(Convert.ToString(CV_HT_VaiTroCongViec_BandedGridview.GetFocusedRowCellValue(CV_HT_VaiTroCongViec_VaiTroTrongCongViec)))
                         )
                     )
                 {
