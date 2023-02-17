@@ -643,9 +643,8 @@ namespace PhanCongCongViec.form.PhanCong
             {
                 for (int j = 0; j < roundNS; j++)
                 {
-                    string s = dtNhanSu.Rows[j]["CV_QL_NhanSu_KhaNangChuyenMon"].ToString();
-                    string s1 = dtCongViec.Rows[i]["CV_QL_CongViec_KhaNangChuyenMon"].ToString();
-                    CV_PC_PhanCongCongViecNhanSuPublic Public = new CV_PC_PhanCongCongViecNhanSuPublic();
+                    string s = dtNhanSu.Rows[99]["CV_QL_NhanSu_KhaNangChuyenMon"].ToString();
+                    string s1 = dtCongViec.Rows[3]["CV_QL_CongViec_KhaNangChuyenMon"].ToString();
                     if (dtNhanSu.Rows[j]["CV_QL_NhanSu_KhaNangChuyenMon"].ToString().CompareTo(dtCongViec.Rows[i]["CV_QL_CongViec_KhaNangChuyenMon"].ToString()) == 0) // == true
                     {
                         PCCVPublic.CV_PC_PhanCongCongViecNhanSu_HienThi = true;
