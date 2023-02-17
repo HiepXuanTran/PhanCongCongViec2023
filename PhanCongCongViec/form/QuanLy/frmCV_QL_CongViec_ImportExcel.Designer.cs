@@ -285,7 +285,7 @@
             this.gridBandChung.Columns.Add(this.CV_QL_CongViec_TenCongViec);
             this.gridBandChung.Name = "gridBandChung";
             this.gridBandChung.VisibleIndex = 0;
-            this.gridBandChung.Width = 600;
+            this.gridBandChung.Width = 648;
             // 
             // CV_QL_CongViecChon
             // 
@@ -320,7 +320,7 @@
             this.CV_QL_CongViec_TenLoaiCongViec.FieldName = "Loại Công Việc";
             this.CV_QL_CongViec_TenLoaiCongViec.Name = "CV_QL_CongViec_TenLoaiCongViec";
             this.CV_QL_CongViec_TenLoaiCongViec.Visible = true;
-            this.CV_QL_CongViec_TenLoaiCongViec.Width = 130;
+            this.CV_QL_CongViec_TenLoaiCongViec.Width = 178;
             // 
             // CV_QL_CongViec_LookupEdit_LoaiCongViec
             // 

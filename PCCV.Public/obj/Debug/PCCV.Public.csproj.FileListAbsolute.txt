@@ -17,3 +17,8 @@ C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PCCV.Publi
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PCCV.Public\obj\Debug\PCCV.Public.dll
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PCCV.Public\obj\Debug\PCCV.Public.pdb
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.Public\obj\Debug\PCCV.Public.csprojResolveAssemblyReference.cache
+D:\WinForm_CSharp\PhanCongCongViec2023\PCCV.Public\bin\Debug\PCCV.Public.dll
+D:\WinForm_CSharp\PhanCongCongViec2023\PCCV.Public\bin\Debug\PCCV.Public.pdb
+D:\WinForm_CSharp\PhanCongCongViec2023\PCCV.Public\obj\Debug\PCCV.Public.csprojResolveAssemblyReference.cache
+D:\WinForm_CSharp\PhanCongCongViec2023\PCCV.Public\obj\Debug\PCCV.Public.dll
+D:\WinForm_CSharp\PhanCongCongViec2023\PCCV.Public\obj\Debug\PCCV.Public.pdb
