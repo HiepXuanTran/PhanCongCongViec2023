@@ -657,12 +657,10 @@ namespace PhanCongCongViec.form.PhanCong
             }
         }
 
-        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
 
-        }
+        //Button Coppy
 
-        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void CV_PC_PhanCongCongViecNhanSu_barButtonItem_Coppy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (KiemTra() == false)
             {
@@ -712,6 +710,11 @@ namespace PhanCongCongViec.form.PhanCong
             CV_PC_PhanCongCongViecNhanSu_bandedGridView.SetRowCellValue(e.RowHandle, CV_PC_PhanCongCongViecNhanSu_bandedGridView.Columns["CV_PC_PhanCongCongViecNhanSu_DiaDiemThucHien"], PCCVPublic.CV_PC_PhanCongCongViecNhanSu_DiaDiemThucHien);
             CV_PC_PhanCongCongViecNhanSu_bandedGridView.SetRowCellValue(e.RowHandle, CV_PC_PhanCongCongViecNhanSu_bandedGridView.Columns["CV_PC_PhanCongCongViecNhanSuChon"], true);
 
+        }
+
+        private void CV_PC_PhanCongCongViecNhanSu_barButtonItem_Import_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadMain.HienThiCV_PC_PhanCongCongViecImport();
         }
     }
 }

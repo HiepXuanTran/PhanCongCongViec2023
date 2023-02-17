@@ -80,10 +80,10 @@
     <Compile Include="form\HeThong\frmCV_HT_VaiTroCongViec.Designer.cs">
       <DependentUpon>frmCV_HT_VaiTroCongViec.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\QuanLy\frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.cs">
+    <Compile Include="form\PhanCong\frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\QuanLy\frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.Designer.cs">
+    <Compile Include="form\PhanCong\frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.Designer.cs">
       <DependentUpon>frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.cs</DependentUpon>
     </Compile>
     <Compile Include="form\QuanLy\frmCV_QL_CongViec.cs">
@@ -149,7 +149,7 @@
     <EmbeddedResource Include="form\HeThong\frmCV_HT_VaiTroCongViec.resx">
       <DependentUpon>frmCV_HT_VaiTroCongViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form\QuanLy\frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.resx">
+    <EmbeddedResource Include="form\PhanCong\frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.resx">
       <DependentUpon>frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\QuanLy\frmCV_QL_CongViec.resx">

@@ -127,6 +127,7 @@
             this.CV_QL_NhanSu_BandedGridview.OptionsView.ShowAutoFilterRow = true;
             this.CV_QL_NhanSu_BandedGridview.OptionsView.ShowFooter = true;
             this.CV_QL_NhanSu_BandedGridview.OptionsView.ShowGroupPanel = false;
+            this.CV_QL_NhanSu_BandedGridview.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_QL_NhanSu_BandedGridview_PopupMenuShowing);
             // 
             // gridBand2
             // 
@@ -550,7 +551,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCV_QL_NhanSu";
             this.Text = "Quản lý nhân sự";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

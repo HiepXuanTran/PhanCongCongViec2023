@@ -166,6 +166,22 @@ namespace PhanCongCongViec
             else
                 m_frmCV_QL_NhomCongViec_ImportExcel.Activate();
         }
+
+        //Load Form Import Phân Công Công Việc
+        static frmCV_PC_PhanCongCongViecNhanSu_ImportExcel m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel = null;
+        public static void HienThiCV_PC_PhanCongCongViecImport()
+        {
+            if (m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel == null || m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.IsDisposed)
+            {
+                m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel = new frmCV_PC_PhanCongCongViecNhanSu_ImportExcel();
+                m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.MdiParent = frmMain.ActiveForm;
+                m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.Show();
+            }
+            else
+            {
+                m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.Activate();
+            }
+        }
     }
     public class BienToanCuc
     {

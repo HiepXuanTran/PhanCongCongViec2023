@@ -33,3 +33,10 @@ C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PCCV.Data\
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.dll
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.pdb
+D:\WinForm_CSharp\PhanCongCongViec2023\PCCV.Data\bin\Debug\PCCV.Data.dll
+D:\WinForm_CSharp\PhanCongCongViec2023\PCCV.Data\bin\Debug\PCCV.Data.pdb
+D:\WinForm_CSharp\PhanCongCongViec2023\PCCV.Data\bin\Debug\PCCV.Public.dll
+D:\WinForm_CSharp\PhanCongCongViec2023\PCCV.Data\bin\Debug\PCCV.Public.pdb
+D:\WinForm_CSharp\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.csprojResolveAssemblyReference.cache
+D:\WinForm_CSharp\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.dll
+D:\WinForm_CSharp\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.pdb
