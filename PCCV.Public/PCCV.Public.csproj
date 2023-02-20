@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CV_HT_LoaiCongViecPublic.cs" />
     <Compile Include="CV_HT_MucDoKhoPublic.cs" />
+    <Compile Include="CV_HT_NhomThucHienPublic.cs" />
     <Compile Include="CV_HT_UuTienCongViecPublic.cs" />
     <Compile Include="CV_HT_VaiTroCongViecPublic.cs" />
     <Compile Include="CV_QL_CongViecPublic.cs" />

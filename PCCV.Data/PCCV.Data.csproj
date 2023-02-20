@@ -44,6 +44,7 @@
     <Compile Include="clsKetNoi.cs" />
     <Compile Include="CV_HT_LoaiCongViecData.cs" />
     <Compile Include="CV_HT_MucDoKhoData.cs" />
+    <Compile Include="CV_HT_NhomThucHienData.cs" />
     <Compile Include="CV_HT_UuTienCongViecData.cs" />
     <Compile Include="CV_HT_VaiTroCongViecData.cs" />
     <Compile Include="CV_QL_CongViecData.cs" />

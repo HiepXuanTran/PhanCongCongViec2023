@@ -114,6 +114,19 @@ namespace PhanCongCongViec
                 m_frmCV_QL_CongViec_ImportExcel.Activate();
         }
 
+        static frmCV_PC_PhanCongCongViecNhanSu_ImportExcel m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel = null;
+        public static void HienThiCV_PC_PhanCongCongViecNhanSuImport()
+        {
+            if (m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel == null || m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.IsDisposed)
+            {
+                m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel = new frmCV_PC_PhanCongCongViecNhanSu_ImportExcel();
+                m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.MdiParent = frmMain.ActiveForm;
+                m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.Show();
+            }
+            else
+                m_frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.Activate();
+        }
+
         static frmCV_HT_VaiTroCongViec m_frmCV_HT_VaiTroCongViec = null;
         public static void HienThiCV_HT_VaiTroCongViec()
         {
@@ -127,6 +140,18 @@ namespace PhanCongCongViec
                 m_frmCV_HT_VaiTroCongViec.Activate();
         }
 
+        static frmCV_HT_NhomThucHien m_frmCV_HT_NhomThucHien = null;
+        public static void HienThiCV_HT_NhomThucHien()
+        {
+            if (m_frmCV_HT_NhomThucHien == null || m_frmCV_HT_NhomThucHien.IsDisposed)
+            {
+                m_frmCV_HT_NhomThucHien = new frmCV_HT_NhomThucHien();
+                m_frmCV_HT_NhomThucHien.MdiParent = frmMain.ActiveForm;
+                m_frmCV_HT_NhomThucHien.Show();
+            }
+            else
+                m_frmCV_HT_NhomThucHien.Activate();
+        }
         static frmCV_HT_UuTienCongViec m_frmCV_HT_UuTienCongViec = null;
         public static void HienThiCV_HT_UuTienCongViec()
         {
