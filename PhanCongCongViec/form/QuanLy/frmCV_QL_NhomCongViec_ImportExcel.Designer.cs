@@ -80,9 +80,9 @@
             this.labelX1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.labelX1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.labelX1.Location = new System.Drawing.Point(2, 2);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(2);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(897, 28);
+            this.labelX1.Size = new System.Drawing.Size(1197, 34);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "<div align = \"center\">XỬ LÝ DỮ LIỆU EXCEL NHÓM CÔNG VIỆC</div>";
             // 
@@ -115,22 +115,22 @@
             this.panelControl1.Controls.Add(this.CV_QL_NhomCongViec_GridControl);
             this.panelControl1.Controls.Add(this.labelX1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 24);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.panelControl1.Location = new System.Drawing.Point(0, 30);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(901, 373);
+            this.panelControl1.Size = new System.Drawing.Size(1201, 459);
             this.panelControl1.TabIndex = 5;
             // 
             // CV_QL_NhomCongViec_GridControl
             // 
             this.CV_QL_NhomCongViec_GridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CV_QL_NhomCongViec_GridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.CV_QL_NhomCongViec_GridControl.Location = new System.Drawing.Point(2, 30);
+            this.CV_QL_NhomCongViec_GridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CV_QL_NhomCongViec_GridControl.Location = new System.Drawing.Point(2, 36);
             this.CV_QL_NhomCongViec_GridControl.MainView = this.CV_QL_NhomCongViec_bandedGridView;
-            this.CV_QL_NhomCongViec_GridControl.Margin = new System.Windows.Forms.Padding(2);
+            this.CV_QL_NhomCongViec_GridControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CV_QL_NhomCongViec_GridControl.MenuManager = this.barManager1;
             this.CV_QL_NhomCongViec_GridControl.Name = "CV_QL_NhomCongViec_GridControl";
-            this.CV_QL_NhomCongViec_GridControl.Size = new System.Drawing.Size(897, 341);
+            this.CV_QL_NhomCongViec_GridControl.Size = new System.Drawing.Size(1197, 421);
             this.CV_QL_NhomCongViec_GridControl.TabIndex = 2;
             this.CV_QL_NhomCongViec_GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CV_QL_NhomCongViec_bandedGridView});
@@ -507,32 +507,32 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlTop.Size = new System.Drawing.Size(901, 24);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(1201, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 397);
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlBottom.Size = new System.Drawing.Size(901, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 489);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1201, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 373);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 459);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(901, 24);
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 373);
+            this.barDockControlRight.Location = new System.Drawing.Point(1201, 30);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 459);
             // 
             // ofd
             // 
@@ -540,16 +540,18 @@
             // 
             // frmCV_QL_NhomCongViec_ImportExcel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 397);
+            this.ClientSize = new System.Drawing.Size(1201, 489);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmCV_QL_NhomCongViec_ImportExcel";
             this.Text = "Import file Excel Nhóm Công Việc";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCV_QL_NhomCongViec_ImportExcel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

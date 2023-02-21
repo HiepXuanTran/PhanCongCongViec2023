@@ -658,7 +658,8 @@ namespace PhanCongCongViec.form.PhanCong
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            LoadMain.HienThiCV_PC_PhanCongCongViecNhanSuImport();
+           // LoadMain.HienThiCV_PC_PhanCongCongViecNhanSuImport();
+            new frmCV_PC_PhanCongCongViecNhanSu_ImportExcel().ShowDialog();
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -118,7 +118,6 @@ C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PhanCongCo
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PhanCongCongViec\bin\Debug\PCCV.BLL.pdb
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PhanCongCongViec\bin\Debug\PCCV.Public.pdb
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PhanCongCongViec\bin\Debug\PCCV.Data.pdb
-C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.PhanCong.frmCV_PC_PhanCongCongViecNhanSu.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_ChiTietCongViec.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_NhanSu.resources
@@ -127,3 +126,5 @@ C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec\obj\x86\Debug\
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_NhanSu.resources
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.HeThong.frmCV_HT_NhomThucHien.resources
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.PhanCong.frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.resources
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.HeThong.frmCV_HT_NhomThucHien.resources
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.PhanCong.frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.resources

@@ -836,7 +836,8 @@ namespace PhanCongCongViec.form.QuanLy
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            LoadMain.HienThiCV_TT_CongViecImport();
+            //LoadMain.HienThiCV_TT_CongViecImport();
+            new frmCV_QL_CongViec_ImportExcel().ShowDialog();
         }
     }
 }

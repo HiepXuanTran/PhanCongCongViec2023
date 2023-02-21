@@ -180,32 +180,32 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlTop.Size = new System.Drawing.Size(1303, 24);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(1737, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 459);
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1303, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 565);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1737, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 435);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 535);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1303, 24);
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 435);
+            this.barDockControlRight.Location = new System.Drawing.Point(1737, 30);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 535);
             // 
             // barButtonItem2
             // 
@@ -218,19 +218,19 @@
             this.panelControl1.Controls.Add(this.CV_PC_PhanCongCongViecNhanSu_gridControl);
             this.panelControl1.Controls.Add(this.labelX1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 24);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.panelControl1.Location = new System.Drawing.Point(0, 30);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1303, 435);
+            this.panelControl1.Size = new System.Drawing.Size(1737, 535);
             this.panelControl1.TabIndex = 6;
             // 
             // CV_PC_PhanCongCongViecNhanSu_gridControl
             // 
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CV_PC_PhanCongCongViecNhanSu_gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Location = new System.Drawing.Point(2, 30);
+            this.CV_PC_PhanCongCongViecNhanSu_gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Location = new System.Drawing.Point(2, 36);
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.MainView = this.CV_PC_PhanCongCongViecNhanSu_bandedGridView;
-            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Margin = new System.Windows.Forms.Padding(2);
+            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.MenuManager = this.barManager1;
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.Name = "CV_PC_PhanCongCongViecNhanSu_gridControl";
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -242,7 +242,7 @@
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach,
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro,
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu});
-            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Size = new System.Drawing.Size(1299, 403);
+            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Size = new System.Drawing.Size(1733, 497);
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.TabIndex = 2;
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CV_PC_PhanCongCongViecNhanSu_bandedGridView});
@@ -728,9 +728,9 @@
             this.labelX1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.labelX1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.labelX1.Location = new System.Drawing.Point(2, 2);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(2);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(1299, 28);
+            this.labelX1.Size = new System.Drawing.Size(1733, 34);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "<div align = \"center\">XỬ LÝ DỮ LIỆU EXCEL NHÓM CÔNG VIỆC</div>";
             // 
@@ -740,16 +740,18 @@
             // 
             // frmCV_PC_PhanCongCongViecNhanSu_ImportExcel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1303, 459);
+            this.ClientSize = new System.Drawing.Size(1737, 565);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmCV_PC_PhanCongCongViecNhanSu_ImportExcel";
             this.Text = "frmCV_PC_PhanCongCongViecNhanSu_ImportExcel";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCV_PC_PhanCongCongViecNhanSu_ImportExcel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

@@ -491,7 +491,8 @@ namespace PhanCongCongViec.form.QuanLy
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
 
-            LoadMain.HienThiCV_TT_NhomCongViecImport();
+            //LoadMain.HienThiCV_TT_NhomCongViecImport();
+            new frmCV_QL_NhomCongViec_ImportExcel().ShowDialog();
         }
 
         }
