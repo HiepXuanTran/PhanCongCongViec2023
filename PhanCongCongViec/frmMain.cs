@@ -71,5 +71,10 @@ namespace PhanCongCongViec
         {
             LoadMain.HienThiCV_HT_NhomThucHien();
         }
+
+        private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadMain.HienThiCV_HT_KhaNangChuyenMon();
+        }
     }
 }

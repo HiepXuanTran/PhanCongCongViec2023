@@ -13,6 +13,7 @@ using System.Data.SqlClient;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Menu;
 using DevExpress.Utils.Menu;
+using DevExpress.XtraEditors.Repository;
 namespace PhanCongCongViec.form.QuanLy
 {
     public partial class frmCV_QL_CongViec : Form
@@ -24,11 +25,13 @@ namespace PhanCongCongViec.form.QuanLy
         }
         CV_QL_CongViecPublic CongViecPublic = new CV_QL_CongViecPublic();
         //flag edit and flag add
+        CV_HT_NhomThucHienBLL clsNhomThucHien = new CV_HT_NhomThucHienBLL();
         CV_QL_NhanSuBLL clsNhanSu = new CV_QL_NhanSuBLL();
         bool CV_QL_CongViecEdit = false;
         bool CV_QL_CongViecAdd = false;
         bool CV_QL_CongViecCoppy = false;
         // lock 6 cột cuối
+        CV_HT_KhaNangChuyenMonBLL clsKhaNangChuyenMon = new CV_HT_KhaNangChuyenMonBLL();
         CV_HT_MucDoKhoBLL clsMucDoKho = new CV_HT_MucDoKhoBLL();
         CV_QL_NhomCongViecBLL clsNhomCongViec = new CV_QL_NhomCongViecBLL();
         CV_QL_CongViecBLL cls = new CV_QL_CongViecBLL();
@@ -334,63 +337,93 @@ namespace PhanCongCongViec.form.QuanLy
 
         private void frmCV_QL_CongViec_Load(object sender, EventArgs e)
         {
+            //lookup edit kha nang chuyen mon
+            //CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.DataSource = clsKhaNangChuyenMon.LoadCV_HT_KhaNangChuyenMon_LoadAll();
+            //CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.DisplayMember = "CV_HT_KhaNangChuyenMon_TenKhaNang";
+            //CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.ValueMember = "CV_HT_KhaNangChuyenMon_Id";
+            //CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.PopupWidth = 900;
+            //CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.ShowFooter = false;
+            //CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.Columns.Clear();
+            //CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_KhaNangChuyenMon_TenKhaNang", "Khả năng chuyên môn", 300));
+            //CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_KhaNangChuyenMon_MoTa", "Mô tả", 300));
+            //CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_KhaNangChuyenMon_GhiChu", "Ghi chú", 300));
 
-            //lookup edit nhom thuc hien 
-           // CV_QL_CongViec_LookupEdit_NhomThucHien.DataSource = clsNhanSu.LoadCV_QL_NhanSu_LoadSTT();
-            CV_QL_CongViec_LookupEdit_NhomThucHien.DisplayMember = "CV_TT_NhanSu_NhomThucHien";
-            CV_QL_CongViec_LookupEdit_NhomThucHien.ValueMember = "CV_TT_NhanSu_ID";
-            CV_QL_CongViec_LookupEdit_NhomThucHien.PopupWidth = 400;
-            CV_QL_CongViec_LookupEdit_NhomThucHien.ShowFooter = false;
-            CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Clear();
-            CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_HoTen", "Họ tên", 200));
-            CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_DonVi", "Đơn vị", 150));
-            CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_NhomThucHien", "Nhóm thực hiện", 250));
-            CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_TrinhDo", "Trình độ", 150));
-            CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_KhaNangChuyenMon", "Khả năng chuyên môn", 300));
+
+
+
+            // combobox edit kha nang chuyen mon
+            CV_QL_CongViec_CBEdit_KhaNangChuyenMon.DataSource = clsKhaNangChuyenMon.LoadCV_HT_KhaNangChuyenMon_LoadAll();
+            CV_QL_CongViec_CBEdit_KhaNangChuyenMon.DisplayMember = "CV_HT_KhaNangChuyenMon_TenKhaNang";
+            CV_QL_CongViec_CBEdit_KhaNangChuyenMon.ValueMember = "CV_HT_KhaNangChuyenMon_Id";
+
+
+            //CV_QL_CongViec_CBEdit_NhomThucHien.DataSource = clsNhomThucHien.LoadCV_HT_NhomThucHien_LoadAll();
+            //CV_QL_CongViec_CBEdit_NhomThucHien.DisplayMember = "CV_HT_NhomThucHien_TenNhomThucHien";
+            //CV_QL_CongViec_CBEdit_NhomThucHien.ValueMember = "CV_HT_NhomThucHien_ID";
+            //CV_QL_CongViec_CBEdit_NhomThucHien.PopupFormSize = new Size(1000,200);
+            //CV_QL_CongViec_CBEdit_NhomThucHien.Items.Add("CV_HT_NhomThucHien_TenNhomThucHien", "Tên nhóm thực hiện", System.Windows.Forms.CheckState.Checked, true);
+
+            // combobox edit nhom thuc hien 
+            CV_QL_CongViec_CBEdit_NhomThucHien.DataSource = clsNhomThucHien.LoadCV_HT_NhomThucHien_LoadAll();
+            CV_QL_CongViec_CBEdit_NhomThucHien.DisplayMember = "CV_HT_NhomThucHien_TenNhomThucHien";
+            CV_QL_CongViec_CBEdit_NhomThucHien.ValueMember = "CV_HT_NhomThucHien_ID";
+            //checkedComboBoxEdit1.Items.Add("CV_HT_NhomThucHien_TenNhomThucHien", "Tên nhóm thực hiện", System.Windows.Forms.CheckState.Checked, true);
+            //checkedComboBoxEdit1.Items.Add(2, "Int Item", System.Windows.Forms.CheckState.Checked, true);
+            //checkedComboBoxEdit1.Items.Add(true, "Boolean Item", System.Windows.Forms.CheckState.Checked, true);
+
+
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.DataSource = clsNhomThucHien.LoadCV_HT_NhomThucHien_LoadAll();
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.DisplayMember = "CV_HT_NhomThucHien_TenNhomThucHien";
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.ValueMember = "CV_HT_NhomThucHien_ID";
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.PopupWidth = 1300;
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.ShowFooter = false;
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Clear();
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_NhomThucHien_TenNhomThucHien", "Tên nhóm", 500));
+            //CV_QL_CongViec_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_NhomThucHien_GhiChu", "Ghi chú", 500));
 
 
             // lookup edit muc do kho
             CV_QL_CongViec_LookupEdit_MucDoKho.DataSource = clsMucDoKho.LoadCV_HT_MucDoKho_LoadAll();
             CV_QL_CongViec_LookupEdit_MucDoKho.DisplayMember = "CV_HT_MucDoKho_DoKhoCongViec";
             CV_QL_CongViec_LookupEdit_MucDoKho.ValueMember = "CV_HT_MucDoKho_DoKhoCongViec";
-            CV_QL_CongViec_LookupEdit_MucDoKho.PopupWidth = 400;
+            CV_QL_CongViec_LookupEdit_MucDoKho.PopupWidth = 900;
             CV_QL_CongViec_LookupEdit_MucDoKho.ShowFooter = false;
             CV_QL_CongViec_LookupEdit_MucDoKho.Columns.Clear();
-            CV_QL_CongViec_LookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_MucDoKho_DoKhoCongViec", "Độ khó công việc", 50));
-            CV_QL_CongViec_LookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_MucDoKho_Mota", "Mô tả", 50));
-            CV_QL_CongViec_LookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_MucDoKho_GhiChu", "Ghi chú", 50));
+            CV_QL_CongViec_LookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_MucDoKho_DoKhoCongViec", "Độ khó công việc", 300));
+            CV_QL_CongViec_LookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_MucDoKho_Mota", "Mô tả", 300));
+            CV_QL_CongViec_LookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_MucDoKho_GhiChu", "Ghi chú", 300));
             // lookup edit nhóm công việc
             CV_QL_CongViec_LookupEdit_NhomCongViec.DataSource = clsNhomCongViec.LoadCV_QL_NhomCongViec_LoadAll();
             CV_QL_CongViec_LookupEdit_NhomCongViec.DisplayMember = "CV_QL_NhomCongViec_TenNhomCongViec1";
             CV_QL_CongViec_LookupEdit_NhomCongViec.ValueMember = "CV_QL_NhomCongViec_TenNhomCongViec1";
-            CV_QL_CongViec_LookupEdit_NhomCongViec.PopupWidth = 400;
+            CV_QL_CongViec_LookupEdit_NhomCongViec.PopupWidth = 1200;
             CV_QL_CongViec_LookupEdit_NhomCongViec.ShowFooter = false;
             CV_QL_CongViec_LookupEdit_NhomCongViec.Columns.Clear();
-            CV_QL_CongViec_LookupEdit_NhomCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 50));
-            CV_QL_CongViec_LookupEdit_NhomCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 50));
-            CV_QL_CongViec_LookupEdit_NhomCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_MoTa", "Mô tả", 50));
-            CV_QL_CongViec_LookupEdit_NhomCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_GhiChu", "Ghi chú", 50));
+            CV_QL_CongViec_LookupEdit_NhomCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 450));
+            CV_QL_CongViec_LookupEdit_NhomCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 450));
+            CV_QL_CongViec_LookupEdit_NhomCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_MoTa", "Mô tả", 450));
+            CV_QL_CongViec_LookupEdit_NhomCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_GhiChu", "Ghi chú", 450));
             // lookup edit nhóm công việc 2
             CV_QL_CongViec_LookupEdit_NhomCongViec2.DataSource = clsNhomCongViec.LoadCV_QL_NhomCongViec_LoadAll();
             CV_QL_CongViec_LookupEdit_NhomCongViec2.DisplayMember = "CV_QL_NhomCongViec_TenNhomCongViec2";
             CV_QL_CongViec_LookupEdit_NhomCongViec2.ValueMember = "CV_QL_NhomCongViec_TenNhomCongViec2";
-            CV_QL_CongViec_LookupEdit_NhomCongViec2.PopupWidth = 400;
+            CV_QL_CongViec_LookupEdit_NhomCongViec2.PopupWidth = 1200;
             CV_QL_CongViec_LookupEdit_NhomCongViec2.ShowFooter = false;
             CV_QL_CongViec_LookupEdit_NhomCongViec2.Columns.Clear();
-            CV_QL_CongViec_LookupEdit_NhomCongViec2.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 50));
-            CV_QL_CongViec_LookupEdit_NhomCongViec2.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 50));
-            CV_QL_CongViec_LookupEdit_NhomCongViec2.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_MoTa", "Mô tả", 50));
-            CV_QL_CongViec_LookupEdit_NhomCongViec2.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_GhiChu", "Ghi chú", 50));
+            CV_QL_CongViec_LookupEdit_NhomCongViec2.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 450));
+            CV_QL_CongViec_LookupEdit_NhomCongViec2.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 450));
+            CV_QL_CongViec_LookupEdit_NhomCongViec2.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_MoTa", "Mô tả", 450));
+            CV_QL_CongViec_LookupEdit_NhomCongViec2.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhomCongViec_GhiChu", "Ghi chú", 450));
             // lookup edit Loại công việc
             CV_QL_CongViec_LookupEdit_LoaiCongViec.DataSource = clsLoaiCongViec.LoadCV_HT_LoaiCongViec_LoadAll();
             CV_QL_CongViec_LookupEdit_LoaiCongViec.DisplayMember = "CV_HT_LoaiCongViec_TenLoaiCongViec";
             CV_QL_CongViec_LookupEdit_LoaiCongViec.ValueMember = "CV_HT_LoaiCongViec_TenLoaiCongViec";
-            CV_QL_CongViec_LookupEdit_LoaiCongViec.PopupWidth = 400;
+            CV_QL_CongViec_LookupEdit_LoaiCongViec.PopupWidth = 1000;
             CV_QL_CongViec_LookupEdit_LoaiCongViec.ShowFooter = false;
             CV_QL_CongViec_LookupEdit_LoaiCongViec.Columns.Clear();
-            CV_QL_CongViec_LookupEdit_LoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_LoaiCongViec_TenLoaiCongViec", "Tên Loại công việc", 50));
-            CV_QL_CongViec_LookupEdit_LoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_LoaiCongViec_Mota", "Mô tả", 50));
-            CV_QL_CongViec_LookupEdit_LoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_LoaiCongViec_GhiChu", "Ghi chú", 50));
+            CV_QL_CongViec_LookupEdit_LoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_LoaiCongViec_TenLoaiCongViec", "Tên Loại công việc", 300));
+            CV_QL_CongViec_LookupEdit_LoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_LoaiCongViec_Mota", "Mô tả", 350));
+            CV_QL_CongViec_LookupEdit_LoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_LoaiCongViec_GhiChu", "Ghi chú", 350));
 
             CV_QL_CongViec_GridControl.DataSource = cls.LoadCV_QL_CongViec();
             string s = CV_QL_CongViec_BandedGridview.RowCount.ToString();
@@ -529,7 +562,8 @@ namespace PhanCongCongViec.form.QuanLy
                             }
                             if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_NhomThucHien))))
                             {
-                                Public.NhomThucHien = Convert.ToInt32(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_NhomThucHien));
+                                string s = CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_NhomThucHien).ToString();
+                                Public.NhomThucHien = CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_NhomThucHien).ToString();
                             }
                             Public.MucDoKho = CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_MucDoKho).ToString();
                             if (string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_FileDinhKem))))
@@ -549,7 +583,7 @@ namespace PhanCongCongViec.form.QuanLy
                             {
                                 Public.TenFile = Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_TenFile));
                             }
-                            Public.KhaNangChuyenMon = CV_QL_CongViec_BandedGridview.GetFocusedRowCellDisplayText(CV_QL_CongViec_KhaNangChuyenMon);
+                            Public.KhaNangChuyenMon = CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_KhaNangChuyenMon).ToString();
                             if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_TongSoPhutThucHien))))
                             {
                                 Public.SoPhutThucHien = Convert.ToDouble(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_TongSoPhutThucHien));
@@ -769,7 +803,7 @@ namespace PhanCongCongViec.form.QuanLy
                     }
                     if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_NhomThucHien))))
                     {
-                        CongViecPublic.NhomThucHien = Convert.ToInt32(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_NhomThucHien));
+                        CongViecPublic.NhomThucHien = CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_NhomThucHien).ToString();
                     }
                     CongViecPublic.MucDoKho = CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_MucDoKho).ToString();
                     if (string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_FileDinhKem))))

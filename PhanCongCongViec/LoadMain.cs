@@ -191,6 +191,21 @@ namespace PhanCongCongViec
             else
                 m_frmCV_QL_NhomCongViec_ImportExcel.Activate();
         }
+        // form kha nang chuyen mon
+        static frmCV_HT_KhaNangChuyenMon m_frmCV_HT_KhaNangChuyenMon = null;
+        public static void HienThiCV_HT_KhaNangChuyenMon()
+        {
+            if (m_frmCV_HT_KhaNangChuyenMon == null || m_frmCV_HT_KhaNangChuyenMon.IsDisposed)
+            {
+                m_frmCV_HT_KhaNangChuyenMon = new frmCV_HT_KhaNangChuyenMon();
+                m_frmCV_HT_KhaNangChuyenMon.MdiParent = frmMain.ActiveForm;
+                m_frmCV_HT_KhaNangChuyenMon.Show();
+            }
+            else
+                m_frmCV_HT_KhaNangChuyenMon.Activate();
+        }
+
+
     }
     public class BienToanCuc
     {

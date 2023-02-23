@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="form\HeThong\frmCV_HT_KhaNangChuyenMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\HeThong\frmCV_HT_KhaNangChuyenMon.Designer.cs">
+      <DependentUpon>frmCV_HT_KhaNangChuyenMon.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\HeThong\frmCV_HT_LoaiCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     <Compile Include="LoadMain.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="form\HeThong\frmCV_HT_KhaNangChuyenMon.resx">
+      <DependentUpon>frmCV_HT_KhaNangChuyenMon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\HeThong\frmCV_HT_LoaiCongViec.resx">
       <DependentUpon>frmCV_HT_LoaiCongViec.cs</DependentUpon>
     </EmbeddedResource>

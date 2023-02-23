@@ -487,9 +487,16 @@
             // 
             // CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec
             // 
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Appearance.Options.UseTextOptions = true;
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.AppearanceDropDownHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.AppearanceDropDownHeader.Options.UseFont = true;
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.AutoHeight = false;
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.DropDownRows = 10;
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Name = "CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec";
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.NullText = "";
             // 

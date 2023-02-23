@@ -194,29 +194,29 @@ namespace PhanCongCongViec.form.QuanLy
             CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.DataSource = clsCongViec.LoadCV_QL_CongViec();
             CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.DisplayMember = "CV_QL_CongViec_MucDoKho";
             CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.ValueMember = "CV_QL_CongViec_ID";
-            CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.PopupWidth = 400;
+            CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.PopupWidth = 1400;
             CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.ShowFooter = false;
             CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Clear();
-            CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenLoaiCongViec", "Tên loại công việc", 200));
-            CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 150));
-            CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 150));
-            CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenCongViec", "Tên công việc", 150));
+            CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenLoaiCongViec", "Tên loại công việc", 400));
+            CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 350));
+            CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 350));
+            CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenCongViec", "Tên công việc", 350));
             CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MucDoKho", "Độ khó công việc", 150));
-            CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MoTaCongViec", "Mô tả công việc", 150));
+            CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MoTaCongViec", "Mô tả công việc", 550));
 
             // load form ten cong viec
             CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.DataSource = clsCongViec.LoadCV_QL_CongViec();
             CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.DisplayMember = "CV_QL_CongViec_TenCongViec";
             CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.ValueMember = "CV_QL_CongViec_ID";
-            CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.PopupWidth = 400;
+            CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.PopupWidth = 1400;
             CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.ShowFooter = false;
             CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Clear();
-            CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenLoaiCongViec", "Tên loại công việc", 200));
-            CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 150));
-            CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 150));
-            CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenCongViec", "Tên công việc", 150));
+            CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenLoaiCongViec", "Tên loại công việc", 450));
+            CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 350));
+            CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 350));
+            CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenCongViec", "Tên công việc", 350));
             CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MucDoKho", "Độ khó công việc", 150));
-            CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MoTaCongViec", "Mô tả công việc", 150));
+            CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MoTaCongViec", "Mô tả công việc", 550));
 
             CV_QL_ChiTietCongViec_GridControl.DataSource = cls.LoadCV_QL_ChiTietCongViec();
             CV_QL_ChiTietCongViec_barButtonItem_Luu.Enabled = false;

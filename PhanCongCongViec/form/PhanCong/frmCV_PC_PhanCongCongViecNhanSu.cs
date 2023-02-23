@@ -25,7 +25,7 @@ namespace PhanCongCongViec.form.PhanCong
         bool CV_PC_PhanCongCongViecNhanSuAdd = false;
         bool CV_PC_PhanCongCongViecNhanSu_Edit = false;
         bool CV_PC_PhanCongCongViecNhanSu_Coppy = false;
-
+        CV_HT_KhaNangChuyenMonBLL clsKhaNangChuyenMon = new CV_HT_KhaNangChuyenMonBLL();
         CV_PC_PhanCongCongViecNhanSuPublic PCCVPublic = new CV_PC_PhanCongCongViecNhanSuPublic();
         CV_PC_PhanCongCongViecNhanSuBLL clsPhanCongCongViecNhanSu = new CV_PC_PhanCongCongViecNhanSuBLL();
         CV_HT_VaiTroCongViecBLL clsVaiTro = new CV_HT_VaiTroCongViecBLL();
@@ -295,15 +295,15 @@ namespace PhanCongCongViec.form.PhanCong
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.DataSource = clsCongViec.LoadCV_QL_CongViec();
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.DisplayMember = "CV_QL_CongViec_TenLoaiCongViec";
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.ValueMember = "CV_QL_CongViec_ID";
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.PopupWidth = 400;
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.PopupWidth = 1500;
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.ShowFooter = false;
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.Columns.Clear();
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenLoaiCongViec", "Tên loại công việc", 150));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 150));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 150));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenCongViec", "Tên công việc", 150));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MucDoKho", "Độ khó công việc", 150));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MoTaCongViec", "Mô tả công việc", 150));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenLoaiCongViec", "Tên loại công việc", 250));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 250));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 250));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenCongViec", "Tên công việc", 250));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MucDoKho", "Độ khó công việc",250));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MoTaCongViec", "Mô tả công việc", 250));
 
             // load ten nhom cong viec 1 lookup edit
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenNhomCongViec1.DataSource = clsCongViec.LoadCV_QL_CongViec();
@@ -337,15 +337,15 @@ namespace PhanCongCongViec.form.PhanCong
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.DataSource = clsCongViec.LoadCV_QL_CongViec();
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.DisplayMember = "CV_QL_CongViec_TenCongViec";
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.ValueMember = "CV_QL_CongViec_ID";
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.PopupWidth = 400;
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.PopupWidth = 1500;
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.ShowFooter = false;
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Columns.Clear();
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenLoaiCongViec", "Tên loại công việc", 200));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 150));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 150));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenCongViec", "Tên công việc", 150));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MucDoKho", "Độ khó công việc", 150));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MoTaCongViec", "Mô tả công việc", 150));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenLoaiCongViec", "Tên loại công việc", 250));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec1", "Tên nhóm công việc 1", 250));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenNhomCongViec2", "Tên nhóm công việc 2", 250));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_TenCongViec", "Tên công việc", 250));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MucDoKho", " Mức độ khó", 100));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MoTaCongViec", "Mô tả công việc", 400));
 
             // muc do kho lookup edit
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_MucDoKho.DataSource = clsCongViec.LoadCV_QL_CongViec();
@@ -365,25 +365,25 @@ namespace PhanCongCongViec.form.PhanCong
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.DataSource = clsVaiTro.LoadCV_HT_VaiTroCongViec_LoadAll();
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.DisplayMember = "CV_HT_VaiTroCongViec_VaiTroTrongCongViec";
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.ValueMember = "CV_HT_VaiTroCongViec_ID";
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.PopupWidth = 400;
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.PopupWidth = 1000;
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.ShowFooter = false;
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.Columns.Clear();
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_VaiTroCongViec_VaiTroTrongCongViec", "Vai trò", 200));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_VaiTroCongViec_MoTa", "Mô tả", 150));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_VaiTroCongViec_GhiChu", "Ghi chú", 150));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_VaiTroCongViec_VaiTroTrongCongViec", "Vai trò", 350));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_VaiTroCongViec_MoTa", "Mô tả", 350));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_VaiTroCongViec_GhiChu", "Ghi chú", 350));
 
             // load nhan su
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.DataSource = clsNhanSu.LoadCV_QL_NhanSu_LoadUser();
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.DisplayMember = "CV_QL_NhanSu_HoTen";
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.ValueMember = "CV_QL_NhanSu_ID";
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.PopupWidth = 400;
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.PopupWidth = 1000;
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.ShowFooter = false;
             CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.Columns.Clear();
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhanSu_HoTen", "Họ tên", 200));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhanSu_DonVi", "Đơn vị", 150));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhanSu_HoTen", "Họ tên", 300));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhanSu_DonVi", "Đơn vị", 400));
             //CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_TT_NhanSu_NhomThucHien", "Nhóm thực hiện", 250));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhanSu_TrinhDo", "Trình độ", 150));
-            CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhanSu_KhaNangChuyenMon", "Khả năng chuyên môn", 300));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhanSu_TrinhDo", "Trình độ", 200));
+            CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_NhanSu_KhaNangChuyenMon", "Khả năng chuyên môn", 500));
 
 
             // start
@@ -491,6 +491,22 @@ namespace PhanCongCongViec.form.PhanCong
             Lock_Unlock_Control(true); // lock nut luu vs undo
             Lock_Unlock_Control_Input(false); //Khóa điều khiển nhập dữ liệu
         }
+        public int[] TachChuoiThanhMang(string chuoi)
+        {
+            if (chuoi == "")
+            {
+                return null;
+            }
+            string output = chuoi.Replace(" ", "");
+            string[] numberArray = output.Split(',');
+            int[] intArray = new int[numberArray.Length];
+            for (int i = 0; i < numberArray.Length; i++)
+            {
+                int.TryParse(numberArray[i], out intArray[i]);
+            }
+            return intArray;
+
+        }
 
         private void CV_PC_PhanCongCongViecNhanSu_barButtonItem_Luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -547,10 +563,10 @@ namespace PhanCongCongViec.form.PhanCong
 
                             if (CV_PC_PhanCongCongViecNhanSu_Edit == true)
                             {
-                                    Public.HT_USER_Create = Convert.ToInt32(CV_PC_PhanCongCongViecNhanSu_bandedGridView.GetFocusedRowCellValue(HT_USER_Create));
-                                    Public.HT_USER_Editor = BienToanCuc.HT_USER_ID;
-                                    Public.CV_PC_PhanCongCongViecNhanSu_DateCreate = Convert.ToDateTime(CV_PC_PhanCongCongViecNhanSu_bandedGridView.GetFocusedRowCellValue(CV_PC_PhanCongCongViecNhanSu_DateCreate));
-                                    Public.CV_PC_PhanCongCongViecNhanSu_DateEditor = DateTime.Now;
+                                   Public.HT_USER_Create = Convert.ToInt32(CV_PC_PhanCongCongViecNhanSu_bandedGridView.GetFocusedRowCellValue(HT_USER_Create));
+                                   Public.HT_USER_Editor = BienToanCuc.HT_USER_ID;
+                                   Public.CV_PC_PhanCongCongViecNhanSu_DateCreate = Convert.ToDateTime(CV_PC_PhanCongCongViecNhanSu_bandedGridView.GetFocusedRowCellValue(CV_PC_PhanCongCongViecNhanSu_DateCreate));
+                                   Public.CV_PC_PhanCongCongViecNhanSu_DateEditor = DateTime.Now;
                                    Public.CV_PC_PhanCongCongViecNhanSu_ID = Convert.ToInt32(CV_PC_PhanCongCongViecNhanSu_bandedGridView.GetFocusedRowCellValue(CV_PC_PhanCongCongViecNhanSu_ID));
                                    kq = clsPhanCongCongViecNhanSu.CV_PC_PhanCongCongViecNhanSu_Update(Public);
                             }
@@ -627,6 +643,20 @@ namespace PhanCongCongViec.form.PhanCong
 
         }
 
+        private bool SoSanh2Mang(int[] a, int[] b)
+        {
+            for (int i = 0; i < a.Length; i++)
+            {
+                    for (int j = 0; j < b.Length; j++)
+                    {
+                        if (a[i] == b[j])
+                        {
+                            return true;
+                        }
+                    }
+            }
+            return false;
+        }
         //private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         //{
 
@@ -642,18 +672,49 @@ namespace PhanCongCongViec.form.PhanCong
             {
                 for (int j = 0; j < roundNS; j++)
                 {
-                    string s = dtNhanSu.Rows[99]["CV_QL_NhanSu_KhaNangChuyenMon"].ToString();
-                    string s1 = dtCongViec.Rows[3]["CV_QL_CongViec_KhaNangChuyenMon"].ToString();
-                    if (dtNhanSu.Rows[j]["CV_QL_NhanSu_KhaNangChuyenMon"].ToString().CompareTo(dtCongViec.Rows[i]["CV_QL_CongViec_KhaNangChuyenMon"].ToString()) == 0) // == true
+                    int[] KhaNangChuyenMonCongViec = TachChuoiThanhMang(dtCongViec.Rows[i]["CV_QL_CongViec_KhaNangChuyenMon"].ToString());
+                    int[] KhaNangChuyenMonNhanSu = TachChuoiThanhMang(dtNhanSu.Rows[j]["CV_QL_NhanSu_KhaNangChuyenMon"].ToString());
+                    int[] NhomThucHienCongViec = TachChuoiThanhMang(dtCongViec.Rows[i]["CV_QL_CongViec_NhomThucHien"].ToString());
+                    int[] nhomThucHienNhanSu = TachChuoiThanhMang(dtNhanSu.Rows[j]["CV_QL_NhanSu_NhomThucHien"].ToString());
+                    if (NhomThucHienCongViec != null && nhomThucHienNhanSu != null && KhaNangChuyenMonNhanSu != null && KhaNangChuyenMonCongViec!=null)
                     {
-                        PCCVPublic.CV_PC_PhanCongCongViecNhanSu_HienThi = true;
-                        PCCVPublic.CV_PC_PhanCongCongViecNhanSu_SuDung = BienToanCuc.HT_USER_Ten;
-                        PCCVPublic.CV_PC_PhanCongCongViecNhanSu_IDCongViec = Convert.ToInt32(dtCongViec.Rows[i]["CV_QL_CongViec_ID"].ToString());
-                        PCCVPublic.CV_PC_PhanCongCongViecNhanSu_IDUser = Convert.ToInt32(dtNhanSu.Rows[j]["CV_QL_NhanSu_ID"].ToString());
-                        CV_PC_PhanCongCongViecNhanSu_bandedGridView.AddNewRow();
+                        if (SoSanh2Mang(NhomThucHienCongViec, nhomThucHienNhanSu) == true&& SoSanh2Mang(KhaNangChuyenMonNhanSu,KhaNangChuyenMonCongViec)==true)
+                        {
+                            PCCVPublic.CV_PC_PhanCongCongViecNhanSu_IDCongViec = Convert.ToInt32(dtCongViec.Rows[i]["CV_QL_CongViec_ID"].ToString());
+                            PCCVPublic.CV_PC_PhanCongCongViecNhanSu_IDUser = Convert.ToInt32(dtNhanSu.Rows[j]["CV_QL_NhanSu_ID"].ToString());
+                            CV_PC_PhanCongCongViecNhanSu_bandedGridView.AddNewRow();
+
+                            // mo khoa NHAP DU LIEU
+                            CV_PC_PhanCongCongViecNhanSu_Coppy = false;
+                            CV_PC_PhanCongCongViecNhanSuAdd = true;
+                            CV_PC_PhanCongCongViecNhanSu_Edit = false;
+                            Lock_Unlock_Control_Input(true);
+                            Lock_Unlock_Control(false);
+                        }
                     }
+
+                    //PCCVPublic.CV_PC_PhanCongCongViecNhanSu_IDCongViec = Convert.ToInt32(dtCongViec.Rows[i]["CV_QL_CongViec_ID"].ToString());
+                    //PCCVPublic.CV_PC_PhanCongCongViecNhanSu_IDUser = Convert.ToInt32(dtNhanSu.Rows[j]["CV_QL_NhanSu_ID"].ToString());
+                    //CV_PC_PhanCongCongViecNhanSu_bandedGridView.AddNewRow();
+
+                    //// mo khoa NHAP DU LIEU
+                    //CV_PC_PhanCongCongViecNhanSu_Coppy = false;
+                    //CV_PC_PhanCongCongViecNhanSuAdd = true;
+                    //CV_PC_PhanCongCongViecNhanSu_Edit = false;
+                    //Lock_Unlock_Control_Input(true);
+                    //Lock_Unlock_Control(false);
+                    //if (dtNhanSu.Rows[j]["CV_QL_NhanSu_KhaNangChuyenMon"].ToString().CompareTo(dtCongViec.Rows[i]["CV_QL_CongViec_KhaNangChuyenMon"].ToString()) == 0) // == true
+                    //{
+                    //    PCCVPublic.CV_PC_PhanCongCongViecNhanSu_HienThi = true;
+                    //    PCCVPublic.CV_PC_PhanCongCongViecNhanSu_SuDung = BienToanCuc.HT_USER_Ten;
+                    //    PCCVPublic.CV_PC_PhanCongCongViecNhanSu_IDCongViec = Convert.ToInt32(dtCongViec.Rows[i]["CV_QL_CongViec_ID"].ToString());
+                    //    PCCVPublic.CV_PC_PhanCongCongViecNhanSu_IDUser = Convert.ToInt32(dtNhanSu.Rows[j]["CV_QL_NhanSu_ID"].ToString());
+                    //    CV_PC_PhanCongCongViecNhanSu_bandedGridView.AddNewRow();
+                    //}
+                    //String s = dtNhanSu.Rows[j]["CV_QL_NhanSu_KhaNangChuyenMon"].ToString();
                 }
             }
+
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

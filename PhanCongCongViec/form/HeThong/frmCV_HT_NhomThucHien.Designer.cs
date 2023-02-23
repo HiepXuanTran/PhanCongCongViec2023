@@ -87,10 +87,10 @@
             // CV_HT_NhomThucHien_GridControl
             // 
             this.CV_HT_NhomThucHien_GridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CV_HT_NhomThucHien_GridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.CV_HT_NhomThucHien_GridControl.Location = new System.Drawing.Point(0, 40);
+            this.CV_HT_NhomThucHien_GridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CV_HT_NhomThucHien_GridControl.Location = new System.Drawing.Point(0, 49);
             this.CV_HT_NhomThucHien_GridControl.MainView = this.CV_HT_NhomThucHien_BandedGridview;
-            this.CV_HT_NhomThucHien_GridControl.Margin = new System.Windows.Forms.Padding(2);
+            this.CV_HT_NhomThucHien_GridControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CV_HT_NhomThucHien_GridControl.MenuManager = this.barManager1;
             this.CV_HT_NhomThucHien_GridControl.Name = "CV_HT_NhomThucHien_GridControl";
             this.CV_HT_NhomThucHien_GridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -99,7 +99,7 @@
             this.CV_QL_CongViec_LookupEdit_NhomCongViec,
             this.CV_QL_CongViec_LookupEdit_NhomCongViec2,
             this.CV_QL_CongViec_ComboboxEdit_MucDoKho});
-            this.CV_HT_NhomThucHien_GridControl.Size = new System.Drawing.Size(1118, 418);
+            this.CV_HT_NhomThucHien_GridControl.Size = new System.Drawing.Size(1491, 514);
             this.CV_HT_NhomThucHien_GridControl.TabIndex = 1;
             this.CV_HT_NhomThucHien_GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CV_HT_NhomThucHien_BandedGridview});
@@ -368,32 +368,32 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlTop.Size = new System.Drawing.Size(1118, 24);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(1491, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 482);
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1118, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 593);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1491, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 458);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 563);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1118, 24);
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 458);
+            this.barDockControlRight.Location = new System.Drawing.Point(1491, 30);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 563);
             // 
             // CV_QL_CongViec_LookupEdit_LoaiCongViec
             // 
@@ -441,10 +441,10 @@
             this.panel1.Controls.Add(this.CV_HT_NhomThucHien_GridControl);
             this.panel1.Controls.Add(this.labelX1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1118, 458);
+            this.panel1.Size = new System.Drawing.Size(1491, 563);
             this.panel1.TabIndex = 7;
             // 
             // labelX1
@@ -458,22 +458,24 @@
             this.labelX1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.labelX1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.labelX1.Location = new System.Drawing.Point(0, 0);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(2);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(1118, 40);
+            this.labelX1.Size = new System.Drawing.Size(1491, 49);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "<div align = \"center\">NHÓM THỰC HIỆN</div>";
             // 
             // frmCV_HT_NhomThucHien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 482);
+            this.ClientSize = new System.Drawing.Size(1491, 593);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmCV_HT_NhomThucHien";
             this.Text = "Quản Lý Nhóm Thực Hiện";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -23,6 +23,8 @@ namespace PhanCongCongViec.form.QuanLy
         CV_QL_NhanSuBLL cls = new CV_QL_NhanSuBLL();
         bool CV_QL_NhanSuEdit = false;
         bool CV_QL_NhanSuAdd = false;
+        CV_HT_KhaNangChuyenMonBLL clsKhaNangChuyenMon = new CV_HT_KhaNangChuyenMonBLL();
+        CV_HT_NhomThucHienBLL clsNhomThucHien = new CV_HT_NhomThucHienBLL();
 
         #region Cho phép thực hiện thao tác CLICK phải chuột
 
@@ -146,6 +148,28 @@ namespace PhanCongCongViec.form.QuanLy
 
         private void frmCV_QL_NhanSu_Load(object sender, EventArgs e)
         {
+
+            //lookup edit kha nang chuyen mon
+            CV_QL_NhanSu_LookupEdit_KhaNangChuyenMon.DataSource = clsKhaNangChuyenMon.LoadCV_HT_KhaNangChuyenMon_LoadAll();
+            CV_QL_NhanSu_LookupEdit_KhaNangChuyenMon.DisplayMember = "CV_HT_KhaNangChuyenMon_TenKhaNang";
+            CV_QL_NhanSu_LookupEdit_KhaNangChuyenMon.ValueMember = "CV_HT_KhaNangChuyenMon_Id";
+            CV_QL_NhanSu_LookupEdit_KhaNangChuyenMon.PopupWidth = 900;
+            CV_QL_NhanSu_LookupEdit_KhaNangChuyenMon.ShowFooter = false;
+            CV_QL_NhanSu_LookupEdit_KhaNangChuyenMon.Columns.Clear();
+            CV_QL_NhanSu_LookupEdit_KhaNangChuyenMon.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_KhaNangChuyenMon_TenKhaNang", "Khả năng chuyên môn", 300));
+            CV_QL_NhanSu_LookupEdit_KhaNangChuyenMon.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_KhaNangChuyenMon_MoTa", "Mô tả", 300));
+            CV_QL_NhanSu_LookupEdit_KhaNangChuyenMon.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_KhaNangChuyenMon_GhiChu", "Ghi chú", 300));
+
+
+            CV_QL_NhanSu_LookupEdit_NhomThucHien.DataSource = clsNhomThucHien.LoadCV_HT_NhomThucHien_LoadAll();
+            CV_QL_NhanSu_LookupEdit_NhomThucHien.DisplayMember = "CV_HT_NhomThucHien_TenNhomThucHien";
+            CV_QL_NhanSu_LookupEdit_NhomThucHien.ValueMember = "CV_HT_NhomThucHien_ID";
+            CV_QL_NhanSu_LookupEdit_NhomThucHien.PopupWidth = 900;
+            CV_QL_NhanSu_LookupEdit_NhomThucHien.ShowFooter = false;
+            CV_QL_NhanSu_LookupEdit_NhomThucHien.Columns.Clear();
+            CV_QL_NhanSu_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_NhomThucHien_TenNhomThucHien", "Nhóm thực hiện", 450));
+            CV_QL_NhanSu_LookupEdit_NhomThucHien.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_HT_NhomThucHien_GhiChu", "Ghi chú", 450));
+
             CV_QL_NhanSu_GridControl.DataSource = cls.LoadCV_QL_NhanSu_LoadUser();
             CV_QL_NhanSu_barButtonItem_Luu.Enabled = false;
             CV_QL_NhanSu_barButtonItem_Undo.Enabled = false;

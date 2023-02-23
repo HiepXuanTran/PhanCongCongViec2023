@@ -441,7 +441,7 @@ namespace PhanCongCongViec.form.QuanLy
                             }
                             if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_NhomThucHien))))
                             {
-                                Public.NhomThucHien = Convert.ToInt32(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_NhomThucHien));
+                                Public.NhomThucHien = CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_NhomThucHien).ToString();
                             }
                             Public.MucDoKho = CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_MucDoKho).ToString();
                             if (string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_FileDinhKem))))

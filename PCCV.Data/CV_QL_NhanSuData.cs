@@ -17,13 +17,6 @@ namespace PCCV.Data
         {
             return cls.LayDuLieu("SP_CV_QL_NhanSu_Select");
         }
-
-
-        public DataTable LoadCV_QL_NhanSu_LoadSTT()
-        {
-            return cls.LayDuLieu("SP_CV_QL_NhanSu_Select_TheoNhomThucHien");
-        }
-
         public int CV_QL_NhanSu_Del(CV_QL_NhanSuPublic Public)
         {
             int thamso = 4;

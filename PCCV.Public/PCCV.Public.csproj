@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CV_HT_KhaNangChuyenMonPublic.cs" />
     <Compile Include="CV_HT_LoaiCongViecPublic.cs" />
     <Compile Include="CV_HT_MucDoKhoPublic.cs" />
     <Compile Include="CV_HT_NhomThucHienPublic.cs" />

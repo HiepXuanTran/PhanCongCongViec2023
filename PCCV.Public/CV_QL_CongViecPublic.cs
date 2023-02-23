@@ -56,9 +56,9 @@ namespace PCCV.Public
             get { return _MoTaCongViec; }
             set { _MoTaCongViec = value; }
         }
-        int _NhomThucHien;
+        string _NhomThucHien;
 
-        public int NhomThucHien
+        public string NhomThucHien
         {
             get { return _NhomThucHien; }
             set { _NhomThucHien = value; }

@@ -160,7 +160,11 @@ namespace PhanCongCongViec.form.HeThong
         // check nhap du lieu chua xong
         private bool KiemTra_NhapDuLieu()
         {
-            CV_HT_LoaiCongViec_BandedGridView.MoveFirst();
+            //CV_HT_LoaiCongViec_BandedGridView.MoveFirst();
+            //if (CV_HT_LoaiCongViec_BandedGridView.GetFocusedRowCellValue(CV_HT_LoaiCongViecChon).ToString() == null)
+            //{
+            //    MessageBox.Show("Bạn phải chọn dòng mới thêm", "Lỗi!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
             for (int i = 0; i < CV_HT_LoaiCongViec_BandedGridView.RowCount; i++)
             {
                 if (Convert.ToBoolean(CV_HT_LoaiCongViec_BandedGridView.GetFocusedRowCellValue(CV_HT_LoaiCongViecChon)) &&
@@ -173,6 +177,7 @@ namespace PhanCongCongViec.form.HeThong
                 }
                 CV_HT_LoaiCongViec_BandedGridView.MoveNext();
             }
+            
             return true;
         }
         // Hàm read file
@@ -230,7 +235,12 @@ namespace PhanCongCongViec.form.HeThong
         // hàm kiểm tra check ô để sửa
         private bool KiemTra()
         {
-            CV_HT_LoaiCongViec_BandedGridView.MoveFirst();
+            //CV_HT_LoaiCongViec_BandedGridView.MoveFirst();
+            //string s = CV_HT_LoaiCongViec_BandedGridView.GetFocusedRowCellValue(CV_HT_LoaiCongViecChon).ToString();
+            //if (CV_HT_LoaiCongViec_BandedGridView.GetFocusedRowCellValue(CV_HT_LoaiCongViecChon).ToString() == null)
+            //{
+            //    MessageBox.Show("Bạn phải chọn dòng mới thêm", "Lỗi!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
             for (int i = 0; i < CV_HT_LoaiCongViec_BandedGridView.RowCount; i++)
             {
                 if (Convert.ToBoolean(CV_HT_LoaiCongViec_BandedGridView.GetFocusedRowCellValue(CV_HT_LoaiCongViecChon))) // == true

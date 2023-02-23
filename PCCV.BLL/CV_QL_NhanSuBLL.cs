@@ -30,9 +30,5 @@ namespace PCCV.BLL
         {
             return cls.CV_QL_NhanSu_Edit(Public);
         }
-        public DataTable LoadCV_QL_NhanSu_LoadSTT()
-        {
-            return cls.LoadCV_QL_NhanSu_LoadSTT();
-        }
     }
 }

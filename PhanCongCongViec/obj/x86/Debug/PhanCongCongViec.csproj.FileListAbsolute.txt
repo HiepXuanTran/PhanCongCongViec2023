@@ -128,3 +128,4 @@ C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec\obj\x86\Debug\
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.PhanCong.frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.HeThong.frmCV_HT_NhomThucHien.resources
 C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.PhanCong.frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.resources
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.HeThong.frmCV_HT_KhaNangChuyenMon.resources

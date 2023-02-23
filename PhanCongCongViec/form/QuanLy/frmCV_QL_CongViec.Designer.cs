@@ -46,8 +46,9 @@
             this.CV_QL_CongViec_ChiTietCongViec = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_CongViec_MoTaCongViec = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_QL_CongViec_NhomThucHien = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.CV_QL_CongViec_LookupEdit_NhomThucHien = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.CV_QL_CongViec_CBEdit_NhomThucHien = new DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit();
             this.CV_QL_CongViec_KhaNangChuyenMon = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.CV_QL_CongViec_LookupEdit_KhaNangChuyenMon = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.CV_QL_CongViec_FileDinhKem = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.CV_QL_CongViec_TenFile = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -85,6 +86,8 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.CV_QL_CongViec_ComboboxEdit_MucDoKho = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.CV_QL_CongViec_LookupEdit_NhomThucHien = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.CV_QL_CongViec_CBEdit_KhaNangChuyenMon = new DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.CV_QL_CongViec_SaveFileDinhKem = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
@@ -93,11 +96,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_LoaiCongViec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_NhomCongViec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_NhomCongViec2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_NhomThucHien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_CBEdit_NhomThucHien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_KhaNangChuyenMon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_btnEdit_TenFile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_MucDoKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_ComboboxEdit_MucDoKho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_NhomThucHien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_CBEdit_KhaNangChuyenMon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -124,7 +130,10 @@
             this.CV_QL_CongViec_LookupEdit_NhomCongViec2,
             this.CV_QL_CongViec_ComboboxEdit_MucDoKho,
             this.CV_QL_CongViec_LookupEdit_MucDoKho,
-            this.CV_QL_CongViec_LookupEdit_NhomThucHien});
+            this.CV_QL_CongViec_LookupEdit_NhomThucHien,
+            this.CV_QL_CongViec_LookupEdit_KhaNangChuyenMon,
+            this.CV_QL_CongViec_CBEdit_NhomThucHien,
+            this.CV_QL_CongViec_CBEdit_KhaNangChuyenMon});
             this.CV_QL_CongViec_GridControl.Size = new System.Drawing.Size(1522, 437);
             this.CV_QL_CongViec_GridControl.TabIndex = 1;
             this.CV_QL_CongViec_GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -230,9 +239,14 @@
             // 
             // CV_QL_CongViec_LookupEdit_LoaiCongViec
             // 
+            this.CV_QL_CongViec_LookupEdit_LoaiCongViec.AppearanceDropDownHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_CongViec_LookupEdit_LoaiCongViec.AppearanceDropDownHeader.Options.UseFont = true;
+            this.CV_QL_CongViec_LookupEdit_LoaiCongViec.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.CV_QL_CongViec_LookupEdit_LoaiCongViec.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_CongViec_LookupEdit_LoaiCongViec.AutoHeight = false;
             this.CV_QL_CongViec_LookupEdit_LoaiCongViec.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CV_QL_CongViec_LookupEdit_LoaiCongViec.DropDownRows = 10;
             this.CV_QL_CongViec_LookupEdit_LoaiCongViec.Name = "CV_QL_CongViec_LookupEdit_LoaiCongViec";
             this.CV_QL_CongViec_LookupEdit_LoaiCongViec.NullText = "";
             // 
@@ -255,9 +269,14 @@
             // 
             // CV_QL_CongViec_LookupEdit_NhomCongViec
             // 
+            this.CV_QL_CongViec_LookupEdit_NhomCongViec.AppearanceDropDownHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_CongViec_LookupEdit_NhomCongViec.AppearanceDropDownHeader.Options.UseFont = true;
+            this.CV_QL_CongViec_LookupEdit_NhomCongViec.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.CV_QL_CongViec_LookupEdit_NhomCongViec.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_CongViec_LookupEdit_NhomCongViec.AutoHeight = false;
             this.CV_QL_CongViec_LookupEdit_NhomCongViec.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CV_QL_CongViec_LookupEdit_NhomCongViec.DropDownRows = 10;
             this.CV_QL_CongViec_LookupEdit_NhomCongViec.Name = "CV_QL_CongViec_LookupEdit_NhomCongViec";
             this.CV_QL_CongViec_LookupEdit_NhomCongViec.NullText = "";
             // 
@@ -280,9 +299,14 @@
             // 
             // CV_QL_CongViec_LookupEdit_NhomCongViec2
             // 
+            this.CV_QL_CongViec_LookupEdit_NhomCongViec2.AppearanceDropDownHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_CongViec_LookupEdit_NhomCongViec2.AppearanceDropDownHeader.Options.UseFont = true;
+            this.CV_QL_CongViec_LookupEdit_NhomCongViec2.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.CV_QL_CongViec_LookupEdit_NhomCongViec2.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_CongViec_LookupEdit_NhomCongViec2.AutoHeight = false;
             this.CV_QL_CongViec_LookupEdit_NhomCongViec2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CV_QL_CongViec_LookupEdit_NhomCongViec2.DropDownRows = 10;
             this.CV_QL_CongViec_LookupEdit_NhomCongViec2.Name = "CV_QL_CongViec_LookupEdit_NhomCongViec2";
             this.CV_QL_CongViec_LookupEdit_NhomCongViec2.NullText = "";
             // 
@@ -363,19 +387,18 @@
             this.CV_QL_CongViec_NhomThucHien.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_CongViec_NhomThucHien.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_CongViec_NhomThucHien.Caption = "Nhóm thực hiện";
-            this.CV_QL_CongViec_NhomThucHien.ColumnEdit = this.CV_QL_CongViec_LookupEdit_NhomThucHien;
+            this.CV_QL_CongViec_NhomThucHien.ColumnEdit = this.CV_QL_CongViec_CBEdit_NhomThucHien;
             this.CV_QL_CongViec_NhomThucHien.FieldName = "CV_QL_CongViec_NhomThucHien";
             this.CV_QL_CongViec_NhomThucHien.Name = "CV_QL_CongViec_NhomThucHien";
             this.CV_QL_CongViec_NhomThucHien.Visible = true;
             this.CV_QL_CongViec_NhomThucHien.Width = 130;
             // 
-            // CV_QL_CongViec_LookupEdit_NhomThucHien
+            // CV_QL_CongViec_CBEdit_NhomThucHien
             // 
-            this.CV_QL_CongViec_LookupEdit_NhomThucHien.AutoHeight = false;
-            this.CV_QL_CongViec_LookupEdit_NhomThucHien.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.CV_QL_CongViec_CBEdit_NhomThucHien.AutoHeight = false;
+            this.CV_QL_CongViec_CBEdit_NhomThucHien.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CV_QL_CongViec_LookupEdit_NhomThucHien.Name = "CV_QL_CongViec_LookupEdit_NhomThucHien";
-            this.CV_QL_CongViec_LookupEdit_NhomThucHien.NullText = "";
+            this.CV_QL_CongViec_CBEdit_NhomThucHien.Name = "CV_QL_CongViec_CBEdit_NhomThucHien";
             // 
             // CV_QL_CongViec_KhaNangChuyenMon
             // 
@@ -390,10 +413,24 @@
             this.CV_QL_CongViec_KhaNangChuyenMon.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_CongViec_KhaNangChuyenMon.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_CongViec_KhaNangChuyenMon.Caption = "Khả năng chuyên môn *";
+            this.CV_QL_CongViec_KhaNangChuyenMon.ColumnEdit = this.CV_QL_CongViec_CBEdit_KhaNangChuyenMon;
             this.CV_QL_CongViec_KhaNangChuyenMon.FieldName = "CV_QL_CongViec_KhaNangChuyenMon";
             this.CV_QL_CongViec_KhaNangChuyenMon.Name = "CV_QL_CongViec_KhaNangChuyenMon";
             this.CV_QL_CongViec_KhaNangChuyenMon.Visible = true;
             this.CV_QL_CongViec_KhaNangChuyenMon.Width = 200;
+            // 
+            // CV_QL_CongViec_LookupEdit_KhaNangChuyenMon
+            // 
+            this.CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.AppearanceDropDownHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.AppearanceDropDownHeader.Options.UseFont = true;
+            this.CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.AutoHeight = false;
+            this.CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.DropDownRows = 10;
+            this.CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.Name = "CV_QL_CongViec_LookupEdit_KhaNangChuyenMon";
+            this.CV_QL_CongViec_LookupEdit_KhaNangChuyenMon.NullText = "";
             // 
             // CV_QL_CongViec_FileDinhKem
             // 
@@ -487,9 +524,14 @@
             // 
             // CV_QL_CongViec_LookupEdit_MucDoKho
             // 
+            this.CV_QL_CongViec_LookupEdit_MucDoKho.AppearanceDropDownHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_CongViec_LookupEdit_MucDoKho.AppearanceDropDownHeader.Options.UseFont = true;
+            this.CV_QL_CongViec_LookupEdit_MucDoKho.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.CV_QL_CongViec_LookupEdit_MucDoKho.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_CongViec_LookupEdit_MucDoKho.AutoHeight = false;
             this.CV_QL_CongViec_LookupEdit_MucDoKho.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CV_QL_CongViec_LookupEdit_MucDoKho.DropDownRows = 10;
             this.CV_QL_CongViec_LookupEdit_MucDoKho.Name = "CV_QL_CongViec_LookupEdit_MucDoKho";
             this.CV_QL_CongViec_LookupEdit_MucDoKho.NullText = "";
             // 
@@ -829,6 +871,26 @@
             "Siêu khủng khiếp"});
             this.CV_QL_CongViec_ComboboxEdit_MucDoKho.Name = "CV_QL_CongViec_ComboboxEdit_MucDoKho";
             // 
+            // CV_QL_CongViec_LookupEdit_NhomThucHien
+            // 
+            this.CV_QL_CongViec_LookupEdit_NhomThucHien.AppearanceDropDownHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CV_QL_CongViec_LookupEdit_NhomThucHien.AppearanceDropDownHeader.Options.UseFont = true;
+            this.CV_QL_CongViec_LookupEdit_NhomThucHien.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.CV_QL_CongViec_LookupEdit_NhomThucHien.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CV_QL_CongViec_LookupEdit_NhomThucHien.AutoHeight = false;
+            this.CV_QL_CongViec_LookupEdit_NhomThucHien.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CV_QL_CongViec_LookupEdit_NhomThucHien.DropDownRows = 10;
+            this.CV_QL_CongViec_LookupEdit_NhomThucHien.Name = "CV_QL_CongViec_LookupEdit_NhomThucHien";
+            this.CV_QL_CongViec_LookupEdit_NhomThucHien.NullText = "";
+            // 
+            // CV_QL_CongViec_CBEdit_KhaNangChuyenMon
+            // 
+            this.CV_QL_CongViec_CBEdit_KhaNangChuyenMon.AutoHeight = false;
+            this.CV_QL_CongViec_CBEdit_KhaNangChuyenMon.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CV_QL_CongViec_CBEdit_KhaNangChuyenMon.Name = "CV_QL_CongViec_CBEdit_KhaNangChuyenMon";
+            // 
             // labelX1
             // 
             // 
@@ -866,11 +928,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_LoaiCongViec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_NhomCongViec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_NhomCongViec2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_NhomThucHien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_CBEdit_NhomThucHien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_KhaNangChuyenMon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_btnEdit_TenFile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_MucDoKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_ComboboxEdit_MucDoKho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_LookupEdit_NhomThucHien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CV_QL_CongViec_CBEdit_KhaNangChuyenMon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -935,5 +1000,8 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem CV_QL_CongViec_barButtonItem_Coppy;
         private DevExpress.XtraBars.BarSubItem barSubItem2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_QL_CongViec_LookupEdit_KhaNangChuyenMon;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit CV_QL_CongViec_CBEdit_NhomThucHien;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit CV_QL_CongViec_CBEdit_KhaNangChuyenMon;
     }
 }

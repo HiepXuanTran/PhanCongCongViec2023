@@ -42,13 +42,14 @@
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.tabStrip1 = new DevComponents.DotNetBar.TabStrip();
-            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,14 +70,15 @@
             this.barButtonItem10,
             this.barButtonItem11,
             this.barButtonItem12,
-            this.barButtonItem13});
+            this.barButtonItem13,
+            this.barButtonItem14});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbon.MaxItemId = 17;
+            this.ribbon.MaxItemId = 18;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(1114, 143);
+            this.ribbon.Size = new System.Drawing.Size(1300, 179);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barButtonItem1
@@ -183,6 +185,16 @@
             this.barButtonItem12.Name = "barButtonItem12";
             this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick);
             // 
+            // barButtonItem13
+            // 
+            this.barButtonItem13.Caption = "Nhóm Thực Hiện";
+            this.barButtonItem13.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.Glyph")));
+            this.barButtonItem13.Id = 16;
+            this.barButtonItem13.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.LargeGlyph")));
+            this.barButtonItem13.Name = "barButtonItem13";
+            this.barButtonItem13.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -214,16 +226,17 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem8);
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem12);
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem13);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem14);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Hệ thống ";
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 391);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 479);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1114, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1300, 40);
             // 
             // tabStrip1
             // 
@@ -234,34 +247,32 @@
             this.tabStrip1.CloseButtonVisible = true;
             this.tabStrip1.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabStrip1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabStrip1.Location = new System.Drawing.Point(0, 143);
+            this.tabStrip1.Location = new System.Drawing.Point(0, 179);
             this.tabStrip1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabStrip1.MdiForm = this;
             this.tabStrip1.MdiTabbedDocuments = true;
             this.tabStrip1.Name = "tabStrip1";
             this.tabStrip1.SelectedTab = null;
             this.tabStrip1.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.tabStrip1.Size = new System.Drawing.Size(1114, 19);
+            this.tabStrip1.Size = new System.Drawing.Size(1300, 23);
             this.tabStrip1.Style = DevComponents.DotNetBar.eTabStripStyle.Office2007Document;
             this.tabStrip1.TabIndex = 2;
             this.tabStrip1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
             this.tabStrip1.Text = "tabStrip1";
             // 
-            // barButtonItem13
+            // barButtonItem14
             // 
-            this.barButtonItem13.Caption = "Nhóm Thực Hiện";
-            this.barButtonItem13.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.Glyph")));
-            this.barButtonItem13.Id = 16;
-            this.barButtonItem13.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.LargeGlyph")));
-            this.barButtonItem13.Name = "barButtonItem13";
-            this.barButtonItem13.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
+            this.barButtonItem14.Caption = "Khả năng chuyên môn";
+            this.barButtonItem14.Id = 17;
+            this.barButtonItem14.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.LargeGlyph")));
+            this.barButtonItem14.Name = "barButtonItem14";
+            this.barButtonItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1114, 422);
+            this.ClientSize = new System.Drawing.Size(1300, 519);
             this.Controls.Add(this.tabStrip1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
@@ -301,5 +312,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
     }
 }
