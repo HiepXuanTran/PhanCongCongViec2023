@@ -31,6 +31,7 @@ namespace PhanCongCongViec.form.PhanCong
         CV_HT_VaiTroCongViecBLL clsVaiTro = new CV_HT_VaiTroCongViecBLL();
         CV_QL_CongViecBLL clsCongViec = new CV_QL_CongViecBLL();
         CV_QL_NhanSuBLL clsNhanSu = new CV_QL_NhanSuBLL();
+        CV_QL_CongViecPublic CVPublic = new CV_QL_CongViecPublic();
         bool CV_QL_ImportAdd = false;
         private bool ValidInput()
         {
@@ -463,19 +464,36 @@ namespace PhanCongCongViec.form.PhanCong
 
                 //----Start SqlDataReader----- Đọc dữ liệu trả về trên nhiều dòng
                 OleDbDataReader dr = command.ExecuteReader();
+
                 while (dr.HasRows)
                 {
                     while (dr.Read())
                     {
-                        dt.Rows.Add(
-                                    new object[] 
+
+                        string TenLoaiCongViec = dr["Tên loại công việc"].ToString();
+                        string TenNhomCongViec1 = dr["Tên nhóm công việc 1"].ToString();
+                        string TenNhomCongViec2 = dr["Tên nhóm công việc 2"].ToString();
+                        string TenCongViec = dr["Tên công việc"].ToString();
+                        string MucDoKho = dr["Mức độ khó"].ToString();
+                        CVPublic.TenLoaiCongViec = TenLoaiCongViec;
+                        CVPublic.TenNhomCongViec1 = TenNhomCongViec1;
+                        CVPublic.TenNhomCongViec2 = TenNhomCongViec2;
+                        CVPublic.TenCongViec = TenCongViec;
+                        CVPublic.MucDoKho = MucDoKho;
+                        DataTable dtid = clsCongViec.CV_QL_CongViec_ReturnID(CVPublic);// gọi hàm trả về id từ 5 biến trên
+                        int id = -1;
+                        for (int i = 0; i < dtid.Rows.Count; i++)
+                        {
+                            id =Convert.ToInt32(dtid.Rows[i]["CV_QL_CongViec_ID"].ToString());
+                        }
+                            dt.Rows.Add(
+                                        new object[] 
                                             {   
-                                                //dr["Chọn"],
-                                                dr["Tên loại công việc"],
-                                                dr["Tên nhóm công việc 1"],
-                                                dr["Tên nhóm công việc 2"],
-                                                dr["Tên công việc"],
-                                                dr["Mức độ khó"],
+                                                id,
+                                                id,
+                                                id,
+                                                id,
+                                                id,
                                                 dr["Nhân sự"],
                                                 dr["Vai trò"],
                                                 dr["Ngày bắt đầu"],
@@ -484,7 +502,7 @@ namespace PhanCongCongViec.form.PhanCong
                                                 dr["Lý do"],
                                                 dr["Địa điểm thực hiện"]
                                             }
-                                    );
+                                        );
                     }
                     dr.NextResult();
                 }

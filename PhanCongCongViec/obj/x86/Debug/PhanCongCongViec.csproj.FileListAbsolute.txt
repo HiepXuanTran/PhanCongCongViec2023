@@ -132,3 +132,4 @@ C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PhanCongCongViec\bin\Debug\PhanCongCongViec.exe.config
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.exe
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.pdb
+C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.HeThong.frmCV_HT_KhaNangChuyenMon.resources

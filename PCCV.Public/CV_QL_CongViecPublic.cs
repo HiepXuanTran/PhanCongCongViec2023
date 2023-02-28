@@ -154,5 +154,20 @@ namespace PCCV.Public
             get { return _CV_QL_CongViec_HienThi; }
             set { _CV_QL_CongViec_HienThi = value; }
         }
+
+        string _CV_QL_CongViec_DonVi;
+
+        public string CV_QL_CongViec_DonVi
+        {
+            get { return _CV_QL_CongViec_DonVi; }
+            set { _CV_QL_CongViec_DonVi = value; }
+        }
+        string _CV_QL_CongViec_To;
+
+        public string CV_QL_CongViec_To
+        {
+            get { return _CV_QL_CongViec_To; }
+            set { _CV_QL_CongViec_To = value; }
+        }
     }
 }

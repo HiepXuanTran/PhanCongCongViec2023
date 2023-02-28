@@ -24,6 +24,23 @@ namespace PCCV.Data
             giatri[0] = Public.Id;
             return cls.LayDuLieu_R("SP_CV_QL_CongViec_Load_R_Para_File", bien, giatri, thamso);
         }
+        public DataTable CV_QL_CongViec_ReturnID(CV_QL_CongViecPublic Public)
+        {
+            int thamso = 5;
+            string[] bien = new string[thamso];
+            object[] giatri = new object[thamso];
+            bien[0] = "@CV_QL_CongViec_TenLoaiCongViec";
+            bien[1] = "@CV_QL_CongViec_TenNhomCongViec1";
+            bien[2] = "@CV_QL_CongViec_TenNhomCongViec2";
+            bien[3] = "@CV_QL_CongViec_TenCongViec";
+            bien[4] = "@CV_QL_CongViec_MucDoKho";
+            giatri[0] = Public.TenLoaiCongViec;
+            giatri[1] = Public.TenNhomCongViec1;
+            giatri[2] = Public.TenNhomCongViec2;
+            giatri[3] = Public.TenCongViec;
+            giatri[4] = Public.MucDoKho;
+            return cls.LayDuLieu("SP_CV_QL_CongViec_ReturnID", bien, giatri, thamso);
+        }
         //public DataTable LoadNhanSu()
         //{
         //    return cls.LayDuLieu("CV_QL_CongViec_NhomThucHien_CbEdit");
@@ -45,7 +62,7 @@ namespace PCCV.Data
         }
         public int CV_QL_CongViec_Add(CV_QL_CongViecPublic Public)
         {
-            int thamso = 18;
+            int thamso = 20;
             string[] bien = new string[thamso];
             object[] giatri = new object[thamso];
             bien[0] = "@CV_QL_CongViec_TenLoaiCongViec";
@@ -66,6 +83,8 @@ namespace PCCV.Data
             bien[15] = "@CV_QL_CongViec_HienThi";
             bien[16] = "@CV_QL_CongViec_SuDung";
             bien[17] = "@CV_QL_CongViec_TenFile";
+            bien[18] = "@CV_QL_CongViec_DonVi";
+            bien[19] = "@CV_QL_CongViec_To";
 
 
             giatri[0] = Public.TenLoaiCongViec;
@@ -86,11 +105,13 @@ namespace PCCV.Data
             giatri[15] = Public.CV_QL_CongViec_HienThi;
             giatri[16] = Public.CV_QL_CongViec_SuDung;
             giatri[17] = Public.TenFile;
+            giatri[18] = Public.CV_QL_CongViec_DonVi;
+            giatri[19] = Public.CV_QL_CongViec_To;
             return cls.Update("SP_CV_QL_CongViec_Insert", bien, giatri, thamso);
         }
         public int CV_QL_CongViec_Edit(CV_QL_CongViecPublic Public)
         {
-            int thamso = 21;
+            int thamso = 23;
             string[] bien = new string[thamso];
             object[] giatri = new object[thamso];
             bien[0] = "@CV_QL_CongViec_TenLoaiCongViec";
@@ -114,6 +135,9 @@ namespace PCCV.Data
             bien[18] = "@CV_QL_CongViec_SuDung";
             bien[19] = "@CV_QL_CongViec_ID";
             bien[20] = "@CV_QL_CongViec_TenFile";
+            bien[21] = "@CV_QL_CongViec_DonVi";
+            bien[22] = "@CV_QL_CongViec_To";
+
             giatri[0] = Public.TenLoaiCongViec;
             giatri[1] = Public.TenNhomCongViec1;
             giatri[2] = Public.TenNhomCongViec2;
@@ -135,6 +159,8 @@ namespace PCCV.Data
             giatri[18] = Public.CV_QL_CongViec_SuDung;
             giatri[19] = Public.Id;
             giatri[20] = Public.TenFile;
+            giatri[21] = Public.CV_QL_CongViec_DonVi;
+            giatri[22] = Public.CV_QL_CongViec_To;
             return cls.Update("SP_CV_QL_CongViec_Update", bien, giatri, thamso);
         }
     }

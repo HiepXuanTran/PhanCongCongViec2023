@@ -31,6 +31,10 @@ namespace PCCV.BLL
         {
             return cls.LoadCV_QL_CongViec_Load_R_Para_File(Public);
         }
+        public DataTable CV_QL_CongViec_ReturnID(CV_QL_CongViecPublic Public)
+        {
+            return cls.CV_QL_CongViec_ReturnID(Public);
+        }
         //public DataTable LoadNhanSu()
         //{
         //    return cls.LoadNhanSu();
