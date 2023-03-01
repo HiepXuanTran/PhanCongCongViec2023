@@ -32,6 +32,8 @@ namespace PhanCongCongViec.form.PhanCong
         CV_QL_CongViecBLL clsCongViec = new CV_QL_CongViecBLL();
         CV_QL_NhanSuBLL clsNhanSu = new CV_QL_NhanSuBLL();
         CV_QL_CongViecPublic CVPublic = new CV_QL_CongViecPublic();
+        CV_HT_VaiTroCongViecPublic VTPublic = new CV_HT_VaiTroCongViecPublic();
+        CV_QL_NhanSuPublic NSPublic = new CV_QL_NhanSuPublic();
         bool CV_QL_ImportAdd = false;
         private bool ValidInput()
         {
@@ -482,9 +484,29 @@ namespace PhanCongCongViec.form.PhanCong
                         CVPublic.MucDoKho = MucDoKho;
                         DataTable dtid = clsCongViec.CV_QL_CongViec_ReturnID(CVPublic);// gọi hàm trả về id từ 5 biến trên
                         int id = -1;
+
+                        string TenVaiTro = dr["Vai trò"].ToString();
+                        VTPublic.CV_HT_VaiTroCongViec_VaiTroTrongCongViec = TenVaiTro;
+                        DataTable dtidvt = clsVaiTro.CV_HT_VaiTroCongViec_ReturnID(VTPublic);
+                        int idvt = -1;
+
+                        string TenNhanSu = dr["Nhân sự"].ToString();
+                        NSPublic.CV_QL_NhanSu_HoTen = TenNhanSu;
+                        DataTable dtidns = clsNhanSu.CV_QL_NhanSu_ReturnID(NSPublic);
+                        int idns = -1;
+
                         for (int i = 0; i < dtid.Rows.Count; i++)
                         {
                             id =Convert.ToInt32(dtid.Rows[i]["CV_QL_CongViec_ID"].ToString());
+                        }
+                        for (int i = 0; i < dtid.Rows.Count; i++)
+                        {
+                            idvt = Convert.ToInt32(dtidvt.Rows[i]["CV_HT_VaiTroCongViec_ID"].ToString());
+                        }
+
+                        for (int i = 0; i < dtid.Rows.Count; i++)
+                        {
+                            idns = Convert.ToInt32(dtidns.Rows[i]["CV_QL_NhanSu_ID"].ToString());
                         }
                             dt.Rows.Add(
                                         new object[] 
@@ -494,8 +516,8 @@ namespace PhanCongCongViec.form.PhanCong
                                                 id,
                                                 id,
                                                 id,
-                                                dr["Nhân sự"],
-                                                dr["Vai trò"],
+                                                idns,
+                                                idvt,
                                                 dr["Ngày bắt đầu"],
                                                 dr["Ngày kết thúc"],
                                                 dr["Đánh giá"],

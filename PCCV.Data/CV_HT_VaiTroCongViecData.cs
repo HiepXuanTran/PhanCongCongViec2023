@@ -15,6 +15,16 @@ namespace PCCV.Data
             return cls.LayDuLieu("SP_CV_HT_VaiTroCongViec_Select");
         }
 
+        public DataTable CV_HT_VaiTroCongViec_ReturnID(CV_HT_VaiTroCongViecPublic Public)
+        {
+            int thamso = 1;
+            string[] bien = new string[thamso];
+            object[] giatri = new object[thamso];
+            bien[0] = "@CV_HT_VaiTroCongViec_VaiTroTrongCongViec";
+            giatri[0] = Public.CV_HT_VaiTroCongViec_VaiTroTrongCongViec;
+            return cls.LayDuLieu("SP_CV_HT_VaiTroCongViec_ReturnID", bien, giatri, thamso);
+        }
+
         public int CV_HT_VaiTroCongViec_Del(CV_HT_VaiTroCongViecPublic Public)
         {
             int thamso = 4;

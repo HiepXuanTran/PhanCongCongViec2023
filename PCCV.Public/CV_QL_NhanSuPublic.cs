@@ -14,6 +14,9 @@ namespace PCCV.Public
             get { return _CV_QL_NhanSu_ID; }
             set { _CV_QL_NhanSu_ID = value; }
         }
+
+         
+
         private string _CV_QL_NhanSu_MaNhanSu;
 
         public string CV_QL_NhanSu_MaNhanSu

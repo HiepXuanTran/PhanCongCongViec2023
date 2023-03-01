@@ -28,5 +28,9 @@ namespace PCCV.BLL
         {
             return cls.CV_HT_VaiTroCongViec_Edit(Public);
         }
+        public DataTable CV_HT_VaiTroCongViec_ReturnID(CV_HT_VaiTroCongViecPublic Public)
+        {
+            return cls.CV_HT_VaiTroCongViec_ReturnID(Public);
+        }
     }
 }

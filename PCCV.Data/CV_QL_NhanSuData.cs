@@ -17,6 +17,17 @@ namespace PCCV.Data
         {
             return cls.LayDuLieu("SP_CV_QL_NhanSu_Select");
         }
+
+        public DataTable CV_QL_NhanSu_ReturnID(CV_QL_NhanSuPublic Public)
+        {
+            int thamso = 1;
+            string[] bien = new string[thamso];
+            object[] giatri = new object[thamso];
+            bien[0] = "@HT_USER_Ten";
+            giatri[0] = Public.CV_QL_NhanSu_HoTen;
+            return cls.LayDuLieu("SP_CV_QL_NhanSu_ReturnID", bien, giatri, thamso);
+        }
+
         public int CV_QL_NhanSu_Del(CV_QL_NhanSuPublic Public)
         {
             int thamso = 4;

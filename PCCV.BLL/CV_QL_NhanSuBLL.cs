@@ -30,5 +30,10 @@ namespace PCCV.BLL
         {
             return cls.CV_QL_NhanSu_Edit(Public);
         }
+
+        public DataTable CV_QL_NhanSu_ReturnID(CV_QL_NhanSuPublic Public)
+        {
+            return cls.CV_QL_NhanSu_ReturnID(Public);
+        }
     }
 }
