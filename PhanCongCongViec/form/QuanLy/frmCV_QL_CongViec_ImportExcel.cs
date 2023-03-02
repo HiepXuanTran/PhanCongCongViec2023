@@ -366,6 +366,7 @@ namespace PhanCongCongViec.form.QuanLy
                 dt.Columns.Add("CV_QL_CongViec_TenFile", typeof(string));
                 ////
                 CV_QL_CongViec_GridControl.DataSource = dt;
+                
 
             }
             catch (Exception ex)

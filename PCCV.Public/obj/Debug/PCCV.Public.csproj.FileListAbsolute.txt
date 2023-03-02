@@ -20,3 +20,7 @@ C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PCCV.Public\bin\Debug\PCCV.Publ
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PCCV.Public\bin\Debug\PCCV.Public.pdb
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PCCV.Public\obj\Debug\PCCV.Public.dll
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PCCV.Public\obj\Debug\PCCV.Public.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.Public\bin\Debug\PCCV.Public.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.Public\bin\Debug\PCCV.Public.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.Public\obj\Debug\PCCV.Public.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.Public\obj\Debug\PCCV.Public.pdb

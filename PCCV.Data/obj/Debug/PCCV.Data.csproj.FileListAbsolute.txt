@@ -33,3 +33,10 @@ C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PCCV.Data\
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.dll
 C:\Users\Admin\Desktop\PCCV\PhanCongCongViec2023\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.Data\bin\Debug\PCCV.Data.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.Data\bin\Debug\PCCV.Data.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.Data\bin\Debug\PCCV.Public.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.Data\bin\Debug\PCCV.Public.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.Data\obj\Debug\PCCV.Data.pdb

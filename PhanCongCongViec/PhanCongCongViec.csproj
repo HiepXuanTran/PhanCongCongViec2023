@@ -98,6 +98,12 @@
     <Compile Include="form\PhanCong\frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.Designer.cs">
       <DependentUpon>frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\QuanLy\frmCV_QL_ChiTietCongViec_ImportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\QuanLy\frmCV_QL_ChiTietCongViec_ImportExcel.Designer.cs">
+      <DependentUpon>frmCV_QL_ChiTietCongViec_ImportExcel.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\QuanLy\frmCV_QL_CongViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form\PhanCong\frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.resx">
       <DependentUpon>frmCV_PC_PhanCongCongViecNhanSu_ImportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\QuanLy\frmCV_QL_ChiTietCongViec_ImportExcel.resx">
+      <DependentUpon>frmCV_QL_ChiTietCongViec_ImportExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\QuanLy\frmCV_QL_CongViec.resx">
       <DependentUpon>frmCV_QL_CongViec.cs</DependentUpon>

@@ -24,6 +24,16 @@ namespace PCCV.Data
             giatri[0] = Public.Id;
             return cls.LayDuLieu_R("SP_CV_QL_CongViec_Load_R_Para_File", bien, giatri, thamso);
         }
+        public DataTable CV_QL_CongViec_ReturnID_fromTen(CV_QL_CongViecPublic Public)
+        {
+
+            int thamso = 1;
+            string[] bien = new string[thamso];
+            object[] giatri = new object[thamso];
+            bien[0] = "@CV_QL_CongViec_TenCongViec";
+            giatri[0] = Public.TenCongViec;
+            return cls.LayDuLieu("SP_CV_QL_CongViec_ReturnID_TheoTen", bien, giatri, thamso);
+        }
         public DataTable CV_QL_CongViec_ReturnID(CV_QL_CongViecPublic Public)
         {
             int thamso = 5;

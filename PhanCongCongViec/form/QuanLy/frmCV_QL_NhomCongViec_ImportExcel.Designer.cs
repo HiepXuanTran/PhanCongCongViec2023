@@ -62,6 +62,7 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CV_QL_NhomCongViec_GridControl)).BeginInit();
@@ -538,6 +539,10 @@
             // 
             this.ofd.FileName = "ofd";
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            // 
             // frmCV_QL_NhomCongViec_ImportExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -548,7 +553,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCV_QL_NhomCongViec_ImportExcel";
             this.Text = "Import file Excel Nhóm Công Việc";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -597,5 +602,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_QL_NhomCongViec_DateEditor;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_QL_NhomCongViec_HienThi;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_QL_NhomCongViec_SuDung;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

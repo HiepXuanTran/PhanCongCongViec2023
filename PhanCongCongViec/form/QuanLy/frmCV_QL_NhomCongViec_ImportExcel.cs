@@ -24,7 +24,6 @@ namespace PhanCongCongViec.form.QuanLy
             new MultiSelectionEditingHelper(CV_QL_NhomCongViec_bandedGridView);
         }
 
-
         string FileName_Import = "";
         CV_QL_NhomCongViecPublic NhomCongViecPublic = new CV_QL_NhomCongViecPublic();
         CV_QL_NhomCongViecBLL cls = new CV_QL_NhomCongViecBLL();
@@ -363,6 +362,11 @@ namespace PhanCongCongViec.form.QuanLy
 
             }
         
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
         }
 
 

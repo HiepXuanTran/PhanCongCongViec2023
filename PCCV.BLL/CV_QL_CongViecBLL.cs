@@ -19,6 +19,10 @@ namespace PCCV.BLL
         {
             return cls.CV_QL_CongViec_Del(Public);
         }
+        public DataTable CV_QL_CongViec_ReturnID_fromTen(CV_QL_CongViecPublic Public)
+        {
+            return cls.CV_QL_CongViec_ReturnID_fromTen(Public);
+        }
         public int CV_QL_CongViec_Add(CV_QL_CongViecPublic Public)
         {
             return cls.CV_QL_CongViec_Add(Public);

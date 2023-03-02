@@ -6,26 +6,32 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
 using PCCV.BLL;
 using PCCV.Public;
 using System.IO;
 using System.Data.SqlClient;
 using DevExpress.Utils.Menu;
 using DevExpress.XtraGrid.Menu;
-
+using System.Data.OleDb;
 namespace PhanCongCongViec.form.QuanLy
-
 {
-    public partial class frmCV_QL_ChiTietCongViec : Form
+    public partial class frmCV_QL_ChiTietCongViec_ImportExcel : Form
     {
-        public frmCV_QL_ChiTietCongViec()
+        public frmCV_QL_ChiTietCongViec_ImportExcel()
         {
             InitializeComponent();
             new MultiSelectionEditingHelper(CV_QL_ChiTietCongViec_BandedGridview);
         }
-
+        string FileName_Import = "";
         CV_QL_CongViecBLL clsCongViec = new CV_QL_CongViecBLL();
-        bool CV_QL_ChiTietCongViecEdit = false;
         bool CV_QL_ChiTietCongViecAdd = false;
         CV_QL_ChiTietCongViecBLL cls = new CV_QL_ChiTietCongViecBLL();
 
@@ -43,6 +49,15 @@ namespace PhanCongCongViec.form.QuanLy
                 CV_QL_ChiTietCongViec_BandedGridview.MoveNext();
             }
             CV_QL_ChiTietCongViec_BandedGridview.MoveFirst();
+        }
+        private bool ValidInput()
+        {
+            if (FileName_Import.Trim() == "")
+            {
+                MessageBox.Show("Xin vui lòng chọn tập tin excel cần import!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
         void No_Check_All_Click(object sender, EventArgs e)
         {
@@ -74,7 +89,7 @@ namespace PhanCongCongViec.form.QuanLy
         {
             if (BienToanCuc.Lock_NhapDuLieu == true)
             {
-                
+
                 this.CV_QL_ChiTietCongViec_TenCongViec.OptionsColumn.ReadOnly = !Lock_Control;
                 this.CV_QL_ChiTietCongViec_CacBuocCongViec.OptionsColumn.ReadOnly = !Lock_Control;
                 this.CV_QL_ChiTietCongViec_MoTaBuocCongViec.OptionsColumn.ReadOnly = !Lock_Control;
@@ -89,13 +104,10 @@ namespace PhanCongCongViec.form.QuanLy
         private void Lock_Unlock_Control(Boolean Lock_Control) //Khóa và mở khóa điều khiển chức năng
         {
             CV_QL_ChiTietCongViec_barButtonItem_Refresh.Enabled = Lock_Control;
-            CV_QL_ChiTietCongViec_barButtonItem_Add.Enabled = Lock_Control;
-            CV_QL_ChiTietCongViec_barButtonItem_Sua.Enabled = Lock_Control;
-            CV_QL_ChiTietCongViec_barButtonItem_Xoa.Enabled = Lock_Control;
+            CV_QL_ChiTietCongViec_barButtonItem_Import.Enabled = Lock_Control;
             CV_QL_ChiTietCongViec_barButtonItem_Luu.Enabled = !Lock_Control;
             CV_QL_ChiTietCongViec_barButtonItem_Undo.Enabled = !Lock_Control;
         }
-
         // check nhap du lieu chua xong
         private bool KiemTra_NhapDuLieu()
         {
@@ -105,7 +117,7 @@ namespace PhanCongCongViec.form.QuanLy
                 if (Convert.ToBoolean(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViecChon)) &&
                         (
                             string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_TenCongViec))) ||
-                            
+
                             string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_MucDoKho)))
                         )
                     )
@@ -183,12 +195,8 @@ namespace PhanCongCongViec.form.QuanLy
             return false;
         }
 
-        private void CV_QL_ChiTietCongViec_barButtonItem_Refresh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            frmCV_QL_ChiTietCongViec_Load(sender, e);
-        }
 
-        private void frmCV_QL_ChiTietCongViec_Load(object sender, EventArgs e)
+        private void frmCV_QL_ChiTietCongViec_ImportExcel_Load(object sender, EventArgs e)
         {
             // lookup muc do kho
             CV_QL_ChiTietCongViec_lookupEdit_MucDoKho.DataSource = clsCongViec.LoadCV_QL_CongViec();
@@ -218,94 +226,16 @@ namespace PhanCongCongViec.form.QuanLy
             CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MucDoKho", "Độ khó công việc", 150));
             CV_QL_ChiTietCongViec_lookupEdit_TenCongViec.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CV_QL_CongViec_MoTaCongViec", "Mô tả công việc", 550));
 
-            CV_QL_ChiTietCongViec_GridControl.DataSource = cls.LoadCV_QL_ChiTietCongViec();
+            CV_QL_ChiTietCongViec_GridControl.DataSource = null;
             CV_QL_ChiTietCongViec_barButtonItem_Luu.Enabled = false;
             CV_QL_ChiTietCongViec_barButtonItem_Undo.Enabled = false;
             Lock_Unlock_Control_Input(false); // lock input
             CV_QL_ChiTietCongViec_BandedGridview.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.None;
         }
 
-        private void CV_QL_ChiTietCongViec_barButtonItem_Add_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void CV_QL_ChiTietCongViec_barButtonItem_Refresh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            CV_QL_ChiTietCongViecAdd = true;
-            CV_QL_ChiTietCongViecEdit = false;
-            CV_QL_ChiTietCongViec_BandedGridview.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
-            Lock_Unlock_Control_Input(true);
-            Lock_Unlock_Control(false);
-        }
-
-        private void CV_QL_ChiTietCongViec_barButtonItem_Sua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (KiemTra() == false)
-            {
-                MessageBox.Show("Bạn phải chọn dữ liệu", "Thông báo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // check mã công việc xem có chọn đúng dòng có dữ liệu chưa 
-            if (string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_ID))))
-            {
-                MessageBox.Show("Bạn phải lựa chọn lại dữ liệu trên lưới", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
-                return;
-            }
-            else
-            {
-                CV_QL_ChiTietCongViecAdd = false;
-                CV_QL_ChiTietCongViecEdit = true;
-                Lock_Unlock_Control_Input(true); //lock input
-                Lock_Unlock_Control(false); // lock nut nhap hien thi nut luu
-            }
-        }
-
-        private void CV_QL_ChiTietCongViec_barButtonItem_Xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (KiemTra() == false)
-            {
-                MessageBox.Show("Bạn phải chọn dữ liệu", "Thông báo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else
-            {
-                // tránh click nhầm
-                int kq = -1;
-                DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xoá?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (dr == DialogResult.Yes)
-                {
-                    //Xoá từng dòng đã check
-                    CV_QL_ChiTietCongViec_BandedGridview.MoveFirst();
-                    for (int i = 0; i < CV_QL_ChiTietCongViec_BandedGridview.RowCount; i++)
-                    {
-                        if (Convert.ToBoolean(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViecChon))) // == true
-                        {
-                            string s = Convert.ToString(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_ID));
-                            if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_ID))))
-                            {
-                                CV_QL_ChiTietCongViecPublic Public = new CV_QL_ChiTietCongViecPublic();
-                                Public.Id = Convert.ToInt32(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_ID));
-                                Public.HT_USER_Editor = BienToanCuc.HT_USER_ID;
-                                Public.CV_QL_ChiTietCongViec_DateEditor = DateTime.Now;
-                                Public.CV_QL_ChiTietCongViec_SuDung = BienToanCuc.HT_USER_Ten;
-                                Public.CV_QL_ChiTietCongViec_IDCongViec = Convert.ToInt32(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_TenCongViec));
-                                kq = cls.CV_QL_ChiTietCongViec_Del(Public);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Xin mời chọn lại dữ liệu trên lưới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                        CV_QL_ChiTietCongViec_BandedGridview.MoveNext();
-                    }
-                }
-                TraVe_DongDLChon();
-                if (kq > 0)
-                {
-                    MessageBox.Show("Xoá Thành Công!");
-                    frmCV_QL_ChiTietCongViec_Load(sender, e); // load lai form
-                }
-                else
-                {
-                    MessageBox.Show("Xoá Thất bại!");
-                }
-            }
+            frmCV_QL_ChiTietCongViec_ImportExcel_Load(sender, e);
         }
 
         private void CV_QL_ChiTietCongViec_barButtonItem_Luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -313,7 +243,7 @@ namespace PhanCongCongViec.form.QuanLy
             int kq = -1;
             try
             {
-                if (CV_QL_ChiTietCongViecAdd == true || CV_QL_ChiTietCongViecEdit == true)
+                if (CV_QL_ChiTietCongViecAdd == true)
                 {
                     if (KiemTra() == false || KiemTra_NhapDuLieu() == false)
                     {
@@ -343,7 +273,7 @@ namespace PhanCongCongViec.form.QuanLy
                             if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_MoTaBuocCongViec))))
                             {
                                 Public.MoTaBuocCongViec = CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellDisplayText(CV_QL_ChiTietCongViec_MoTaBuocCongViec);
-                            }                            
+                            }
                             Public.MucDoKho = CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_MucDoKho).ToString();
                             if (string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_FileDinhKem))))
                             {
@@ -361,7 +291,7 @@ namespace PhanCongCongViec.form.QuanLy
                             if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_TenFile))))
                             {
                                 Public.TenFile = Convert.ToString(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_TenFile));
-                            }          
+                            }
                             if (!string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_TongSoPhutThucHien))))
                             {
                                 Public.SoPhutThucHien = Convert.ToDouble(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_TongSoPhutThucHien));
@@ -381,16 +311,6 @@ namespace PhanCongCongViec.form.QuanLy
                                 Public.HT_USER_Create = BienToanCuc.HT_USER_ID;
                                 kq = cls.CV_QL_ChiTietCongViec_Add(Public);
                             }
-
-                            if (CV_QL_ChiTietCongViecEdit == true)
-                            {
-                                Public.HT_USER_Create = Convert.ToInt32(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(HT_USER_Create));
-                                Public.HT_USER_Editor = BienToanCuc.HT_USER_ID;
-                                Public.CV_QL_ChiTietCongViec_DateCreate = Convert.ToDateTime(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_DateCreate));
-                                Public.CV_QL_ChiTietCongViec_DateEditor = DateTime.Now;
-                                Public.Id = Convert.ToInt32(CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_ChiTietCongViec_ID));
-                                kq = cls.CV_QL_ChiTietCongViec_Edit(Public);
-                            }
                         }
                         CV_QL_ChiTietCongViec_BandedGridview.MoveNext();
                     }
@@ -402,16 +322,11 @@ namespace PhanCongCongViec.form.QuanLy
                     {
                         MessageBox.Show("Thêm Thành Công!");
                     }
-                    else if (CV_QL_ChiTietCongViecEdit == true)
-                    {
-                        MessageBox.Show("Sửa Thành Công!");
-                    }
                 }
-                frmCV_QL_ChiTietCongViec_Load(sender, e);
+                frmCV_QL_ChiTietCongViec_ImportExcel_Load(sender, e);
                 Lock_Unlock_Control_Input(false); //Khóa điều khiển nhập dữ liệu
                 Lock_Unlock_Control(true); //Mở khóa toàn bộ
                 CV_QL_ChiTietCongViecAdd = false;
-                CV_QL_ChiTietCongViecEdit = false;
             }
 
             catch (Exception ex)
@@ -423,26 +338,12 @@ namespace PhanCongCongViec.form.QuanLy
         private void CV_QL_ChiTietCongViec_barButtonItem_Undo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CV_QL_ChiTietCongViecAdd = false;
-            CV_QL_ChiTietCongViecEdit = false;
             Lock_Unlock_Control(true); // lock nut luu vs undo
             Lock_Unlock_Control_Input(false); //Khóa điều khiển nhập dữ liệu
         }
 
         private void CV_QL_ChiTietCongViec_btnEdit_TenFile_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-        //    if (KiemTra() == false)
-        //    {
-        //        MessageBox.Show("Bạn phải chọn dữ liệu", "Thông báo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        return;
-        //    }
-        //    OpenFileDialog dlg = new OpenFileDialog();
-        //    DialogResult dlgRes = dlg.ShowDialog();
-        //    if (dlgRes != DialogResult.Cancel)
-        //    {
-        //        FileInfo Ten_File = new FileInfo(dlg.FileName);
-        //        CV_QL_ChiTietCongViec_BandedGridview.SetFocusedRowCellValue(CV_QL_ChiTietCongViec_TenFile, Ten_File.Name);
-        //        CV_QL_ChiTietCongViec_BandedGridview.SetFocusedRowCellValue(CV_QL_ChiTietCongViec_FileDinhKem, ReadFile(dlg.FileName));
-        //    }
             OpenFileDialog dlg = new OpenFileDialog();
             DialogResult dlgRes = dlg.ShowDialog();
             if (dlgRes != DialogResult.Cancel)
@@ -455,10 +356,9 @@ namespace PhanCongCongViec.form.QuanLy
             }
         }
 
-        private void CV_QL_ChiTietCongViec_barButtonItem_In_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void CV_QL_ChiTietCongViec_barButtonItem_Print_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             LoadHamDungChung.PreviewPrintableComponent(CV_QL_ChiTietCongViec_GridControl, CV_QL_ChiTietCongViec_GridControl.LookAndFeel);
-
         }
 
         private void CV_QL_ChiTietCongViec_BandedGridview_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
@@ -489,65 +389,118 @@ namespace PhanCongCongViec.form.QuanLy
             }
         }
 
-        private void CV_QL_ChiTietCongViec_barButtonItem_DownloadDinhKem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            CV_QL_ChiTietCongViecPublic Public = new CV_QL_ChiTietCongViecPublic();
-            try
-            {
-                //Start - Download
-                Public.Id = int.Parse("0" + CV_QL_ChiTietCongViec_BandedGridview.GetFocusedRowCellDisplayText(CV_QL_ChiTietCongViec_ID));
-
-                SqlDataReader dr = cls.LoadCV_QL_ChiTietCongViec_Load_R_Para_File(Public);
-                dr.Read();
-
-                string TenFile = "";
-                CV_QL_ChiTietCongViec_SaveFileDinhKem.FileName = Convert.ToString(dr["CV_QL_ChiTietCongViec_TenFile"].ToString());
-
-                DialogResult DR = CV_QL_ChiTietCongViec_SaveFileDinhKem.ShowDialog();
-                if (DR == DialogResult.OK)
-                {
-                    TenFile = CV_QL_ChiTietCongViec_SaveFileDinhKem.FileName;
-                    //Get File data from dataset row.
-                    byte[] FileDinhKem = (byte[])dr["CV_QL_ChiTietCongViec_FileDinhKem"];
-
-                    using (FileStream fs = new FileStream(TenFile, FileMode.Create))
-                    {
-                        fs.Write(FileDinhKem, 0, FileDinhKem.Length);
-                        fs.Close();
-                    }
-                }
-                else
-                {
-                    dr.Dispose();
-                    dr.Close();
-                    return;
-                }
-
-                dr.Dispose();
-                dr.Close();
-
-                MessageBox.Show("Tải file thành công!", "Thành công!", MessageBoxButtons.OK, MessageBoxIcon.None);
-
-                //End - Download mẫu lấy thông tin
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Không tồn tại file NỘI DUNG ĐÍNH KÈM! (ID file: " + Public.Id + ")", "Thông báo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }  
-        }
-
-        private void frmCV_QL_ChiTietCongViec_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
+        System.Data.DataTable dt = new System.Data.DataTable();
         private void CV_QL_ChiTietCongViec_barButtonItem_Import_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new frmCV_QL_ChiTietCongViec_ImportExcel().ShowDialog();
+            
+            // Browse đến file cần import
+            // Lấy đường dẫn file import vừa chọn
+            ofd.Filter = "Excel Files (*.xls)|*.xls"; //Chỉ lựa chọn file excel *.xls ofd.Filter = "Excel Files (*.xls)|*.xls;*.xlsx";
+            FileName_Import = ofd.ShowDialog() == DialogResult.OK ? ofd.FileName : "";
+
+            if (!ValidInput())
+                return;
+
+            // Ðọc dữ liệu từ tập tin excel trả về DataTable
+            string connectionString = "";
+            if (Path.GetExtension(FileName_Import) == ".xls")
+            {   //For Excel 97-03
+
+                connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + FileName_Import.Trim() + ";Extended Properties='Excel 8.0;HDR=YES;IMEX=1'";
+                //string conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + s + ";Password=password;Extended Properties='Excel 8.0;HDR=YES'";
+            }
+            else if (Path.GetExtension(FileName_Import) == ".xlsx")
+            {    //For Excel 07 and greater
+                //connection string for that file which extantion is .xlsx  
+                connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + FileName_Import.Trim() + ";Extended Properties=\"Excel 12.0;HDR=Yes\"";
+                //"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + FileName_Import.Trim() + ";Extended Properties="Excel 12.0 Xml;HDR=YES"";
+                //string conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + s + ";Password=password;Extended Properties='Excel 8.0;HDR=YES'";
+            }
+            else
+            {
+                MessageBox.Show("Dữ liệu file lựa chọn không phải là file excel", "Lỗi!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Tạo đối tượng kết nối
+            OleDbConnection oledbConn = new OleDbConnection(connectionString);
+            try
+            {
+
+                // Mở kết nối
+                oledbConn.Open();
+
+                OleDbCommand command = new OleDbCommand("SELECT	* FROM [Sheet1$]", oledbConn);
+                OleDbDataAdapter adapter = new OleDbDataAdapter(command);
+
+                //DataSet ds = new DataSet();
+
+                //Start: Tạo bảng và Nạp dữ liệu
+                dt.Columns.Add("Tên công việc", typeof(string));
+                dt.Columns.Add("Các bước công việc", typeof(string));
+                dt.Columns.Add("Mô tả bước công việc", typeof(string));
+                dt.Columns.Add("Mức độ khó", typeof(string));
+                dt.Columns.Add("Tổng số phút thực hiện", typeof(string));
+                dt.Columns.Add("Tổng số giờ thực hiện", typeof(string));
+                dt.Columns.Add("Tổng số ngày thực hiện", typeof(string));
+                //----Start SqlDataReader----- Đọc dữ liệu trả về trên nhiều dòng
+                OleDbDataReader dr = command.ExecuteReader();
+
+                while (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        int id = -1;
+                        // get id từ tên import vào
+                        string tenCongViec = dr["Tên công việc"].ToString();
+                        CV_QL_CongViecPublic Cv = new CV_QL_CongViecPublic();
+                        Cv.TenCongViec = tenCongViec;
+                        DataTable dttenCongViec = clsCongViec.CV_QL_CongViec_ReturnID_fromTen(Cv);
+                        for (int i = 0; i < dttenCongViec.Rows.Count; i++)
+                        {
+                            id = Convert.ToInt32(dttenCongViec.Rows[i]["CV_QL_CongViec_ID"].ToString());
+                        }
+                            dt.Rows.Add(
+                                        new object[] 
+                                            {   
+                                                //dr["Chọn"],
+                                                id,
+                                                dr["Các bước công việc"],
+                                                dr["Mô tả bước công việc"],
+                                                dr["Mức độ khó"],
+                                                dr["Tổng số phút thực hiện"],
+                                                dr["Tổng số giờ thực hiện"],
+                                                dr["Tổng số ngày thực hiện"]
+                                            }
+                                        );
+                    }
+                    dr.NextResult();
+                }
+                dr.Dispose();
+                dr.Close();
+                //----End SqlDataReader----- Đọc dữ liệu trả về trên nhiều dòng
+                //
+                ////
+                dt.Columns.Add("CV_QL_ChiTietCongViecChon", typeof(bool), "True");
+                dt.Columns.Add("CV_QL_ChiTietCongViec_ID", typeof(int));
+                ////
+                CV_QL_ChiTietCongViec_GridControl.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Có lỗi xảy ra khi thực hiện impord dữ liệu! \n Vui lòng kiểm tra lại: \n 1. Mẫu file excel import dữ liệu (mẫu được cung cấp sẵn từ phần mềm và có định dạng: *.xls), hoặc; \n 2. Liên hệ với quản trị để được hỗ trợ.", "Lỗi!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                // Đóng chuỗi kết nối
+                oledbConn.Close();
+            }
+            CV_QL_ChiTietCongViecAdd = true;
+            Lock_Unlock_Control_Input(true); //Mở khóa điều khiển nhập dữ liệu
+            Lock_Unlock_Control(false); //Mở khóa lưu dữ liệu
         }
     }
 }
-
-
-
