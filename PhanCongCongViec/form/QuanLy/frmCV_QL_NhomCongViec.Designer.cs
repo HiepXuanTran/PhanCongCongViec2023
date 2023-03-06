@@ -211,14 +211,14 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1188, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1924, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 433);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1188, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1924, 0);
             // 
             // barDockControlLeft
             // 
@@ -231,7 +231,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1188, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1924, 30);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 403);
             // 
             // panel1
@@ -241,7 +241,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1188, 403);
+            this.panel1.Size = new System.Drawing.Size(1924, 403);
             this.panel1.TabIndex = 4;
             // 
             // CV_QL_NhomCongViec_GridControl
@@ -251,7 +251,7 @@
             this.CV_QL_NhomCongViec_GridControl.MainView = this.CV_QL_NhomCongViec_bandedGridView;
             this.CV_QL_NhomCongViec_GridControl.MenuManager = this.barManager1;
             this.CV_QL_NhomCongViec_GridControl.Name = "CV_QL_NhomCongViec_GridControl";
-            this.CV_QL_NhomCongViec_GridControl.Size = new System.Drawing.Size(1188, 354);
+            this.CV_QL_NhomCongViec_GridControl.Size = new System.Drawing.Size(1924, 354);
             this.CV_QL_NhomCongViec_GridControl.TabIndex = 1;
             this.CV_QL_NhomCongViec_GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CV_QL_NhomCongViec_bandedGridView});
@@ -348,7 +348,7 @@
             this.gridBand3.AppearanceHeader.Options.UseForeColor = true;
             this.gridBand3.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand3.Caption = "THÔNG TIN";
+            this.gridBand3.Caption = "THÔNG TIN NHÓM CÔNG VIỆC";
             this.gridBand3.Columns.Add(this.CV_QL_NhomCongViec_TenNhomCongViec1);
             this.gridBand3.Columns.Add(this.CV_QL_NhomCongViec_TenNhomCongViec2);
             this.gridBand3.Columns.Add(this.CV_QL_NhomCongViec_MoTa);
@@ -581,7 +581,7 @@
             this.labelX1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.labelX1.Location = new System.Drawing.Point(0, 0);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(1188, 49);
+            this.labelX1.Size = new System.Drawing.Size(1924, 49);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "<div align = \"center\">QUẢN LÝ NHÓM CÔNG VIỆC</div>";
             // 
@@ -589,7 +589,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 433);
+            this.ClientSize = new System.Drawing.Size(1924, 433);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -641,11 +641,11 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_QL_NhomCongViec_HienThi;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_QL_NhomCongViec_SuDung;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarButtonItem CV_QL_NhomCongViec_barButtonItem_Coppy;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
     }
 }

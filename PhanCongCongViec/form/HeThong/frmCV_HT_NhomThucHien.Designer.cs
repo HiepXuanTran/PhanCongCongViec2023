@@ -178,7 +178,7 @@
             this.gridBand1.AppearanceHeader.Options.UseForeColor = true;
             this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand1.Caption = "THÔNG TIN";
+            this.gridBand1.Caption = "THÔNG TIN NHÓM THỰC HIỆN";
             this.gridBand1.Columns.Add(this.CV_HT_NhomThucHien_TenNhomThucHien);
             this.gridBand1.Columns.Add(this.CV_HT_NhomThucHien_GhiChu);
             this.gridBand1.Name = "gridBand1";
@@ -462,7 +462,7 @@
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(1491, 49);
             this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "<div align = \"center\">NHÓM THỰC HIỆN</div>";
+            this.labelX1.Text = "<div align = \"center\">QUẢN LÝ NHÓM THỰC HIỆN</div>";
             // 
             // frmCV_HT_NhomThucHien
             // 
@@ -475,7 +475,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCV_HT_NhomThucHien";
             this.Text = "Quản Lý Nhóm Thực Hiện";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -499,10 +499,8 @@
         private DevExpress.XtraBars.BarButtonItem CV_HT_NhomThucHien_barButtonItem_Undo;
         private DevExpress.XtraGrid.GridControl CV_HT_NhomThucHien_GridControl;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView CV_HT_NhomThucHien_BandedGridview;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_NhomThucHienChon;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_NhomThucHien_ID;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_NhomThucHien_TenNhomThucHien;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_NhomThucHien_GhiChu;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn HT_USER_Create;
@@ -530,5 +528,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_QL_CongViec_LookupEdit_NhomCongViec;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_QL_CongViec_LookupEdit_NhomCongViec2;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox CV_QL_CongViec_ComboboxEdit_MucDoKho;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
     }
 }

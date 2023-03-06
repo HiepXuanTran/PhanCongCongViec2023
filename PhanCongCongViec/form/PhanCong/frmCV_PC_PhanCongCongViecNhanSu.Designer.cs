@@ -51,6 +51,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.CV_PC_PhanCongCongViecNhanSu_gridControl = new DevExpress.XtraGrid.GridControl();
             this.CV_PC_PhanCongCongViecNhanSu_bandedGridView = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            this.gridBand_Chung = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.CV_PC_PhanCongCongViecNhanSuChon = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_PC_PhanCongCongViecNhanSu_TenLoaiCongViec = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenLoaiCongViec = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -62,14 +63,19 @@
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_TenCongViec = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.CV_PC_PhanCongCongViecNhanSu_MucDoKho = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_MucDoKho = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.CV_PC_PhanCongCongViecNhanSu_IDUser = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.CV_PC_PhanCongCongViecNhanSu_NgayBatDau = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.CV_PC_PhanCongCongViecNhanSu_DanhGia = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_PC_PhanCongCongViecNhanSu_LyDo = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.CV_PC_PhanCongCongViecNhanSu_DiaDiemThucHien = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_PC_PhanCongCongViecNhanSu_ID = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.HT_USER_Create = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -80,12 +86,6 @@
             this.CV_PC_PhanCongCongViecNhanSu_SuDung = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.gridBand_Chung = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CV_PC_PhanCongCongViecNhanSu_gridControl)).BeginInit();
@@ -251,32 +251,32 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlTop.Size = new System.Drawing.Size(1443, 24);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(1924, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 390);
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1443, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 480);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1924, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 366);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 450);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1443, 24);
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 366);
+            this.barDockControlRight.Location = new System.Drawing.Point(1924, 30);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 450);
             // 
             // barButtonItem1
             // 
@@ -289,19 +289,19 @@
             this.panel1.Controls.Add(this.CV_PC_PhanCongCongViecNhanSu_gridControl);
             this.panel1.Controls.Add(this.labelX1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1443, 366);
+            this.panel1.Size = new System.Drawing.Size(1924, 450);
             this.panel1.TabIndex = 4;
             // 
             // CV_PC_PhanCongCongViecNhanSu_gridControl
             // 
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CV_PC_PhanCongCongViecNhanSu_gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Location = new System.Drawing.Point(0, 42);
+            this.CV_PC_PhanCongCongViecNhanSu_gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Location = new System.Drawing.Point(0, 52);
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.MainView = this.CV_PC_PhanCongCongViecNhanSu_bandedGridView;
-            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Margin = new System.Windows.Forms.Padding(2);
+            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.MenuManager = this.barManager1;
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.Name = "CV_PC_PhanCongCongViecNhanSu_gridControl";
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -313,7 +313,7 @@
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSuPhuTrach,
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro,
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_NhanSu});
-            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Size = new System.Drawing.Size(1443, 324);
+            this.CV_PC_PhanCongCongViecNhanSu_gridControl.Size = new System.Drawing.Size(1924, 398);
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.TabIndex = 1;
             this.CV_PC_PhanCongCongViecNhanSu_gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CV_PC_PhanCongCongViecNhanSu_bandedGridView});
@@ -357,6 +357,23 @@
             this.CV_PC_PhanCongCongViecNhanSu_bandedGridView.OptionsView.ShowFooter = true;
             this.CV_PC_PhanCongCongViecNhanSu_bandedGridView.OptionsView.ShowGroupPanel = false;
             this.CV_PC_PhanCongCongViecNhanSu_bandedGridView.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.CV_PC_PhanCongCongViecNhanSu_bandedGridView_InitNewRow);
+            // 
+            // gridBand_Chung
+            // 
+            this.gridBand_Chung.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridBand_Chung.AppearanceHeader.Options.UseFont = true;
+            this.gridBand_Chung.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand_Chung.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand_Chung.Caption = "CÔNG VIỆC";
+            this.gridBand_Chung.Columns.Add(this.CV_PC_PhanCongCongViecNhanSuChon);
+            this.gridBand_Chung.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_TenLoaiCongViec);
+            this.gridBand_Chung.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_TenNhomCongViec1);
+            this.gridBand_Chung.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_TenNhomCongViec2);
+            this.gridBand_Chung.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_TenCongViec);
+            this.gridBand_Chung.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_MucDoKho);
+            this.gridBand_Chung.Name = "gridBand_Chung";
+            this.gridBand_Chung.VisibleIndex = 0;
+            this.gridBand_Chung.Width = 850;
             // 
             // CV_PC_PhanCongCongViecNhanSuChon
             // 
@@ -487,6 +504,8 @@
             // 
             this.CV_PC_PhanCongCongViecNhanSu_MucDoKho.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.CV_PC_PhanCongCongViecNhanSu_MucDoKho.AppearanceCell.Options.UseForeColor = true;
+            this.CV_PC_PhanCongCongViecNhanSu_MucDoKho.AppearanceCell.Options.UseTextOptions = true;
+            this.CV_PC_PhanCongCongViecNhanSu_MucDoKho.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_PC_PhanCongCongViecNhanSu_MucDoKho.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.CV_PC_PhanCongCongViecNhanSu_MucDoKho.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.CV_PC_PhanCongCongViecNhanSu_MucDoKho.AppearanceHeader.Options.UseFont = true;
@@ -507,6 +526,19 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_MucDoKho.Name = "CV_PC_PhanCongCongViecNhanSu_LookupEdit_MucDoKho";
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_MucDoKho.NullText = "";
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridBand2.AppearanceHeader.Options.UseFont = true;
+            this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand2.Caption = "NHÂN SỰ";
+            this.gridBand2.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_IDUser);
+            this.gridBand2.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 1;
+            this.gridBand2.Width = 374;
             // 
             // CV_PC_PhanCongCongViecNhanSu_IDUser
             // 
@@ -537,6 +569,8 @@
             // 
             this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceCell.ForeColor = System.Drawing.Color.Red;
             this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceCell.Options.UseForeColor = true;
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceCell.Options.UseTextOptions = true;
+            this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro.AppearanceHeader.Options.UseFont = true;
@@ -558,10 +592,34 @@
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.Name = "CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro";
             this.CV_PC_PhanCongCongViecNhanSu_LookupEdit_VaiTro.NullText = "";
             // 
+            // gridBand3
+            // 
+            this.gridBand3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridBand3.AppearanceHeader.Options.UseFont = true;
+            this.gridBand3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand3.Caption = "TÌNH HÌNH THỰC HIỆN";
+            this.gridBand3.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand5,
+            this.gridBand4});
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 2;
+            this.gridBand3.Width = 494;
+            // 
+            // gridBand5
+            // 
+            this.gridBand5.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_NgayBatDau);
+            this.gridBand5.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc);
+            this.gridBand5.Name = "gridBand5";
+            this.gridBand5.VisibleIndex = 0;
+            this.gridBand5.Width = 234;
+            // 
             // CV_PC_PhanCongCongViecNhanSu_NgayBatDau
             // 
             this.CV_PC_PhanCongCongViecNhanSu_NgayBatDau.AppearanceCell.ForeColor = System.Drawing.Color.Red;
             this.CV_PC_PhanCongCongViecNhanSu_NgayBatDau.AppearanceCell.Options.UseForeColor = true;
+            this.CV_PC_PhanCongCongViecNhanSu_NgayBatDau.AppearanceCell.Options.UseTextOptions = true;
+            this.CV_PC_PhanCongCongViecNhanSu_NgayBatDau.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_PC_PhanCongCongViecNhanSu_NgayBatDau.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.CV_PC_PhanCongCongViecNhanSu_NgayBatDau.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.CV_PC_PhanCongCongViecNhanSu_NgayBatDau.AppearanceHeader.Options.UseFont = true;
@@ -578,6 +636,8 @@
             // 
             this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc.AppearanceCell.ForeColor = System.Drawing.Color.Red;
             this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc.AppearanceCell.Options.UseForeColor = true;
+            this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc.AppearanceCell.Options.UseTextOptions = true;
+            this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc.AppearanceHeader.Options.UseFont = true;
@@ -589,6 +649,19 @@
             this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc.Name = "CV_PC_PhanCongCongViecNhanSu_NgayKetThuc";
             this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc.Visible = true;
             this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc.Width = 117;
+            // 
+            // gridBand4
+            // 
+            this.gridBand4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridBand4.AppearanceHeader.Options.UseFont = true;
+            this.gridBand4.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand4.Caption = "TỰ ĐÁNH GIÁ THEO THỜI GIAN THỰC";
+            this.gridBand4.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_DanhGia);
+            this.gridBand4.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_LyDo);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 1;
+            this.gridBand4.Width = 260;
             // 
             // CV_PC_PhanCongCongViecNhanSu_DanhGia
             // 
@@ -621,6 +694,13 @@
             this.CV_PC_PhanCongCongViecNhanSu_LyDo.Name = "CV_PC_PhanCongCongViecNhanSu_LyDo";
             this.CV_PC_PhanCongCongViecNhanSu_LyDo.Visible = true;
             this.CV_PC_PhanCongCongViecNhanSu_LyDo.Width = 130;
+            // 
+            // gridBand6
+            // 
+            this.gridBand6.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_DiaDiemThucHien);
+            this.gridBand6.Name = "gridBand6";
+            this.gridBand6.VisibleIndex = 3;
+            this.gridBand6.Width = 180;
             // 
             // CV_PC_PhanCongCongViecNhanSu_DiaDiemThucHien
             // 
@@ -734,96 +814,24 @@
             this.labelX1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelX1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.labelX1.Location = new System.Drawing.Point(0, 0);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(2);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(1443, 42);
+            this.labelX1.Size = new System.Drawing.Size(1924, 52);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "<div align = \"center\">PHÂN CÔNG CÔNG VIỆC - NHÂN SỰ</div>";
             // 
-            // gridBand_Chung
-            // 
-            this.gridBand_Chung.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.gridBand_Chung.AppearanceHeader.Options.UseFont = true;
-            this.gridBand_Chung.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand_Chung.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand_Chung.Caption = "CÔNG VIỆC";
-            this.gridBand_Chung.Columns.Add(this.CV_PC_PhanCongCongViecNhanSuChon);
-            this.gridBand_Chung.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_TenLoaiCongViec);
-            this.gridBand_Chung.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_TenNhomCongViec1);
-            this.gridBand_Chung.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_TenNhomCongViec2);
-            this.gridBand_Chung.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_TenCongViec);
-            this.gridBand_Chung.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_MucDoKho);
-            this.gridBand_Chung.Name = "gridBand_Chung";
-            this.gridBand_Chung.VisibleIndex = 0;
-            this.gridBand_Chung.Width = 850;
-            // 
-            // gridBand2
-            // 
-            this.gridBand2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.gridBand2.AppearanceHeader.Options.UseFont = true;
-            this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand2.Caption = "NHÂN SỰ";
-            this.gridBand2.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_IDUser);
-            this.gridBand2.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_IdVaiTro);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 374;
-            // 
-            // gridBand3
-            // 
-            this.gridBand3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.gridBand3.AppearanceHeader.Options.UseFont = true;
-            this.gridBand3.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand3.Caption = "TÌNH HÌNH THỰC HIỆN";
-            this.gridBand3.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand5,
-            this.gridBand4});
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 494;
-            // 
-            // gridBand5
-            // 
-            this.gridBand5.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_NgayBatDau);
-            this.gridBand5.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_NgayKetThuc);
-            this.gridBand5.Name = "gridBand5";
-            this.gridBand5.VisibleIndex = 0;
-            this.gridBand5.Width = 234;
-            // 
-            // gridBand4
-            // 
-            this.gridBand4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.gridBand4.AppearanceHeader.Options.UseFont = true;
-            this.gridBand4.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand4.Caption = "TỰ ĐÁNH GIÁ THEO THỜI GIAN THỰC";
-            this.gridBand4.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_DanhGia);
-            this.gridBand4.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_LyDo);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.VisibleIndex = 1;
-            this.gridBand4.Width = 260;
-            // 
-            // gridBand6
-            // 
-            this.gridBand6.Columns.Add(this.CV_PC_PhanCongCongViecNhanSu_DiaDiemThucHien);
-            this.gridBand6.Name = "gridBand6";
-            this.gridBand6.VisibleIndex = 3;
-            this.gridBand6.Width = 180;
-            // 
             // frmCV_PC_PhanCongCongViecNhanSu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 390);
+            this.ClientSize = new System.Drawing.Size(1924, 480);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmCV_PC_PhanCongCongViecNhanSu";
             this.Text = "Phân công công việc - Nhân sự";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

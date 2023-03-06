@@ -180,7 +180,7 @@
             this.gridBand1.AppearanceHeader.Options.UseForeColor = true;
             this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand1.Caption = "THÔNG TIN";
+            this.gridBand1.Caption = "THÔNG TIN VAI TRÒ CÔNG VIỆC";
             this.gridBand1.Columns.Add(this.CV_HT_VaiTroCongViec_VaiTroTrongCongViec);
             this.gridBand1.Columns.Add(this.CV_HT_VaiTroCongViec_MoTa);
             this.gridBand1.Columns.Add(this.CV_HT_VaiTroCongViec_GhiChu);
@@ -481,7 +481,7 @@
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(1595, 49);
             this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "<div align = \"center\">VAI TRÒ CÔNG VIỆC</div>";
+            this.labelX1.Text = "<div align = \"center\">QUẢN LÝ VAI TRÒ CÔNG VIỆC</div>";
             // 
             // frmCV_HT_VaiTroCongViec
             // 
@@ -518,10 +518,8 @@
         private DevExpress.XtraBars.BarButtonItem CV_HT_VaiTroCongViec_barButtonItem_Luu;
         private DevExpress.XtraGrid.GridControl CV_HT_VaiTroCongViec_GridControl;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView CV_HT_VaiTroCongViec_BandedGridview;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_VaiTroCongViecChon;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_VaiTroCongViec_ID;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_VaiTroCongViec_VaiTroTrongCongViec;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_VaiTroCongViec_MoTa;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_VaiTroCongViec_GhiChu;
@@ -550,5 +548,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_QL_CongViec_LookupEdit_NhomCongViec;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_QL_CongViec_LookupEdit_NhomCongViec2;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox CV_QL_CongViec_ComboboxEdit_MucDoKho;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
     }
 }

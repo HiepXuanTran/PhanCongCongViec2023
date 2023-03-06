@@ -161,3 +161,4 @@ C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PhanCo
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.csproj.GenerateResource.Cache
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.exe.licenses
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_ChiTietCongViec_ImportExcel.resources
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PhanCongCongViec\obj\x86\Debug\PhanCongCongViec.form.QuanLy.frmCV_QL_ChiTietCongViec_ImportExcel.resources

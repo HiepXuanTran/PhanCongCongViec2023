@@ -52,3 +52,7 @@ C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.B
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.BLL\obj\Debug\PCCV.BLL.csprojResolveAssemblyReference.cache
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.BLL\obj\Debug\PCCV.BLL.dll
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.BLL\obj\Debug\PCCV.BLL.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.BLL\bin\Debug\Microsoft.Office.InfoPath.Permission.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.BLL\bin\Debug\Microsoft.Office.Interop.InfoPath.SemiTrust.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.BLL\obj\Debug\Interop.Office2013CustomActionsLib.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\PhanCongCongViec2023\PCCV.BLL\obj\Debug\PCCV.BLL.csproj.ResolveComReference.cache

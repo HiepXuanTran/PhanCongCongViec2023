@@ -748,9 +748,9 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCV_PC_PhanCongCongViecNhanSu_ImportExcel";
-            this.Text = "frmCV_PC_PhanCongCongViecNhanSu_ImportExcel";
+            this.Text = "XỬ LÝ DỮ LIỆU EXCEL NHÓM CÔNG VIỆC";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCV_PC_PhanCongCongViecNhanSu_ImportExcel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

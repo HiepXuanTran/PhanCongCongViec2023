@@ -237,7 +237,8 @@ namespace PhanCongCongViec.form.QuanLy
                             string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_TenNhomCongViec2))) ||
                             string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_TenCongViec))) ||
                             string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_KhaNangChuyenMon))) ||
-                            string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_MucDoKho)))
+                            string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_MucDoKho))) ||
+                            string.IsNullOrWhiteSpace(Convert.ToString(CV_QL_CongViec_BandedGridview.GetFocusedRowCellValue(CV_QL_CongViec_NhomThucHien)))
                         )
                     )
                 {

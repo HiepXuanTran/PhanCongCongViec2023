@@ -106,7 +106,6 @@
             this.CV_HT_MucDoKho_Sudung,
             this.CV_HT_MucDoKhoChon});
             this.CV_HT_MucDoKho_BandedGridView.GridControl = this.CV_HT_MucDoKho_GridControl;
-            this.CV_HT_MucDoKho_BandedGridView.GroupCount = 1;
             this.CV_HT_MucDoKho_BandedGridView.Name = "CV_HT_MucDoKho_BandedGridView";
             this.CV_HT_MucDoKho_BandedGridView.OptionsBehavior.AutoExpandAllGroups = true;
             this.CV_HT_MucDoKho_BandedGridView.OptionsSelection.MultiSelect = true;
@@ -115,8 +114,6 @@
             this.CV_HT_MucDoKho_BandedGridView.OptionsView.ShowAutoFilterRow = true;
             this.CV_HT_MucDoKho_BandedGridView.OptionsView.ShowFooter = true;
             this.CV_HT_MucDoKho_BandedGridView.OptionsView.ShowGroupPanel = false;
-            this.CV_HT_MucDoKho_BandedGridView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_HT_MucDoKho_DoKhoCongViec, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.CV_HT_MucDoKho_BandedGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_HT_MucDoKho_BandedGridView_PopupMenuShowing);
             // 
             // gridBand1
@@ -150,7 +147,7 @@
             this.gridBand2.AppearanceHeader.Options.UseFont = true;
             this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand2.Caption = "THÔNG TIN";
+            this.gridBand2.Caption = "THÔNG TIN MỨC ĐỘ KHÓ";
             this.gridBand2.Columns.Add(this.CV_HT_MucDoKho_DoKhoCongViec);
             this.gridBand2.Columns.Add(this.CV_HT_MucDoKho_Mota);
             this.gridBand2.Columns.Add(this.CV_HT_MucDoKho_GhiChu);
@@ -170,7 +167,7 @@
             this.CV_HT_MucDoKho_DoKhoCongViec.AppearanceHeader.Options.UseForeColor = true;
             this.CV_HT_MucDoKho_DoKhoCongViec.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_HT_MucDoKho_DoKhoCongViec.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CV_HT_MucDoKho_DoKhoCongViec.Caption = "Mức độ khó";
+            this.CV_HT_MucDoKho_DoKhoCongViec.Caption = "Mức độ khó *";
             this.CV_HT_MucDoKho_DoKhoCongViec.FieldName = "CV_HT_MucDoKho_DoKhoCongViec";
             this.CV_HT_MucDoKho_DoKhoCongViec.Name = "CV_HT_MucDoKho_DoKhoCongViec";
             this.CV_HT_MucDoKho_DoKhoCongViec.Visible = true;
@@ -500,9 +497,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView CV_HT_MucDoKho_BandedGridView;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_MucDoKhoChon;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_MucDoKho_DoKhoCongViec;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_MucDoKho_Mota;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_MucDoKho_GhiChu;
@@ -513,5 +508,7 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_MucDoKho_DateEdit;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_MucDoKho_HienThi;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_MucDoKho_Sudung;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
     }
 }

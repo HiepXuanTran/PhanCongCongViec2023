@@ -555,7 +555,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCV_QL_NhomCongViec_ImportExcel";
-            this.Text = "Import file Excel Nhóm Công Việc";
+            this.Text = "Xử lý dữ liệu excel nhóm công việc";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCV_QL_NhomCongViec_ImportExcel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

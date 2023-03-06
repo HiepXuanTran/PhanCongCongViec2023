@@ -105,7 +105,6 @@
             this.CV_HT_LoaiCongViec_SuDung,
             this.CV_HT_LoaiCongViecChon});
             this.CV_HT_LoaiCongViec_BandedGridView.GridControl = this.CV_HT_LoaiCongViec_GridControl;
-            this.CV_HT_LoaiCongViec_BandedGridView.GroupCount = 1;
             this.CV_HT_LoaiCongViec_BandedGridView.Name = "CV_HT_LoaiCongViec_BandedGridView";
             this.CV_HT_LoaiCongViec_BandedGridView.OptionsBehavior.AutoExpandAllGroups = true;
             this.CV_HT_LoaiCongViec_BandedGridView.OptionsSelection.MultiSelect = true;
@@ -114,8 +113,6 @@
             this.CV_HT_LoaiCongViec_BandedGridView.OptionsView.ShowAutoFilterRow = true;
             this.CV_HT_LoaiCongViec_BandedGridView.OptionsView.ShowFooter = true;
             this.CV_HT_LoaiCongViec_BandedGridView.OptionsView.ShowGroupPanel = false;
-            this.CV_HT_LoaiCongViec_BandedGridView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_HT_LoaiCongViec_TenLoaiCongViec, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.CV_HT_LoaiCongViec_BandedGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.CV_HT_LoaiCongViec_BandedGridView_PopupMenuShowing);
             // 
             // gridBand1
@@ -149,7 +146,7 @@
             this.gridBand2.AppearanceHeader.Options.UseFont = true;
             this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand2.Caption = "THÔNG TIN";
+            this.gridBand2.Caption = "THÔNG TIN LOẠI CÔNG VIỆC";
             this.gridBand2.Columns.Add(this.CV_HT_LoaiCongViec_TenLoaiCongViec);
             this.gridBand2.Columns.Add(this.CV_HT_LoaiCongViec_Mota);
             this.gridBand2.Columns.Add(this.CV_HT_LoaiCongViec_GhiChu);
@@ -169,7 +166,7 @@
             this.CV_HT_LoaiCongViec_TenLoaiCongViec.AppearanceHeader.Options.UseForeColor = true;
             this.CV_HT_LoaiCongViec_TenLoaiCongViec.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_HT_LoaiCongViec_TenLoaiCongViec.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CV_HT_LoaiCongViec_TenLoaiCongViec.Caption = "Tên loại công việc";
+            this.CV_HT_LoaiCongViec_TenLoaiCongViec.Caption = "Tên loại công việc *";
             this.CV_HT_LoaiCongViec_TenLoaiCongViec.FieldName = "CV_HT_LoaiCongViec_TenLoaiCongViec";
             this.CV_HT_LoaiCongViec_TenLoaiCongViec.Name = "CV_HT_LoaiCongViec_TenLoaiCongViec";
             this.CV_HT_LoaiCongViec_TenLoaiCongViec.Visible = true;

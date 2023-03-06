@@ -235,7 +235,6 @@
             this.CV_HT_KhaNangChuyenMon_SuDung,
             this.CV_HT_KhaNangChuyenMonChon});
             this.CV_HT_KhaNangChuyenMon_BandedGridView.GridControl = this.CV_HT_KhaNangChuyenMon_gridControl;
-            this.CV_HT_KhaNangChuyenMon_BandedGridView.GroupCount = 1;
             this.CV_HT_KhaNangChuyenMon_BandedGridView.Name = "CV_HT_KhaNangChuyenMon_BandedGridView";
             this.CV_HT_KhaNangChuyenMon_BandedGridView.OptionsBehavior.AutoExpandAllGroups = true;
             this.CV_HT_KhaNangChuyenMon_BandedGridView.OptionsSelection.MultiSelect = true;
@@ -244,8 +243,6 @@
             this.CV_HT_KhaNangChuyenMon_BandedGridView.OptionsView.ShowAutoFilterRow = true;
             this.CV_HT_KhaNangChuyenMon_BandedGridView.OptionsView.ShowFooter = true;
             this.CV_HT_KhaNangChuyenMon_BandedGridView.OptionsView.ShowGroupPanel = false;
-            this.CV_HT_KhaNangChuyenMon_BandedGridView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.CV_HT_KhaNangChuyenMon_TenKhaNang, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // gridBand1
             // 
@@ -278,7 +275,7 @@
             this.gridBand2.AppearanceHeader.Options.UseFont = true;
             this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand2.Caption = "THÔNG TIN";
+            this.gridBand2.Caption = "THÔNG TIN KHẢ NĂNG CÔNG VIỆC";
             this.gridBand2.Columns.Add(this.CV_HT_KhaNangChuyenMon_TenKhaNang);
             this.gridBand2.Columns.Add(this.CV_HT_KhaNangChuyenMon_MoTa);
             this.gridBand2.Columns.Add(this.CV_HT_KhaNangChuyenMon_GhiChu);
@@ -298,7 +295,7 @@
             this.CV_HT_KhaNangChuyenMon_TenKhaNang.AppearanceHeader.Options.UseForeColor = true;
             this.CV_HT_KhaNangChuyenMon_TenKhaNang.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_HT_KhaNangChuyenMon_TenKhaNang.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CV_HT_KhaNangChuyenMon_TenKhaNang.Caption = "Tên khả năng";
+            this.CV_HT_KhaNangChuyenMon_TenKhaNang.Caption = "Tên khả năng *";
             this.CV_HT_KhaNangChuyenMon_TenKhaNang.FieldName = "CV_HT_KhaNangChuyenMon_TenKhaNang";
             this.CV_HT_KhaNangChuyenMon_TenKhaNang.Name = "CV_HT_KhaNangChuyenMon_TenKhaNang";
             this.CV_HT_KhaNangChuyenMon_TenKhaNang.Visible = true;
@@ -466,7 +463,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmCV_HT_KhaNangChuyenMon";
-            this.Text = "Khả năng chuyên môn";
+            this.Text = "Quản lý khả năng chuyên môn";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCV_HT_KhaNangChuyenMon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -497,9 +494,7 @@
         private DevExpress.XtraBars.BarButtonItem CV_HT_KhaNangChuyenMon_barButtonItem_Undo;
         private DevExpress.XtraBars.BarButtonItem CV_HT_KhaNangChuyenMon_barButtonItem_Print;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView CV_HT_KhaNangChuyenMon_BandedGridView;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_KhaNangChuyenMonChon;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_KhaNangChuyenMon_TenKhaNang;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_KhaNangChuyenMon_MoTa;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_KhaNangChuyenMon_GhiChu;
@@ -510,5 +505,7 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_KhaNangChuyenMon_DateEdit;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_KhaNangChuyenMon_HienThi;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_HT_KhaNangChuyenMon_SuDung;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
     }
 }

@@ -646,7 +646,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCV_QL_ChiTietCongViec_ImportExcel";
-            this.Text = "Import Chi tiết công việc";
+            this.Text = "Xử lý dữ liệu excel chi tiết công việc";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCV_QL_ChiTietCongViec_ImportExcel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

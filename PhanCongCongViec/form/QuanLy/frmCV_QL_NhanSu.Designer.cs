@@ -140,15 +140,16 @@
             this.gridBand2.Columns.Add(this.CV_QL_NhanSuChon);
             this.gridBand2.Columns.Add(this.CV_QL_NhanSu_ID);
             this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 0;
+            this.gridBand2.Visible = false;
+            this.gridBand2.VisibleIndex = -1;
             this.gridBand2.Width = 47;
             // 
             // CV_QL_NhanSuChon
             // 
-            this.CV_QL_NhanSuChon.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhanSuChon.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSuChon.AppearanceCell.Options.UseForeColor = true;
             this.CV_QL_NhanSuChon.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.CV_QL_NhanSuChon.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhanSuChon.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSuChon.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_NhanSuChon.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_NhanSuChon.AppearanceHeader.Options.UseTextOptions = true;
@@ -162,10 +163,10 @@
             // 
             // CV_QL_NhanSu_ID
             // 
-            this.CV_QL_NhanSu_ID.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhanSu_ID.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_ID.AppearanceCell.Options.UseForeColor = true;
             this.CV_QL_NhanSu_ID.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.CV_QL_NhanSu_ID.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhanSu_ID.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_ID.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_NhanSu_ID.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_NhanSu_ID.AppearanceHeader.Options.UseTextOptions = true;
@@ -182,7 +183,7 @@
             this.gridBand1.AppearanceHeader.Options.UseForeColor = true;
             this.gridBand1.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand1.Caption = "THÔNG TIN";
+            this.gridBand1.Caption = "THÔNG TIN NHÂN SỰ";
             this.gridBand1.Columns.Add(this.CV_QL_NhanSu_MaNhanSu);
             this.gridBand1.Columns.Add(this.CV_QL_NhanSu_HoTen);
             this.gridBand1.Columns.Add(this.CV_QL_NhanSu_DonVi);
@@ -190,15 +191,17 @@
             this.gridBand1.Columns.Add(this.CV_QL_NhanSu_TrinhDo);
             this.gridBand1.Columns.Add(this.CV_QL_NhanSu_KhaNangChuyenMon);
             this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 1;
+            this.gridBand1.VisibleIndex = 0;
             this.gridBand1.Width = 1374;
             // 
             // CV_QL_NhanSu_MaNhanSu
             // 
-            this.CV_QL_NhanSu_MaNhanSu.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhanSu_MaNhanSu.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_MaNhanSu.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhanSu_MaNhanSu.AppearanceCell.Options.UseTextOptions = true;
+            this.CV_QL_NhanSu_MaNhanSu.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhanSu_MaNhanSu.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.CV_QL_NhanSu_MaNhanSu.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhanSu_MaNhanSu.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_MaNhanSu.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_NhanSu_MaNhanSu.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_NhanSu_MaNhanSu.AppearanceHeader.Options.UseTextOptions = true;
@@ -206,15 +209,19 @@
             this.CV_QL_NhanSu_MaNhanSu.Caption = "Mã Nhân Sự *";
             this.CV_QL_NhanSu_MaNhanSu.FieldName = "CV_QL_NhanSu_MaNhanSu";
             this.CV_QL_NhanSu_MaNhanSu.Name = "CV_QL_NhanSu_MaNhanSu";
+            this.CV_QL_NhanSu_MaNhanSu.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "CV_QL_NhanSu_MaNhanSu", "{0}")});
             this.CV_QL_NhanSu_MaNhanSu.Visible = true;
             this.CV_QL_NhanSu_MaNhanSu.Width = 100;
             // 
             // CV_QL_NhanSu_HoTen
             // 
-            this.CV_QL_NhanSu_HoTen.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhanSu_HoTen.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_HoTen.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhanSu_HoTen.AppearanceCell.Options.UseTextOptions = true;
+            this.CV_QL_NhanSu_HoTen.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhanSu_HoTen.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CV_QL_NhanSu_HoTen.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhanSu_HoTen.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_HoTen.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_NhanSu_HoTen.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_NhanSu_HoTen.AppearanceHeader.Options.UseTextOptions = true;
@@ -227,10 +234,10 @@
             // 
             // CV_QL_NhanSu_DonVi
             // 
-            this.CV_QL_NhanSu_DonVi.AppearanceCell.ForeColor = System.Drawing.Color.Red;
+            this.CV_QL_NhanSu_DonVi.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_DonVi.AppearanceCell.Options.UseForeColor = true;
             this.CV_QL_NhanSu_DonVi.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CV_QL_NhanSu_DonVi.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhanSu_DonVi.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_DonVi.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_NhanSu_DonVi.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_NhanSu_DonVi.AppearanceHeader.Options.UseTextOptions = true;
@@ -243,12 +250,12 @@
             // 
             // CV_QL_NhanSu_NhomThucHien
             // 
-            this.CV_QL_NhanSu_NhomThucHien.AppearanceCell.ForeColor = System.Drawing.Color.Red;
+            this.CV_QL_NhanSu_NhomThucHien.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_NhomThucHien.AppearanceCell.Options.UseForeColor = true;
             this.CV_QL_NhanSu_NhomThucHien.AppearanceCell.Options.UseTextOptions = true;
             this.CV_QL_NhanSu_NhomThucHien.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhanSu_NhomThucHien.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.CV_QL_NhanSu_NhomThucHien.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhanSu_NhomThucHien.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_NhomThucHien.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_NhanSu_NhomThucHien.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_NhanSu_NhomThucHien.AppearanceHeader.Options.UseTextOptions = true;
@@ -270,10 +277,12 @@
             // 
             // CV_QL_NhanSu_TrinhDo
             // 
-            this.CV_QL_NhanSu_TrinhDo.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhanSu_TrinhDo.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_TrinhDo.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhanSu_TrinhDo.AppearanceCell.Options.UseTextOptions = true;
+            this.CV_QL_NhanSu_TrinhDo.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhanSu_TrinhDo.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CV_QL_NhanSu_TrinhDo.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhanSu_TrinhDo.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_TrinhDo.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_NhanSu_TrinhDo.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_NhanSu_TrinhDo.AppearanceHeader.Options.UseTextOptions = true;
@@ -286,10 +295,12 @@
             // 
             // CV_QL_NhanSu_KhaNangChuyenMon
             // 
-            this.CV_QL_NhanSu_KhaNangChuyenMon.AppearanceCell.ForeColor = System.Drawing.Color.Blue;
+            this.CV_QL_NhanSu_KhaNangChuyenMon.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_KhaNangChuyenMon.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhanSu_KhaNangChuyenMon.AppearanceCell.Options.UseTextOptions = true;
+            this.CV_QL_NhanSu_KhaNangChuyenMon.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhanSu_KhaNangChuyenMon.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.CV_QL_NhanSu_KhaNangChuyenMon.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CV_QL_NhanSu_KhaNangChuyenMon.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.CV_QL_NhanSu_KhaNangChuyenMon.AppearanceHeader.Options.UseFont = true;
             this.CV_QL_NhanSu_KhaNangChuyenMon.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_NhanSu_KhaNangChuyenMon.AppearanceHeader.Options.UseTextOptions = true;
@@ -311,6 +322,10 @@
             // 
             // HT_USER_Create
             // 
+            this.HT_USER_Create.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.HT_USER_Create.AppearanceCell.Options.UseForeColor = true;
+            this.HT_USER_Create.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.HT_USER_Create.AppearanceHeader.Options.UseForeColor = true;
             this.HT_USER_Create.AppearanceHeader.Options.UseTextOptions = true;
             this.HT_USER_Create.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.HT_USER_Create.Caption = "ID Người tạo";
@@ -320,6 +335,10 @@
             // 
             // HT_USER_Editor
             // 
+            this.HT_USER_Editor.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.HT_USER_Editor.AppearanceCell.Options.UseForeColor = true;
+            this.HT_USER_Editor.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.HT_USER_Editor.AppearanceHeader.Options.UseForeColor = true;
             this.HT_USER_Editor.AppearanceHeader.Options.UseTextOptions = true;
             this.HT_USER_Editor.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.HT_USER_Editor.Caption = "bandedGridColumn1";
@@ -329,6 +348,10 @@
             // 
             // CV_QL_NhanSu_DateCreate
             // 
+            this.CV_QL_NhanSu_DateCreate.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.CV_QL_NhanSu_DateCreate.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhanSu_DateCreate.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.CV_QL_NhanSu_DateCreate.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_NhanSu_DateCreate.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_NhanSu_DateCreate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhanSu_DateCreate.Caption = "bandedGridColumn1";
@@ -338,6 +361,10 @@
             // 
             // CV_QL_NhanSu_DateEditor
             // 
+            this.CV_QL_NhanSu_DateEditor.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.CV_QL_NhanSu_DateEditor.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhanSu_DateEditor.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.CV_QL_NhanSu_DateEditor.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_NhanSu_DateEditor.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_NhanSu_DateEditor.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhanSu_DateEditor.Caption = "bandedGridColumn1";
@@ -347,6 +374,10 @@
             // 
             // CV_QL_NhanSu_HienThi
             // 
+            this.CV_QL_NhanSu_HienThi.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.CV_QL_NhanSu_HienThi.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhanSu_HienThi.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.CV_QL_NhanSu_HienThi.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_NhanSu_HienThi.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_NhanSu_HienThi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhanSu_HienThi.Caption = "bandedGridColumn1";
@@ -356,6 +387,10 @@
             // 
             // CV_QL_NhanSu_SuDung
             // 
+            this.CV_QL_NhanSu_SuDung.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.CV_QL_NhanSu_SuDung.AppearanceCell.Options.UseForeColor = true;
+            this.CV_QL_NhanSu_SuDung.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.CV_QL_NhanSu_SuDung.AppearanceHeader.Options.UseForeColor = true;
             this.CV_QL_NhanSu_SuDung.AppearanceHeader.Options.UseTextOptions = true;
             this.CV_QL_NhanSu_SuDung.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.CV_QL_NhanSu_SuDung.Caption = "bandedGridColumn1";
@@ -551,7 +586,7 @@
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(1441, 49);
             this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "<div align = \"center\">THÔNG TIN NHÂN SỰ</div>";
+            this.labelX1.Text = "<div align = \"center\">QUẢN LÝ NHÂN SỰ</div>";
             // 
             // panel1
             // 
@@ -600,10 +635,8 @@
 
         private DevExpress.XtraGrid.GridControl CV_QL_NhanSu_GridControl;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView CV_QL_NhanSu_BandedGridview;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_QL_NhanSuChon;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_QL_NhanSu_ID;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_QL_NhanSu_MaNhanSu;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_QL_NhanSu_HoTen;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn CV_QL_NhanSu_DonVi;
@@ -638,5 +671,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox CV_QL_CongViec_ComboboxEdit_MucDoKho;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_QL_NhanSu_LookupEdit_KhaNangChuyenMon;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CV_QL_NhanSu_LookupEdit_NhomThucHien;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
     }
 }
