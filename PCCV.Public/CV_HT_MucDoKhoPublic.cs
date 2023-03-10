@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PCCV.Public
+namespace Uneti.Public
 {
     public class CV_HT_MucDoKhoPublic
     {

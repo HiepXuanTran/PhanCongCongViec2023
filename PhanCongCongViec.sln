@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhanCongCongViec", "PhanCongCongViec\PhanCongCongViec.csproj", "{CEFBACDB-E84A-49ED-B797-EAE97E0F269F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uneti.Online", "PhanCongCongViec\Uneti.Online.csproj", "{CEFBACDB-E84A-49ED-B797-EAE97E0F269F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCCV.Public", "PCCV.Public\PCCV.Public.csproj", "{10F6DC38-B62E-40FE-B870-32E471D7923E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uneti.Public", "PCCV.Public\Uneti.Public.csproj", "{10F6DC38-B62E-40FE-B870-32E471D7923E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCCV.Data", "PCCV.Data\PCCV.Data.csproj", "{F08763A3-B49F-42BF-A5D9-6595203E9A0F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uneti.Data", "PCCV.Data\Uneti.Data.csproj", "{F08763A3-B49F-42BF-A5D9-6595203E9A0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCCV.BLL", "PCCV.BLL\PCCV.BLL.csproj", "{BB98DF74-61AD-47BF-9A2E-12FE4F556DD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uneti.BLL", "PCCV.BLL\Uneti.BLL.csproj", "{BB98DF74-61AD-47BF-9A2E-12FE4F556DD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

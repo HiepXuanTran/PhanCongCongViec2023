@@ -6,9 +6,9 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 
-namespace PCCV.Data
+namespace Uneti.Data
 {
-    class clsKetNoi
+    class ClsKetNoi
     {
         SqlConnection con = new SqlConnection();
         string ketnoi = ConfigurationManager.ConnectionStrings["project"].ConnectionString;
@@ -29,7 +29,7 @@ namespace PCCV.Data
             }
         }
 
-        public clsKetNoi()
+        public ClsKetNoi()
         {
 
             if (IsServerConnected() == false)

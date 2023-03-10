@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using PCCV.Data;
-using PCCV.Public;
+using Uneti.Data;
+using Uneti.Public;
 
-namespace PCCV.BLL
+namespace Uneti.BLL
 {
     public class CV_HT_NhomThucHienBLL
     {

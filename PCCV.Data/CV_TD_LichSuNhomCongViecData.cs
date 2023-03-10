@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using PCCV.Public;
-namespace PCCV.Data
+using Uneti.Public;
+namespace Uneti.Data
 {
     public class CV_TD_LichSuNhomCongViecData
     {
-        clsKetNoi cls = new clsKetNoi();
+        ClsKetNoi cls = new ClsKetNoi();
         public DataTable LoadLichSuCongViec_LoadAll()
         {
             return cls.LayDuLieu("SP_CV_TD_LichSuNhomCongViec_Select");

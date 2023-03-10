@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using PCCV.Data;
-using PCCV.Public;
-namespace PCCV.BLL
+using Uneti.Data;
+using Uneti.Public;
+namespace Uneti.BLL
 {
     public class CV_QL_NhomCongViecBLL
     {

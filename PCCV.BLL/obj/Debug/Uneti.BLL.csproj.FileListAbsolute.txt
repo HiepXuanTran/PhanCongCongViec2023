@@ -1,0 +1,13 @@
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\obj\Debug\Uneti.BLL.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\obj\Debug\Interop.Office2013CustomActionsLib.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\obj\Debug\Uneti.BLL.csproj.ResolveComReference.cache
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\Uneti.BLL.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\Uneti.BLL.pdb
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\Microsoft.Office.InfoPath.Permission.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\Microsoft.Office.Interop.InfoPath.SemiTrust.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.Data.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.Public.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.Data.pdb
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\bin\Debug\PCCV.Public.pdb
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\obj\Debug\Uneti.BLL.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.BLL\obj\Debug\Uneti.BLL.pdb

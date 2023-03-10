@@ -8,7 +8,7 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 
-namespace PhanCongCongViec
+namespace Uneti.Online
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {

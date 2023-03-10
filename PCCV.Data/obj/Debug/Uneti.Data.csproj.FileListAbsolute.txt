@@ -1,0 +1,7 @@
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.Data\obj\Debug\Uneti.Data.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.Data\obj\Debug\PCCV.Data.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.Data\obj\Debug\PCCV.Data.pdb
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.Data\bin\Debug\PCCV.Data.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.Data\bin\Debug\PCCV.Data.pdb
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.Data\bin\Debug\PCCV.Public.dll
+C:\Users\ADMIN\Desktop\PhanCongCongViec123456\PhanCongCongViec\PCCV.Data\bin\Debug\PCCV.Public.pdb

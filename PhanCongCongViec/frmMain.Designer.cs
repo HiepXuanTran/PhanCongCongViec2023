@@ -1,4 +1,4 @@
-﻿namespace PhanCongCongViec
+﻿namespace Uneti.Online
 {
     partial class frmMain
     {

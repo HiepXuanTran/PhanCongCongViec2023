@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PCCV.Data;
-using PCCV.Public;
+using Uneti.Data;
+using Uneti.Public;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace PCCV.BLL
+namespace Uneti.BLL
 {
     public class CV_HT_UuTienCongViecBLL
     {

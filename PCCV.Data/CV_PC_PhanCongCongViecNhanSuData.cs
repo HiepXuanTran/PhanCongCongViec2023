@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PCCV.Public;
+using Uneti.Public;
 using System.Data;
 using System.Data.SqlClient;
-namespace PCCV.Data
+namespace Uneti.Data
 {
     public class CV_PC_PhanCongCongViecNhanSuData
     {
-        clsKetNoi cls = new clsKetNoi();
+        ClsKetNoi cls = new ClsKetNoi();
         public DataTable LoadCV_PC_PhanCongCongViecNhanSu()
         {
             return cls.LayDuLieu("SP_CV_PC_PhanCongCongViecNhanSu_Select");

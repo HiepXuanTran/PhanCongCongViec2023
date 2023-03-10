@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using PCCV.Public;
+using Uneti.Public;
 
-namespace PCCV.Data
+namespace Uneti.Data
 {
     public class CV_HT_NhomThucHienData
     {
 
-        clsKetNoi cls = new clsKetNoi();
+        ClsKetNoi cls = new ClsKetNoi();
         public DataTable LoadCV_HT_NhomThucHien_LoadAll()
         {
             return cls.LayDuLieu("SP_CV_HT_NhomThucHien_Select");

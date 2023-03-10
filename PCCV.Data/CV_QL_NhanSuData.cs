@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using PCCV.Public;
+using Uneti.Public;
 
-namespace PCCV.Data
+namespace Uneti.Data
 {
     public class CV_QL_NhanSuData
     {
 
-        clsKetNoi cls = new clsKetNoi();
+        ClsKetNoi cls = new ClsKetNoi();
         
         public DataTable LoadCV_QL_NhanSu_LoadUser()
         {

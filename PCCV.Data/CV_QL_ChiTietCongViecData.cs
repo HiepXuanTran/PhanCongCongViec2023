@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PCCV.Public;
+using Uneti.Public;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace PCCV.Data
+namespace Uneti.Data
 {
     public class CV_QL_ChiTietCongViecData
     {
-        clsKetNoi cls = new clsKetNoi();
+        ClsKetNoi cls = new ClsKetNoi();
         public DataTable LoadCV_QL_ChiTietCongViec()
         {
             return cls.LayDuLieu("SP_CV_QL_ChiTietCongViec_Select");

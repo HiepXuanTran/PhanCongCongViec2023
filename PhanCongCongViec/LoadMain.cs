@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PhanCongCongViec.form.QuanLy;
-using PhanCongCongViec.form.HeThong;
-using PhanCongCongViec.form.PhanCong;
+using Uneti.Online.form.QuanLy;
+using Uneti.Online.form.HeThong;
+using Uneti.Online.form.PhanCong;
 using System.Windows.Forms;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors.Repository;
@@ -16,7 +16,7 @@ using DevExpress.LookAndFeel;
 using DevExpress.XtraPrinting;
 using System.Data;
 using System.Net.NetworkInformation;
-namespace PhanCongCongViec
+namespace Uneti.Online
 {
     class LoadMain
     {

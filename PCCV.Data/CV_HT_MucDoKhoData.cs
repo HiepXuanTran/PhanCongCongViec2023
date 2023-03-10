@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PCCV.Public;
+using Uneti.Public;
 using System.Data;
 using System.Data.SqlClient;
-namespace PCCV.Data
+namespace Uneti.Data
 {
     public class CV_HT_MucDoKhoData
     {
-        clsKetNoi cls = new clsKetNoi();
+        ClsKetNoi cls = new ClsKetNoi();
         public DataTable LoadCV_HT_MucDoKho_LoadAll()
         {
             return cls.LayDuLieu("SP_CV_HT_MucDoKho_Select");
